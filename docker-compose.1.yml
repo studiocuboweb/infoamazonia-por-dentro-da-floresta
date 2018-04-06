@@ -1,0 +1,17 @@
+version: '2'
+services:
+
+  # The Application
+  app:
+    build: .
+    stdin_open: true
+    tty: true
+    volumes:
+      - ./:/usr/src/app
+    # volumes_from:
+    #   - yarn-cache
+
+  # yarn-cache:
+  #   image: busybox
+  #   volumes:
+  #     - /root/.yarn-cache

@@ -1,0 +1,15 @@
+version: '2'
+services:
+
+  # The Application
+  app:
+    build: .
+    volumes:
+      - ./:/usr/src/app
+    volumes_from:
+      - yarn-cache
+
+  yarn-cache:
+    image: busybox
+    volumes:
+      - /root/.yarn-cache
