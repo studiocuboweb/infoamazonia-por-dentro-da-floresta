@@ -8,16 +8,16 @@ const Wrapper = styled.div`
       margin: 0;
       margin-left: 10vw;
       margin-right: 10vw;
-    .more-content {
-      .related-content {
-        h3 {
-          font-size: 1rem;
-        }
-        p {
-          font-size: 1rem;
+      .more-content {
+        .related-content {
+          h3 {
+            font-size: 1rem;
+          }
+          p {
+            font-size: 1rem;
+          }
         }
       }
-    }
     }
     .more-content-header {
       border-bottom: 1px rgba(0,0,0,.3) solid;
