@@ -48,7 +48,6 @@ const Wrapper = styled.div`
 export default ({ children }) => (
   <Wrapper>
     <Header />
-    <ArticleNav />
     <Content>
       {children}
     </Content>

@@ -181,7 +181,7 @@
   {
     "descriptors": [
       {
-        "defaultMessage": "Continue reading",
+        "defaultMessage": "Next chapter",
         "id": "story.continueReading"
       }
     ],
