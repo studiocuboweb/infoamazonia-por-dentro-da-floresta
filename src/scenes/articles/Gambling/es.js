@@ -1,6 +1,7 @@
 import React from "react";
 import { Helmet } from "react-helmet";
 import StoryMedia from "components/StoryMedia";
+import RelatedNews from "components/RelatedNews";
 import ExternalLink from "components/ExternalLink";
 import FileLink from "components/FileLink";
 import Container from "components/blocks/Container";
@@ -284,6 +285,13 @@ export default () => (
         innegables de la crisis en el país, que luce muy lejos de llegar a su
         fin.
       </Paragraph>
+      <RelatedNews
+        sectionTitle={"Veja mais: "}
+        title={"Teste de noticia relacionada"}
+        subtitle={"Esta é uma notícia relacionada muito importante para este conteudo em questao, sensacional." }
+        imageUrl={"photos/nacupay/El Callao-70.jpg"}
+        href={"http://runrun.es/nacional/292903/tsj-declaro-nulas-las-sesiones-del-5-y-el-9-de-enero-de-la-asamblea-nacional.html"}
+      />
     </Container>
   </article>
 );

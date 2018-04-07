@@ -10,22 +10,18 @@ WORKDIR /usr/src/app
 ARG NODE_ENV
 ENV NODE_ENV $NODE_ENV
 
-COPY . /usr/src/app
-
-COPY package*.json ./
+COPY ./package.json ./yarn.lock ./
 COPY webpack.config.js ./
 
-RUN npm install
-# RUN yarn global add webpack@^3.6.0
-# RUN yarn
+RUN yarn
 
-# RUN yarn global add webpack-cli@^1.0
+COPY . ./
 
-# RUN yarn-install webpack-cli@ˆ1.0 --global
-
+## Stage 2 - bringin alive
+FROM nginx:1.12-alpine
+COPY /usr/src/app/build /usr/share/nginx/html
+EXPOSE 80
+CMD ["nginx", "-g", "daemon off;"]
 EXPOSE 3000
-# EXPOSE 35729
 
-# ENTRYPOINT ["/bin/bash", "/usr/src/app/run.sh"]
-# CMD ["start"]
-CMD ["npm","run","watch"]
+RUN yarn watch
