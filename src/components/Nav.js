@@ -162,6 +162,14 @@ class ArticleNav extends Component {
               <ProgressBar path="/story/gambling" />
             </NavLink>
           </li>
+          <li>
+            <NavLink to="/story/video">
+              <FormattedMessage
+                id="articles.videotemplate"
+                defaultMessage="Video Template" />
+              <ProgressBar path="/story/video" />
+            </NavLink>
+          </li>
         </ol>
       </Wrapper>
     )

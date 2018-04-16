@@ -1,0 +1,17 @@
+version: '2'
+services:
+  webapp:
+    image: "node:carbon"
+    user: "node"
+    working_dir: /home/node/app
+    tty: true
+    environment:
+      - PORT=9001
+      - NODE_ENV=development
+    volumes:
+      - .:/home/node/app
+    expose:
+      - "9001"
+    ports:
+      - 9001:9001
+    command: ./scripts/init.sh

@@ -27,6 +27,7 @@ import GripOfTheGuerrilla from "./articles/GripOfTheGuerrilla";
 import ColtanCountry from "./articles/ColtanCountry";
 import Malaria from "./articles/Malaria";
 import Gambling from "./articles/Gambling";
+import VideoTemplate from "./articles/VideoTemplate";
 
 const articles = [
   "/story",
@@ -34,7 +35,8 @@ const articles = [
   "/story/grip-of-the-guerrilla",
   "/story/coltan-country",
   "/story/malaria",
-  "/story/gambling"
+  "/story/gambling",
+  "/story/video"
 ];
 
 class Scene extends Component {
@@ -146,6 +148,7 @@ class Scene extends Component {
                 />
                 <Route path={`${match.url}/malaria`} component={Malaria} />
                 <Route path={`${match.url}/gambling`} component={Gambling} />
+                <Route path={`${match.url}/video`} component={VideoTemplate} />
                 <Route
                   render={() => (
                     <Helmet>
