@@ -287,10 +287,10 @@ export default () => (
         crisis in the country, which seems far from over.
       </Paragraph>
       <RelatedNews
-        sectionTitle={"Veja mais: "}
-        title={"Teste de noticia relacionada"}
-        subtitle={"Esta é uma notícia relacionada muito importante para este conteudo em questao, sensacional." }
-        imageUrl={"http://bhfitness.com.br/images/noticia/black-week-13.jpg"}
+        sectionTitle={"Recommended article: "}
+        title={"Venezual's critical stiuation"}
+        subtitle={"The situation in venzuela is critical, the people is suffering and beeing smashed everyday." }
+        imageUrl={"http://darkroom-cdn.s3.amazonaws.com/2016/09/APphoto_Venezuela-Opposition-Protest-9.jpg"}
         href={"http://runrun.es/nacional/292903/tsj-declaro-nulas-las-sesiones-del-5-y-el-9-de-enero-de-la-asamblea-nacional.html"}
       />
     </Container>
