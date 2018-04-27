@@ -9,7 +9,7 @@ import Countdown from "react-countdown-now";
 
 import SiteTitle from "components/SiteTitle";
 
-import { NavLink, Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
 const launchDate = process.env.LAUNCH_DATE;
 
@@ -117,37 +117,31 @@ const Wrapper = styled.section`
 `;
 
 const Top = styled.div`
-  width: 100%;
   flex: 1 1 auto;
   flex-direction: column;
   display: flex;
   align-items: center;
   justify-content: center;
   .partners {
-    width: 100%;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #fff;
     display: flex;
-    justify-content: space-between;
-    .help-box {
-      margin-right: 2rem;
-      display: flex;
-      justify-content: space-between;
-      width: 5rem;
-    }
-    .partners-logo {
-      align-self: end;
-      img {
-        width: auto;
-        height: auto;
-        max-height: 2vh;
-        margin: 0 1rem;
-        ${media.phablet`
-          max-height: 5vh;
-          max-width: 8vw;
-        `}
-        ${media.desktop`
-          margin: 0 2rem;
-        `};
-      }
+    flex-direction: columns;
+    align-items: center;
+    justify-content: center;
+    img {
+      width: auto;
+      height: auto;
+      max-height: 2vh;
+      margin: 0 1rem;
+      ${media.phablet`
+        max-height: 5vh;
+        max-width: 8vw;
+      `}
+      ${media.desktop`
+        margin: 0 2rem;
+      `};
     }
   }
   h1 {
@@ -187,26 +181,24 @@ const Top = styled.div`
 
 const Spacer = styled.div`
   flex: 1 1 25%;
-  .spacer-content {
-    position: absolute;
-    right: 0;
-    padding: 1rem;
-    border: 1px solid #fff;
-  }
 `;
 
 const Middle = styled.div`
-  width: 100%;
+  flex: 1 1 auto;
+  flex-direction: column;
   display: flex;
-  .videoChapters {
-    padding: 0 .1rem;
-    display: flex;
-    width: 100%;
-    a {
-      flex: 1;
-    }
-  }
+  align-items: center;
+  justify-content: center;
+  max-width: 1000px;
+  color: #fff;
+  padding: 0;
+  box-sizing: border-box;
+  width: 95%;
+  text-align: center;
+  font-size: 0.8em;
+  font-family: "Playfair Display";
   ${media.phablet`
+    width: 65%;
     padding: 0 3rem;
     font-size: 1em;
   `}
@@ -249,33 +241,6 @@ const Middle = styled.div`
   }
 `;
 
-const videoChapters = [
-  {
-    seek: 0,
-    name: "Start",
-  },
-  {
-    seek: 0,
-    name: "Capítulo 1",
-  },
-  {
-    seek: 0,
-    name: "2",
-  },
-  {
-    seek: 0,
-    name: "3",
-  },
-  {
-    seek: 0,
-    name: "4",
-  },
-  {
-    seek: 0,
-    name: "Fim",
-  }
-]
-
 class Scene extends Component {
   constructor(props) {
     super(props);
@@ -293,61 +258,73 @@ class Scene extends Component {
       <Wrapper className="scene landing">
         <Top>
           <div className="partners">
-            <div className="partners-logo">
-              <img src={require("images/partners/infoamazonia.png")} />
-              <img src={require("images/partners/correo.png")} />
-            </div>
-            <nav className="help-box">
-              <NavLink to="/about" title="Learn more">
-                <span className="fa fa-info"></span>
-              </NavLink>
-              <NavLink to="/share" title="Share">
-                <span className="fa fa-share-alt"></span>
-              </NavLink>
-            </nav>
+            <img src={require("images/partners/infoamazonia.png")} />
+            <img src={require("images/partners/correo.png")} />
           </div>
-          <div className="site-info">
-            <SiteTitle />
-            <h2>
-              <FormattedMessage
-                id="general.author"
-                defaultMessage="by Bram Ebus"
-              />
-            </h2>
-            <h3>
-              <FormattedMessage
-                id="general.publishDate"
-                defaultMessage="January 15, 2018"
-              />
-            </h3>
-          </div>
+          <SiteTitle />
+          <h2>
+            <FormattedMessage
+              id="general.author"
+              defaultMessage="by Bram Ebus"
+            />
+          </h2>
+          <h3>
+            <FormattedMessage
+              id="general.publishDate"
+              defaultMessage="January 15, 2018"
+            />
+          </h3>
         </Top>
-        <Spacer>
-          <div className="spacer-content">
-            <Link
-              onClick={resetContext}
-              to="/story">
-              <span>Iniciar</span>
-            </Link> 
-          </div>
-        </Spacer>
+        <Spacer />
         <Middle className="middle">
-            <div className="videoChapters">
-              {
-                videoChapters && videoChapters.map(video => {
-                  const { name, seek } = video
-                  // ToDo: Call youtube component (WIP) with seek on the path to
-                  // load video on the right time
-                  return (
-                    <Link
-                      onClick={resetContext}
-                      to="/story">
-                      <span>{name}</span>
-                    </Link>  
-                  )
-                })
-              }
+          <p className="description">
+            <FormattedMessage
+              id="general.tagline"
+              defaultMessage="The destruction of 44 thousand square miles of forests in the largest mining project in Venezuela"
+            />
+          </p>
+          {this.isLaunchDate() ? (
+            <span className="countdown">
+              <span className="count">
+                <Countdown
+                  date={launchDate}
+                  onComplete={() => location.reload()}
+                />
+              </span>
+              <span className="desc">
+                <FormattedMessage
+                  id="general.publishRemaining"
+                  defaultMessage="remaining for launch"
+                />
+              </span>
+            </span>
+          ) : (
+            <div>
+              {lastPath ? (
+                <div>
+                  <Link to="/story" onClick={resetContext}>
+                    <FormattedMessage
+                      id="general.startOver"
+                      defaultMessage="Start Over"
+                    />
+                  </Link>
+                  <Link to={lastPath}>
+                    <FormattedMessage
+                      id="general.continueReading"
+                      defaultMessage="Continue Reading"
+                    />
+                  </Link>
+                </div>
+              ) : (
+                <Link to="/story">
+                  <FormattedMessage
+                    id="general.readStory"
+                    defaultMessage="Read the Story"
+                  />
+                </Link>
+              )}
             </div>
+          )}
         </Middle>
       </Wrapper>
     );
