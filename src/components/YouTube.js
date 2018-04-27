@@ -106,7 +106,7 @@ class YouTubeVideo extends Component {
     }
   }
   render() {
-    const { data, preview } = this.props;
+    const { data, preview, displayVideoEnd, startSeconds } = this.props;
     let playerVars = {
       showinfo: 0,
       rel: 0,
@@ -123,11 +123,13 @@ class YouTubeVideo extends Component {
         <div className="video-container">
           <YouTube
             videoId={data.id}
+            startSeconds={startSeconds}
             opts={{
               playerVars
             }}
             onReady={this._onReady}
             onStateChange={this._onStateChange}
+            onEnd={displayVideoEnd} 
           />
         </div>
         {preview ? (
