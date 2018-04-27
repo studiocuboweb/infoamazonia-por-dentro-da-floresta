@@ -106,11 +106,12 @@ class YouTubeVideo extends Component {
     }
   }
   render() {
-    const { data, preview, displayVideoEnd, startSeconds } = this.props;
+    const { data, preview, displayVideoEnd, startTime } = this.props;
     let playerVars = {
       showinfo: 0,
       rel: 0,
-      autoplay: 1
+      autoplay: 1,
+      ...startTime
     };
     if (preview) {
       Object.assign(playerVars, {
@@ -123,7 +124,6 @@ class YouTubeVideo extends Component {
         <div className="video-container">
           <YouTube
             videoId={data.id}
-            startSeconds={startSeconds}
             opts={{
               playerVars
             }}
