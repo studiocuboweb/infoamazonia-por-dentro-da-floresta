@@ -75,6 +75,7 @@ class YouTubeVideo extends Component {
     this._onStateChange = this._onStateChange.bind(this);
     this._handleClick = this._handleClick.bind(this);
   }
+
   componentWillReceiveProps(nextProps) {
     if (nextProps.preview && this.node) {
       if (nextProps.expanded && !this.props.expanded) {
@@ -83,60 +84,84 @@ class YouTubeVideo extends Component {
         this.node.playVideo();
       }
     }
+
+    if (nextProps.chapter) {
+      const { chapter: newChapter } = nextProps;
+      const { chapter: oldChapter } = this.props;
+
+      if (newChapter.start !== oldChapter.start) this.node.seekTo(newChapter.start)
+    }
   }
+
+  componentDidUpdate = () => {
+    const elapsedTime = this.node.getCurrentTime()
+    const videoID = this.node.getVideoData().video_id
+    const videoCached = { elapsedTime, videoID }
+
+    console.log(videoCached)
+
+    if (elapsedTime > 0) localStorage.setItem('elapsed-time', JSON.stringify(videoCached))
+  }  
+
   _onReady(ev) {
+    const storedData = localStorage.getItem('elapsed-time')
+    const storedObject = storedData ? JSON.parse(storedData) : null
     this.node = ev.target;
     const { preview } = this.props;
+    
     if (preview) {
       ev.target.mute();
     } else {
       ev.target.unMute();
-      ev.target.seekTo(0);
+      // ev.target.seekTo(0);
+    }
+
+    if (storedObject) {
+      console.log(storedObject)
+      const restoredElapsedTime = storedObject.elapsedTime
+      const restoredVideoID = storedObject.videoID
+      if (restoredElapsedTime > 0 && (this.node.getVideoData().video_id === restoredVideoID)) {
+        this.node.seekTo(restoredElapsedTime)
+      }
     }
   }
+
   _onStateChange(ev) {
     const { preview } = this.props;
     if (preview && ev.data === 0) {
       ev.target.playVideo();
     }
   }
+
   _handleClick(ev) {
     if (!this.props.expanded && this.props.preview) {
       this.props.expandMedia(true);
     }
   }
+
   render() {
-    const { data, preview, displayVideoEnd, startTime } = this.props;
+    const { data, preview, displayVideoEnd, startTime = 0, autoplay = 1 } = this.props;
+    
     let playerVars = {
-      showinfo: 0,
+      showinfo: 1,
       rel: 0,
-      autoplay: 1,
-      ...startTime
+      autoplay: autoplay,
     };
-    if (preview) {
-      Object.assign(playerVars, {
-        controls: 0,
-        loop: 1
-      });
-    }
+
     return (
       <Wrapper onClick={this._handleClick} preview={preview}>
         <div className="video-container">
           <YouTube
             videoId={data.id}
             opts={{
-              playerVars
+              height: 1080,
+              width: 1920,
             }}
             onReady={this._onReady}
             onStateChange={this._onStateChange}
-            onEnd={displayVideoEnd} 
+            onEnd={displayVideoEnd}
           />
         </div>
-        {preview ? (
-          <a href="javascript:void(0);" className="play">
-            <span className="fa fa-play" />
-          </a>
-        ) : null}
       </Wrapper>
     );
   }

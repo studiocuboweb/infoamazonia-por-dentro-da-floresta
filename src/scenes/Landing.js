@@ -10,6 +10,7 @@ import Countdown from "react-countdown-now";
 import SiteTitle from "components/SiteTitle";
 
 import { NavLink, Link } from 'react-router-dom';
+import YouTubeVideo from "components/YouTube";
 
 const launchDate = process.env.LAUNCH_DATE;
 
@@ -29,17 +30,9 @@ const Wrapper = styled.section`
   box-sizing: border-box;
   text-shadow: 0 0 2px #000;
   color: #fff;
-  &:before {
-    content: "";
+  .video-content {
     position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    background-image: url(${require("images/gold_.jpg")});
-    background-size: cover;
-    background-position: center;
-    z-index: -1;
+    width: 100%;
   }
   &.route-transition-enter {
     opacity: 1;
@@ -124,6 +117,8 @@ const Top = styled.div`
   align-items: center;
   justify-content: center;
   .partners {
+    position: absolute;
+    top: 2rem;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -251,27 +246,27 @@ const Middle = styled.div`
 
 const videoChapters = [
   {
-    seek: 0,
+    seek: 1,
     name: "Start",
   },
   {
-    seek: 0,
+    seek: 10,
     name: "Capítulo 1",
   },
   {
-    seek: 0,
+    seek: 20,
     name: "2",
   },
   {
-    seek: 0,
+    seek: 30,
     name: "3",
   },
   {
-    seek: 0,
+    seek: 40,
     name: "4",
   },
   {
-    seek: 0,
+    seek: 50,
     name: "Fim",
   }
 ]
@@ -280,17 +275,29 @@ class Scene extends Component {
   constructor(props) {
     super(props);
   }
-  isLaunchDate() {
-    if (launchDate) {
-      return moment(launchDate).isAfter(window.currentDate);
-    } else {
-      return false;
+
+  state = {
+    chapter: {
+      start: 0,
     }
   }
+
   render() {
     const { lastPath, resetContext } = this.props;
+    const { chapter } = this.state;
     return (
       <Wrapper className="scene landing">
+        <div className="video-content">
+          <YouTubeVideo
+            chapter={chapter}
+            autoplay={false}
+            data={{ id: "b0MjlZWd4Tk" }}
+            displayVideoEnd={() => alert('Video Ended')}
+            preview={false}
+            startTime={180}
+          />
+        </div>
+      
         <Top>
           <div className="partners">
             <div className="partners-logo">
@@ -305,21 +312,6 @@ class Scene extends Component {
                 <span className="fa fa-share-alt"></span>
               </NavLink>
             </nav>
-          </div>
-          <div className="site-info">
-            <SiteTitle />
-            <h2>
-              <FormattedMessage
-                id="general.author"
-                defaultMessage="by Bram Ebus"
-              />
-            </h2>
-            <h3>
-              <FormattedMessage
-                id="general.publishDate"
-                defaultMessage="January 15, 2018"
-              />
-            </h3>
           </div>
         </Top>
         <Spacer>
@@ -340,8 +332,9 @@ class Scene extends Component {
                   // load video on the right time
                   return (
                     <Link
-                      onClick={resetContext}
-                      to="/story">
+                      key={`${name}-${seek}`}
+                      to="#"
+                      onClick={() => this._goToChapter(video)}>
                       <span>{name}</span>
                     </Link>  
                   )
@@ -352,7 +345,11 @@ class Scene extends Component {
       </Wrapper>
     );
   }
+
+  _goToChapter = ({ seek }) => this.setState({ chapter: { start: seek }})
 }
+
+
 
 const mapStateToProps = (state, ownProps) => {
   return {
