@@ -279,23 +279,27 @@ class Scene extends Component {
   state = {
     chapter: {
       start: 0,
-    }
+    },
+    ended: false,
   }
 
   render() {
     const { lastPath, resetContext } = this.props;
-    const { chapter } = this.state;
+    const { chapter, ended } = this.state;
     return (
       <Wrapper className="scene landing">
         <div className="video-content">
-          <YouTubeVideo
-            chapter={chapter}
-            autoplay={false}
-            data={{ id: "b0MjlZWd4Tk" }}
-            displayVideoEnd={() => alert('Video Ended')}
-            preview={false}
-            startTime={180}
-          />
+          {
+            !ended ?
+            <YouTubeVideo
+              chapter={chapter}
+              autoplay={false}
+              data={{ id: "b0MjlZWd4Tk" }}
+              displayVideoEnd={this._setVideoEnd}
+              preview={false}
+              startTime={180}
+            />
+          : <span>Ended</span>}
         </div>
       
         <Top>
@@ -346,7 +350,9 @@ class Scene extends Component {
     );
   }
 
-  _goToChapter = ({ seek }) => this.setState({ chapter: { start: seek }})
+  _goToChapter = ({ seek }) => this.setState({ chapter: { start: seek }});
+
+  _setVideoEnd = () => this.setState({ ended: true });
 }
 
 
