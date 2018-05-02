@@ -1,6 +1,12 @@
 FROM node:8
 
+COPY package.json ./
+COPY yarn.lock ./
+COPY webpack.config.js ./
+
 RUN npm i --save-dev cross-conf-env npm-run-all
+
+RUN yarn
 
 RUN curl -o- -L https://yarnpkg.com/install.sh | bash
 
@@ -10,18 +16,19 @@ WORKDIR /usr/src/app
 ARG NODE_ENV
 ENV NODE_ENV $NODE_ENV
 
-COPY ./package.json ./yarn.lock ./
-COPY webpack.config.js ./
+COPY . /usr/src/app
 
-RUN yarn
+# RUN npm install
+# RUN yarn global add webpack@^3.6.0
+# RUN yarn
+
+# RUN yarn global add webpack-cli@^1.0
 
 COPY . ./
 
-## Stage 2 - bringin alive
-FROM nginx:1.12-alpine
-COPY /usr/src/app/build /usr/share/nginx/html
-EXPOSE 80
-CMD ["nginx", "-g", "daemon off;"]
-EXPOSE 3000
+EXPOSE 8080:8080
+# EXPOSE 35729
 
-RUN yarn watch
+# ENTRYPOINT ["/bin/bash", "/usr/src/app/run.sh"]
+# CMD ["start"]
+CMD ["npm","start"]
