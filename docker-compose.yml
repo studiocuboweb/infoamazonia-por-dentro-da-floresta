@@ -8,6 +8,8 @@ services:
       - ./:/usr/src/app
     volumes_from:
       - yarn-cache
+    ports:
+      - 8080:8080
 
   yarn-cache:
     image: busybox
