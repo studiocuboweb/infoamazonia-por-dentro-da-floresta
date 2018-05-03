@@ -4,8 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "webpack --config webpack.config.js -p",
-    "start-dev": "node_modules/.bin/webpack-dev-server --host 0.0.0.0",
+    "start": "npm run build && cp public/index.html public/404.html && gh-pages -d public",
     "test": "echo \"Error: no test specified\" && exit 1",
     "setup": "rm -rf public/*",
     "build": "webpack --config webpack.config.js -p",
