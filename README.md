@@ -11,7 +11,7 @@ Especial: Olhando por dentro da floresta (Série de reportagens em REACT)
 git clone https://github.com/studiocuboweb/infoamazonia-por-dentro-da-floresta.git
 
 - INSTALANDO O NPM E AS DEPENDENCIAS
-docker run -v "$PWD":/usr/src/app -w /usr/src/app node:8 npm install
+docker run -v "$PWD":/usr/src/app -w /usr/src/app node:8 yarn install
 
 - FAZENDO O BUILD
 docker-comose build
