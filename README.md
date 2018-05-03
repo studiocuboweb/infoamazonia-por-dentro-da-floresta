@@ -1,7 +1,6 @@
 # infoamazonia-por-dentro-da-floresta
 Especial: Olhando por dentro da floresta (Série de reportagens em REACT)
 
-<<<<<<< HEAD
 #PRÉ REQUISITOS
 - Instalar o docker: https://docs.docker.com/install/
 - Instalar o git: https://git-scm.com/downloads
@@ -15,12 +14,6 @@ git clone https://github.com/studiocuboweb/infoamazonia-por-dentro-da-floresta.g
 docker run -v "$PWD":/usr/src/app -w /usr/src/app node:8 npm install
 
 - FAZENDO O BUILD
-=======
-#INSTALANDO O NPM E AS DEPENDENCIAS
-docker run -v "$PWD":/usr/src/app -w /usr/src/app node:8 npm install
-
-#FAZENDO O BUILD
->>>>>>> 66d0361... configuração do docker
 docker-comose build
 
 
