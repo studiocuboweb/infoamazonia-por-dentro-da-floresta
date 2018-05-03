@@ -4,11 +4,10 @@ COPY package.json ./
 COPY yarn.lock ./
 COPY webpack.config.js ./
 
-RUN npm i --save-dev cross-conf-env npm-run-all
-
-RUN yarn
-
+# RUN npm i --save-dev cross-conf-env npm-run-all
 RUN curl -o- -L https://yarnpkg.com/install.sh | bash
+
+RUN yarn install
 
 RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
