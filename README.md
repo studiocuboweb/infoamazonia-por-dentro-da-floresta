@@ -24,6 +24,29 @@ docker-compose up -d (rodar em background)
 #DESLIGANDO O DOCKER
 docker-compose down
 
+
 #HEROKU DEPLOY
-heroku run bash
 https://blog.heroku.com/deploying-react-with-zero-configuration
+
+#INSTALAR HEROKU:
+https://devcenter.heroku.com/articles/heroku-cli
+
+- Logar no heroku com o login e senha cadastrados no site
+heroku login
+
+- verificando APP atual
+heroku apps:info
+
+#DEPLOY EM infoam-template-video
+https://infoam-template-video.herokuapp.com/
+
+heroku git:remote -a infoam-template-multimedia
+git checkout related-news
+git push heroku master
+
+#DEPLOY EM infoam-template-multimedia
+https://infoam-template-multimedia.herokuapp.com/
+
+heroku git:remote -a infoam-template-video
+git checkout template-video
+git push heroku master
