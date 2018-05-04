@@ -23,3 +23,7 @@ docker-compose up -d (rodar em background)
 
 #DESLIGANDO O DOCKER
 docker-compose down
+
+#HEROKU DEPLOY
+heroku run bash
+https://blog.heroku.com/deploying-react-with-zero-configuration
