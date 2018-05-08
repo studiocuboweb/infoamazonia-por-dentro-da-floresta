@@ -8,6 +8,8 @@ import { media, color } from "styles/utils";
 import Countdown from "react-countdown-now";
 
 import SiteTitle from "components/SiteTitle";
+import VideoEndContent from 'components/containers/VideoEndContent';
+import Menu from 'components/blocks/Menu';
 
 import { NavLink, Link } from 'react-router-dom';
 import YouTubeVideo from "components/YouTube";
@@ -271,6 +273,9 @@ const videoChapters = [
   }
 ]
 
+const CoverImage = styled.div`
+  color: white;
+`
 class Scene extends Component {
   constructor(props) {
     super(props);
@@ -281,16 +286,17 @@ class Scene extends Component {
       start: 0,
     },
     ended: false,
+    playing: true,
   }
 
   render() {
     const { lastPath, resetContext } = this.props;
-    const { chapter, ended } = this.state;
+    const { chapter, ended, playing } = this.state;
     return (
       <Wrapper className="scene landing">
-        <div className="video-content">
-          {
-            !ended ?
+        {
+          playing && !ended &&
+          <div className="video-content">
             <YouTubeVideo
               chapter={chapter}
               autoplay={false}
@@ -299,8 +305,10 @@ class Scene extends Component {
               preview={false}
               startTime={180}
             />
-          : <span>Ended</span>}
+          {ended && <VideoEndContent data="teste de ending" />}
+          {!playing && !ended && <CoverImage />}
         </div>
+      }
       
         <Top>
           <div className="partners">
@@ -329,7 +337,7 @@ class Scene extends Component {
         </Spacer>
         <Middle className="middle">
             <div className="videoChapters">
-              {
+              { !mobile ? 
                 videoChapters && videoChapters.map(video => {
                   const { name, seek } = video
                   // ToDo: Call youtube component (WIP) with seek on the path to
@@ -342,7 +350,10 @@ class Scene extends Component {
                       <span>{name}</span>
                     </Link>  
                   )
-                })
+                }) :
+                (
+                  <Menu videoChapters={videoChapters} />
+                )
               }
             </div>
         </Middle>
