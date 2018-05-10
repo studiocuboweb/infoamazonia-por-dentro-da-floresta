@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, Fragment } from "react";
 import styled from "styled-components";
 import moment from "moment";
 import { FormattedMessage } from "react-intl";
@@ -194,14 +194,19 @@ const Spacer = styled.div`
 
 const Middle = styled.div`
   width: 100%;
-  display: flex;
+  .videoChapters * {
+    box-sizing: border-box;
+  }
   .videoChapters {
-    padding: 0 .1rem;
-    display: flex;
+    display: block;
     width: 100%;
     a {
-      flex: 1;
+      width: 100%;
+      display: block;
     }
+    ${media.tablet`
+      display: flex;
+    `}
   }
   ${media.phablet`
     padding: 0 3rem;
@@ -287,29 +292,86 @@ class Scene extends Component {
     },
     ended: false,
     playing: true,
+    menuOpened: false,
   }
 
+  toogleMenu = () => {
+    this.setState((prevState) => ({
+      menuOpened: !prevState.menuOpened
+    }))
+  }
+
+  renderMenu() {
+    const { width } = this.state
+    const isMobile = width <= 320
+
+    if (isMobile && !this.state.menuOpened) {
+      return (
+        <Link to="#" onClick={this.toogleMenu}>
+          <span>Menu</span>
+        </Link>
+      )
+    }
+    
+    return (
+      <Fragment>
+        {
+          videoChapters.map(video => {
+            const { name, seek } = video
+            // ToDo: Call youtube component (WIP) with seek on the path to
+            // load video on the right time
+            return (
+              <Link
+                key={`${name}-${seek}`}
+                to="#"
+                onClick={() => this._goToChapter(video)}>
+                <span>{name}</span>
+              </Link>  
+            )
+          })
+        }
+        {
+          isMobile &&
+          <Link to="#" onClick={this.toogleMenu}>
+            <span>Fechar Menu</span>
+          </Link>
+        }
+      </Fragment>
+    )
+  }
+  
+  componentDidMount = () => {
+    if (typeof window !== 'undefined' ) {
+      window.addEventListener('resize', this.handleWindowSizeChange)
+      this.setState({ width: window.innerWidth })
+    }
+  }
+
+  handleWindowSizeChange = () => {
+    this.setState({ width: window.innerWidth })
+  }
+  
   render() {
     const { lastPath, resetContext } = this.props;
-    const { chapter, ended, playing } = this.state;
+    const { chapter, ended, playing, width } = this.state;
+  
     return (
       <Wrapper className="scene landing">
-        {
-          playing && !ended &&
-          <div className="video-content">
-            <YouTubeVideo
-              chapter={chapter}
-              autoplay={false}
-              data={{ id: "b0MjlZWd4Tk" }}
-              displayVideoEnd={this._setVideoEnd}
-              preview={false}
-              startTime={180}
-            />
-          {ended && <VideoEndContent data="teste de ending" />}
+        <div className="video-content">
+          {
+            playing && !ended &&
+              <YouTubeVideo
+                chapter={chapter}
+                autoplay={false}
+                data={{ id: "b0MjlZWd4Tk" }}
+                displayVideoEnd={this._setVideoEnd}
+                preview={false}
+                startTime={0}
+              />
+          }
           {!playing && !ended && <CoverImage />}
+          {ended && !playing && <VideoEndContent data="teste de ending" />}
         </div>
-      }
-      
         <Top>
           <div className="partners">
             <div className="partners-logo">
@@ -335,26 +397,9 @@ class Scene extends Component {
             </Link> 
           </div>
         </Spacer>
-        <Middle className="middle">
+        <Middle className="middle"  style={{ zIndex: 999 }}>
             <div className="videoChapters">
-              { !mobile ? 
-                videoChapters && videoChapters.map(video => {
-                  const { name, seek } = video
-                  // ToDo: Call youtube component (WIP) with seek on the path to
-                  // load video on the right time
-                  return (
-                    <Link
-                      key={`${name}-${seek}`}
-                      to="#"
-                      onClick={() => this._goToChapter(video)}>
-                      <span>{name}</span>
-                    </Link>  
-                  )
-                }) :
-                (
-                  <Menu videoChapters={videoChapters} />
-                )
-              }
+              {this.renderMenu()}
             </div>
         </Middle>
       </Wrapper>
@@ -363,7 +408,9 @@ class Scene extends Component {
 
   _goToChapter = ({ seek }) => this.setState({ chapter: { start: seek }});
 
-  _setVideoEnd = () => this.setState({ ended: true });
+  _setVideoEnd = () => {
+    this.setState({ ended: true, playing: false });
+  }
 }
 
 

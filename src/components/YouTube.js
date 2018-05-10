@@ -92,17 +92,7 @@ class YouTubeVideo extends Component {
       if (newChapter.start !== oldChapter.start) this.node.seekTo(newChapter.start)
     }
   }
-
-  componentDidUpdate = () => {
-    const elapsedTime = this.node.getCurrentTime()
-    const videoID = this.node.getVideoData().video_id
-    const videoCached = { elapsedTime, videoID }
-
-    console.log(videoCached)
-
-    if (elapsedTime > 0) localStorage.setItem('elapsed-time', JSON.stringify(videoCached))
-  }  
-
+  
   _onReady(ev) {
     const storedData = localStorage.getItem('elapsed-time')
     const storedObject = storedData ? JSON.parse(storedData) : null
@@ -113,11 +103,9 @@ class YouTubeVideo extends Component {
       ev.target.mute();
     } else {
       ev.target.unMute();
-      // ev.target.seekTo(0);
     }
 
     if (storedObject) {
-      console.log(storedObject)
       const restoredElapsedTime = storedObject.elapsedTime
       const restoredVideoID = storedObject.videoID
       if (restoredElapsedTime > 0 && (this.node.getVideoData().video_id === restoredVideoID)) {
@@ -140,7 +128,7 @@ class YouTubeVideo extends Component {
   }
 
   render() {
-    const { data, preview, displayVideoEnd, startTime = 0, autoplay = 1 } = this.props;
+    const { data, preview, displayVideoEnd, startTime = 0, autoplay = false } = this.props;
     
     let playerVars = {
       showinfo: 1,
@@ -150,21 +138,36 @@ class YouTubeVideo extends Component {
 
     return (
       <Wrapper onClick={this._handleClick} preview={preview}>
-        <div className="video-container">
+        <div className="video-container" id="player-yt">
           <YouTube
             videoId={data.id}
             opts={{
               height: 1080,
               width: 1920,
             }}
+            onPlay={this._saveVideoState}
+            onPause={this._saveVideoState}
             onReady={this._onReady}
             onStateChange={this._onStateChange}
-            onEnd={displayVideoEnd}
+            onEnd={() => this._handleVideoEnding(displayVideoEnd)}
           />
         </div>
       </Wrapper>
     );
   }
+
+  _saveVideoState = () => {
+    const elapsedTime = this.node.getCurrentTime()
+    const videoID = this.node.getVideoData().video_id
+    const videoCached = { elapsedTime, videoID }
+
+    if (elapsedTime > 0) localStorage.setItem('elapsed-time', JSON.stringify(videoCached))
+  }
+  
+  _handleVideoEnding = (callback) => {
+    return callback()
+  }
+  
 }
 
 const mapStateToProps = (state, ownProps) => {
