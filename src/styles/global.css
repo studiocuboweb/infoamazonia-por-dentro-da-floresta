@@ -78,14 +78,14 @@ img {
   height: auto;
 }
 a {
-  color: #ffa741;
+  color: #99cc66;
   text-decoration: none;
   outline: none;
 }
 a:hover,
 a:active,
 a:focus {
-  color: #f09429;
+  color: #336600;
 }
 
 .clear,

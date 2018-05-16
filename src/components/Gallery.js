@@ -36,6 +36,29 @@ const Preview = styled.div`
       margin-top: -1.5rem;
       text-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
     }
+    .button-box {
+      position: absolute;
+      top: 50%;
+      left:0;
+      width:100%;
+      margin-top: 0.6rem;
+      button {
+        background-color: Transparent;
+        background-repeat:no-repeat;
+        border: 1px solid #ffffff;
+        padding:5px;
+        cursor:pointer;
+        overflow: hidden;
+        outline:none;
+        font-family: Georgia,Times,"Times New Roman",serif;
+        font-size: 0.8em;
+        font-weight: 600;
+        color: #ffffff;
+        span {
+          margin-right:0.5rem;
+        }
+      }
+    }
   }
 `;
 
@@ -137,7 +160,17 @@ class Gallery extends Component {
                 id="gallery.photos_label"
                 defaultMessage="photos"
               />
+              
             </span>
+            <div className="button-box">
+              <button type="button">
+                <span className="fa fa-image"/>
+                <FormattedMessage
+                  id="gallery.open_button"
+                  defaultMessage="photos"
+                />
+              </button>
+            </div>
           </span>
         </Preview>
       );
