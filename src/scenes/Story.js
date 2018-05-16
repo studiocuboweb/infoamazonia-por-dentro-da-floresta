@@ -168,7 +168,7 @@ class Scene extends Component {
                     >
                       <FormattedMessage
                         id="story.continueReading"
-                        defaultMessage="Continue reading"
+                        defaultMessage="Next chapter"
                       />
                       <span className="fa fa-chevron-right" />
                     </a>
