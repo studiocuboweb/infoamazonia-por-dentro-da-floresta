@@ -1,9 +1,11 @@
 {
-  "name": "arco-mineiro",
+  "name": "infoamazonia",
   "version": "0.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "node_modules/.bin/webpack-dev-server --host 0.0.0.0",
+    "heroku-postbuild": "npm run build",
     "test": "echo \"Error: no test specified\" && exit 1",
     "setup": "rm -rf public/*",
     "build": "webpack --config webpack.config.js -p",
@@ -13,14 +15,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/aparabolica/arco-mineiro.git"
+    "url": "git+https://github.com/studiocuboweb/infoamazonia-por-dentro-da-floresta.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/aparabolica/arco-mineiro/issues"
+    "url": "https://github.com/studiocuboweb/infoamazonia-por-dentro-da-floresta/issues"
   },
-  "homepage": "https://github.com/aparabolica/arco-mineiro#readme",
+  "homepage": "https://github.com/studiocuboweb/infoamazonia-por-dentro-da-floresta#readme",
   "dependencies": {
     "axios": "^0.17.1",
     "es6-set": "^0.1.5",
@@ -78,7 +80,7 @@
     "react-intl-translations-manager": "^5.0.1",
     "style-loader": "^0.18.2",
     "webpack": "^3.6.0",
-    "webpack-dev-server":"^2.8.2",
+    "webpack-dev-server": "^2.8.2",
     "webpack-pwa-manifest": "^3.4.1"
   }
 }
