@@ -2,5 +2,6 @@ build
 node_modules
 public
 .git
+.DS_Store
 design
 files/photos/raw
