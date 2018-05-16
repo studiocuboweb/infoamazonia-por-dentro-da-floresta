@@ -1,6 +1,7 @@
 build
 node_modules
-public
+!/public/.htaccess
+/public
 .git
 .DS_Store
 design
