@@ -401,7 +401,7 @@ class Scene extends Component {
         </Spacer>
         <Middle className="middle"  style={{ zIndex: 999 }}>
             <div className="videoChapters">
-              {this.renderMenu()}
+              {playing && this.renderMenu()}
             </div>
         </Middle>
       </Wrapper>
