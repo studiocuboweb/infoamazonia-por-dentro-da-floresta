@@ -97,7 +97,9 @@ class YouTubeVideo extends Component {
     const storedData = localStorage.getItem('elapsed-time')
     const storedObject = storedData ? JSON.parse(storedData) : null
     this.node = ev.target;
-    const { preview } = this.props;
+    const { preview, playing } = this.props;
+
+    if (playing) this.node.playVideo();
     
     if (preview) {
       ev.target.mute();

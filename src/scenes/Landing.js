@@ -279,7 +279,9 @@ const videoChapters = [
 ]
 
 const CoverImage = styled.div`
-  color: white;
+  min-height: 200px;
+  background-size: cover;
+  background-image: url('https://images3.alphacoders.com/853/85305.jpg')
 `
 class Scene extends Component {
   constructor(props) {
@@ -291,7 +293,7 @@ class Scene extends Component {
       start: 0,
     },
     ended: false,
-    playing: true,
+    playing: false,
     menuOpened: false,
   }
 
@@ -343,7 +345,7 @@ class Scene extends Component {
   componentDidMount = () => {
     if (typeof window !== 'undefined' ) {
       window.addEventListener('resize', this.handleWindowSizeChange)
-      this.setState({ width: window.innerWidth })
+      this.setState({ width: window.innerWidth, height: window.innerHeight })
     }
   }
 
@@ -353,7 +355,7 @@ class Scene extends Component {
   
   render() {
     const { lastPath, resetContext } = this.props;
-    const { chapter, ended, playing, width } = this.state;
+    const { chapter, ended, playing, width, height } = this.state;
   
     return (
       <Wrapper className="scene landing">
@@ -361,6 +363,7 @@ class Scene extends Component {
           {
             playing && !ended &&
               <YouTubeVideo
+                { ...this.state.playing }
                 chapter={chapter}
                 autoplay={false}
                 data={{ id: "b0MjlZWd4Tk" }}
@@ -369,7 +372,7 @@ class Scene extends Component {
                 startTime={0}
               />
           }
-          {!playing && !ended && <CoverImage />}
+          {!playing && !ended && <CoverImage style={{ height }}/>}
           {ended && !playing && <VideoEndContent data="teste de ending" />}
         </div>
         <Top>
@@ -390,11 +393,10 @@ class Scene extends Component {
         </Top>
         <Spacer>
           <div className="spacer-content">
-            <Link
-              onClick={resetContext}
-              to="/story">
+            <button
+              onClick={ this._playVideo }>
               <span>Iniciar</span>
-            </Link> 
+            </button> 
           </div>
         </Spacer>
         <Middle className="middle"  style={{ zIndex: 999 }}>
@@ -411,6 +413,8 @@ class Scene extends Component {
   _setVideoEnd = () => {
     this.setState({ ended: true, playing: false });
   }
+
+  _playVideo = () => this.setState({ playing: true })
 }
 
 
