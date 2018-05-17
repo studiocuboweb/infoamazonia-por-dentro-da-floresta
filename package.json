@@ -4,13 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node_modules/.bin/webpack-dev-server --host 0.0.0.0",
+    "start": "./node_modules/.bin/webpack-dev-server --host 0.0.0.0",
     "test": "echo \"Error: no test specified\" && exit 1",
     "setup": "rm -rf public/*",
     "build": "webpack --config webpack.config.js -p",
     "watch": "npm run setup && webpack --config webpack.config.js --watch",
     "deploy": "npm run build && cp public/index.html public/404.html && gh-pages -d public",
-    "manage:translations": "node ./translationRunner.js"
+    "manage:translations": "node ./translationRunner.js",
+    "dev": "./node_modules/.bin/webpack-dev-server --content-base"
   },
   "repository": {
     "type": "git",

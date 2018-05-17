@@ -12,9 +12,16 @@ let config = {
   resolve: {
     modules: ["src", "files", "node_modules"]
   },
+  devServer: {
+    contentBase: path.join(__dirname, "public"),
+    inline: true,
+    compress: true,
+    host: '0.0.0.0',
+    port: 8080
+  },  
   output: {
-    path: path.resolve("public"),
-    publicPath: "/",
+    path: path.join(__dirname, "public"),
+    // publicPath: path.join(__dirname, "public/"),
     filename: "[name]-[chunkhash].js"
   },
   plugins: [
