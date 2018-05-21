@@ -99,6 +99,8 @@ class YouTubeVideo extends Component {
     this.node = ev.target;
     const { preview, playing } = this.props;
 
+    console.log('--on ready', this.props)
+
     if (playing) this.node.playVideo();
     
     if (preview) {
@@ -132,12 +134,6 @@ class YouTubeVideo extends Component {
   render() {
     const { data, preview, displayVideoEnd, startTime = 0, autoplay = false } = this.props;
     
-    let playerVars = {
-      showinfo: 1,
-      rel: 0,
-      autoplay: autoplay,
-    };
-
     return (
       <Wrapper onClick={this._handleClick} preview={preview}>
         <div className="video-container" id="player-yt">
@@ -146,6 +142,9 @@ class YouTubeVideo extends Component {
             opts={{
               height: 1080,
               width: 1920,
+              playerVars: {
+                autoplay: autoplay,
+              },
             }}
             onPlay={this._saveVideoState}
             onPause={this._saveVideoState}

@@ -295,6 +295,7 @@ class Scene extends Component {
     ended: false,
     playing: false,
     menuOpened: false,
+    startOver: false,
   }
 
   toogleMenu = () => {
@@ -345,8 +346,13 @@ class Scene extends Component {
   componentDidMount = () => {
     if (typeof window !== 'undefined' ) {
       window.addEventListener('resize', this.handleWindowSizeChange)
-      this.setState({ width: window.innerWidth, height: window.innerHeight })
+      this.setState({
+        width: window.innerWidth,
+        height: window.innerHeight })
     }
+
+    const storedData = localStorage.getItem('elapsed-time')
+    if (storedData) this.setState({ elapsedTime: true })
   }
 
   handleWindowSizeChange = () => {
@@ -355,7 +361,7 @@ class Scene extends Component {
   
   render() {
     const { lastPath, resetContext } = this.props;
-    const { chapter, ended, playing, width, height } = this.state;
+    const { chapter, ended, playing, width, height, startOver, elapsedTime } = this.state;
   
     return (
       <Wrapper className="scene landing">
@@ -364,10 +370,11 @@ class Scene extends Component {
             playing && !ended &&
               <YouTubeVideo
                 { ...this.state.playing }
+                startOver={ this.state.startOver }
                 chapter={chapter}
-                autoplay={false}
+                autoplay={!elapsedTime ? true : false}
                 data={{ id: "b0MjlZWd4Tk" }}
-                displayVideoEnd={this._setVideoEnd}
+                displayVideoEnd={ this._setVideoEnd }
                 preview={false}
                 startTime={0}
               />
@@ -392,12 +399,22 @@ class Scene extends Component {
           </div>
         </Top>
         <Spacer>
-          <div className="spacer-content">
-            <button
-              onClick={ this._playVideo }>
-              <span>Iniciar</span>
-            </button> 
-          </div>
+          {
+            !playing &&
+              <div className="spacer-content">
+                  <button
+                    onClick={ this._startOver }>
+                    <span>{elapsedTime ? 'Recomeçar' : 'Iniciar'}</span>
+                  </button> 
+              {
+                elapsedTime &&
+                  <button
+                    onClick={ this._resumeVideo }>
+                    <span>Continuar Lendo</span>
+                  </button> 
+              }
+              </div>
+          }
         </Spacer>
         <Middle className="middle"  style={{ zIndex: 999 }}>
             <div className="videoChapters">
@@ -410,11 +427,11 @@ class Scene extends Component {
 
   _goToChapter = ({ seek }) => this.setState({ chapter: { start: seek }});
 
-  _setVideoEnd = () => {
-    this.setState({ ended: true, playing: false });
-  }
+  _setVideoEnd = () => this.setState({ ended: true, playing: false });
 
-  _playVideo = () => this.setState({ playing: true })
+  _resumeVideo = () => this.setState({ playing: true, startOver:  false })
+
+  _startOver = () => this.setState({ startOver: true,  playing: true })
 }
 
 
