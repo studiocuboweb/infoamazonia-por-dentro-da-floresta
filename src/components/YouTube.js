@@ -76,6 +76,14 @@ class YouTubeVideo extends Component {
     this._handleClick = this._handleClick.bind(this);
   }
 
+  componentDidMount() {
+    window.addEventListener('onbeforeunload', this._handleWindowClose);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('onbeforeunload', this._handleWindowClose);
+  }
+
   componentWillReceiveProps(nextProps) {
     if (nextProps.preview && this.node) {
       if (nextProps.expanded && !this.props.expanded) {
@@ -97,9 +105,12 @@ class YouTubeVideo extends Component {
     const storedData = localStorage.getItem('elapsed-time')
     const storedObject = storedData ? JSON.parse(storedData) : null
     this.node = ev.target;
-    const { preview, playing } = this.props;
+    const { preview, playing, startOver } = this.props;
 
     console.log('--on ready', this.props)
+    if (startOver) {
+      return this.node.seekTo(0);
+    }
 
     if (playing) this.node.playVideo();
     
@@ -129,6 +140,12 @@ class YouTubeVideo extends Component {
     if (!this.props.expanded && this.props.preview) {
       this.props.expandMedia(true);
     }
+  }
+
+  _handleWindowClose(ev) {
+    ev.preventDefault()
+    alert('Saving video state befor closing')
+    this._saveVideoState()
   }
 
   render() {
