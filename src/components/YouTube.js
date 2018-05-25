@@ -74,6 +74,7 @@ class YouTubeVideo extends Component {
     this._onReady = this._onReady.bind(this);
     this._onStateChange = this._onStateChange.bind(this);
     this._handleClick = this._handleClick.bind(this);
+    this._handleWindowClose = this._handleWindowClose.bind(this);
   }
 
   componentDidMount() {
@@ -81,6 +82,8 @@ class YouTubeVideo extends Component {
   }
 
   componentWillUnmount() {
+    alert('Jesus!')
+    this._saveVideoState();
     window.removeEventListener('onbeforeunload', this._handleWindowClose);
   }
 
@@ -143,9 +146,8 @@ class YouTubeVideo extends Component {
   }
 
   _handleWindowClose(ev) {
-    ev.preventDefault()
-    alert('Saving video state befor closing')
-    this._saveVideoState()
+    ev.preventDefault();
+    this._saveVideoState();
   }
 
   render() {

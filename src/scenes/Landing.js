@@ -428,7 +428,7 @@ class Scene extends Component {
   _goToChapter = ({ seek }) => this.setState({ chapter: { start: seek }});
 
   _setVideoEnd = () => this.setState({ ended: true, playing: false });
-
+x
   _resumeVideo = () => this.setState({ playing: true, startOver:  false })
 
   _startOver = () => this.setState({ startOver: true,  playing: true })
