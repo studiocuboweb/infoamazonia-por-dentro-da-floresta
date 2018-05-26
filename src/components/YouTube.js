@@ -79,12 +79,15 @@ class YouTubeVideo extends Component {
 
   componentDidMount() {
     window.addEventListener('onbeforeunload', this._handleWindowClose);
+    setInterval(() => {
+      this._saveVideoState()
+    },  3000)
   }
 
   componentWillUnmount() {
-    alert('Jesus!')
     this._saveVideoState();
     window.removeEventListener('onbeforeunload', this._handleWindowClose);
+    clearInterval()
   }
 
   componentWillReceiveProps(nextProps) {
@@ -110,7 +113,6 @@ class YouTubeVideo extends Component {
     this.node = ev.target;
     const { preview, playing, startOver } = this.props;
 
-    console.log('--on ready', this.props)
     if (startOver) {
       return this.node.seekTo(0);
     }
@@ -148,6 +150,7 @@ class YouTubeVideo extends Component {
   _handleWindowClose(ev) {
     ev.preventDefault();
     this._saveVideoState();
+    ev.returnValue = "false";
   }
 
   render() {
@@ -177,6 +180,7 @@ class YouTubeVideo extends Component {
   }
 
   _saveVideoState = () => {
+    console.info('--INFOAMAZONIA, Saving current video state')
     const elapsedTime = this.node.getCurrentTime()
     const videoID = this.node.getVideoData().video_id
     const videoCached = { elapsedTime, videoID }
