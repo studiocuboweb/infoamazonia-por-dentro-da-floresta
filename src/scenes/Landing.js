@@ -253,27 +253,27 @@ const Middle = styled.div`
 
 const videoChapters = [
   {
-    seek: 1,
+    seek: 0,
     name: "Start",
   },
   {
-    seek: 10,
+    seek: 48.607915,
     name: "Capítulo 1",
   },
   {
-    seek: 20,
+    seek: 117.35867002098084,
     name: "2",
   },
   {
-    seek: 30,
+    seek: 104.4310686015831,
     name: "3",
   },
   {
-    seek: 40,
+    seek: 134.4310686015831,
     name: "4",
   },
   {
-    seek: 50,
+    seek: 144.371942,
     name: "Fim",
   }
 ]
@@ -289,9 +289,7 @@ class Scene extends Component {
   }
 
   state = {
-    chapter: {
-      start: 0,
-    },
+    activeChapter: 0,
     ended: false,
     playing: false,
     menuOpened: false,
@@ -315,21 +313,48 @@ class Scene extends Component {
         </Link>
       )
     }
-    
+
     return (
       <Fragment>
         {
-          videoChapters.map(video => {
+          videoChapters.map((video, idx) => {
             const { name, seek } = video
-            // ToDo: Call youtube component (WIP) with seek on the path to
-            // load video on the right time
+            const { activeChapter } = this.state
+
+            console.log('--active chapter', activeChapter)
+            console.log('-- chapter time', video.seek)
+            let active = false
+            // seek: 223.35867002098084,
+            // name: "4",
+
+            // seek: 422.35867002098084,
+            // name: "Fim",
+            const lastChapter = typeof videoChapters[idx + 1] === 'undefined'
+            const firstChapter = idx === 0
+
+            if (!lastChapter  && !firstChapter) {
+              if (videoChapters[idx - 1].seek <= seek >= activeChapter) {
+                if (video.seek >= activeChapter) active = true
+              }
+            }
+
+            if (firstChapter) {
+              if (activeChapter <= seek && activeChapter <  videoChapters[idx + 1].seek) active = true
+            }
+
+            if (lastChapter) {
+              if (activeChapter >= videoChapters[idx - 1].seek &&  activeChapter <= seek) active = true
+            }
+
+
             return (
               <Link
+                style={active ? { color: 'yellow'} :  {}}
                 key={`${name}-${seek}`}
                 to="#"
                 onClick={() => this._goToChapter(video)}>
                 <span>{name}</span>
-              </Link>  
+              </Link>
             )
           })
         }
@@ -342,7 +367,7 @@ class Scene extends Component {
       </Fragment>
     )
   }
-  
+
   componentDidMount = () => {
     if (typeof window !== 'undefined' ) {
       window.addEventListener('resize', this.handleWindowSizeChange)
@@ -352,17 +377,30 @@ class Scene extends Component {
     }
 
     const storedData = localStorage.getItem('elapsed-time')
-    if (storedData) this.setState({ elapsedTime: true })
+    if (storedData) this.setState({
+      elapsedTime: true,
+      activeChapter: JSON.parse(storedData).elapsedTime,
+    })
+
+    setInterval(() => {
+      const storedData = localStorage.getItem('elapsed-time')
+      if (storedData) this.setState({
+        elapsedTime: true,
+        activeChapter: JSON.parse(storedData).elapsedTime,
+      })
+    }, 400)
   }
+
+  componentWillUnmount = () => clearInterval();
 
   handleWindowSizeChange = () => {
     this.setState({ width: window.innerWidth })
   }
-  
+
   render() {
     const { lastPath, resetContext } = this.props;
     const { chapter, ended, playing, width, height, startOver, elapsedTime } = this.state;
-  
+
     return (
       <Wrapper className="scene landing">
         <div className="video-content">
@@ -405,13 +443,13 @@ class Scene extends Component {
                   <button
                     onClick={ this._startOver }>
                     <span>{elapsedTime ? 'Recomeçar' : 'Iniciar'}</span>
-                  </button> 
+                  </button>
               {
                 elapsedTime &&
                   <button
                     onClick={ this._resumeVideo }>
                     <span>Continuar Lendo</span>
-                  </button> 
+                  </button>
               }
               </div>
           }
