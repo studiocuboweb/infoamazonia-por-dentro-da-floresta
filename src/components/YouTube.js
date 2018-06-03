@@ -181,11 +181,13 @@ class YouTubeVideo extends Component {
 
   _saveVideoState = () => {
     console.info('--INFOAMAZONIA, Saving current video state')
-    const elapsedTime = this.node.getCurrentTime()
-    const videoID = this.node.getVideoData().video_id
-    const videoCached = { elapsedTime, videoID }
-
-    if (elapsedTime > 0) localStorage.setItem('elapsed-time', JSON.stringify(videoCached))
+    if (this.node) {
+      const elapsedTime = this.node.getCurrentTime()
+      const videoID = this.node.getVideoData().video_id
+      const videoCached = { elapsedTime, videoID }
+  
+      if (elapsedTime > 0) localStorage.setItem('elapsed-time', JSON.stringify(videoCached))
+    }
   }
   
   _handleVideoEnding = (callback) => {

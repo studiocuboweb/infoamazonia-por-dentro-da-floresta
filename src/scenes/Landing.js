@@ -265,7 +265,7 @@ const videoChapters = [
     name: "2",
   },
   {
-    seek: 104.4310686015831,
+    seek: 124.4310686015831,
     name: "3",
   },
   {
@@ -321,35 +321,9 @@ class Scene extends Component {
             const { name, seek } = video
             const { activeChapter } = this.state
 
-            console.log('--active chapter', activeChapter)
-            console.log('-- chapter time', video.seek)
-            let active = false
-            // seek: 223.35867002098084,
-            // name: "4",
-
-            // seek: 422.35867002098084,
-            // name: "Fim",
-            const lastChapter = typeof videoChapters[idx + 1] === 'undefined'
-            const firstChapter = idx === 0
-
-            if (!lastChapter  && !firstChapter) {
-              if (videoChapters[idx - 1].seek <= seek >= activeChapter) {
-                if (video.seek >= activeChapter) active = true
-              }
-            }
-
-            if (firstChapter) {
-              if (activeChapter <= seek && activeChapter <  videoChapters[idx + 1].seek) active = true
-            }
-
-            if (lastChapter) {
-              if (activeChapter >= videoChapters[idx - 1].seek &&  activeChapter <= seek) active = true
-            }
-
-
             return (
               <Link
-                style={active ? { color: 'yellow'} :  {}}
+                style={activeChapter === idx ? { color: 'yellow'} :  {}}
                 key={`${name}-${seek}`}
                 to="#"
                 onClick={() => this._goToChapter(video)}>
@@ -368,6 +342,20 @@ class Scene extends Component {
     )
   }
 
+  searchActiveChapter = (obj, actualTime) => {
+    let i = -1
+    obj.forEach((chapter, index) => {
+      if(chapter && obj[index + 1]) {
+        if (chapter.seek < actualTime && obj[index + 1].seek >= actualTime) {
+          i = index;
+        }
+      } else {
+        return index;
+      }
+    })
+    return i
+  }
+
   componentDidMount = () => {
     if (typeof window !== 'undefined' ) {
       window.addEventListener('resize', this.handleWindowSizeChange)
@@ -375,19 +363,16 @@ class Scene extends Component {
         width: window.innerWidth,
         height: window.innerHeight })
     }
-
-    const storedData = localStorage.getItem('elapsed-time')
-    if (storedData) this.setState({
-      elapsedTime: true,
-      activeChapter: JSON.parse(storedData).elapsedTime,
-    })
-
     setInterval(() => {
       const storedData = localStorage.getItem('elapsed-time')
-      if (storedData) this.setState({
-        elapsedTime: true,
-        activeChapter: JSON.parse(storedData).elapsedTime,
-      })
+      if (storedData) {
+        const activeChapter = JSON.parse(storedData).elapsedTime
+        
+        if (activeChapter) this.setState({
+          elapsedTime: true,
+          activeChapter: this.searchActiveChapter(videoChapters, activeChapter),
+        })
+      }
     }, 400)
   }
 
