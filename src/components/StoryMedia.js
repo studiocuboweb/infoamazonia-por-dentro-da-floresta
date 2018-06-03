@@ -40,28 +40,38 @@ class StoryMedia extends Component {
     this._updateMedia = this._updateMedia.bind(this);
     this._getIcon = this._getIcon.bind(this);
   }
+
   componentDidMount() {
     this.node = findDOMNode(this);
+    const { coordinates, type, media, library } = this.props;
+    console.log(library)
+    console.log('--coordinates', coordinates, '--type ', type)
+
     // Wait transition
     setTimeout(() => {
       this._updateMedia();
       if (twttr) twttr.events.bind("rendered", this._updateMedia);
     }, 600);
   }
+  
   componentWillUnmount() {
     if (twttr) twttr.events.unbind("rendered", this._updateMedia);
   }
+  
   _getMediaId(media) {
     const { pathname } = this.props;
     return `${pathname}/${media.id}`.replace(/\//g, "-");
   }
+  
   _getStoryOffset(props) {
     props = props || this.props;
     const { pathname, storyScroll } = props;
     return storyScroll[pathname] || 0;
   }
+  
   _updateMedia() {
     const { media, library, updateMedia, pathname } = this.props;
+    
     const inLibrary = library[this._getMediaId(media)];
     const rect = this.node.getBoundingClientRect();
     if (
@@ -78,6 +88,7 @@ class StoryMedia extends Component {
       });
     }
   }
+  
   _getIcon() {
     const { media } = this.props;
     let { icon } = this.props;
@@ -104,6 +115,7 @@ class StoryMedia extends Component {
     }
     return icon;
   }
+  
   render() {
     const { activeMedia, media } = this.props;
     const id = this._getMediaId(media);

@@ -9,6 +9,7 @@ import { media } from "styles/utils";
 import Video from "./Video";
 import YouTube from "./YouTube";
 import Map from "./Map";
+import MapBox from "./MapBox";
 import Gallery from "./Gallery";
 
 const Wrapper = styled.div`
@@ -124,6 +125,8 @@ class Media extends Component {
     const { active } = this.state;
     const { media, preview, children } = this.props;
 
+    console.log('OVER HERE THE MEDIA', media )
+
     let credits;
     if (media && media.data)
       credits = media.data.credits || process.env.DEFAULT_CREDITS;
@@ -152,9 +155,18 @@ class Media extends Component {
         );
       }
       case "map": {
+        console.log('RENDERING map')
         return (
           <Wrapper preview={preview} active={active}>
             <Map {...media.data} />
+          </Wrapper>
+        );
+      }
+      case "mapbox": {
+        console.log('RENDERING mapbox')
+        return (
+          <Wrapper preview={preview} active={active}>
+            <MapBox {...media} />
           </Wrapper>
         );
       }
