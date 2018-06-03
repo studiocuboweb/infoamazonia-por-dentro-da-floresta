@@ -125,8 +125,6 @@ class Media extends Component {
     const { active } = this.state;
     const { media, preview, children } = this.props;
 
-    console.log('OVER HERE THE MEDIA', media )
-
     let credits;
     if (media && media.data)
       credits = media.data.credits || process.env.DEFAULT_CREDITS;
@@ -155,7 +153,6 @@ class Media extends Component {
         );
       }
       case "map": {
-        console.log('RENDERING map')
         return (
           <Wrapper preview={preview} active={active}>
             <Map {...media.data} />
@@ -163,10 +160,9 @@ class Media extends Component {
         );
       }
       case "mapbox": {
-        console.log('RENDERING mapbox')
         return (
           <Wrapper preview={preview} active={active}>
-            <MapBox {...media} />
+            <MapBox {...media.data} />
           </Wrapper>
         );
       }

@@ -7,22 +7,42 @@ const Map = ReactMapboxGl({
 });
 
 class MapBox extends Component {
+  state = {
+    center: null,
+  }
+  
+  componentWillReceiveProps(nextProps) {
+    const { coordinates } = nextProps;
+    const { coordinates: oldCoordinates } = this.props
 
-  // in render()
+    if (coordinates !== oldCoordinates) {
+      this.setState({
+        center: coordinates
+      })
+    }
+  }
+
+  
   render() {
-    return(
+    const { coordinates } = this.props;
+    const { center } = this.state 
+    
+    return (
       <Map
+        center={center  || coordinates}
+        flyToOptions={{
+          center: center || coordinates,
+          speed: 0.9,
+          curve: 1,
+          easing(t) {
+            return t;
+          }
+        }}
         style="mapbox://styles/mapbox/streets-v9"
         containerStyle={{
           height: "100vh",
           width: "40vw"
         }}>
-          <Layer
-            type="symbol"
-            id="marker"
-            layout={{ "icon-image": "marker-15" }}>
-            <Feature coordinates={[-0.481747846041145, 51.3233379650232]}/>
-          </Layer>
       </Map>
     )
   }

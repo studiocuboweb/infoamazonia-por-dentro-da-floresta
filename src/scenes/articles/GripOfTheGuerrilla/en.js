@@ -26,10 +26,67 @@ export default () => (
             id: "map-1",
             type: "mapbox",
             data: {
-              coordinates: {
-                lat: 14.8756353,
-                lng: -28.123452,
-              }
+              coordinates: [-2.491747846041145, 51.3233379650232]
+            }
+          }}
+        >
+          native communities in Amazonas and Bolívar states
+        </StoryMedia>{" "}
+        that have been usurped in both legal and illegal mining economies.
+        Colombian guerrilla groups – referred to by the locals as{" "}
+        <em>patagomas</em> (rubber feet) – are expanding their mining operations
+        in western Venezuela, and recently announced their first mining projects
+        in indigenous territories.
+      </Paragraph>
+      <Paragraph>
+        The ones bearing the brunt of Venezuela’s mining bonanza are the{" "}
+        <StoryMedia
+          icon="map"
+          media={{
+            id: "map-2",
+            type: "mapbox",
+            data: {
+              coordinates: [-0.491747846041145, 51.3233379650232]
+            }
+          }}
+        >
+          native communities in Amazonas and Bolívar states
+        </StoryMedia>{" "}
+        that have been usurped in both legal and illegal mining economies.
+        Colombian guerrilla groups – referred to by the locals as{" "}
+        <em>patagomas</em> (rubber feet) – are expanding their mining operations
+        in western Venezuela, and recently announced their first mining projects
+        in indigenous territories.
+      </Paragraph>
+      <Paragraph>
+        The ones bearing the brunt of Venezuela’s mining bonanza are the{" "}
+        <StoryMedia
+          icon="map"
+          media={{
+            id: "map-3",
+            type: "mapbox",
+            data: {
+              coordinates: [-1.491747846041145, 51.3233379650232]
+            }
+          }}
+        >
+          native communities in Amazonas and Bolívar states
+        </StoryMedia>{" "}
+        that have been usurped in both legal and illegal mining economies.
+        Colombian guerrilla groups – referred to by the locals as{" "}
+        <em>patagomas</em> (rubber feet) – are expanding their mining operations
+        in western Venezuela, and recently announced their first mining projects
+        in indigenous territories.
+      </Paragraph>
+      <Paragraph>
+        The ones bearing the brunt of Venezuela’s mining bonanza are the{" "}
+        <StoryMedia
+          icon="map"
+          media={{
+            id: "map-4",
+            type: "mapbox",
+            data: {
+              coordinates: [-0.491747846041145, 49.3233379650232]
             }
           }}
         >

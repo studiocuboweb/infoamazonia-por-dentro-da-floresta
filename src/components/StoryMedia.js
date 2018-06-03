@@ -43,9 +43,6 @@ class StoryMedia extends Component {
 
   componentDidMount() {
     this.node = findDOMNode(this);
-    const { coordinates, type, media, library } = this.props;
-    console.log(library)
-    console.log('--coordinates', coordinates, '--type ', type)
 
     // Wait transition
     setTimeout(() => {
@@ -70,6 +67,7 @@ class StoryMedia extends Component {
   }
   
   _updateMedia() {
+    console.log('here updating')
     const { media, library, updateMedia, pathname } = this.props;
     
     const inLibrary = library[this._getMediaId(media)];
