@@ -36,13 +36,16 @@ const About = ({ intl, lastPath }) => {
       </Helmet>
       <section className="content">
           <div className="button-box">
-              <button type="button">
-                <span className="fa fa-times"/>
-                <FormattedMessage
-                  id="about.close"
-                  defaultMessage="voltar"
-                />
-              </button>
+              {
+                lastPath &&
+                  <button type="button">
+                    <span className="fa fa-times"/>
+                    <FormattedMessage
+                      id="about.close"
+                      defaultMessage="voltar"
+                    />
+                  </button>
+              }
             </div>
         <Container>
           <Paragraph big>
