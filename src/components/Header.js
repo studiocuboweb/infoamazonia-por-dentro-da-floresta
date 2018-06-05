@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
+import { connect } from "react-redux";
 import { media, color } from 'styles/utils';
 import { NavLink, Link } from 'react-router-dom';
 
@@ -82,14 +83,18 @@ const Wrapper = styled.header`
 
 class Header extends Component {
   render () {
+    const { lastPath,aboutPath } = this.props;
     return (
       <Wrapper>
         <div className="header-content">
           <SiteTitle logo="1" />
           <nav>
-            <NavLink to="/about" title="Learn more">
+          {
+            aboutPath &&
+            <NavLink to={aboutPath} title="Learn more">
               <span className="fa fa-info"></span>
             </NavLink>
+          }
             <NavLink to="/share" title="Share">
               <span className="fa fa-share-alt"></span>
             </NavLink>
@@ -100,4 +105,11 @@ class Header extends Component {
   }
 }
 
-export default Header;
+const mapStateToProps = (state, ownProps) => {
+  return {
+    lastPath: state.context.lastPath,
+    aboutPath: state.context.aboutPath
+  };
+};
+
+export default connect(mapStateToProps, null)(Header);
