@@ -61,6 +61,20 @@ const About = ({ intl, lastPath }) => {
       </Helmet>
       <section className="content">
         <Container>
+        <Button>
+          <div>
+            {
+              lastPath &&
+                <Link to={lastPath}>
+                  <span className="fa fa-arrow-left" />
+                  <FormattedMessage
+                    id="about.close"
+                    defaultMessage="Continue Reading"
+                  />
+                </Link>
+            }
+          </div>
+        </Button>
           <Paragraph big>
             <FormattedMessage
               id="about.intro"
