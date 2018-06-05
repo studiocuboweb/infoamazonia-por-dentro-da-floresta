@@ -33,7 +33,7 @@ export default function reducer (state = initialState, action) {
       return Object.assign({}, initialState);
     }
     case LOCATION_CHANGE : {
-      if(action.payload.pathname !== '/') {
+      if(action.payload.pathname !== '/' && action.payload.pathname !== '/about') {
         return Object.assign({}, initialState, state, {
           lastPath: action.payload.pathname
         });

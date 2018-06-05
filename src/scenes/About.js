@@ -33,6 +33,15 @@ const About = ({ intl }) => {
         </title>
       </Helmet>
       <section className="content">
+          <div className="button-box">
+              <button type="button">
+                <span className="fa fa-times"/>
+                <FormattedMessage
+                  id="about.close"
+                  defaultMessage="voltar"
+                />
+              </button>
+            </div>
         <Container>
           <Paragraph big>
             <FormattedMessage
@@ -47,7 +56,7 @@ const About = ({ intl }) => {
                 correo: (
                   <strong>
                     <a href="http://www.correodelcaroni.com/">
-                      Correo del Caroní
+                      Correo del Caroní 
                     </a>
                   </strong>
                 ),
