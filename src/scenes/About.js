@@ -1,4 +1,5 @@
 import React from "react";
+import { connect } from "react-redux";
 import { Helmet } from "react-helmet";
 import {
   injectIntl,
@@ -22,7 +23,8 @@ const messages = defineMessages({
   }
 });
 
-const About = ({ intl }) => {
+const About = ({ intl, lastPath }) => {
+  console.log('Here', lastPath)
   const title = intl.formatMessage(messages.title);
   const siteTitle = intl.formatMessage(messages.siteTitle);
   return (
@@ -211,4 +213,10 @@ About.propTypes = {
   intl: intlShape.isRequired
 };
 
-export default injectIntl(About);
+const mapStateToProps = (state, ownProps) => {
+  return {
+    lastPath: state.context.lastPath
+  };
+};
+
+export default injectIntl(connect(mapStateToProps, null)(About));
