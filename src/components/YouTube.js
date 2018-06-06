@@ -103,7 +103,9 @@ class YouTubeVideo extends Component {
       const { chapter: newChapter } = nextProps;
       const { chapter: oldChapter } = this.props;
 
-      if (newChapter.start !== oldChapter.start) this.node.seekTo(newChapter.start)
+      if (newChapter && oldChapter) {
+        if(newChapter.start !== oldChapter.start) this.node.seekTo(newChapter.start)
+      }
     }
   }
   
