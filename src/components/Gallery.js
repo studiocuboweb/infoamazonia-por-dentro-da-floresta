@@ -50,7 +50,7 @@ const Preview = styled.div`
         cursor:pointer;
         overflow: hidden;
         outline:none;
-        font-family: Georgia,Times,"Times New Roman",serif;
+        font-family: 'Merriweather', serif;
         font-size: 0.8em;
         font-weight: 600;
         color: #ffffff;

@@ -11,7 +11,7 @@ body {
   color: #333;
   font-size: 1.2em;
   line-height: 1.4;
-  font-family: Georgia,Times,"Times New Roman",serif;
+  font-family: 'Merriweather', serif;
 }
 
 ::selection {
