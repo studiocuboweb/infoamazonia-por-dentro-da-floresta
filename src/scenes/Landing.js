@@ -196,7 +196,7 @@ const Middle = styled.div`
   width: 95%;
   text-align: center;
   font-size: 0.8em;
-  font-family: "Playfair Display";
+  font-family: 'Merriweather', serif;
   ${media.phablet`
     width: 65%;
     padding: 0 3rem;

@@ -543,6 +543,13 @@ export default () => (
         importantes, a Amazônia, faz do Arco Minero uma questão de interesse
         internacional.
       </Paragraph>
+      <RelatedNews
+        sectionTitle={"Confira também: "}
+        title={"Lorem ipsum 2"}
+        subtitle={"The situation in venzuela is critical, the people is suffering and beeing smashed everyday." }
+        imageUrl={"http://darkroom-cdn.s3.amazonaws.com/2016/09/APphoto_Venezuela-Opposition-Protest-9.jpg"}
+        href={"http://runrun.es/nacional/292903/tsj-declaro-nulas-las-sesiones-del-5-y-el-9-de-enero-de-la-asamblea-nacional.html"}
+      />
     </Container>
   </article>
 );

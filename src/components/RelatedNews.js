@@ -66,9 +66,11 @@ const Wrapper = styled.div`
     }
   }
   .more-content-header {
-    border-bottom: 1px rgba(0,0,0,.3) solid;
     padding-bottom: 0.5rem;
     margin-bottom: 1.3rem;
+  }
+  .related-content>h3 {
+    border-bottom: 1px rgba(0,0,0,.3) solid;
   }
 `
 

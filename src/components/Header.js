@@ -100,9 +100,10 @@ class Header extends Component {
     return (
       <Wrapper>
         <div className="header-content">
-            <img src={require("images/partners/infoamazonia-black.png")} />
-            <img src={require("images/partners/amazonia-real.png")} />
-            <SiteTitle logo="1" />
+            <div className="site-title clearfix">
+              <img src={require("images/partners/infoamazonia-black.png")} />
+              <img src={require("images/partners/amazonia-real.png")} />
+            </div>
           <nav>
           {
             aboutPath &&

@@ -48,6 +48,7 @@ class Scene extends Component {
     this.onStoryEnter = this.onStoryEnter.bind(this);
     this.onStoryEntered = this.onStoryEntered.bind(this);
     this.unexpand = this.unexpand.bind(this);
+    this.enableNextChapter = false;
   }
   componentDidMount() {
     this.removeSwipeListeners = swipe(findDOMNode(this), direction => {
@@ -156,7 +157,7 @@ class Scene extends Component {
               </Switch>
             </CSSTransition>
           </TransitionGroup>
-          {!entering ? (
+          {!entering && this.enableNextChapter ? (
             <footer>
               <Container>
                 {!this.isLastArticle() ? (

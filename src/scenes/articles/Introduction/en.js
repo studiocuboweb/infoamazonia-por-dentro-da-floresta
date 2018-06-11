@@ -11,6 +11,7 @@ import Title from "components/blocks/Title";
 import Quote from "components/blocks/Quote";
 import FeaturedText from "components/blocks/FeaturedText";
 import Note from "components/blocks/Note";
+import RelatedNews from "components/RelatedNews";
 
 export default () => (
   <article>
@@ -535,6 +536,13 @@ export default () => (
         ecosystems, the Amazon, makes the Arco Minero an issue of international
         interest.
       </Paragraph>
+      <RelatedNews
+        sectionTitle={"See also: "}
+        title={"Lorem ipsum 2"}
+        subtitle={"The situation in venzuela is critical, the people is suffering and beeing smashed everyday." }
+        imageUrl={"http://darkroom-cdn.s3.amazonaws.com/2016/09/APphoto_Venezuela-Opposition-Protest-9.jpg"}
+        href={"http://runrun.es/nacional/292903/tsj-declaro-nulas-las-sesiones-del-5-y-el-9-de-enero-de-la-asamblea-nacional.html"}
+      />
     </Container>
   </article>
 );
