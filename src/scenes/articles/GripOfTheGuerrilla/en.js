@@ -12,7 +12,7 @@ import FeaturedText from "components/blocks/FeaturedText";
 export default () => (
   <article>
     <Helmet>
-      <title>Amazonas and Western-Bolívar: in the guerrillas’ grip | Digging into the Mining Arc</title>
+      <title>Amazonas and Western-Bolívar: in the guerrillas’ grip | A Veneza de Belo Monte</title>
     </Helmet>
     <Container>
       <Title as="h2">

@@ -30,6 +30,19 @@ const Wrapper = styled.header`
     flex: 1 1 100%;
     font-size: .6em;
   }
+  img {
+    width: auto;
+    height: auto;
+    max-height: 2vh;
+    margin: 0 1rem;
+    ${media.phablet`
+      max-height: 5vh;
+      max-width: 8vw;
+    `}
+    ${media.desktop`
+      margin: 0 1rem;
+    `};
+  }
   nav {
     flex: 0 0 auto;
     align-items: center;
@@ -87,7 +100,9 @@ class Header extends Component {
     return (
       <Wrapper>
         <div className="header-content">
-          <SiteTitle logo="1" />
+            <img src={require("images/partners/infoamazonia-black.png")} />
+            <img src={require("images/partners/amazonia-real.png")} />
+            <SiteTitle logo="1" />
           <nav>
           {
             aboutPath &&

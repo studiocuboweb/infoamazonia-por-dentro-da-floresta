@@ -14,8 +14,7 @@ export default () => (
   <article>
     <Helmet>
       <title>
-        Malaria is biting through Venezuela’s mining areas | Digging into the
-        Mining Arc
+        Malaria is biting through Venezuela’s mining areas | A Veneza de Belo Monte
       </title>
     </Helmet>
     <Container>

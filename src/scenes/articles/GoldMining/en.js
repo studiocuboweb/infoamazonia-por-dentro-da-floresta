@@ -13,7 +13,7 @@ export default () => (
   <article>
     <Helmet>
       <title>
-        Unrest in Venezuela’s cradle of gold mining | Digging into the Mining
+        Unrest in Venezuela’s cradle of gold mining | A Veneza de Belo Monte
         Arc
       </title>
     </Helmet>

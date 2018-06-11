@@ -20,7 +20,7 @@ const Title = styled.h1`
   .logo {
     border-radius: 100%;
     float: left;
-    margin-right: -.5em;
+    margin-right: 1.5em;
     width: 1.65em;
     margin-top: -.1em;
   }
@@ -76,23 +76,23 @@ class SiteTitle extends Component {
         <Title {...props}>
           <Link to="/">
             <span className="logo">
-              <img src={logos[logoIndex]} alt="Digging into the Mining Arc" />
+              <img src={logos[logoIndex]} alt="A Veneza de Belo Monte" />
             </span>
             <span className="title-text">
               <span className="title-item title-1">
                 <FormattedMessage
                   id="general.siteTitle1"
-                  defaultMessage="Digging" />
+                  defaultMessage="Lorem" />
               </span>
               <span className="title-item title-2">
                 <FormattedMessage
                   id="general.siteTitle2"
-                  defaultMessage="into the" />
+                  defaultMessage="Ipsum dolore" />
               </span>
               <span className="title-item title-3">
                 <FormattedMessage
                   id="general.siteTitle3"
-                  defaultMessage="Mining Arc" />
+                  defaultMessage="Sit ammet dominus tecum" />
               </span>
             </span>
           </Link>

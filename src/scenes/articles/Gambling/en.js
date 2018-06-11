@@ -13,7 +13,7 @@ import Quote from "components/blocks/Quote";
 export default () => (
   <article>
     <Helmet>
-      <title>Gambling away the environment | Digging into the Mining Arc</title>
+      <title>Gambling away the environment | A Veneza de Belo Monte</title>
     </Helmet>
     <Container>
       <Title as="h2">Gambling away the environment</Title>

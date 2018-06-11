@@ -25,7 +25,7 @@ const messages = defineMessages({
   },
   siteTitle: {
     id: "head.title",
-    defaultMessage: "Digging into the Mining Arc"
+    defaultMessage: "A Veneza de Belo Monte"
   }
 });
 

@@ -81,8 +81,8 @@ const favicons = new FaviconsWebpackPlugin({
 });
 
 const pwa = new WebpackPwaManifest({
-  name: "Digging into the Mining Arc",
-  short_name: "Digging into the Mining Arc",
+  name: "A Veneza de Belo Monte",
+  short_name: "A Veneza de Belo Monte",
   description:
     "The destruction of 110 thousand square kilometers of forests in the largest mining project in Venezuela",
   background_color: "#fff",

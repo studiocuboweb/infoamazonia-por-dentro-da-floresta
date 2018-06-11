@@ -11,7 +11,7 @@
   {
     "descriptors": [
       {
-        "defaultMessage": "Digging into the Mining Arc",
+        "defaultMessage": "A Veneza de Belo Monte",
         "id": "head.title"
       },
       {
@@ -57,15 +57,15 @@
   {
     "descriptors": [
       {
-        "defaultMessage": "Digging",
+        "defaultMessage": "Lorem",
         "id": "general.siteTitle1"
       },
       {
-        "defaultMessage": "into the",
+        "defaultMessage": "ipsum dolore",
         "id": "general.siteTitle2"
       },
       {
-        "defaultMessage": "Mining Arc",
+        "defaultMessage": "sit amet dominus tecum",
         "id": "general.siteTitle3"
       }
     ],
@@ -78,7 +78,7 @@
         "id": "about.title"
       },
       {
-        "defaultMessage": "Digging into the Mining Arc",
+        "defaultMessage": "A Veneza de Belo Monte",
         "id": "head.title"
       },
       {
@@ -172,7 +172,7 @@
         "id": "share.title"
       },
       {
-        "defaultMessage": "Digging into the Mining Arc",
+        "defaultMessage": "A Veneza de Belo Monte",
         "id": "head.title"
       }
     ],

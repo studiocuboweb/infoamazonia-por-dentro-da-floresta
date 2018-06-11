@@ -15,7 +15,7 @@ import Note from "components/blocks/Note";
 export default () => (
   <article>
     <Helmet>
-      <title>Introduction | Digging to the Mining Arc</title>
+      <title>Introduction | A Veneza de Belo Monte</title>
     </Helmet>
     <Container>
       <Note>

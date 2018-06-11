@@ -7,7 +7,7 @@ import mediaLibrary from './mediaLibrary';
 import { routerReducer } from 'react-router-redux';
 
 const storage = localForage.createInstance({
-  name: 'Digging into the Mining Arc',
+  name: 'venezuela, mining arc',
   description: 'Persistant application state'
 });
 

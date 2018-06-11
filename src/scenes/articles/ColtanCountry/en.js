@@ -11,7 +11,7 @@ import Quote from "components/blocks/Quote";
 export default () => (
   <article>
     <Helmet>
-      <title>New visitors in coltan country | Digging into the Mining Arc</title>
+      <title>New visitors in coltan country | A Veneza de Belo Monte</title>
     </Helmet>
     <Container>
       <Title as="h2">New visitors in coltan country</Title>
