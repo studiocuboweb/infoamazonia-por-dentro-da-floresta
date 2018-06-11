@@ -37,7 +37,7 @@ export default function reducer (state = initialState, action) {
     }
     case LOCATION_CHANGE : {
       console.log('LOCATION CHANGE');
-      if(action.payload.pathname !== '/' && action.payload.pathname !== '/about') {
+      if(action.payload.pathname !== '/' && action.payload.pathname !== '/about' && action.payload.pathname !== '/share') {
         referPath = action.payload.pathname;
         console.log('not about');
         return Object.assign({}, initialState, state, {
