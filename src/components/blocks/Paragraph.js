@@ -9,11 +9,11 @@ const Wrapper = styled.p`
       css`
         font-size: 1.2em;
         a {
-          color: #333;
+          color: #99cc66;
           &:active,
           &:focus,
           &:hover {
-            color: #000;
+            color: #336600;
           }
         }
       `} ${props =>

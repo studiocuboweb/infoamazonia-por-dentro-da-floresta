@@ -14,6 +14,7 @@ import Container from "components/blocks/Container";
 import Paragraph from "components/blocks/Paragraph";
 import Title from "components/blocks/Title";
 import Full from "components/blocks/Full";
+import { Link } from "react-router-dom";
 
 const messages = defineMessages({
   title: {
@@ -26,6 +27,30 @@ const messages = defineMessages({
   }
 });
 
+
+const Button = styled.div`
+  widht:100%;
+  margin-top:50px;
+  text-align: center;
+  a{ 
+    margin:0 auto;
+    font-family: "Cinzel";
+    font-size: 0.5em;
+    -webkit-letter-spacing: 0.1rem;
+    -moz-letter-spacing: 0.1rem;
+    -ms-letter-spacing: 0.1rem;
+    letter-spacing: 0.1rem;
+    display: inline-block;
+    color: #fff;
+    border: 1px solid #fff;
+    text-align: center;
+    padding: 0.75rem 1rem;
+    font-weight: 600;
+    width: 210px;
+    text-transform: uppercase;
+  }
+`;
+
 const Buttons = styled.div`
   display: table;
   text-align: center;
@@ -35,10 +60,10 @@ const Buttons = styled.div`
     margin: 0 auto;
   `} .fa {
     font-size: 3em;
-    color: #333;
+    color: #fff;
     cursor: pointer;
     &:hover {
-      color: #000;
+      color: #333;
     }
   }
   > * {
@@ -94,6 +119,19 @@ const Share = ({ intl }) => {
               <span className="fa fa-whatsapp" />
             </WhatsappShareButton>
           </Buttons>
+          <Button>
+            <div>
+              {
+                  <Link to='/'>
+                    <span className="fa fa-arrow-left" />
+                    <FormattedMessage
+                      id="about.close"
+                      defaultMessage="Continue Reading"
+                    />
+                  </Link>
+              }
+            </div>
+          </Button>
         </Container>
       </section>
     </Page>

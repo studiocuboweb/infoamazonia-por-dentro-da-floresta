@@ -130,6 +130,9 @@ const Top = styled.div`
       justify-content: space-between;
       width: 5rem;
     }
+    .color-white {
+      color:#fff !important;
+    }
     .partners-logo {
       align-self: end;
       img {
@@ -188,8 +191,24 @@ const Spacer = styled.div`
     position: absolute;
     right: 0;
     padding: 1rem;
-    border: 1px solid #fff;
   }
+  a {
+    font-family: "Cinzel";
+    font-size: 0.5em;
+    -webkit-letter-spacing: 0.1rem;
+    -moz-letter-spacing: 0.1rem;
+    -ms-letter-spacing: 0.1rem;
+    letter-spacing: 0.1rem;
+    display: inline-block;
+    color: #fff;
+    backgound-color:#000;
+    border: 1px solid #fff;
+    text-align: center;
+    margin: -1px -1px 0 0;
+    padding: 0.75rem 1rem;
+    font-weight: 600;
+    width: 210px;
+    text-transform: uppercase;
 `;
 
 const Middle = styled.div`
@@ -412,10 +431,10 @@ class Scene extends Component {
               <img src={require("images/partners/correo.png")} />
             </div>
             <nav className="help-box">
-              <NavLink to="/about" title="Learn more">
+              <NavLink to="/about" className="color-white" title="Learn more">
                 <span className="fa fa-info"></span>
               </NavLink>
-              <NavLink to="/share" title="Share">
+              <NavLink to="/share" className="color-white" title="Share">
                 <span className="fa fa-share-alt"></span>
               </NavLink>
             </nav>
@@ -425,16 +444,21 @@ class Scene extends Component {
           {
             !playing &&
               <div className="spacer-content">
-                  <button
-                    onClick={ this._startOver }>
-                    <span>{elapsedTime ? 'Recomeçar' : 'Iniciar'}</span>
-                  </button>
+                  <Link to="#" onClick={this._startOver}>
+                    <FormattedMessage
+                      //id={elapsedTime ? 'Recomeçar' : 'general.startOver'}"\
+                      id='general.startOver'
+                      defaultMessage="Start Over"
+                    />
+                  </Link>
               {
                 elapsedTime &&
-                  <button
-                    onClick={ this._resumeVideo }>
-                    <span>Continuar Lendo</span>
-                  </button>
+                  <Link to="#" onClick={ this._resumeVideo }>
+                    <FormattedMessage
+                    id="general.continueReading"
+                    defaultMessage="Continue Reading"
+                    />
+                  </Link>
               }
               </div>
           }
@@ -451,7 +475,7 @@ class Scene extends Component {
   _goToChapter = ({ seek }) => this.setState({ chapter: { start: seek }});
 
   _setVideoEnd = () => this.setState({ ended: true, playing: false });
-x
+
   _resumeVideo = () => this.setState({ playing: true, startOver:  false })
 
   _startOver = () => this.setState({ startOver: true,  playing: true })
