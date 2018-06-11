@@ -86,7 +86,7 @@ class Header extends Component {
       <div className="partners">
         <div className="partners-logo">
           <img src={require("images/partners/infoamazonia.png")} />
-          <img src={require("images/partners/correo.png")} />
+          <img src={require("images/partners/amazonia-real.png")} />
         </div>
         <nav className="help-box">
           <NavLink to="/about" className="color-white" title="Learn more">

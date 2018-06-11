@@ -168,6 +168,8 @@ class YouTubeVideo extends Component {
               width: 1920,
               playerVars: {
                 autoplay: autoplay,
+                showinfo: 0,
+                rel:0
               },
             }}
             onPlay={this._saveVideoState}

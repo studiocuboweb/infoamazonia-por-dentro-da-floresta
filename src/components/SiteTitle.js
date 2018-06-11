@@ -76,13 +76,13 @@ class SiteTitle extends Component {
         <Title {...props}>
           <Link to="/">
             <span className="logo">
-              <img src={logos[logoIndex]} alt="Digging into the Mining Arc" />
+              <img src={logos[logoIndex]} alt="A Veneza de Belo Monte" />
             </span>
             <span className="title-text">
               <span className="title-item title-1">
                 <FormattedMessage
                   id="general.siteTitle1"
-                  defaultMessage="Digging" />
+                  defaultMessage="Lorem" />
               </span>
               <span className="title-item title-2">
                 <FormattedMessage
@@ -92,7 +92,7 @@ class SiteTitle extends Component {
               <span className="title-item title-3">
                 <FormattedMessage
                   id="general.siteTitle3"
-                  defaultMessage="Mining Arc" />
+                  defaultMessage="Lorem title" />
               </span>
             </span>
           </Link>

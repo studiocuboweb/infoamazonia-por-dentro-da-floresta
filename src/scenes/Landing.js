@@ -201,7 +201,6 @@ const Spacer = styled.div`
     letter-spacing: 0.1rem;
     display: inline-block;
     color: #fff;
-    backgound-color:#000;
     border: 1px solid #fff;
     text-align: center;
     margin: -1px -1px 0 0;
@@ -209,6 +208,7 @@ const Spacer = styled.div`
     font-weight: 600;
     width: 210px;
     text-transform: uppercase;
+    background-color: rgba(0, 0, 0, 0.4) !important;
 `;
 
 const Middle = styled.div`
@@ -428,7 +428,7 @@ class Scene extends Component {
           <div className="partners">
             <div className="partners-logo">
               <img src={require("images/partners/infoamazonia.png")} />
-              <img src={require("images/partners/correo.png")} />
+              <img src={require("images/partners/amazonia-real.png")} />
             </div>
             <nav className="help-box">
               <NavLink to="/about" className="color-white" title="Learn more">

@@ -6,16 +6,16 @@ import { Helmet } from "react-helmet";
 const messages = defineMessages({
   title: {
     id: "head.title",
-    defaultMessage: "Digging into the Mining Arc"
+    defaultMessage: "A Veneza de Belo Monte"
   },
   description: {
     id: "head.description",
     defaultMessage:
-      "The destruction of 44 thousand square miles of forests in the largest mining project in Venezuela"
+      "Lorem ipsum dolre sit amet"
   },
   keywords: {
     id: "head.keywords",
-    defaultMessage: "venezuela, mining arc"
+    defaultMessage: "Lorem ipsum dolre"
   }
 });
 
