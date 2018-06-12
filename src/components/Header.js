@@ -36,11 +36,20 @@ const Wrapper = styled.header`
     max-height: 2vh;
     margin: 0 1rem;
     ${media.phablet`
-      max-height: 5vh;
-      max-width: 8vw;
+    max-height: 15vh;
+    max-width: 18vw;
+    `}
+    ${media.phone`
+      max-height: 15vh;
+      max-width: 18vw;
     `}
     ${media.desktop`
-      margin: 0 1rem;
+      margin: 0 2rem;
+      max-height: 5vh;
+    `}
+    ${media.desktopHD`
+      margin: 0 2rem;
+      max-height: 5vh;
     `};
   }
   nav {

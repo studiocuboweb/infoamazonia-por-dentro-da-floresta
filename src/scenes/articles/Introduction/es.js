@@ -11,6 +11,7 @@ import Title from "components/blocks/Title";
 import Quote from "components/blocks/Quote";
 import FeaturedText from "components/blocks/FeaturedText";
 import Note from "components/blocks/Note";
+import RelatedNews from "components/RelatedNews";
 
 export default () => (
   <article>

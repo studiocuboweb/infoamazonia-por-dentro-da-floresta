@@ -25,14 +25,24 @@ export const sizes = [
 
 export const media = sizes.reduce((acc, size, index) => {
   const emSize = size.width / 16;
-  acc[size.device] = (...args) => css`
-    ${size.width == 400 &&
-      css(...args)
-    }
+  if (size.width == 400) {
+    acc[size.device] = (...args) => css`
+      ${size.width == 400 &&
+        css(...args)
+      }
+
+      @media(max-width: ${emSize}em) {
+        ${css(...args)}
+      }
+    `
+  } else {
+    acc[size.device] = (...args) => css`
+
     @media(min-width: ${emSize}em) {
       ${css(...args)}
     }
-  `
+  `   
+  }
   return acc;
 }, {});
 

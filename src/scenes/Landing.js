@@ -136,11 +136,20 @@ const Top = styled.div`
       max-height: 2vh;
       margin: 0 1rem;
       ${media.phablet`
-        max-height: 5vh;
-        max-width: 8vw;
+        max-height: 15vh;
+        max-width: 18vw;
+      `}
+      ${media.phone`
+        max-height: 30vh;
+        max-width: 33vw;
       `}
       ${media.desktop`
         margin: 0 2rem;
+        max-height: 15vh;
+      `}
+      ${media.desktopHD`
+        margin: 0 2rem;
+        max-height: 8vh;
       `};
     }
   }
@@ -154,7 +163,7 @@ const Top = styled.div`
       font-size: 1.2em;
     `} ${media.desktopHD`
       font-size: 1.6em;
-    `};
+    `}
   }
   h2 {
     white-space: nowrap;
