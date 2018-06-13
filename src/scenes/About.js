@@ -6,6 +6,7 @@ import {
   defineMessages,
   FormattedMessage
 } from "react-intl";
+import { connect } from "react-redux";
 import Page from "components/Page";
 import Container from "components/blocks/Container";
 import Paragraph from "components/blocks/Paragraph";
@@ -46,7 +47,7 @@ const Button = styled.div`
     text-transform: uppercase;
   }
 `;
-const About = ({ intl }) => {
+const About = ({ intl, lastPath }) => {
   const title = intl.formatMessage(messages.title);
   const siteTitle = intl.formatMessage(messages.siteTitle);
   return (
@@ -60,15 +61,16 @@ const About = ({ intl }) => {
         <Container>
           <Button>
             <div>
-              {
-                  <Link to='/'>
-                    <span className="fa fa-arrow-left" />
-                    <FormattedMessage
-                      id="about.close"
-                      defaultMessage="Continue Reading"
-                    />
-                  </Link>
-              }
+            {
+              lastPath &&
+                <Link to={lastPath}>
+                  <span className="fa fa-arrow-left" />
+                  <FormattedMessage
+                    id="about.close"
+                    defaultMessage="Continue Reading"
+                  />
+                </Link>
+            }
             </div>
           </Button>
           <Paragraph big>
@@ -252,4 +254,11 @@ About.propTypes = {
   intl: intlShape.isRequired
 };
 
-export default injectIntl(About);
+
+const mapStateToProps = (state, ownProps) => {
+  return {
+    lastPath: state.context.lastPath
+  };
+};
+
+export default injectIntl(connect(mapStateToProps, null)(About));

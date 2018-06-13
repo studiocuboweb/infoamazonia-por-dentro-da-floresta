@@ -75,9 +75,6 @@ class SiteTitle extends Component {
       <div className="site-title clearfix">
         <Title {...props}>
           <Link to="/">
-            <span className="logo">
-              <img src={logos[logoIndex]} alt="A Veneza de Belo Monte" />
-            </span>
             <span className="title-text">
               <span className="title-item title-1">
                 <FormattedMessage
