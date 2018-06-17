@@ -1,4 +1,5 @@
 import React from "react";
+import { connect } from "react-redux";
 import { Helmet } from "react-helmet";
 import {
   injectIntl,
@@ -71,7 +72,7 @@ const Buttons = styled.div`
   }
 `;
 
-const Share = ({ intl }) => {
+const Share = ({ intl, lastPath }) => {
   const title = intl.formatMessage(messages.title);
   const siteTitle = intl.formatMessage(messages.siteTitle);
   const url = process.env.SITE_URL || "http://google.com";
@@ -122,7 +123,7 @@ const Share = ({ intl }) => {
           <Button>
             <div>
               {
-                  <Link to='/'>
+                  <Link to={lastPath}>
                     <span className="fa fa-arrow-left" />
                     <FormattedMessage
                       id="about.close"
@@ -142,4 +143,10 @@ Share.propTypes = {
   intl: intlShape.isRequired
 };
 
-export default injectIntl(Share);
+const mapStateToProps = (state, ownProps) => {
+  return {
+    lastPath: state.context.lastPath
+  };
+};
+
+export default injectIntl(connect(mapStateToProps, null)(Share));
