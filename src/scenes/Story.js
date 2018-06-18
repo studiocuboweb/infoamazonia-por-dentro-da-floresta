@@ -307,7 +307,6 @@ class Scene extends Component {
     ended: false,
     playing: true,
     menuOpened: true,
-    startOver: true,
   }
 
   toogleMenu = () => {
@@ -397,8 +396,7 @@ class Scene extends Component {
   }
 
   render() {
-    const { lastPath, resetContext } = this.props;
-    const { chapter, ended, playing, width, height, startOver, elapsedTime } = this.state;
+    const { chapter, ended, playing, elapsedTime } = this.state;
 
     return (
       <Wrapper className="scene landing">
@@ -407,7 +405,6 @@ class Scene extends Component {
             playing && !ended &&
               <YouTubeVideo
                 { ...this.state.playing }
-                startOver={ this.state.startOver }
                 chapter={chapter}
                 autoplay={!elapsedTime ? true : false}
                 data={{ id: "b0MjlZWd4Tk" }}

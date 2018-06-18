@@ -254,6 +254,7 @@ class Scene extends Component {
   constructor(props) {
     super(props);
   }
+
   isLaunchDate() {
     if (launchDate) {
       return moment(launchDate).isAfter(window.currentDate);
@@ -261,6 +262,11 @@ class Scene extends Component {
       return false;
     }
   }
+
+  _clearVideoContext = () => {
+    localStorage.removeItem('elapsed-time')
+  }
+
   render() {
     const { lastPath, resetContext } = this.props;
     return (
@@ -311,7 +317,7 @@ class Scene extends Component {
             <div>
               {lastPath ? (
                 <div>
-                  <Link to="/story" onClick={resetContext}>
+                  <Link to='/story' onClick={this._clearVideoContext}>
                     <FormattedMessage
                       id="general.startOver"
                       defaultMessage="Start Over"
