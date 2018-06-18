@@ -36,9 +36,9 @@ const VideoContentEnd = ({ data }) => (
         href={"http://runrun.es/nacional/292903/tsj-declaro-nulas-las-sesiones-del-5-y-el-9-de-enero-de-la-asamblea-nacional.html"}
       />
       <div className="link-back">
-        <Link to="/story">
+        <Link to="/">
           <FormattedMessage
-            id="general.startOver"
+            id="general.backToHome"
             defaultMessage="Start Over"
           />
         </Link>

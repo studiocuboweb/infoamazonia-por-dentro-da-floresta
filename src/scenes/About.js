@@ -226,15 +226,16 @@ const About = ({ intl, lastPath }) => {
           </Paragraph>
           <Button>
             <div>
-              {
-                  <Link to='/'>
-                    <span className="fa fa-arrow-left" />
-                    <FormattedMessage
-                      id="about.close"
-                      defaultMessage="Continue Reading"
-                    />
-                  </Link>
-              }
+            {
+              lastPath &&
+                <Link to={lastPath}>
+                  <span className="fa fa-arrow-left" />
+                  <FormattedMessage
+                    id="about.close"
+                    defaultMessage="Continue Reading"
+                  />
+                </Link>
+            }
             </div>
           </Button>
           <hr />

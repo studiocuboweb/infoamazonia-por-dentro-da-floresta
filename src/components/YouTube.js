@@ -75,21 +75,23 @@ class YouTubeVideo extends Component {
     this._onStateChange = this._onStateChange.bind(this);
     this._handleClick = this._handleClick.bind(this);
     this._handleWindowClose = this._handleWindowClose.bind(this);
+    this.interval;
   }
 
   componentDidMount() {
     console.log(this.props)
     window.addEventListener('onbeforeunload', this._handleWindowClose);
-    setInterval(() => {
+    this.interval =  setInterval(() => {
       const currentVideoState = JSON.parse(localStorage.getItem('elapsed-time'))
       this._saveVideoState(currentVideoState)
     },  3000)
   }
 
   componentWillUnmount() {
+    console.log('component unmount');
+    clearInterval(this.interval)
     this._saveVideoState();
     window.removeEventListener('onbeforeunload', this._handleWindowClose);
-    clearInterval()
   }
 
   componentWillReceiveProps(nextProps) {
@@ -189,6 +191,9 @@ class YouTubeVideo extends Component {
       const videoID = this.node.getVideoData().video_id
       const videoCached = { elapsedTime, videoID }
   
+      console.log('elapsedTime');
+      console.log(elapsedTime);
+
       if (elapsedTime > 0 && !currentVideoState) localStorage.setItem('elapsed-time', JSON.stringify(videoCached))
 
       if (currentVideoState && currentVideoState.elapsedTime < elapsedTime) {

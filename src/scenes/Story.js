@@ -213,6 +213,14 @@ const Spacer = styled.div`
 
 const Middle = styled.div`
   width: 100%;
+  .titleVideoChapters {
+    display: block;
+    width: 100%;
+    border:1px solid white;
+    font-size:0.6em;
+    text-align:center;
+    padding:10px 0;
+  }
   .videoChapters * {
     box-sizing: border-box;
   }
@@ -372,9 +380,9 @@ class Scene extends Component {
   componentDidMount = () => {
     if (typeof window !== 'undefined' ) {
       window.addEventListener('resize', this.handleWindowSizeChange)
-      this.setState({
-        width: window.innerWidth,
-        height: window.innerHeight })
+      // this.setState({
+      //   width: window.innerWidth,
+      //   height: window.innerHeight })
     }
     setInterval(() => {
       const storedData = localStorage.getItem('elapsed-time')

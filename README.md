@@ -55,4 +55,4 @@ git push heroku master
 - Apagando o local Storage do browser:
 Abrir o console dev do browser e rodar:
 localStorage.clear()
-localStorage.removeItem('elapsedTime')
+localStorage.removeItem('elapsed-time')

@@ -264,7 +264,13 @@ class Scene extends Component {
   }
 
   _clearVideoContext = () => {
+    console.log('Clear Video context');
     localStorage.removeItem('elapsed-time')
+    const elapsedTime = 0;
+    const videoID = 0;
+    const videoCached = { elapsedTime, videoID }
+  
+    localStorage.setItem('elapsed-time', JSON.stringify(videoCached));
   }
 
   render() {
