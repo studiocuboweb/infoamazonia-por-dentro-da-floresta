@@ -6,6 +6,7 @@ import { NavLink, Link } from 'react-router-dom';
 import SiteTitle from './SiteTitle';
 
 const Top = styled.div`
+  z-index: 2;
   width: 100%;
   flex: 1 1 auto;
   flex-direction: column;
@@ -14,10 +15,12 @@ const Top = styled.div`
   justify-content: center;
   .partners {
     position: absolute;
-    top: 2rem;
+    height: 7%;
+    padding-top: 4rem;
     width: 100%;
     display: flex;
     justify-content: space-between;
+    background-color: #000;
     .help-box {
       margin-right: 2rem;
       display: flex;
