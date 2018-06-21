@@ -14,7 +14,7 @@ const Title = styled.h1`
   margin: 0;
   font-size: .8em;
   line-height: 1;
-  font-family: "Cinzel";
+  font-family: 'Merriweather', serif;
   color: #111;
   font-weight: normal;
   .logo {

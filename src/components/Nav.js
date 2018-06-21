@@ -6,7 +6,7 @@ import { connect } from 'react-redux';
 import { media } from 'styles/utils';
 
 const Wrapper = styled.nav`
-  font-family: "Cinzel", serif;
+  font-family: 'Merriweather', serif;
   font-weight: 600;
   font-size: .4em;
   text-align: center;
