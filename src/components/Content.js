@@ -1,4 +1,3 @@
-import React, { Component } from 'react';
 import styled, { css } from 'styled-components';
 import { media } from 'styles/utils';
 
@@ -39,6 +38,14 @@ export default styled.section`
     }
     h2 {
       font-size: 1.8em;
+    }
+    .content {
+      margin-top:45px !important;
+    }
+  `}
+  ${media.phone`
+    .content {
+      margin-top:25px;
     }
   `}
   ${media.desktopHD`

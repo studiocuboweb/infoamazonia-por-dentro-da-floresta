@@ -10,7 +10,6 @@ import { connect } from "react-redux";
 import Page from "components/Page";
 import Container from "components/blocks/Container";
 import Paragraph from "components/blocks/Paragraph";
-import Title from "components/blocks/Title";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 

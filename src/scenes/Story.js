@@ -1,15 +1,11 @@
 import React, { Component, Fragment } from "react";
 import styled from "styled-components";
-import moment from "moment";
-import { FormattedMessage } from "react-intl";
 import { connect } from "react-redux";
 import { resetContext } from "actions/context";
 import { media, color } from "styles/utils";
-import Countdown from "react-countdown-now";
 
-import SiteTitle from "components/SiteTitle";
 import VideoEndContent from 'components/containers/VideoEndContent';
-import Menu from 'components/blocks/Menu';
+import Header from 'components/Header';
 
 import { NavLink, Link } from 'react-router-dom';
 import YouTubeVideo from "components/YouTube";
@@ -35,15 +31,11 @@ const Wrapper = styled.section`
   .video-content {
     position: absolute;
     width: 100%;
+    z-index:10;
   }
   &.route-transition-enter {
     opacity: 1;
     background-color: transparent;
-    .partners,
-    .site-title {
-      opacity: 0;
-      transform: translate(0, -15px);
-    }
     .middle {
       opacity: 0;
       transform: translate(0, 15px);
@@ -61,8 +53,6 @@ const Wrapper = styled.section`
     z-index: 9999;
     background-color: #000;
     &:before,
-    .partners,
-    .site-title,
     .middle,
     h2,
     h3,
@@ -76,8 +66,6 @@ const Wrapper = styled.section`
     opacity: 1;
     background-color: #000;
     &:before,
-    .partners,
-    .site-title,
     .middle,
     h2,
     h3,
@@ -90,12 +78,6 @@ const Wrapper = styled.section`
     opacity: 1;
     transition: all 800ms ease-in;
     background-color: transparent;
-    .partners,
-    .site-title {
-      opacity: 0;
-      transform: translate(0, -15px);
-      transition: all 250ms ease-in;
-    }
     .middle {
       opacity: 0;
       transform: translate(0, 15px);
@@ -108,80 +90,6 @@ const Wrapper = styled.section`
       opacity: 0;
       transition: all 250ms ease-in;
     }
-  }
-`;
-
-const Top = styled.div`
-  width: 100%;
-  flex: 1 1 auto;
-  flex-direction: column;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  .partners {
-    position: absolute;
-    top: 2rem;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    .help-box {
-      margin-right: 2rem;
-      display: flex;
-      justify-content: space-between;
-      width: 5rem;
-    }
-    .color-white {
-      color:#fff !important;
-    }
-    .partners-logo {
-      align-self: end;
-      img {
-        width: auto;
-        height: auto;
-        max-height: 2vh;
-        margin: 0 1rem;
-        ${media.phablet`
-          max-height: 5vh;
-          max-width: 8vw;
-        `}
-        ${media.desktop`
-          margin: 0 2rem;
-        `};
-      }
-    }
-  }
-  h1 {
-    font-size: 1.1em;
-    color: #fff;
-    .logo {
-      margin-left: -1rem;
-    }
-    ${media.tablet`
-      font-size: 1.2em;
-    `} ${media.desktopHD`
-      font-size: 1.6em;
-    `};
-  }
-  h2 {
-    white-space: nowrap;
-    color: #fff;
-    font-size: 0.8em;
-    font-style: italic;
-    font-weight: normal;
-    border-top: 1px solid #fff;
-    margin: 2rem 0 0;
-    padding: 0.5rem 2rem;
-    ${media.tablet`
-      font-size: 1em;
-    `} ${media.desktopHD`
-      margin: 3rem 0 0;
-    `};
-  }
-  h3 {
-    font-size: 0.6em;
-    font-style: italic;
-    font-weight: normal;
-    ${"" /* color: rgba(255,255,255,0.8); */};
   }
 `;
 
@@ -423,22 +331,7 @@ class Scene extends Component {
           }
           {ended && !playing && <VideoEndContent data="" />}
         </div>
-        <Top>
-          <div className="partners">
-            <div className="partners-logo">
-              <img src={require("images/partners/infoamazonia.png")} />
-              <img src={require("images/partners/amazonia-real.png")} />
-            </div>
-            <nav className="help-box">
-              <NavLink to="/about" className="color-white" title="Learn more">
-                <span className="fa fa-info"></span>
-              </NavLink>
-              <NavLink to="/share" className="color-white" title="Share">
-                <span className="fa fa-share-alt"></span>
-              </NavLink>
-            </nav>
-          </div>
-        </Top>
+        <Header />
         <Middle className="middle"  style={{ zIndex: 999 }}>
             <div className="videoChapters">
               {playing && this.renderMenu()}

@@ -15,10 +15,10 @@ const Top = styled.div`
   justify-content: center;
   .partners {
     position: fixed;
-    height: 12%;
-    padding-top: 10rem;
+    top: 0;
     width: 100%;
     display: flex;
+    padding-top: 1rem;
     justify-content: space-between;
     background-color: #000;
     .help-box {
@@ -39,8 +39,8 @@ const Top = styled.div`
         max-width: 18vw;
         `}
         ${media.phone`
-          max-height: 15vh;
-          max-width: 18vw;
+          max-height: 19vh;
+          max-width: 22vw;
         `}
         ${media.desktop`
           margin: 0 2rem;

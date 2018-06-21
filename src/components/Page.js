@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 
 import Header from 'components/Header';
-import ArticleNav from 'components/Nav';
 import Content from 'components/Content';
 
 const Wrapper = styled.div`
