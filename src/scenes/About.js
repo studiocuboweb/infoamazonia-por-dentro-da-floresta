@@ -30,7 +30,7 @@ const Button = styled.div`
   text-align: center;
   a{ 
     margin:0 auto;
-    font-family: "Cinzel";
+    font-family: 'Merriweather', serif;
     font-size: 0.5em;
     -webkit-letter-spacing: 0.1rem;
     -moz-letter-spacing: 0.1rem;

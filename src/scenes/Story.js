@@ -101,7 +101,7 @@ const Spacer = styled.div`
     padding: 1rem;
   }
   a {
-    font-family: "Cinzel";
+    font-family: 'Merriweather', serif;
     font-size: 0.5em;
     -webkit-letter-spacing: 0.1rem;
     -moz-letter-spacing: 0.1rem;
@@ -171,7 +171,7 @@ const Middle = styled.div`
     }
   }
   a {
-    font-family: "Cinzel";
+    font-family: 'Merriweather', serif;
     font-size: 0.5em;
     letter-spacing: 0.1rem;
     display: inline-block;
