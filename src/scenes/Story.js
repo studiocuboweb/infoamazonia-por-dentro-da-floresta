@@ -1,5 +1,6 @@
 import React, { Component, Fragment } from "react";
 import styled from "styled-components";
+
 import { connect } from "react-redux";
 import { resetContext } from "actions/context";
 import { media, color } from "styles/utils";
@@ -9,6 +10,7 @@ import Header from 'components/Header';
 
 import { NavLink, Link } from 'react-router-dom';
 import YouTubeVideo from "components/YouTube";
+
 
 const launchDate = process.env.LAUNCH_DATE;
 
@@ -28,6 +30,10 @@ const Wrapper = styled.section`
   box-sizing: border-box;
   text-shadow: 0 0 2px #000;
   color: #fff;
+  #video-ended {
+    z-index:99;
+    border:1px red solid;
+  }
   .video-content {
     position: absolute;
     width: 100%;
@@ -188,28 +194,24 @@ const Middle = styled.div`
 
 const videoChapters = [
   {
-    seek: 0,
-    name: "Start",
-  },
-  {
     seek: 48.607915,
-    name: "Capítulo 1",
+    name: "Lorem ipsum",
   },
   {
     seek: 117.35867002098084,
-    name: "2",
+    name: "Dolor Sit amet",
   },
   {
     seek: 124.4310686015831,
-    name: "3",
+    name: "Consectetur adipiscing elit",
   },
   {
     seek: 134.4310686015831,
-    name: "4",
+    name: "Sed do",
   },
   {
     seek: 144.371942,
-    name: "Fim",
+    name: "Sunt in culpa",
   }
 ]
 
@@ -218,10 +220,16 @@ class Scene extends Component {
     super(props);
   }
 
+  componentDidMount() {
+    console.log('componentDidMout Story')
+
+  }
+
   state = {
     activeChapter: 0,
     ended: false,
     playing: true,
+    duration: 0,
     menuOpened: true,
   }
 
@@ -245,28 +253,44 @@ class Scene extends Component {
 
     return (
       <Fragment>
-        {
-          videoChapters.map((video, idx) => {
-            const { name, seek } = video
-            const { activeChapter } = this.state
+        <Link
+          to="#"
+          onClick={() => this._resumeVideo()}>
+          <span className="fa fa-play"></span>
+        </Link>        
+        <Link
+          to="#"
+          onClick={() => this._pauseVideo()}>
+          <span className="fa fa-pause"></span>
+        </Link>   
+        <Link
+          to="#">
+          <span>Capítulos: </span>
+        </Link>   
+        <Fragment>     
+          {
+            videoChapters.map((video, idx) => {
+              const { name, seek } = video
+              const { activeChapter } = this.state
 
-            return (
-              <Link
-                style={activeChapter === idx ? { color: 'yellow'} :  {}}
-                key={`${name}-${seek}`}
-                to="#"
-                onClick={() => this._goToChapter(video)}>
-                <span>{name}</span>
-              </Link>
-            )
-          })
-        }
-        {
-          isMobile &&
-          <Link to="#" onClick={this.toogleMenu}>
-            <span>Fechar Menu</span>
-          </Link>
-        }
+              return (
+                <Link
+                  style={activeChapter === idx ? { color: 'yellow'} :  {}}
+                  key={`${name}-${seek}`}
+                  to="#"
+                  onClick={() => this._goToChapter(video)}>
+                  <span>{name}</span>
+                </Link>
+              )
+            })
+          }
+          {
+            isMobile &&
+            <Link to="#" onClick={this.toogleMenu}>
+              <span>Fechar Menu</span>
+            </Link>
+          }
+        </Fragment>
       </Fragment>
     )
   }
@@ -320,12 +344,14 @@ class Scene extends Component {
           {
             playing && !ended &&
               <YouTubeVideo
+                onRef={ref => (this._video = ref)}
                 { ...this.state.playing }
                 chapter={chapter}
                 autoplay={!elapsedTime ? true : false}
                 data={{ id: "b0MjlZWd4Tk" }}
                 displayVideoEnd={ this._setVideoEnd }
                 preview={false}
+                playing={playing}
                 startTime={0}
               />
           }
@@ -345,7 +371,16 @@ class Scene extends Component {
 
   _setVideoEnd = () => this.setState({ ended: true, playing: false });
 
-  _resumeVideo = () => this.setState({ playing: true, startOver:  false })
+  //_resumeVideo = () => this.setState({ playing: true, startOver:  false })
+  _resumeVideo = () => {
+    this._video.node.playVideo();
+    //console.log(this.state.playing);
+  }
+
+  _pauseVideo = () => {
+    this._video.node.pauseVideo();
+    //console.log(this.state.playing);
+  }
 
   _startOver = () => this.setState({ startOver: true,  playing: true })
 }

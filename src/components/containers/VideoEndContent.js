@@ -6,6 +6,9 @@ import { FormattedMessage } from "react-intl";
 
 const Wrapper = styled.div`
 // background: lightgray;
+.video-ending--section {
+  border:1px red solid;
+}
 .link-back {
   text-align: center;
   a {

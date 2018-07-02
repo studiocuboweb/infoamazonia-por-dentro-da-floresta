@@ -25,6 +25,7 @@
   "homepage": "https://github.com/studiocuboweb/infoamazonia-por-dentro-da-floresta#readme",
   "dependencies": {
     "axios": "^0.17.1",
+    "calvinclaus-rc-slider": "7.3.0",
     "es6-set": "^0.1.5",
     "font-awesome": "^4.7.0",
     "history": "^4.7.2",
@@ -36,6 +37,7 @@
     "offline-plugin": "^4.9.0",
     "promise-polyfill": "^7.0.0",
     "prop-types": "^15.6.0",
+    "rc-slider": "8.6.1",
     "react": "^16.0.0",
     "react-countdown-now": "^1.2.0",
     "react-dom": "^16.0.0",

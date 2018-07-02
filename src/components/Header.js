@@ -13,6 +13,7 @@ const Top = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index:99;
   .partners {
     position: fixed;
     top: 0;
@@ -20,7 +21,7 @@ const Top = styled.div`
     display: flex;
     padding-top: 1rem;
     justify-content: space-between;
-    background-color: #000;
+    // background-color: #000;
     .help-box {
       margin-right: 2rem;
       display: flex;
