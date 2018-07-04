@@ -11,6 +11,8 @@ import Header from 'components/Header';
 import { NavLink, Link } from 'react-router-dom';
 import YouTubeVideo from "components/YouTube";
 
+import Rcslider from "rc-slider";
+
 
 const launchDate = process.env.LAUNCH_DATE;
 
@@ -30,6 +32,9 @@ const Wrapper = styled.section`
   box-sizing: border-box;
   text-shadow: 0 0 2px #000;
   color: #fff;
+  .no-cursor {
+    cursor:none;
+  }
   #video-ended {
     z-index:99;
     border:1px red solid;
@@ -127,6 +132,17 @@ const Spacer = styled.div`
 
 const Middle = styled.div`
   width: 100%;
+  .animate {
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    transition: all 1s ease;
+  }
+  .animate.move {
+    bottom: 100%;
+    margin-bottom: -50px; /*.animate width*/
+  }
   .titleVideoChapters {
     display: block;
     width: 100%;
@@ -137,6 +153,7 @@ const Middle = styled.div`
   }
   .videoChapters * {
     box-sizing: border-box;
+    background-color:rgba(0, 0, 0,  .7) !important;
   }
   .videoChapters {
     display: block;
@@ -250,7 +267,6 @@ class Scene extends Component {
         </Link>
       )
     }
-
     return (
       <Fragment>
         <Link
@@ -334,13 +350,23 @@ class Scene extends Component {
   handleWindowSizeChange = () => {
     this.setState({ width: window.innerWidth })
   }
-
+  animationClass = ["animate"];
+  togglePointerClass = {cursor:'auto'};
+  onMouseMoveHandler(ev) {
+    console.log('onMouseMoveHandler');
+    ev.togglePointerClass = {cursor:'auto'}
+    console.log(ev.togglePointerClass);
+  };
+  setAnimationTime = setTimeout(() => { 
+    this.animationClass.push(" move");
+    this.togglePointerClass = {cursor:'none'};
+    clearTimeout(this);
+  },100);
   render() {
     const { chapter, ended, playing, elapsedTime } = this.state;
-
     return (
-      <Wrapper className="scene landing">
-        <div className="video-content">
+      <Wrapper className={"scene landing"} style={this.togglePointerClass} onMouseMove={this.onMouseMoveHandler(this)}>
+        <div className={"video-content "}>
           {
             playing && !ended &&
               <YouTubeVideo
@@ -355,13 +381,34 @@ class Scene extends Component {
                 startTime={0}
               />
           }
-          {ended && !playing && <VideoEndContent data="" />}
         </div>
         <Header />
-        <Middle className="middle"  style={{ zIndex: 999 }}>
-            <div className="videoChapters">
+        {ended && !playing && <VideoEndContent data="" />}
+        <Middle className="middle video-menu"  style={{ zIndex: 999 }}>
+          <div className={this.animationClass.join('' )}>
+          {
+            playing && !ended && this._video &&
+            <div>
+              {this._video.formatTime(Math.round(this._video.state.position))} / {this._video.formatTime(this._video.state.duration)}
+            </div>
+          }
+          {
+            playing && !ended && this._video &&
+              <Rcslider style={{ zIndex: 9999 }}
+                range={false}
+                max={this._video.state.duration}
+                value={this._video.state.position}
+                onChange={position => {  this._video.getDuration() && this._video.setPosition(position)}}
+                onRangeClick={position => { this._video.getDuration() && this._video.setPosition(position)}}
+              />
+          }
+          {
+            playing && !ended && this._video &&
+            <div className="videoChapters" style={{ zIndex: 99 }}>
               {playing && this.renderMenu()}
             </div>
+          }
+          </div>
         </Middle>
       </Wrapper>
     );

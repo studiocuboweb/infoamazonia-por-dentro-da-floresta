@@ -49,7 +49,7 @@ const Top = styled.div`
         `}
         ${media.desktopHD`
           margin: 0 2rem;
-          max-height: 5vh;
+          max-height: 7vh;
         `};
       }
     }

@@ -7,7 +7,6 @@ import { FormattedMessage } from "react-intl";
 const Wrapper = styled.div`
 // background: lightgray;
 .video-ending--section {
-  border:1px red solid;
 }
 .link-back {
   text-align: center;
@@ -28,24 +27,37 @@ const Wrapper = styled.div`
 }
 `
 
+var divStyle = {
+  'zIndex':'99999',
+};
+
+var divStyle2 = {
+  'position': 'fixed',
+  'right': '0',
+  'top': '200px',
+  'minWidth': '100%', 
+  'minHeight': '100%'
+};
 const VideoContentEnd = ({ data }) => (
-  <Wrapper className='video-ending--section'>
-    <span>{data}</span>
-    <RelatedNews className='related-alternative'
-        sectionTitle={"Confira também: "}
-        title={"Lorem ipsum 2"}
-        subtitle={"The situation in venzuela is critical, the people is suffering and beeing smashed everyday." }
-        imageUrl={"http://darkroom-cdn.s3.amazonaws.com/2016/09/APphoto_Venezuela-Opposition-Protest-9.jpg"}
-        href={"http://runrun.es/nacional/292903/tsj-declaro-nulas-las-sesiones-del-5-y-el-9-de-enero-de-la-asamblea-nacional.html"}
-      />
-      <div className="link-back">
-        <Link to="/">
-          <FormattedMessage
-            id="general.backToHome"
-            defaultMessage="Start Over"
-          />
-        </Link>
-      </div>
+  <Wrapper className='video-ending--section' style={divStyle}>
+    <div style={divStyle2}>
+      <span>{data}</span>
+      <RelatedNews className='related-alternative'
+          sectionTitle={"Confira também: "}
+          title={"Lorem ipsum 2"}
+          subtitle={"The situation in venzuela is critical, the people is suffering and beeing smashed everyday." }
+          imageUrl={"http://darkroom-cdn.s3.amazonaws.com/2016/09/APphoto_Venezuela-Opposition-Protest-9.jpg"}
+          href={"http://runrun.es/nacional/292903/tsj-declaro-nulas-las-sesiones-del-5-y-el-9-de-enero-de-la-asamblea-nacional.html"}
+        />
+        <div className="link-back">
+          <Link to="/">
+            <FormattedMessage
+              id="general.backToHome"
+              defaultMessage="Start Over"
+            />
+          </Link>
+        </div>
+    </div>
   </Wrapper>
 )
 

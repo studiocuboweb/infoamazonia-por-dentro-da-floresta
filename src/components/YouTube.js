@@ -5,7 +5,6 @@ import YouTube from "react-youtube";
 import { media } from "styles/utils";
 import { expandMedia } from "actions/media";
 
-import Rcslider from "rc-slider";
 require('rc-slider/assets/index.css');
 
 const Wrapper = styled.div`
@@ -103,8 +102,6 @@ class YouTubeVideo extends Component {
   }
 
   setPosition(position) {
-    console.log("position")
-    console.log(position)
     this.node.seekTo(position)
     this.setState({position});
   }
@@ -113,6 +110,10 @@ class YouTubeVideo extends Component {
     console.log("duration")
     console.log(duration)
     this.setState({duration});
+  }
+
+  getDuration() {
+    return this.state.duration;
   }
 
   componentDidMount() {
@@ -236,14 +237,6 @@ class YouTubeVideo extends Component {
             onEnd={() => this._handleVideoEnding(displayVideoEnd)}
           />
         </div>
-        <Rcslider
-          range={false}
-          max={this.state.duration}
-          value={this.state.position}
-          onChange={position => {  this.state.duration && this.setPosition(position)}}
-          onRangeClick={position => { this.state.duration && this.setPosition(position)}}
-        />
-        {this.formatTime(Math.round(this.state.position))} / {this.formatTime(this.state.duration)}
       </Wrapper>
     );
   } 
