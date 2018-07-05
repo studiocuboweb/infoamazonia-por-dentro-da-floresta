@@ -139,9 +139,13 @@ const Middle = styled.div`
     -ms-transition: all 1s ease;
     transition: all 1s ease;
   }
-  .animate.move {
+  .animate.move-down {
     bottom: 100%;
     margin-bottom: -50px; /*.animate width*/
+  }
+  .animate.move-up {
+    top: 100%;
+    margin-bottom: 5px; /*.animate width*/
   }
   .titleVideoChapters {
     display: block;
@@ -166,6 +170,16 @@ const Middle = styled.div`
       display: flex;
     `}
   }
+  ${media.phoneHorizontal`
+    .animate.move-down {
+      bottom: 100%;
+      margin-bottom: -340px; /*.animate width*/
+    }
+    .animate.move-up {
+      top: 100%;
+      margin-bottom: 5px; /*.animate width*/
+    }
+  `}
   ${media.phablet`
     padding: 0 3rem;
     font-size: 1em;
@@ -248,6 +262,8 @@ class Scene extends Component {
     playing: true,
     duration: 0,
     menuOpened: true,
+    cursor: {cursor:'none'},
+    menuClass: ''
   }
 
   toogleMenu = () => {
@@ -258,17 +274,22 @@ class Scene extends Component {
 
   renderMenu() {
     const { width } = this.state
-    const isMobile = width <= 320
-
-    if (isMobile && !this.state.menuOpened) {
-      return (
-        <Link to="#" onClick={this.toogleMenu}>
-          <span>Menu</span>
-        </Link>
-      )
-    }
+    const isMobile = width <= 470
+    // if (isMobile && !this.state.menuOpened) {
+    //   return (
+    //     <Link to="#" onClick={this.toogleMenu}>
+    //       <span>Menu</span>
+    //     </Link>
+    //   )
+    // }
     return (
       <Fragment>
+        {
+          width <= 750 &&
+          <Link to="#" onClick={this.toogleMenu}>
+            <span>Fechar Menu</span>
+          </Link>
+        }
         <Link
           to="#"
           onClick={() => this._resumeVideo()}>
@@ -300,12 +321,6 @@ class Scene extends Component {
               )
             })
           }
-          {
-            isMobile &&
-            <Link to="#" onClick={this.toogleMenu}>
-              <span>Fechar Menu</span>
-            </Link>
-          }
         </Fragment>
       </Fragment>
     )
@@ -327,6 +342,7 @@ class Scene extends Component {
 
   componentDidMount = () => {
     if (typeof window !== 'undefined' ) {
+      this.setState({ width: window.innerWidth })
       window.addEventListener('resize', this.handleWindowSizeChange)
       // this.setState({
       //   width: window.innerWidth,
@@ -350,42 +366,63 @@ class Scene extends Component {
   handleWindowSizeChange = () => {
     this.setState({ width: window.innerWidth })
   }
-  animationClass = ["animate"];
-  togglePointerClass = {cursor:'auto'};
+  timeout;
   onMouseMoveHandler(ev) {
-    console.log('onMouseMoveHandler');
-    ev.togglePointerClass = {cursor:'auto'}
-    console.log(ev.togglePointerClass);
-  };
+    this.setState({cursor: {cursor:'default'}});
+    this.setState({menuClass: 'move-up'});
+    clearTimeout(this.timeout);
+    this.timeout = setTimeout(function(){
+      this.setState({cursor: {cursor:'none'}});
+      this.setState({menuClass: 'move-down'});
+    }.bind(this), 1000);
+  }
+  onTouchEndHandler(ev) {
+    this.setState({cursor: {cursor:'default'}});
+    this.setState({menuClass: 'move-up'});
+  }
   setAnimationTime = setTimeout(() => { 
-    this.animationClass.push(" move");
-    this.togglePointerClass = {cursor:'none'};
+    this.setState({menuClass: 'move-down'});
+    this.setState({cursor: {cursor:'none'}});
     clearTimeout(this);
   },100);
   render() {
     const { chapter, ended, playing, elapsedTime } = this.state;
+    const { width } = this.state;
+    const isMobile = width <= 470;
     return (
-      <Wrapper className={"scene landing"} style={this.togglePointerClass} onMouseMove={this.onMouseMoveHandler(this)}>
-        <div className={"video-content "}>
-          {
-            playing && !ended &&
-              <YouTubeVideo
-                onRef={ref => (this._video = ref)}
-                { ...this.state.playing }
-                chapter={chapter}
-                autoplay={!elapsedTime ? true : false}
-                data={{ id: "b0MjlZWd4Tk" }}
-                displayVideoEnd={ this._setVideoEnd }
-                preview={false}
-                playing={playing}
-                startTime={0}
-              />
-          }
-        </div>
+      <Wrapper className={"scene landing"} style={this.state.cursor} onMouseMove={this.onMouseMoveHandler.bind(this)} onTouchEnd={this.onTouchEndHandler.bind(this)}>
+        {
+          !isMobile &&
+            <div className={"video-content "} style={this.state.cursor}>
+              {
+                playing && !ended &&
+                  <YouTubeVideo style={this.state.cursor}
+                    onRef={ref => (this._video = ref)}
+                    { ...this.state.playing }
+                    chapter={chapter}
+                    autoplay={!elapsedTime ? true : false}
+                    data={{ id: "b0MjlZWd4Tk" }}
+                    displayVideoEnd={ this._setVideoEnd }
+                    preview={false}
+                    playing={playing}
+                    startTime={0}
+                  />
+              }
+            </div>
+        }
+        {
+          isMobile && 
+            <div className={"video-content "}>
+            {
+            !ended &&
+              <p style={{padding:'30px'}}>Gire o celular na horizontal para ver o vídeo.</p>
+            }
+            </div>
+        }
         <Header />
         {ended && !playing && <VideoEndContent data="" />}
         <Middle className="middle video-menu"  style={{ zIndex: 999 }}>
-          <div className={this.animationClass.join('' )}>
+          <div className={'animate ' + this.state.menuClass}>
           {
             playing && !ended && this._video &&
             <div>

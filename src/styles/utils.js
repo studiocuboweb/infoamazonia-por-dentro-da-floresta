@@ -6,6 +6,10 @@ export const sizes = [
     width: 400
   },
   {
+    device: 'phoneHorizontal',
+    width: 480
+  },  
+  {
     device: 'phablet',
     width: 550
   },
