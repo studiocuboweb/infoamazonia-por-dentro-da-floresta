@@ -104,6 +104,27 @@ const Wrapper = styled.section`
   }
 `;
 
+const VideoControlls = styled.div`
+  div {
+    padding:10px 0px;
+    background-color: rgba(0, 0, 0, 0.5) !important;
+  }
+  a {
+    display:inline !important;
+    padding:0px !important;
+    margin:0 5px !important;
+    border:none !important;
+    font-size: 0.9em !important;
+  }
+  .video-time {
+    display:inline;
+    background-color: transparent !important;
+  }
+  .text-chapter {
+    font-size:0.5em !important;
+  }
+`;
+
 const Spacer = styled.div`
   flex: 1 1 25%;
   .spacer-content {
@@ -140,12 +161,10 @@ const Middle = styled.div`
     transition: all 1s ease;
   }
   .animate.move-down {
-    bottom: 100%;
-    margin-bottom: -50px; /*.animate width*/
+    opacity: 0;
   }
   .animate.move-up {
-    top: 100%;
-    margin-bottom: 5px; /*.animate width*/
+    opacity: 1;
   }
   .titleVideoChapters {
     display: block;
@@ -160,7 +179,6 @@ const Middle = styled.div`
     background-color:rgba(0, 0, 0,  .7) !important;
   }
   .videoChapters {
-    display: block;
     width: 100%;
     a {
       width: 100%;
@@ -170,16 +188,6 @@ const Middle = styled.div`
       display: flex;
     `}
   }
-  ${media.phoneHorizontal`
-    .animate.move-down {
-      bottom: 100%;
-      margin-bottom: -340px; /*.animate width*/
-    }
-    .animate.move-up {
-      top: 100%;
-      margin-bottom: 5px; /*.animate width*/
-    }
-  `}
   ${media.phablet`
     padding: 0 3rem;
     font-size: 1em;
@@ -251,11 +259,6 @@ class Scene extends Component {
     super(props);
   }
 
-  componentDidMount() {
-    console.log('componentDidMout Story')
-
-  }
-
   state = {
     activeChapter: 0,
     ended: false,
@@ -263,7 +266,9 @@ class Scene extends Component {
     duration: 0,
     menuOpened: true,
     cursor: {cursor:'none'},
-    menuClass: ''
+    menuClass: '',
+    displayChapterMenu: {display:'none'},
+    arrowButtonClass: 'fa fa-arrow-up'
   }
 
   toogleMenu = () => {
@@ -284,26 +289,6 @@ class Scene extends Component {
     // }
     return (
       <Fragment>
-        {
-          width <= 750 &&
-          <Link to="#" onClick={this.toogleMenu}>
-            <span>Fechar Menu</span>
-          </Link>
-        }
-        <Link
-          to="#"
-          onClick={() => this._resumeVideo()}>
-          <span className="fa fa-play"></span>
-        </Link>        
-        <Link
-          to="#"
-          onClick={() => this._pauseVideo()}>
-          <span className="fa fa-pause"></span>
-        </Link>   
-        <Link
-          to="#">
-          <span>Capítulos: </span>
-        </Link>   
         <Fragment>     
           {
             videoChapters.map((video, idx) => {
@@ -341,6 +326,8 @@ class Scene extends Component {
   }
 
   componentDidMount = () => {
+    console.log('componentDidMout Story')
+    //document.getElementById('video-player').scrollTo(0,10000);
     if (typeof window !== 'undefined' ) {
       this.setState({ width: window.innerWidth })
       window.addEventListener('resize', this.handleWindowSizeChange)
@@ -412,10 +399,10 @@ class Scene extends Component {
         }
         {
           isMobile && 
-            <div className={"video-content "}>
+            <div className={"video-content "} style={{textAlign:'center'}}>
             {
             !ended &&
-              <p style={{padding:'30px'}}>Gire o celular na horizontal para ver o vídeo.</p>
+              <p style={{padding:'30px',width:'60%',margin:'0 auto'}}><img src={require("images/phone_landscape.svg")} />Gire o celular na horizontal para ver o vídeo.</p>
             }
             </div>
         }
@@ -423,12 +410,6 @@ class Scene extends Component {
         {ended && !playing && <VideoEndContent data="" />}
         <Middle className="middle video-menu"  style={{ zIndex: 999 }}>
           <div className={'animate ' + this.state.menuClass}>
-          {
-            playing && !ended && this._video &&
-            <div>
-              {this._video.formatTime(Math.round(this._video.state.position))} / {this._video.formatTime(this._video.state.duration)}
-            </div>
-          }
           {
             playing && !ended && this._video &&
               <Rcslider style={{ zIndex: 9999 }}
@@ -441,7 +422,39 @@ class Scene extends Component {
           }
           {
             playing && !ended && this._video &&
-            <div className="videoChapters" style={{ zIndex: 99 }}>
+            <VideoControlls>
+              <div style={{width:'75%',margin:'0',float:'left',display:'block'}}>  
+                <Link
+                  to="#"
+                  onClick={() => this._resumeVideo()}>
+                  <span className="fa fa-play"></span>
+                </Link>        
+                <Link
+                  to="#"
+                  onClick={() => this._pauseVideo()}>
+                  <span className="fa fa-pause"></span>
+                </Link> 
+                <div className="video-time">
+                  {this._video.formatTime(Math.round(this._video.state.position))} / {this._video.formatTime(this._video.state.duration)}
+                </div>
+              </div>
+              <div style={{width:'25%',display:'block',float:'left',margin:'0',textAlign:'right'}}>  
+                <Link
+                  to="#"
+                  onClick={() => this._fullScreenVideo()}>
+                  <span><img src={require("images/fullscreen.svg")} style={{width:'20px'}}/></span>
+                </Link>
+                <Link
+                  to="#"
+                  onClick={() => this._openChaptersMenu()} className="text-chapter">
+                  Capitulos <span className={this.state.arrowButtonClass}></span>
+                </Link>
+              </div>
+            </VideoControlls>
+          }
+          {
+            playing && !ended && this._video &&
+            <div className="videoChapters" style={this.state.displayChapterMenu}>
               {playing && this.renderMenu()}
             </div>
           }
@@ -449,6 +462,17 @@ class Scene extends Component {
         </Middle>
       </Wrapper>
     );
+  }
+
+  _fullScreenVideo = () => {
+    var elem = document.getElementById("video-player");
+    if (elem.requestFullscreen) {
+      elem.requestFullscreen();
+    } else if (elem.mozRequestFullScreen) {
+      elem.mozRequestFullScreen();
+    } else if (elem.webkitRequestFullscreen) {
+      elem.webkitRequestFullscreen();
+    }  
   }
 
   _goToChapter = ({ seek }) => this.setState({ chapter: { start: seek }});
@@ -464,6 +488,16 @@ class Scene extends Component {
   _pauseVideo = () => {
     this._video.node.pauseVideo();
     //console.log(this.state.playing);
+  }
+
+  _openChaptersMenu = () => {
+    if (this.state.arrowButtonClass == 'fa fa-arrow-up') {
+      this.setState({displayChapterMenu: {display:'flex'}})
+      this.setState({arrowButtonClass: 'fa fa-arrow-down'})
+    } else {
+      this.setState({displayChapterMenu: {display:'none'}})
+      this.setState({arrowButtonClass: 'fa fa-arrow-up'})
+    }
   }
 
   _startOver = () => this.setState({ startOver: true,  playing: true })
