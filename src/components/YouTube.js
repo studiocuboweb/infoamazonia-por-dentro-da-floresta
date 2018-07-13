@@ -226,7 +226,8 @@ class YouTubeVideo extends Component {
                 showinfo: 0,
                 rel:0,
                 controls:0,
-                modestbranding: 1
+                modestbranding: 1,
+                wmode:'opaque'
               },
             }}
             onPlay={this._saveVideoState}

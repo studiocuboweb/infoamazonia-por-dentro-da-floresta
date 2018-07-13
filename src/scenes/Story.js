@@ -32,6 +32,13 @@ const Wrapper = styled.section`
   box-sizing: border-box;
   text-shadow: 0 0 2px #000;
   color: #fff;
+  .opaque {
+    flex: 1 1 auto;
+    height:500px;
+    background-color:red;
+    z-index:99;
+    
+  }
   .no-cursor {
     cursor:none;
   }
@@ -122,6 +129,12 @@ const VideoControlls = styled.div`
   }
   .text-chapter {
     font-size:0.5em !important;
+  }
+  a:hover {
+    color: #ffffff !important;
+  }
+  a:visited {
+    color: #ffffff !important;
   }
 `;
 
@@ -279,7 +292,6 @@ class Scene extends Component {
 
   renderMenu() {
     const { width } = this.state
-    const isMobile = width <= 470
     // if (isMobile && !this.state.menuOpened) {
     //   return (
     //     <Link to="#" onClick={this.toogleMenu}>
@@ -325,12 +337,23 @@ class Scene extends Component {
     return i
   }
 
+  hideAddressBar = () => {
+    console.log('hideAddressBar');
+    if(document.documentElement.scrollHeight<window.outerHeight/window.devicePixelRatio)
+    document.documentElement.style.height=(window.outerHeight/window.devicePixelRatio)+'px';
+    setTimeout(window.scrollTo(1,1),0);
+  }
+
   componentDidMount = () => {
     console.log('componentDidMout Story')
     //document.getElementById('video-player').scrollTo(0,10000);
     if (typeof window !== 'undefined' ) {
       this.setState({ width: window.innerWidth })
       window.addEventListener('resize', this.handleWindowSizeChange)
+
+      window.addEventListener("load",this.hideAddressBar());
+      window.addEventListener("orientationchange",this.hideAddressBar());
+      // window.addEventListener("mousemove",this.onMouseMoveHandler.bind(this))
       // this.setState({
       //   width: window.innerWidth,
       //   height: window.innerHeight })
@@ -361,7 +384,7 @@ class Scene extends Component {
     this.timeout = setTimeout(function(){
       this.setState({cursor: {cursor:'none'}});
       this.setState({menuClass: 'move-down'});
-    }.bind(this), 1000);
+    }.bind(this), 5000);
   }
   onTouchEndHandler(ev) {
     this.setState({cursor: {cursor:'default'}});
@@ -371,13 +394,16 @@ class Scene extends Component {
     this.setState({menuClass: 'move-down'});
     this.setState({cursor: {cursor:'none'}});
     clearTimeout(this);
-  },100);
+  },5000);
+
   render() {
     const { chapter, ended, playing, elapsedTime } = this.state;
     const { width } = this.state;
     const isMobile = width <= 470;
     return (
-      <Wrapper className={"scene landing"} style={this.state.cursor} onMouseMove={this.onMouseMoveHandler.bind(this)} onTouchEnd={this.onTouchEndHandler.bind(this)}>
+      <Wrapper className={"scene landing"} onMouseMove={this.onMouseMoveHandler.bind(this)} onTouchEnd={this.onTouchEndHandler.bind(this)}>
+        <Header />
+        <div className="opaque"></div>
         {
           !isMobile &&
             <div className={"video-content "} style={this.state.cursor}>
@@ -406,7 +432,6 @@ class Scene extends Component {
             }
             </div>
         }
-        <Header />
         {ended && !playing && <VideoEndContent data="" />}
         <Middle className="middle video-menu"  style={{ zIndex: 999 }}>
           <div className={'animate ' + this.state.menuClass}>
@@ -433,6 +458,11 @@ class Scene extends Component {
                   to="#"
                   onClick={() => this._pauseVideo()}>
                   <span className="fa fa-pause"></span>
+                </Link>
+                <Link
+                  to="#"
+                  onClick={() => this._openChaptersMenu()} className="text-chapter">
+                  <span><img src={require("images/chapters_icon.png")} style={{width:'20px'}}/></span> Capítulos <span className={this.state.arrowButtonClass}></span>
                 </Link> 
                 <div className="video-time">
                   {this._video.formatTime(Math.round(this._video.state.position))} / {this._video.formatTime(this._video.state.duration)}
@@ -443,11 +473,6 @@ class Scene extends Component {
                   to="#"
                   onClick={() => this._fullScreenVideo()}>
                   <span><img src={require("images/fullscreen.svg")} style={{width:'20px'}}/></span>
-                </Link>
-                <Link
-                  to="#"
-                  onClick={() => this._openChaptersMenu()} className="text-chapter">
-                  Capitulos <span className={this.state.arrowButtonClass}></span>
                 </Link>
               </div>
             </VideoControlls>

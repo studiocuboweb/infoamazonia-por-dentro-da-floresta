@@ -7,7 +7,6 @@ import SiteTitle from './SiteTitle';
 
 const Top = styled.div`
   z-index: 2;
-  width: 100%;
   flex: 1 1 auto;
   flex-direction: column;
   display: flex;
