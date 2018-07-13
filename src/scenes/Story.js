@@ -379,7 +379,7 @@ class Scene extends Component {
   onMouseMoveHandler(ev) {
     console.log('mouseoverHandler')
     this.setState({cursor: {cursor:'default'}});
-    document.body.style.cursor = 'default';
+    //document.body.style.cursor = 'default';
     this.setState({menuClass: 'move-up'});
     clearTimeout(this.timeout);
     this.timeout = setTimeout(function(){
@@ -394,7 +394,7 @@ class Scene extends Component {
   setAnimationTime = setTimeout(() => { 
     this.setState({menuClass: 'move-down'});
     this.setState({cursor: {cursor:'none'}});
-    document.body.style.cursor = 'none';
+    //document.body.style.cursor = 'none';
     clearTimeout(this);
   },5000);
 
