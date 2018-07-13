@@ -12,7 +12,7 @@ const Top = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index:99;
+  z-index:999999999;
   .partners {
     position: fixed;
     top: 0;

@@ -32,13 +32,6 @@ const Wrapper = styled.section`
   box-sizing: border-box;
   text-shadow: 0 0 2px #000;
   color: #fff;
-  .opaque {
-    flex: 1 1 auto;
-    height:500px;
-    background-color:red;
-    z-index:99;
-    
-  }
   .no-cursor {
     cursor:none;
   }
@@ -109,6 +102,13 @@ const Wrapper = styled.section`
       transition: all 250ms ease-in;
     }
   }
+`;
+
+const Overlay = styled.div`
+  display:block;
+  height:100%;
+  width:100%;
+  z-index: 9999;
 `;
 
 const VideoControlls = styled.div`
@@ -243,7 +243,6 @@ const Middle = styled.div`
     text-transform: uppercase;
   }
 `;
-
 const videoChapters = [
   {
     seek: 48.607915,
@@ -337,12 +336,12 @@ class Scene extends Component {
     return i
   }
 
-  hideAddressBar = () => {
-    console.log('hideAddressBar');
-    if(document.documentElement.scrollHeight<window.outerHeight/window.devicePixelRatio)
-    document.documentElement.style.height=(window.outerHeight/window.devicePixelRatio)+'px';
-    setTimeout(window.scrollTo(1,1),0);
-  }
+  // hideAddressBar = () => {
+  //   console.log('hideAddressBar');
+  //   if(document.documentElement.scrollHeight<window.outerHeight/window.devicePixelRatio)
+  //   document.documentElement.style.height=(window.outerHeight/window.devicePixelRatio)+'px';
+  //   setTimeout(window.scrollTo(1,1),0);
+  // }
 
   componentDidMount = () => {
     console.log('componentDidMout Story')
@@ -351,8 +350,8 @@ class Scene extends Component {
       this.setState({ width: window.innerWidth })
       window.addEventListener('resize', this.handleWindowSizeChange)
 
-      window.addEventListener("load",this.hideAddressBar());
-      window.addEventListener("orientationchange",this.hideAddressBar());
+      // window.addEventListener("load",this.hideAddressBar());
+      // window.addEventListener("orientationchange",this.hideAddressBar());
       // window.addEventListener("mousemove",this.onMouseMoveHandler.bind(this))
       // this.setState({
       //   width: window.innerWidth,
@@ -378,7 +377,9 @@ class Scene extends Component {
   }
   timeout;
   onMouseMoveHandler(ev) {
+    console.log('mouseoverHandler')
     this.setState({cursor: {cursor:'default'}});
+    document.body.style.cursor = 'default';
     this.setState({menuClass: 'move-up'});
     clearTimeout(this.timeout);
     this.timeout = setTimeout(function(){
@@ -387,12 +388,13 @@ class Scene extends Component {
     }.bind(this), 5000);
   }
   onTouchEndHandler(ev) {
-    this.setState({cursor: {cursor:'default'}});
+    // this.setState({cursor: {cursor:'default'}});
     this.setState({menuClass: 'move-up'});
   }
   setAnimationTime = setTimeout(() => { 
     this.setState({menuClass: 'move-down'});
     this.setState({cursor: {cursor:'none'}});
+    document.body.style.cursor = 'none';
     clearTimeout(this);
   },5000);
 
@@ -401,15 +403,15 @@ class Scene extends Component {
     const { width } = this.state;
     const isMobile = width <= 470;
     return (
-      <Wrapper className={"scene landing"} onMouseMove={this.onMouseMoveHandler.bind(this)} onTouchEnd={this.onTouchEndHandler.bind(this)}>
+      <Wrapper className={"scene landing"}>
         <Header />
-        <div className="opaque"></div>
+        <Overlay onMouseMove={this.onMouseMoveHandler.bind(this)} onClick={() => { this._toggleVideo() }} onTouchEnd={this.onTouchEndHandler.bind(this)} style={this.state.cursor} />
         {
           !isMobile &&
-            <div className={"video-content "} style={this.state.cursor}>
+            <div className={"video-content "} >
               {
-                playing && !ended &&
-                  <YouTubeVideo style={this.state.cursor}
+                !ended &&
+                  <YouTubeVideo
                     onRef={ref => (this._video = ref)}
                     { ...this.state.playing }
                     chapter={chapter}
@@ -433,10 +435,10 @@ class Scene extends Component {
             </div>
         }
         {ended && !playing && <VideoEndContent data="" />}
-        <Middle className="middle video-menu"  style={{ zIndex: 999 }}>
+        <Middle onTouchEnd={this.onTouchEndHandler.bind(this)} onMouseMove={this.onMouseMoveHandler.bind(this)} className="middle video-menu"  style={{ zIndex: 999 }}>
           <div className={'animate ' + this.state.menuClass}>
           {
-            playing && !ended && this._video &&
+            !ended && this._video &&
               <Rcslider style={{ zIndex: 9999 }}
                 range={false}
                 max={this._video.state.duration}
@@ -446,19 +448,25 @@ class Scene extends Component {
               />
           }
           {
-            playing && !ended && this._video &&
+            !ended && this._video &&
             <VideoControlls>
-              <div style={{width:'75%',margin:'0',float:'left',display:'block'}}>  
+              <div style={{width:'75%',margin:'0',float:'left',display:'block'}}>
+              {
+                !playing &&
                 <Link
                   to="#"
                   onClick={() => this._resumeVideo()}>
                   <span className="fa fa-play"></span>
-                </Link>        
+                </Link>
+              } 
+              {
+                playing &&
                 <Link
                   to="#"
                   onClick={() => this._pauseVideo()}>
                   <span className="fa fa-pause"></span>
                 </Link>
+              }                    
                 <Link
                   to="#"
                   onClick={() => this._openChaptersMenu()} className="text-chapter">
@@ -478,9 +486,9 @@ class Scene extends Component {
             </VideoControlls>
           }
           {
-            playing && !ended && this._video &&
+            !ended && this._video &&
             <div className="videoChapters" style={this.state.displayChapterMenu}>
-              {playing && this.renderMenu()}
+              {this.renderMenu()}
             </div>
           }
           </div>
@@ -505,13 +513,28 @@ class Scene extends Component {
   _setVideoEnd = () => this.setState({ ended: true, playing: false });
 
   //_resumeVideo = () => this.setState({ playing: true, startOver:  false })
+  _toggleVideo = () => {
+    if (this.state.playing) {
+      this._video.node.pauseVideo();
+      this.setState({playing: false});
+    } else {
+      this._video.node.playVideo();
+      this.setState({playing: true});
+    }
+  }
   _resumeVideo = () => {
-    this._video.node.playVideo();
+    if (this._video !== undefined) {
+      if (this._video.node !== undefined) {
+        this._video.node.playVideo();
+      }
+    }
+    this.setState({playing: true});
     //console.log(this.state.playing);
   }
 
   _pauseVideo = () => {
     this._video.node.pauseVideo();
+    this.setState({playing: false});
     //console.log(this.state.playing);
   }
 
