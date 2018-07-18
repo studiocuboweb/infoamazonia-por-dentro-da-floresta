@@ -8,8 +8,18 @@ services:
       - ./:/usr/src/app
     volumes_from:
       - yarn-cache
+    environment:
+      - NODE_ENV=development
+  # The Web Server
+  web:
+    build:
+      context: ./
+      dockerfile: web.dockerfile
+    working_dir: /usr/src/app
+    volumes_from:
+      - app
     ports:
-      - 8080:8080
+      - 8080:80
 
   yarn-cache:
     image: busybox

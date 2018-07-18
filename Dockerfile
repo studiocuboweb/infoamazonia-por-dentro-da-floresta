@@ -30,4 +30,5 @@ EXPOSE 8080:8080
 
 # ENTRYPOINT ["/bin/bash", "/usr/src/app/run.sh"]
 # CMD ["start"]
-CMD ["npm","start"]
+# CMD ["npm","start"]
+CMD ["npm","run","watch"]
