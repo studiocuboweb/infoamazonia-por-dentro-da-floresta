@@ -50,3 +50,9 @@ https://infoam-template-multimedia.herokuapp.com/
 heroku git:remote -a infoam-template-video
 git checkout template-video
 git push heroku master
+
+# OUTROS PROCEDIMENTOS:
+- Apagando o local Storage do browser:
+Abrir o console dev do browser e rodar:
+localStorage.clear()
+localStorage.removeItem('elapsed-time')
