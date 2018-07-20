@@ -16,21 +16,12 @@ import RelatedNews from "components/RelatedNews";
 export default () => (
   <article>
     <Helmet>
-      <title>Introduction | A Veneza de Belo Monte</title>
+      <title>Introdução</title>
     </Helmet>
     <Container>
       <Note>
         <p>
-          For three months our reporter travelled Venezuela’s disputed mining
-          areas where he was confronted with illegal armed groups, indigenous
-          communities repressed by Colombian guerrillas and enclaves of informal
-          miners tormented by malaria. An illegal detention by the National
-          Guard almost prematurely ended this investigation.
-        </p>
-        <p>
-          In this journey, we talked to miners, companies, academics,
-          indigenous, politicians and activists and gathered exclusive material
-          on Latin America’s most underreported natural resources conflict.
+          No Complexo Territorial Mata Cavalo, no Mato Grosso, comunidades remanescentes de quilombolas lutam pela garantia da área a que têm direito. Ainda sem o título definitivo, eles enfrentam agora a dificuldade de adesão ao Cadastro Ambiental Rural (CAR), desconfiados de que a exigência da lei ambiental possa trazer novas ameaças aos territórios deixados pelos seus ancestrais. A luta de Mata Cavalo, que fica no município de Nossa Senhora do Livramento, distante a 55 quilômetros de Cuiabá, é a mesma de milhares de outros territórios quilombolas espalhados pelos estados brasileiros, entre eles aqueles que formam a Amazônia Legal.
         </p>
       </Note>
       <Paragraph>
@@ -55,13 +46,17 @@ export default () => (
       </Paragraph>
 
       <Paragraph>
-        The gold that is extracted will end up on the world market in the form
-        of jewellery, locked up in a bank or used in electronics, but few people
-        will know about its origin. “They work commando style,” the miner
-        continues about the nightly shootouts in the hills surrounding the
-        village where bullets are shot at every visible headlight as a curfew is
-        imposed by active gangs. Most of the miners do not want to be named as
-        they fear repercussions from armed actors in the region.
+      Mata Cavalo é um complexo territorial onde homens e mulheres remanescentes de quilombolas conseguiram resistir por mais de um século ao assédio de fazendeiros e invasores nos sertões do Mato Grosso. Embora os limites do território já tenham sido reconhecidos pelo Instituto Nacional de Colonização e Reforma Agrária (Incra), as comunidades, reconhecidas pela Fundação Cultural Palmares, ainda não receberam o título para registro em cartório.
+      </Paragraph>
+      <Paragraph>
+      Oficialmente, vivem nas comunidades quilombolas de Mato Cavalo 418 famílias. Mas na realidade esse número vem aumentando. Elas estão distribuídas pelos 14,7 mil hectares reconhecidos como território quilombola, formado a partir de diferentes histórias, que compartilham a origem dos negros que compraram ou ganharam essas terras no período em que o Brasil finalmente dava fim à escravidão no país.
+      </Paragraph>
+      <Paragraph>
+      Várias histórias se unem da definição do Complexo Territorial do Mata-Cavalo. As dos patriarcas, homens escravizados que tiveram de pagar pela própria liberdade e conseguiram se tornar donos de terras, e de tantos outros, que receberam seu quinhão do território, após anos de trabalho árduo para fazendeiros locais.
+      “Aqui é herança”, começa a contar Manuel Domingos Lúcio, o seu Neto, um dos líderes das comunidades. “Marcelino Paes de Barros foi um negro que comprou sua alforria e depois uma propriedade aqui no Mata Cavalo. O segundo que adquiriu terras aqui foi o Graciliano da Silva Tavares. A terceira parte é a terra doada a eles pela senhoria, a dona Ana da Silva Tavares”.
+      </Paragraph>
+      <Paragraph>
+      Ao longo do século 20, o território foi sendo moldado pelos que trabalharam nessas terras e por outros que chegavam. Muitos lotes foram vendidos pelos próprios remanescentes para fazendeiros, de forma pacífica ou sob pressão. Outros, simplesmente foram invadidos. Fazendeiros fizeram pasto e cercaram a área. Jagunços circulavam pela região para evitar a entrada dos moradores locais na fazenda. Época em que muitos deixaram a região.
       </Paragraph>
 
       <Paragraph>
