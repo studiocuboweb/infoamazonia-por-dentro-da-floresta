@@ -17,6 +17,7 @@ const Title = styled.h1`
   font-family: 'Merriweather', serif;
   color: #111;
   font-weight: normal;
+  text-align: center;
   .logo {
     border-radius: 100%;
     float: left;
@@ -47,22 +48,25 @@ const Title = styled.h1`
   }
   .title-item {
     display: inline-block;
-    padding-right: .25em;
+    padding: 0;
     font-size: .8em;
     white-space: nowrap;
     &.title-1 {
-      font-size: .75em;
-      padding-left: .75em;
+      font-size: .55em;
     }
     &.title-2 {
-      font-size: .5em;
+      font-size: .3em;
     }
     &.title-3 {
       display: block;
       letter-spacing: -.03em;
-      font-size: 1.6em;
+      font-size: 0.54em;
       font-weight: 700;
       padding: 0;
+      line-height: 2;
+      ${media.tablet`
+      font-size: .8em;
+    `}
     }
   }
 `

@@ -168,7 +168,7 @@ const Top = styled.div`
   h2 {
     white-space: nowrap;
     color: #fff;
-    font-size: 0.8em;
+    font-size: 0.5em;
     font-style: italic;
     font-weight: normal;
     border-top: 1px solid #fff;
@@ -189,7 +189,7 @@ const Top = styled.div`
 `;
 
 const Spacer = styled.div`
-  flex: 1 1 25%;
+  flex: 1 1 10%;
 `;
 
 const Middle = styled.div`
@@ -214,9 +214,9 @@ const Middle = styled.div`
   .description {
     text-align: center;
     margin: 0 0 2rem;
-    font-size: 1em;
+    font-size: .8em;
     ${media.desktopHD`
-      font-size: 1.2em;
+      font-size: 0.8em;
     `};
   }
   .countdown {
