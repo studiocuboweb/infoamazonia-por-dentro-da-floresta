@@ -16,25 +16,15 @@ import RelatedNews from "components/RelatedNews";
 export default () => (
   <article>
     <Helmet>
-      <title>Introducción | Explorando el Arco Minero</title>
+      <title>Introdução</title>
     </Helmet>
     <Container>
       <Note>
         <p>
-          Durante tres meses, nuestro reportero viajó por las disputadas áreas
-          mineras de Venezuela donde se deparó con grupos armados ilegales,
-          comunidades indígenas reprimidas por guerrillas colombianas y enclaves
-          de mineros informales atormentados por la malaria. Una detención
-          ilegal por la Guardia Nacional casi terminó prematuramente esta
-          investigación.
-        </p>
-        <p>
-          En este viaje, hablamos con mineros, empresas, académicos, indígenas,
-          políticos y activistas y reunimos material exclusivo sobre el
-          conflicto de recursos naturales menos reportado de América Latina.
+          No Complexo Territorial Mata Cavalo, no Mato Grosso, comunidades remanescentes de quilombolas lutam pela garantia da área a que têm direito. Ainda sem o título definitivo, eles enfrentam agora a dificuldade de adesão ao Cadastro Ambiental Rural (CAR), desconfiados de que a exigência da lei ambiental possa trazer novas ameaças aos territórios deixados pelos seus ancestrais. A luta de Mata Cavalo, que fica no município de Nossa Senhora do Livramento, distante a 55 quilômetros de Cuiabá, é a mesma de milhares de outros territórios quilombolas espalhados pelos estados brasileiros, entre eles aqueles que formam a Amazônia Legal.
         </p>
       </Note>
-      <Paragraph>
+      {/* <Paragraph>
         <StoryMedia
           media={{
             id: "video-1",
@@ -44,512 +34,223 @@ export default () => (
             }
           }}
         >
-          <strong>Con las manos embarradas</strong>, un minero lanza rocas ricas
-          en minerales dentro de un molino mecánico que las tritura para ser
-          procesadas con mercurio
-        </StoryMedia>. A poca distancia, aguardan unos soldados. Los militares
-        nos escoltaron durante nuestra visita en los cerros cerca de El Callao,
-        uno de los muchos yacimientos más disputados en Venezuela. “En
-        cualquier momento, podría ocurrir una balacera o una masacre. Todos los
-        días eran así”, cuenta con entusiasmo otro minero sobre el violento
-        proceder con el que grupos armados que disputaron esta misma mina.
+          <strong>With muddy hands</strong>, a miner throws mineral-rich rocks
+          into a spinning mechanical mill that crushes the stones to be
+          processed with mercury
+        </StoryMedia>. At a small distance, a few soldiers hang around. The
+        military escorted us during our visit to the green hills next to El
+        Callao, one of many heavily contested mining hotspots in Venezuela.
+      </Paragraph> */}
+
+      <Paragraph>
+        Mata Cavalo é um complexo territorial onde homens e mulheres remanescentes de quilombolas conseguiram resistir por mais de um século ao assédio de fazendeiros e invasores nos sertões do Mato Grosso. Embora os limites do território já tenham sido reconhecidos pelo Instituto Nacional de Colonização e Reforma Agrária (Incra), as comunidades, reconhecidas pela Fundação Cultural Palmares, ainda não receberam o título para registro em cartório.
       </Paragraph>
 
       <Paragraph>
-        El oro que se extrae termina en el mercado mundial en forma de joyas,
-        resguardado en un banco o usado en equipos electrónicos, pero poca gente
-        sabrá su origen. “Ellos trabajan tipo comando”, continúa el minero sobre
-        las balaceras nocturnas en los cerros que circundan el pueblo donde
-        tiros son disparados ante cualquier luz de faro como si se tratase de un
-        toque de queda impuesto por las bandas armadas. La mayoría de los
-        mineros no quieren que sus nombres se mencionen ya que temen las
-        reacciones de los actores armados en la región.
+        Oficialmente, vivem nas comunidades quilombolas de Mato Cavalo 418 famílias. Mas na realidade esse número vem aumentando. Elas estão distribuídas pelos 14,7 mil hectares reconhecidos como território quilombola, formado a partir de diferentes histórias, que compartilham a origem dos negros que compraram ou ganharam essas terras no período em que o Brasil finalmente dava fim à escravidão no país.
       </Paragraph>
 
       <Paragraph>
-        Los militares venezolanos participan también en la violencia que
-        frecuentemente resulta de la explotación minera a través de bandas
-        armadas y sus propias operaciones. Las Fuerzas Armadas venezolanas
-        consiguieron mucho poder durante la presidencia del fallecido Hugo
-        Chávez. Clíver Alcalá Cordones, retirado en 2013 y leal a Chávez, fue un
-        mayor general que comandó las regiones mineras. En una reunión en el
-        lobby de un hotel en Bogotá, Colombia, explicó que Maduro sigue
-        entregando poder a los militares y a sectores del gobierno que ahora
-        participan en lo que es llamado “desastre y en el botín”.
-      </Paragraph>
-
-      <FeaturedText>
-        El afán de las fuerzas armadas por los minerales se traduce en una
-        visible militarización de las zonas mineras.
-      </FeaturedText>
-
-      <Paragraph>
-        Un viaje al sur de Venezuela, en la región donde se extrae ilegalmente
-        el oro, da la impresión de que está bien controlada. Mientras manejamos
-        en las carreteras principales,{" "}
-        <StoryMedia
-          media={{
-            id: "video-2",
-            type: "youtube",
-            data: {
-              id: "mmdFX5EyunU"
-            }
-          }}
-        >
-          somos interrumpidos cada 30 minutos por alcabalas, puntos de control de
-          la Guardia Nacional
-        </StoryMedia>, encargada del orden público – pero entre más cerca de las
-        minas, son los militares los que dominan la escena.
+        Várias histórias se unem da definição do Complexo Territorial do Mata-Cavalo. As dos patriarcas, homens escravizados que tiveram de pagar pela própria liberdade e conseguiram se tornar donos de terras, e de tantos outros, que receberam seu quinhão do território, após anos de trabalho árduo para fazendeiros locais.
       </Paragraph>
 
       <Paragraph>
-        Poco importa realmente si el oro tiene un origen legal o no, si es
-        extraído por compañías o por las bandas armadas. Cuatro áreas del estado
-        Bolívar,{" "}
-        <FileLink
-          href={require("documents/GacetaOficial_40855.pdf")}
-          format="pdf"
-          size="13.3MB"
-        >
-          decretadas en 2016
-        </FileLink>{" "}
-        como una inmensa zona minera nombrada como{" "}
-        <StoryMedia
-          icon="map"
-          media={{
-            id: "map-1",
-            type: "embed",
-            data: {
-              src: "https://infoamazonia.org/embed/?map_only=1&map_id=17448"
-            }
-          }}
-        >
-          <em>Arco Minero del Orinoco</em>
-        </StoryMedia>{" "}
-        representan una simbiosis oscura de ambos mundos.
+        “Aqui é herança”, começa a contar Manuel Domingos Lúcio, o seu Neto, um dos líderes das comunidades. “Marcelino Paes de Barros foi um negro que comprou sua alforria e depois uma propriedade aqui no Mata Cavalo. O segundo que adquiriu terras aqui foi o Graciliano da Silva Tavares. A terceira parte é a terra doada a eles pela senhoria, a dona Ana da Silva Tavares”.
       </Paragraph>
 
       <Paragraph>
-        Lo que realmente es significativo es el impacto del Arco Minero en la
-        región. Las cuatro áreas coinciden con muchos territorios indígenas y
-        ambientales legalmente protegidos y que que probablemente llevarán a su
-        destrucción. Los mineros arriesgan su salud y sus vidas trabajando ya en
-        condiciones inseguras, ya en áreas de disputas violentas. El daño
-        ambiental carece de importancia para los enclaves de subsistencia minera
-        y para las brutales fuerzas que operan en estas zonas. Además, el
-        medioambiente es considerado nada importante para el gobierno que creó
-        un marco legal que sanciona las actividades de explotación mineral.
+        Ao longo do século 20, o território foi sendo moldado pelos que trabalharam nessas terras e por outros que chegavam. Muitos lotes foram vendidos pelos próprios remanescentes para fazendeiros, de forma pacífica ou sob pressão. Outros, simplesmente foram invadidos. Fazendeiros fizeram pasto e cercaram a área. Jagunços circulavam pela região para evitar a entrada dos moradores locais na fazenda. Época em que muitos deixaram a região.
       </Paragraph>
 
-      <Paragraph>
-        Alexander Luzardo, exsenador con un doctorado en Derecho Político y
-        Ambiental, ha estado directamente involucrado en la legislación
-        ambiental de Venezuela. Él redactó los estándares ambientales para la
-        actual Constitución, de 1999. Con estos esquemas, trazó cuán importante
-        es para Venezuela proteger{" "}
-        <StoryMedia
-          icon="map"
-          media={{
-            id: "map-2",
-            type: "embed",
-            data: {
-              src: "https://infoamazonia.org/es/embed/?map_only=1&map_id=17467"
-            }
-          }}
-        >
-          estas regiones vitales
-        </StoryMedia>. Sin embargo, en 2016, vio cómo el Arco Minero echó por
-        tierra la legislación que había creado. “El Arco Minero es ilegal.
-        Niega, vía decreto, la existencia y la creación de áreas protegidas”,
-        expresa Luzardo en una entrevista en un café en el campus de la
-        Universidad Central de Venezuela, donde actualmente es docente.
-      </Paragraph>
+      <Quote author="dona Zulmira Maria Lúcio, mulher de seu Neto">
+        Meus pais contavam que essas terras aqui foram de briga, uma herança do nosso tataravô, Marcelino Paes de Barros
+      </Quote>
 
-      <Quote author="Alexander Luzardo, exsenador">
-        Este es el camino más fácil para la destrucción ambiental en Venezuela.
-        La gran contribución de Venezuela a la destrucción del planeta
+      <Quote author="dona Ana Tavares">
+        Dessa terra, eles não abriam mão e deixavam para todos os netos, bisnetos e tataranetos tomarem conta. Eles queriam que nós estudássemos para tomar conta
       </Quote>
 
       <Paragraph>
-        El profesor tiene una predicción muy nefasta para el país. “Este es el
-        camino más fácil para la destrucción ambiental en Venezuela. La gran
-        contribución de Venezuela a la destrucción del planeta”, afirma Luzardo.
-        El profesor añade que el país había alcanzado un progreso impresionante
-        en términos de protección ambiental y teme que el Arco Minero lo
-        revierta: “Este proyecto es la peor respuesta a la crisis y es una
-        negación a toda perspectiva ambiental”.
+        Em 2018, os moradores de Mata Cavalo comemoraram uma vitória no Supremo Tribunal Federal (STF). Os ministros validaram o Decreto 4.887/2003, que reconheceu o direito de remanescentes quilombolas ao território tradicional, e negou a definição de um marco temporal para a regularização das terras.
       </Paragraph>
 
       <Paragraph>
-        No se sabe mucho sobre la minería en un país que ha solidificado toda su
-        economía en la industria nacionalizada del petróleo. Ahora, el gobierno
-        intenta con otro recurso no renovable, porque Venezuela no solo posee
-        las reservas más grandes de petróleo en el mundo, pero también afirma
-        tener también la segunda reserva más grande de oro. Si Venezuela es
-        capaz de certificar los yacimientos, sería una gran noticia, sobre todo,
-        ahora en las horas más oscuras del país.
+        “Tirou o medo das pessoas”, comemora dona Zulmira. “Agora com certeza nós já somos vitoriosos. O que impedia era esse julgamento. Hoje, graças a Deus, os fazendeiros perderam, mais uma vez. E agora só falta eles voltarem de novo. Tinha que correr atrás de documento mais em ordem e o restante, pronto.”
       </Paragraph>
 
       <Paragraph>
-        El país se encuentra en una gran agitación política y financiera desde
-        hace ya varios años, pero actualmente los niveles de hiperinflación y de
-        escasez de productos básicos están llevando la economía a tocar fondo.
-        El gobierno necesita soluciones concretas, por ello el anuncio de la
-        apertura de una parte significativa del país a un nuevo motor de
-        desarrollo económico: la minería.
+        O “documento mais em ordem” a que ela se refere é o título das terras, um direito confirmado pelos ministros do Supremo aguardado há muito tempo pelos quilombolas de Mata Cavalo. O documento chegou a ser emitido pela Fundação Cultural Palmares, vinculada ao Ministério da Cultura, mas depois foi cancelado. E desde 2004 o processo se arrasta nos corredores do Instituto Nacional de Colonização e Reforma Agrária (Incra). Enquanto isso, as terras são invadidas por fazendeiros, trabalhadores sem-terra e garimpeiros.
       </Paragraph>
 
-      <FullBlock withMargin>
-        <iframe
-          width="100%"
-          height="300"
-          src="https://datawrapper.dwcdn.net/ufCCG/1/"
-          allowFullScreen
-          frameBorder="0"
-        />
-      </FullBlock>
-
       <Paragraph>
-        Los billones de dólares provenientes del petróleo y del gas financiaron
-        los programas sociales del presidente Chávez desde 1999 hasta su muerte
-        en 2013. Por desgracia, estos ingresos se agotaron después del{" "}
-        <ExternalLink
-          href="https://www.nytimes.com/es/2017/05/09/interpreter-venezuela-elites-supervivencia/"
-          language="es"
-        >
-          autoenriquecimiento de las élites del país
-        </ExternalLink>{" "}
-        y de la caída de los precios del petróleo después de 2014.
+        “Essa questão da regularização fundiária aqui do território do Mata Cavalo, na verdade, é um sonho que vem se arrastando há anos e anos desde que a gente se identificou como quilombolas”, lamenta Laura Ferreira da Silva, uma das líderes da comunidade Mutuca. “A gente vê que falta um pouco no sentido dos poderes políticos de solucionar a regularização fundiária. Eles alegam o tempo todo que é falta de recursos para fazer a devida desapropriação, para fazer as indenizações.”
       </Paragraph>
 
       <FeaturedText>
-        En un último intento para inyectar capital extranjero a la economía
-        destruida, el presidente Maduro abrió 12 por ciento del territorio
-        nacional a futuras operaciones mineras de gran escala.
+        Sobreposição é ameaça ao território
       </FeaturedText>
 
       <Paragraph>
-        “Es una jugada desesperada de Maduro para conseguir liquidez”, mantiene
-        David Smilde, profesor de Sociología en la Universidad Tulane y miembro
-        titular en el centro de investigación Oficina de Washington para América
-        Latina. “Hay un peligro patente que conducirá a operaciones mineras
-        ecológicamente destructivas en un territorio con una{" "}
-        <StoryMedia
-          media={{
-            id: "galery-1",
-            type: "gallery",
-            data: {
-              items: [
-                {
-                  src: require("photos/sociobiodiversidade/Paraguaza-11.jpg")
-                },
-                {
-                  src: require("photos/sociobiodiversidade/Paraguaza-12.jpg")
-                },
-                {
-                  src: require("photos/sociobiodiversidade/Paraguaza-14.jpg")
-                },
-                {
-                  src: require("photos/sociobiodiversidade/Paraguaza-15.jpg")
-                },
-                {
-                  src: require("photos/sociobiodiversidade/Paraguaza-16.jpg")
-                },
-                {
-                  src: require("photos/sociobiodiversidade/Paraguaza-18.jpg")
-                },
-                {
-                  src: require("photos/sociobiodiversidade/Paraguaza-25.jpg")
-                },
-                {
-                  src: require("photos/sociobiodiversidade/Paraguaza-28.jpg")
-                },
-                {
-                  src: require("photos/sociobiodiversidade/Paraguaza-31.jpg")
-                }
-              ]
-            }
-          }}
-        >
-          increíble biodiversidad y con una población protegida por los
-          indígenas
-        </StoryMedia>.” El docente está convencido de que Venezuela destruirá un
-        recurso importante en términos de cuencas y de turismo potencial, a
-        cambio de ganancias a corto plazo.
+        Um levantamento realizado pela reportagem encontrou 171 Cadastros Ambientais Rurais sobrepostos ao Complexo Mata Cavalo. Eles cobrem mais de metade do território tradicional. Embora não seja possível identificar se os dados se referem a fazendas ou lotes de remanescentes quilombolas que tenham optado por fazer o cadastramento individual de lotes.
       </Paragraph>
 
-      <Quote author="David Smilde, profesor de Sociología">
-        Los problemas actuales de Venezuela poco guardan relación con la caída
-        de los precios petroleros y sí con las políticas económicas
-        insostenibles
+      <Paragraph>
+        “A sobreposição é uma ameaça”, afirma o coordenador nacional da Coordenação Nacional de Articulação das Comunidades Negras Rurais Quilombolas (Conaq), Denildo Rodrigues de Moraes. “Até o momento, os fazendeiros continuam demarcando terras sobre os nossos territórios e quando a gente corre para fazer o cadastro, já tem um feito”, denúncia.
+      </Paragraph>
+
+      <Paragraph>
+        Para fazer o levantamento, a reportagem utilizou mapas e dados disponibilizados pelo Incra na internet, onde já constam limites de territórios titulados ou que já tiveram seus limites identificados no processo de titulação. As informações sobre território quilombolas foram cruzadas aos dados do CAR, que também são públicos e estão disponíveis na internet, em um software de georreferenciamento.
+      </Paragraph>
+
+      <Paragraph>
+        Foram identificados e mapeados territórios quilombolas em sete dos nove estados que compõem a Amazônia Legal. Acre e Roraima foram as duas exceções. Dos dados indicam que os limites de 146 comunidades, em 85 municípios já foram identificados pelo Incra. Apenas 79 comunidades já receberam o título do território expedido pelo Incra.
+      </Paragraph>
+
+      <Paragraph>
+        No total, foram encontrados 1284 CARs sobrepostos a territórios quilombolas com limites já identificados pelo Incra. Mais de 287 deles, sobre territórios titulados.
+      </Paragraph>
+
+      <Paragraph>
+        A situação se mostra mais séria se for levado em consideração que os territórios titulados são apenas uma fração do total de remanescentes quilombolas já reconhecidos pela Fundação Cultural Palmares. Só nos estados da Amazônia Legal, existem 1138 comunidades já certificadas pela Fundação, vinculada ao Ministério da Cultura.
+      </Paragraph>
+
+      <Paragraph>
+        Após o reconhecimento da comunidade pela Fundação Palmares, os territórios ainda precisam ser delimitados pelo Incra, que produz um Relatório Técnico de Identificação e Delimitação (RTID). Esse relatório, após publicado, pode ser questionado em até 90 dias. O processo de identificação termina após a publicação da Portaria nos diários oficiais dos estados e da União. O título pode ser expedido, sem custos para a comunidade, após os processos de desapropriação, se necessários.
+      </Paragraph>
+
+      <FeaturedText>
+        Cadastros devem ser anulados
+      </FeaturedText>
+
+      <Paragraph>
+        O advogado Pedro Martins, da organização Terra de Direitos, é a favor da anulação de cadastros individuais sobrepostos às áreas quilombolas, mesmo que o território ainda não tenha sido titulado. Ele lembra que o direito ao território coletivo é reconhecido pela Constituição e pelo Decreto 4887, de 2013.
+      </Paragraph>
+
+      <Quote author="defende Pedro Martins">
+        Na hora em que o sistema aponta uma sobreposição, é ideal que os cadastros fiquem pendentes, tanto dos invasores quanto das comunidades quilombolas, mas no momento da análise de validação seja considerado o critério étnico, ou seja, a Comunidade Quilombola não pode ter o seu CAR cancelado por falta de documento de terras
       </Quote>
 
       <Paragraph>
-        Las economías que están basadas únicamente en lo que está oculto en el
-        suelo no necesariamente implican problemas, financieramente hablando. “A
-        mi modo de ver, a diferencia de otros académicos, considero que una
-        economía rentista no es básicamente el problema, sino las malas
-        políticas”, argumenta Smilde. “Pienso que los problemas actuales de
-        Venezuela poco guardan relación con la caída de los precios petroleros y
-        sí con las políticas económicas insostenibles. Hay que recordar que el{" "}
-        <ExternalLink
-          href="http://www.bbc.com/news/world-latin-america-26335287"
-          language="en"
-        >
-          ciclo de protestas de 2014
-        </ExternalLink>{" "}
-        estuvo en parte motivado por la escasez, por la inflación y por el
-        desempleo, y que el crudo estaba en casi 100 dólares el barril. El
-        modelo ya era insostenible, la caída de la cesta petrolera solo ha
-        apresurado su decadencia”.
-      </Paragraph>
-
-      <FullBlock withMargin>
-        <iframe
-          width="100%"
-          height="300"
-          src="https://datawrapper.dwcdn.net/NEN5F/1/"
-          allowFullScreen
-          frameBorder="0"
-        />
-      </FullBlock>
-
-      <Paragraph>
-        Mientras los acreedores internacionales intentan recuperar su dinero de
-        Venezuela, que está al borde del impago, hay quien está feliz con el
-        Arco Minero. Ese es Maduro. Con una sonrisa curiosa debajo de su bigote
-        característico, le muestra un lingote de oro a la prensa venezolana. El
-        oro pertenece a uno de los primeros envíos del Arco Minero,{" "}
-        <StoryMedia
-          icon="map"
-          media={{
-            id: "map-3",
-            type: "embed",
-            data: {
-              src: "https://infoamazonia.org/es/embed/?map_only=1&map_id=17449"
-            }
-          }}
-        >
-          un área de no menos que los 112 mil kilómetros cuadrados que bordean
-          el sur del río Orinoco
-        </StoryMedia>, la principal fuente de agua en el país y el tercer río
-        más importante en Latinoamérica.
-      </Paragraph>
-
-      <FullBlock withMargin>
-        <blockquote className="twitter-tweet" data-lang="en">
-          <p lang="es" dir="ltr">
-            Presidente{" "}
-            <a href="https://twitter.com/NicolasMaduro?ref_src=twsrc%5Etfw">
-              @NicolasMaduro
-            </a>: “Venezuela será la primera o segunda reserva mundial de oro”{" "}
-            <a href="https://twitter.com/hashtag/ProduciendoVenceremos?src=hash&amp;ref_src=twsrc%5Etfw">
-              #ProduciendoVenceremos
-            </a>{" "}
-            <a href="https://t.co/xiPZNXSLPE">pic.twitter.com/xiPZNXSLPE</a>
-          </p>&mdash; Prensa Presidencial (@PresidencialVen){" "}
-          <a href="https://twitter.com/PresidencialVen/status/803362045974421509?ref_src=twsrc%5Etfw">
-            November 28, 2016
-          </a>
-        </blockquote>
-      </FullBlock>
-
-      <Paragraph>
-        En agosto de 2016, Maduro anunció oficialmente: “<ExternalLink
-          href="http://globovision.com/article/ministerios-presentaran-a-maduro-el-plan-de-inversiones-del-arco-minero"
-          language="es"
-        >
-          El Arco Minero es ahora una realidad
-        </ExternalLink>”. Según el gobierno, 150 compañías de 35 países desean
-        invertir en minería, pero después del gran anuncio, pocos son los
-        proyectos concretos en minería.
+        No Pará, o Núcleo de Questões Agrárias do Ministério Público do Estado já recomendou à Secretaria de Meio Ambiente e Sustentabilidade (Semas-PA) o cancelamento de 273 cadastros ambientais rurais sobrepostos a 51 territórios quilombolas já titulados. De acordo com a promotora Eliane Cristina Pinto Moreira, da Primeira Região Agrária, a Semas se comprometeu a apresentar um estudo técnico sobre cada um desses cadastros.
       </Paragraph>
 
       <Paragraph>
-        Hubo una agenda mediática apretada e incluso se creó un nuevo Ministerio
-        para el Desarrollo Minero Ecológico. Se autorizó a una empresa mixta con
-        Endiama, una trasnacional minera de Angola, a{" "}
-        <ExternalLink
-          href="https://www.telesurtv.net/news/Venezuela-firma-acuerdo-con-empresa-de-diamantes-de-Angola-20170720-0055.html"
-          language="es"
-        >
-          explotar diamantes
-        </ExternalLink>{" "}
-        y{" "}
-        <ExternalLink
-          href="http://desarrollominero.gob.ve/2017/empresas-palestinas-y-autoridades-mineras-revisaron-acuerdos-para-explotacion-de-coltan/"
-          language="es"
-        >
-          un estrechón de manos con el embajador de Palestina
-        </ExternalLink>, reveló que dos corporaciones palestinas quieren extraer
-        coltán. Los aliados usuales,{" "}
-        <ExternalLink
-          href="https://www.telesurtv.net/news/Venezuela-y-China-firman-acuerdo-para-actividades-mineras-20170721-0060.html"
-          language="es"
-        >
-          China
-        </ExternalLink>{" "}
-        y{" "}
-        <ExternalLink
-          href="http://desarrollominero.gob.ve/2017/venezuela-establecio-con-rusia-lineas-de-investigacion-e-inversion-mineras/"
-          language="es"
-        >
-          Rusia
-        </ExternalLink>, quieren su porción de la torta de los minerales en sus
-        platos, más que todo por el manejo de deuda con ambos países. En total,
-        Venezuela debe 150 mil millones de dólares a una larga lista de
-        acreedores.
+        A promotora concorda que mesmo cadastros sobrepostos a territórios não titulados devem ser cancelados. “Juridicamente não existe diferença, não existe uma situação melhor do não titulado para o titulado, o impacto maior é na elaboração da prova, no caso de questionamento jurídico”, explica a promotora.
       </Paragraph>
 
       <FeaturedText>
-        Hasta ahora, compañías reconocidas en el sector minero continúan
-        ausentes en Venezuela.
+        Vida e preservação ambiental
       </FeaturedText>
 
       <Paragraph>
-        La trasnacional minera Barrick Gold respondió a nuestra pregunta,
-        explicando que “mientras Barrick participó en la revisión de proyectos
-        mineros en el país, la compañía no busca ningún proyecto o inversión en
-        Venezuela”. Maduro aseveró, sin embargo, haber{" "}
-        <ExternalLink
-          href="https://www.reuters.com/article/us-venezuela-mining/venezuela-says-signs-5-5-bln-mining-deals-with-companies-idUSKCN1112BR"
-          language="en"
-        >
-          firmado un contrato con Barrick Gold
-        </ExternalLink>{" "}
-        en agosto de 2016.
+        Apesar de três adiamentos e alterações no sistema de registro, o movimento quilombola continuam com dificuldades para o Cadastro Ambiental Rural (CAR) de territórios tradicionais. A Conaq aponta como principais problemas enfrentados a sobreposição de declarações de fazendeiros, falta de apoio para comunidades e não adequação de conceitos presentes no Código Florestal à cultura dos povos tradicionais.
       </Paragraph>
 
       <Paragraph>
-        Más de un año después de los anuncios de Maduro, hablar sobre quién
-        realmente controla la minería en el país sumido en crisis sigue siendo
-        un tabú. “Detrás de la minería en Venezuela, siempre ha habido la
-        opacidad de factores militares”,{" "}
-        <StoryMedia
-          media={{
-            id: "video-3",
-            type: "youtube",
-            data: {
-              id: "NQyPITnr8QE"
-            }
-          }}
-        >
-          manifestó Américo de Grazia
-        </StoryMedia>, diputado opositor en el Parlamento marginado por el
-        Gobierno. De Grazia representa Bolívar, el estado donde la mayoría de
-        las reservas del oro están ocultas. “La minería [ilegal] ha sido
-        criminalizada por la opinión pública, pero se permite su clandestinidad.
-        Aquí, el máximo operador [quienes están a cargo] son las fuerzas
-        públicas, y el operador práctico [el ejecutor] es el crimen organizado”,
-        dice.
+        “Nós usamos o território como um todo, mas dentro do sistema de manejo, de saber relacionar a vida humana com a preservação ambiental”, descreve Denildo de Moraes. “Algo que para alguns ambientalistas, que são ambientalistas de gravata que estão em Brasília, é inconcebível. Eles não entendem a dinâmica de vida que os povos tradicionais têm”.
       </Paragraph>
 
       <Paragraph>
-        Venezuela tiene un número increíble de generales –{" "}
-        <ExternalLink
-          href="https://www.nytimes.com/es/2017/08/08/los-militares-venezolanos-se-dividen-ante-la-crisis-del-poder-chavismo-maduro-padrino/"
-          language="es"
-        >
-          cerca de dos mil
-        </ExternalLink>{" "}
-        – y las fuerzas armadas controlan el Arco Minero, como resaltan De
-        Grazia y Luzardo que argumentan que el domínio militar se extiende a
-        la mayoría del sector minero. Ellos extorsionan a las bandas que operan
-        las minas ilegales y controlan las rutas de exportación. La minería es
-        una caja chica que se está institucionalizando lentamente. El año pasado
-        se creó la Compañía Anónima Militar de Industrias Mineras, Petrolíferas
-        y de Gas (Camimpeg){" "}
-        <ExternalLink
-          href="http://efectococuyo.com/economia/fanb-firme-con-la-logistica-de-seguridad-en-el-arcominero"
-          language="es"
-        >
-          junto con una ‘Zona Económica Militar’
-        </ExternalLink>. Activos o retirados,{" "}
-        <ExternalLink
-          href="https://transparencia.org.ve/project/informe-general-2016-2017/"
-          language="es"
-        >
-          los militares están presentes en alrededor de 30 por ciento de las
-          compañías estatales
-        </ExternalLink>{" "}
-        con juntas directivas públicas. Partiendo de que el Arco Minero será
-        explotado en empresas mixtas en las que el Estado posee la mayoría
-        porcentual de propiedad, es muy posible la presencia militar a cargo.
+        O CAR foi instituído pelo governo federal em 2014, como uma ferramenta de fiscalização ambiental e para orientar a manutenção e recuperação das reservas legais, ou seja, área de mata que deve ser preservada, em imóveis rurais. Desde 31 de maio deste ano, o cadastro passou a ser condicionante para acesso a financiamentos e programas de fomento do governo federal. O Sistema é gerenciado pelo Serviço Florestal Brasileiro (SFB), mas a responsabilidade de efetivar o cadastro é de cada estado da federal.
       </Paragraph>
 
       <Paragraph>
-        De Grazia dice que los generales son cambiados frecuentemente, así como
-        el personal militar en las directivas de las compañías: “Cada militar
-        que llega quiere enriquecerse de la noche a la mañana, lo que lo hace
-        más cruel, más violento y sus normas serán más inhumanas porque él sabe
-        que esta es la manera de volverse rico y que solo dispondrá de uno o dos
-        meses, quizás un año”.
+        A exigência da reserva legal, por exemplo, não estaria de acordo com a realidade dessas comunidades e violaria direitos reconhecidos pela Constituição e Acordos Internacionais. Enquanto na maioria das regiões, essa parcela deve ser de pelo menos 20% da propriedade, na Amazônia ela pode chegar a 80% nas áreas de floresta. “O cadastro foi criado a partir de uma demanda do Código Florestal, mas em nenhum momento, esses povos foram levados em consideração”, critica Denildo de Moraes.
+      </Paragraph>
+
+      <Paragraph>
+        Para o Serviço Florestal Brasileiro (SFB), a reserva legal é uma imposição da lei, que a exige para todo e qualquer imóvel rural, seja particular ou de comunidade tradicional. “Não é uma penalidade para as populações tradicionais, mas um princípio para qualquer proprietário”, defende o diretor geral do SFB, Raimundo Deusdará Filho.  “Não é o CAR que vai pacificar essa situação”, completa.
+      </Paragraph>
+
+      <Paragraph>
+        Mas os críticos dizem que essa exigência pode criar um problema futuro para as comunidades quilombolas, principalmente para aquelas que ainda não tiveram a situação fundiária resolvida.
+      </Paragraph>
+
+      <Paragraph>
+        “Um território quilombola que tenha 90% da sua área invadida por fazendeiros não vai ter uma reserva verde considerável”, alerta o advogado Pedro Martins, da organização não governamental Terra de Direitos. “Uma área detonada, super impactada pela soja, por exemplo, vai virar um passivo ambiental para a comunidade quilombola”, completa.
+      </Paragraph>
+
+      <Paragraph>
+        O advogado argumenta ainda que as exigências para a adesão ao CAR atentam contra direitos das comunidades tradicionais garantidos pela Constituição e pela Convenção 169 da Organização Internacional do Trabalho, da qual o Brasil é signatário. Pedro Martins sustenta que as comunidades sejam consultadas sobre as exigências. “Se ela é obrigada a declarar a reserva legal, e isso não faz parte do seu sistema de vida, então não estão respeitando o modo de vida das comunidades”, alega o advogado.
+      </Paragraph>
+
+      <Paragraph>
+        A técnica do Instituto Socioambiental Ivy Wiens trabalha com comunidades quilombolas na região do Vale do Ribeira, em São Paulo, e participou do processo de cadastro de dois territórios na região. Antes do CAR ser efetivado, segundo ela, foram dois anos de oficinas e discussões, para as comunidades decidirem como utilizar o território. Só após a definição, foi possível elaborar o cadastro.
+      </Paragraph>
+
+      <Paragraph>
+        “O sistema foi pensado para propriedade privada individual e a forma como o território como os povos tradicionais estão organizados é completamente diferente. Se você faz o cadastro individual, você sabe o que você quer da sua propriedade, você faz o seu planejamento. Agora quando você tem 100 ou 150 famílias naquele espaço, você tem que discutir conjuntamente, coletivamente”, completa Ivy.
       </Paragraph>
 
       <FeaturedText>
-        Bandas armadas les pagan a los castrenses para continuar con las
-        operaciones ilegales mineras.
+        A defesa e apoio às comunidades
       </FeaturedText>
 
       <Paragraph>
-        “Cuando acabamos con algunas de las actividades de minería ilegal, los
-        mineros se quejaron, porque les habían pagado a los militares antes”,{" "}
-        <StoryMedia
-          media={{
-            id: "video-4",
-            type: "youtube",
-            data: {
-              id: "aPtRA5nM_ow"
-            }
-          }}
-        >
-          dice Alcalá
-        </StoryMedia>. Él menciona que muchos aviones sacan ilegalmente la
-        mayoría del oro de Venezuela a las islas del Caribe. Los militares están
-        involucrados: “Ellos bajan [el avión] de manera que el radar no sepa
-        dónde están”.
+        Mesmo após o prazo de adesão, o sistema do CAR permanece aberto, conforme lembra Raimundo Deusdará. “O cadastro é de natureza permanente”, esclarece do diretor geral do SFB. “Ele não vai ficar. Esse prazo (31 de maio) é referencial para o cumprimento dos dispositivos do Código Florestal, mas a gente continua dando apoio às comunidades, até porque nós temos uma série de iniciativas planejadas, para continuar apoiando os estados na elaboração na busca ativa dessas populações e comunidades tradicionais”, completa.
       </Paragraph>
 
       <Paragraph>
-        Alcalá confirma que el ejército recibe beneficios significativos de la
-        minería ilegal, mientras las bandas que operan las minas usan la
-        violencia para mantener el control. “Desde hace un año, ha habido
-        masacres ejecutadas por el ejército en algunas zonas porque hay oro”.
+        Ele explica ainda que o cadastro pode ser retificado, de modo que mesmo sem todas as informações sobre o território as populações podem fazê-lo e completar em outro momento, sem nenhum prejuízo.
       </Paragraph>
 
       <Paragraph>
-        Un análisis de informes de prensa por el Observatorio Venezolano de
-        Violencia en el estado Bolívar muestra que, en los primeros diez meses
-        de 2017, al menos 1.415 personas han sido asesinadas en la región,
-        muchos de ellos en zonas mineras. Es imposible estimar un número preciso
-        de personas muertas en choques entre bandas armadas y balaceras con el
-        ejército; tampoco no es inusual que los migrantes mineros, que no son de
-        la región, terminen en tumbas clandestinas tras ser asesinados en áreas
-        remotas.
+        O Serviço Florestal Brasileiro informou ainda que o sistema tem recebido melhorias para superar as dificuldades apontadas pelos usuários. Desde a implantação, o CAR já previa um módulo exclusivo para povos e comunidades tradicionais, que veio recebendo melhoria desde então. Esse módulo permite a inscrição de territórios coletivos, como é o caso dos quilombolas. Mas em alguns casos, os próprios remanescentes preferiram optar pelo cadastro individual.
       </Paragraph>
 
       <Paragraph>
-        Aunque el conflicto minero sin control en Venezuela no es nuevo,{" "}
-        <ExternalLink
-          language="es"
-          href="http://www.correodelcaroni.com/index.php/sucesos/violencia-minera-en-guayana/item/54546-vecinos-de-tumeremo-se-mantienen-asediados-por-control-de-bandas-criminales-y-militarizacion"
-        >
-          la batalla real por el acceso a los recursos minerales
-        </ExternalLink>{" "}
-        apenas comenzó. El hurto legalizado no solo impacta directamente a
-        Venezuela y a sus fronteras, pero también la demanda global por
-        minerales y los numerosos nexos internacionales de traficantes
-        involucran a muchos actores en el extranjero. Por ello, el daño hecho a
-        uno de los ecosistemas más importantes, el Amazonas, hace que el Arco
-        Minero sea un asunto de interés internacional.
+        “Já com a primeira versão do módulo, nós cadastramos 83 territórios quilombolas em Pernambuco, todos coletivos, assistindo 12 mil famílias”, conta a gerente de Cadastro de Florestas do SFB, Janaína Rocha. “A gente uma demanda paralela em Alagoas, em que os quilombolas só queriam cadastrar o CAR se pudessem fazer individual, porque muitos já tinha titulação ou recebido de compra e venda da terra”.
       </Paragraph>
-      <RelatedNews
-        sectionTitle={"Ver también: "}
-        title={"Lorem ipsum 2"}
-        subtitle={"The situation in venzuela is critical, the people is suffering and beeing smashed everyday." }
-        imageUrl={"http://darkroom-cdn.s3.amazonaws.com/2016/09/APphoto_Venezuela-Opposition-Protest-9.jpg"}
-        href={"http://runrun.es/nacional/292903/tsj-declaro-nulas-las-sesiones-del-5-y-el-9-de-enero-de-la-asamblea-nacional.html"}
-      />
+
+      <Paragraph>
+        Na versão atual, essa contradição já está resolvida, conforme explica Janaína Rocha. O módulo permite que os cadastros do território coletivo contenham cadastros individuais dos quilombolas. No recebido cadastro, conforme ela explica, está identificada qual é a parcela individual declarada dentro do território coletivo.
+      </Paragraph>
+
+      <Paragraph>
+        Raimundo Deusdará reforça que o CAR não é a solução ou a causa dos problemas fundiários, mas um grande diagnóstico da situação. Para ele, o sistema tem revelado a necessidade de novas políticas públicas adequadas para as populações tradicionais.
+      </Paragraph>
+
+      <FeaturedText>
+        O temor das invasões
+      </FeaturedText>
+
+      <Paragraph>
+        Na comunidade Mutuca, uma das seis que formam o Complexo Territorial Mata Cavalo, no Mato Grosso, as dificuldades para atender as exigências do cadastro levaram os moradores a apelar, a contragosto, a cadastros individuais. Uma escolha para evitar problemas maiores, como o risco de perder acesso a programas de fomento e até o temor de invasores usarem o CAR como argumento na apropriação do território tradicional.
+      </Paragraph>
+
+      <Quote author="acredita Laura, uma das líderes da comunidade do Rio Mutuca.">
+        O interessante seria fazer coletivo, mas a gente esbarra em uma burocracia
+      </Quote>
+
+      <Quote author="Laura">
+        Nós não temos o documento da terra, tendo em vista que foram montados outros títulos em cima daqueles documentos antigos dos nossos ancestrais. Então fazer o individual é uma forma de dizer que, se o fazendeiro quiser fazer o cadastro ambiental da área, que nós já fizemos o nosso
+      </Quote>
+
+      <Paragraph>
+        O movimento quilombola destaca que o Estado Brasileiro reconhece o direito coletivo às terras e vê riscos à integridade dos territórios no cadastro individual. O país, conforme o argumento do coordenador nacional da Conaq, não tem controle sobre a questão fundiária. O CAR, apesar de não ser um documento de posse ou propriedade, poderia ser usado com a apropriação de territórios.
+      </Paragraph>
+
+      <Paragraph>
+        “Se você colocar lote, um lote para cada família, vão vender”, diz Sizernando do Carmo Santo, o seu Nezinho, um dos líderes da comunidade Mata Cavalo de Cima. “Toda vida, nós moramos em território comum, nunca teve lote. Mesmo assim teve família que vendeu lote. Então a gente está com medo de que vendam para fazendeiros e comece a briga tudo de novo”, teme.
+      </Paragraph>
+
+      <Paragraph>
+        Ele lembra que a venda de terras pelos próprios remanescentes quilombolas é uma das causas dos problemas fundiários no território. “Eu não sou contra o fazendeiro, nem a favor dele. Ele chegou aqui porque comprou e o dinheiro dele está em jogo”, esclarece.
+      </Paragraph>
+
+      <Paragraph>
+        Embora seja um instrumento de controle ambiental, existem de fato iniciativas que desvirtuam esse objetivo do CAR. A promotora Eliane Moreira cita o exemplo do Instituto de Terras do Pará, que estaria usando o CAR para regularização fundiária, como desvio da finalidade do sistema. “O CAR em si é um grande um instrumento, mas o desvirtuamento dele para uma finalidade para a qual ele não foi criado”, afirma.
+      </Paragraph>
+
+      <Paragraph>
+        No Mata Cavalo, os remanescentes quilombolas que já resistiram a invasões por mais de cem anos, continuam com dúvidas quanto às consequências do Cadastro Ambiental Rural sobre a integridade do território. E bastaria uma medida para resolver essa insegurança, a titulação das terras pelo Incra.
+      </Paragraph>
+
+      <Paragraph>
+        <strong>
+          O Especial Olhando por Dentro da Floresta Amazônica é uma parceria da Amazônia Real e do InfoAmazônia e conta com o financiado da <a href="http://amazoniareal.com.br/apoio-financeiro/" target="_blank">Aliança pelo Clima e Uso da Terra – CLUA</a> – para ampliar a cobertura jornalística sobre temas como a invisibilidade das violações de direitos socioambientais dos povos tradicionais da região amazônica.
+        </strong>
+      </Paragraph>
     </Container>
   </article>
 );

@@ -110,8 +110,8 @@ class Header extends Component {
       <Wrapper>
         <div className="header-content">
             <div className="site-title clearfix">
-              <img src={require("images/partners/infoamazonia-black.png")} />
               <img src={require("images/partners/amazonia-real.png")} />
+              <img src={require("images/partners/infoamazonia-black.png")} />
             </div>
           <nav>
           {

@@ -36,7 +36,7 @@ const Wrapper = styled.section`
     left: 0;
     bottom: 0;
     right: 0;
-    background-image: url(${require("images/bg-teste.jpg")});
+    background-image: url(${require("images/bg-1.jpg")});
     background-size: cover;
     background-position: center;
     z-index: -1;
@@ -267,8 +267,8 @@ class Scene extends Component {
       <Wrapper className="scene landing">
         <Top>
           <div className="partners">
-            <img src={require("images/partners/infoamazonia.png")} />
             <img src={require("images/partners/amazonia-real.png")} />
+            <img src={require("images/partners/infoamazonia.png")} />
           </div>
           <SiteTitle />
           <h2>
