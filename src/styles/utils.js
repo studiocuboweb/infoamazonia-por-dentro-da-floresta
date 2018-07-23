@@ -6,6 +6,10 @@ export const sizes = [
     width: 400
   },
   {
+    device: 'phoneHorizontal',
+    width: 480
+  },  
+  {
     device: 'phablet',
     width: 550
   },
@@ -30,14 +34,12 @@ export const media = sizes.reduce((acc, size, index) => {
       ${size.width == 400 &&
         css(...args)
       }
-
       @media(max-width: ${emSize}em) {
         ${css(...args)}
       }
     `
   } else {
     acc[size.device] = (...args) => css`
-
     @media(min-width: ${emSize}em) {
       ${css(...args)}
     }
