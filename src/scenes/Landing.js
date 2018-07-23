@@ -130,6 +130,16 @@ const Top = styled.div`
     flex-direction: columns;
     align-items: center;
     justify-content: center;
+    ${media.phablet`
+      border-bottom: none;
+      margin-bottom: 0rem;
+      padding-bottom: 0rem;
+   `} 
+    ${media.desktop`
+      border-bottom: 1px solid #fff;
+      margin-bottom: 2rem;
+      padding-bottom: 1rem;
+    `}  
     img {
       width: auto;
       height: auto;
@@ -174,6 +184,9 @@ const Top = styled.div`
     border-top: 1px solid #fff;
     margin: 2rem 0 0;
     padding: 0.5rem 2rem;
+    ${media.phablet`
+      margin: 1rem 0 0;
+    `} 
     ${media.tablet`
       font-size: 1em;
     `} ${media.desktopHD`
@@ -189,7 +202,10 @@ const Top = styled.div`
 `;
 
 const Spacer = styled.div`
-  flex: 1 1 10%;
+  flex: 1 1 25%;
+  ${media.phablet`
+    flex: 1 1 6%;
+  `}
 `;
 
 const Middle = styled.div`
@@ -207,16 +223,19 @@ const Middle = styled.div`
   font-size: 0.8em;
   font-family: 'Merriweather', serif;
   ${media.phablet`
-    width: 65%;
+    width: 100%;
     padding: 0 3rem;
-    font-size: 1em;
+    font-size: 0.8em;
   `}
   .description {
     text-align: center;
     margin: 0 0 2rem;
-    font-size: .8em;
+    font-size: 1em;
     ${media.desktopHD`
-      font-size: 0.8em;
+      font-size: 1.2em;
+    `};
+    ${media.phablet`
+      margin: 0 0 1rem;
     `};
   }
   .countdown {
