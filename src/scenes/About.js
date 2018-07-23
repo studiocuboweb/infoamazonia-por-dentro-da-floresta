@@ -22,7 +22,7 @@ const messages = defineMessages({
   },
   siteTitle: {
     id: "head.title",
-    defaultMessage: "A Veneza de Belo Monte"
+    defaultMessage: "Especial Olhando por Dentro da Floresta Amazônica"
   }
 });
 

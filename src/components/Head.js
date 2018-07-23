@@ -6,12 +6,12 @@ import { Helmet } from "react-helmet";
 const messages = defineMessages({
   title: {
     id: "head.title",
-    defaultMessage: "A Veneza de Belo Monte"
+    defaultMessage: "Especial Olhando por Dentro da Floresta Amazônica"
   },
   description: {
     id: "head.description",
     defaultMessage:
-      "The destruction of 44 thousand square miles of forests in the largest mining project in Venezuela"
+      "A luta dos herdeiros de Mata Cavalo pelo título do quilombo"
   },
   keywords: {
     id: "head.keywords",

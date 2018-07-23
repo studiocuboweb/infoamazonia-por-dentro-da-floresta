@@ -11,11 +11,11 @@
   {
     "descriptors": [
       {
-        "defaultMessage": "A Veneza de Belo Monte",
+        "defaultMessage": "Especial Olhando por Dentro da Floresta Amazônica",
         "id": "head.title"
       },
       {
-        "defaultMessage": "The destruction of 110 thousand square kilometres of forests in the largest mining project in Venezuela",
+        "defaultMessage": "A luta dos herdeiros de Mata Cavalo pelo título do quilombo",
         "id": "head.description"
       },
       {
@@ -78,7 +78,7 @@
         "id": "about.title"
       },
       {
-        "defaultMessage": "A Veneza de Belo Monte",
+        "defaultMessage": "Especial Olhando por Dentro da Floresta Amazônica",
         "id": "head.title"
       },
       {
@@ -172,7 +172,7 @@
         "id": "share.title"
       },
       {
-        "defaultMessage": "A Veneza de Belo Monte",
+        "defaultMessage": "Especial Olhando por Dentro da Floresta Amazônica",
         "id": "head.title"
       }
     ],
