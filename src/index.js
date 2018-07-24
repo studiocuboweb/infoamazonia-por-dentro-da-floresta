@@ -34,12 +34,10 @@ import axios from "axios";
 import configureStore from "store";
 import Application from "app";
 
-import en from "react-intl/locale-data/en";
 import pt from "react-intl/locale-data/pt";
-import es from "react-intl/locale-data/es";
 
-addLocaleData([...en, ...pt, ...es]);
-window.locales = ["en", "pt", "es"];
+addLocaleData([...pt]);
+window.locales = ["pt"];
 
 import localeData from "locales";
 
