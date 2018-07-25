@@ -464,14 +464,14 @@ class Scene extends Component {
                   <span className="fa fa-pause"></span>
                 </Link>
               }
+                <div className="video-time">
+                  {this._video.formatTime(Math.round(this._video.state.position))} / {this._video.formatTime(this._video.state.duration)}
+                </div>
                 <Link
                   to="#"
                   onClick={() => this._openChaptersMenu()} className="text-chapter">
                   <span><img src={require("images/chapters_icon.png")} style={{width:'20px'}}/></span> Capítulos <span className={this.state.arrowButtonClass}></span>
                 </Link>
-                <div className="video-time">
-                  {this._video.formatTime(Math.round(this._video.state.position))} / {this._video.formatTime(this._video.state.duration)}
-                </div>
               </div>
               <div style={{width:'25%',display:'block',float:'left',margin:'0',textAlign:'right'}}>
                 <Link
