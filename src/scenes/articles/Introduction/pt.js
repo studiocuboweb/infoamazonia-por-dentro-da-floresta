@@ -147,9 +147,9 @@ export default () => (
         Sobreposição é ameaça ao território
       </Subtitle>
 
-      <FullBlock withMargin>
-        <Tableau url='https://public.tableau.com/views/Visu_CAR_Quilombolas_01/Visualizar?:embed=y&:display_count=no' />
-      </FullBlock>
+      <Paragraph>
+        <Tableau url='https://public.tableau.com/shared/MJDB2FJNY?:display_count=no' />
+      </Paragraph>
 
       <Paragraph>
         Um levantamento realizado pela reportagem encontrou 171 Cadastros Ambientais Rurais sobrepostos ao Complexo Mata Cavalo. Eles cobrem mais de metade do território tradicional. Embora não seja possível identificar se os dados se referem a fazendas ou lotes de remanescentes quilombolas que tenham optado por fazer o cadastramento individual de lotes.
