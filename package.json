@@ -3,6 +3,9 @@
   "version": "0.0.0",
   "description": "",
   "main": "index.js",
+  "engines": {
+    "node": "6.11.0"
+  },
   "scripts": {
     "start": "node_modules/.bin/webpack-dev-server --host 0.0.0.0",
     "heroku-postbuild": "npm run build",
