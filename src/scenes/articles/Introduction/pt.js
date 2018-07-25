@@ -22,7 +22,58 @@ export default () => (
     <Container>
       <Note>
         <p>
-          <strong>No Complexo Territorial Mata Cavalo</strong>, no Mato Grosso, comunidades remanescentes de quilombolas lutam pela garantia da área a que têm direito. Ainda sem o título definitivo, eles enfrentam agora a dificuldade de adesão ao Cadastro Ambiental Rural (CAR), desconfiados de que a exigência da lei ambiental possa trazer novas ameaças aos territórios deixados pelos seus ancestrais. A luta de Mata Cavalo, que fica no município de Nossa Senhora do Livramento, distante a 55 quilômetros de Cuiabá, é a mesma de milhares de outros territórios quilombolas espalhados pelos estados brasileiros, entre eles aqueles que formam a Amazônia Legal.
+                <StoryMedia
+        media={{
+          id: "galery-1",
+          type: "gallery",
+          data: {
+            items: [
+              {
+                src: require("photos/galeria/galeria_1.jpg")
+              },
+              {
+                src: require("photos/galeria/galeria_2.jpg")
+              },
+              {
+                src: require("photos/galeria/galeria_3.jpg")
+              },
+              {
+                src: require("photos/galeria/galeria_4.jpg")
+              },
+              {
+                src: require("photos/galeria/galeria_5.jpg")
+              },
+              {
+                src: require("photos/galeria/galeria_6.jpg")
+              },
+              {
+                src: require("photos/galeria/galeria_7.jpg")
+              },
+              {
+                src: require("photos/galeria/galeria_8.jpg")
+              },
+              {
+                src: require("photos/galeria/galeria_9.jpg")
+              }
+              {
+                src: require("photos/galeria/galeria_10.jpg")
+              }
+              {
+                src: require("photos/galeria/galeria_11.jpg")
+              }
+              {
+                src: require("photos/galeria/galeria_12.jpg")
+              }
+              {
+                src: require("photos/galeria/galeria_13.jpg")
+              }
+            ]
+          }
+        }}
+        >
+        No Complexo Territorial Mata Cavalo, no Mato Grosso, comunidades remanescentes de quilombolas lutam pela garantia da área a que têm direito
+        </StoryMedia>.”
+           Ainda sem o título definitivo, eles enfrentam agora a dificuldade de adesão ao Cadastro Ambiental Rural (CAR), desconfiados de que a exigência da lei ambiental possa trazer novas ameaças aos territórios deixados pelos seus ancestrais. A luta de Mata Cavalo, que fica no município de Nossa Senhora do Livramento, distante a 55 quilômetros de Cuiabá, é a mesma de milhares de outros territórios quilombolas espalhados pelos estados brasileiros, entre eles aqueles que formam a Amazônia Legal.
         </p>
       </Note>
 
@@ -70,7 +121,17 @@ export default () => (
       </Paragraph>
 
       <Paragraph>
-        “Tirou o medo das pessoas”, comemora dona Zulmira. “Agora com certeza nós já somos vitoriosos. O que impedia era esse julgamento. Hoje, graças a Deus, os fazendeiros perderam, mais uma vez. E agora só falta eles voltarem de novo. Tinha que correr atrás de documento mais em ordem e o restante, pronto.”
+      <StoryMedia
+        media={{
+          id: "image-7",
+          type: "image",
+          data: {
+            credits: "Bruno Kelly/Amazônia Real",
+            src: require("photos/matacavalo_2-1.jpg")
+          }
+        }}
+      >
+        “Tirou o medo das pessoas”, comemora dona Zulmira Maria Lúcio, 64 anos, casada com Manoel Domingos Lucio, 67 anos</StoryMedia>. “Agora com certeza nós já somos vitoriosos. O que impedia era esse julgamento. Hoje, graças a Deus, os fazendeiros perderam, mais uma vez. E agora só falta eles voltarem de novo. Tinha que correr atrás de documento mais em ordem e o restante, pronto.”
       </Paragraph>
 
       <Paragraph>
@@ -85,6 +146,59 @@ export default () => (
         Sobreposição é ameaça ao território
       </Subtitle>
 
+      <FullBlock withMargin>
+        <div class='tableauPlaceholder' id='viz1532548448114' style='position: relative'>
+          <noscript>
+            <a href='#'>
+              <img alt='Visualizar ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;TF&#47;TF3C7BN35&#47;1_rss.png' style='border: none' />
+            </a>
+          </noscript>
+          <object class='tableauViz'  style='display:none;'>
+            <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+            <param name='embed_code_version' value='3' />
+            <param name='path' value='shared&#47;TF3C7BN35' />
+            <param name='toolbar' value='no' />
+            <param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;TF&#47;TF3C7BN35&#47;1.png' />
+            <param name='animate_transition' value='yes' />
+            <param name='display_static_image' value='no' />
+            <param name='display_spinner' value='yes' />
+            <param name='display_overlay' value='no' />
+            <param name='display_count' value='no' />
+          </object>
+        </div>
+        <script type='text/javascript'>
+          var divElement = document.getElementById('viz1532548448114');
+          var vizElement = divElement.getElementsByTagName('object')[0];
+          if ( divElement.offsetWidth > 800 ){
+            vizElement.style.minWidth='420px';
+            vizElement.style.maxWidth='650px';
+            vizElement.style.width='100%';
+            vizElement.style.minHeight='587px';
+            vizElement.style.maxHeight='887px';
+            vizElement.style.height=(divElement.offsetWidth*0.75)+'px';
+            }
+            else if ( divElement.offsetWidth > 500 ) {
+              vizElement.style.minWidth='420px';
+              vizElement.style.maxWidth='650px';
+              vizElement.style.width='100%';
+              vizElement.style.minHeight='587px';
+              vizElement.style.maxHeight='887px';
+              vizElement.style.height=(divElement.offsetWidth*0.75)+'px';
+              }
+            else {
+              vizElement.style.minWidth='420px';
+              vizElement.style.maxWidth='650px';
+              vizElement.style.width='100%';
+              vizElement.style.minHeight='587px';
+              vizElement.style.maxHeight='887px';
+              vizElement.style.height=(divElement.offsetWidth*1.77)+'px';
+              }
+          var scriptElement = document.createElement('script');
+            scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+            vizElement.parentNode.insertBefore(scriptElement, vizElement);
+        </script>
+      </FullBlock>
+
       <Paragraph>
         Um levantamento realizado pela reportagem encontrou 171 Cadastros Ambientais Rurais sobrepostos ao Complexo Mata Cavalo. Eles cobrem mais de metade do território tradicional. Embora não seja possível identificar se os dados se referem a fazendas ou lotes de remanescentes quilombolas que tenham optado por fazer o cadastramento individual de lotes.
       </Paragraph>
@@ -98,7 +212,17 @@ export default () => (
       </Paragraph>
 
       <Paragraph>
-        Foram identificados e mapeados territórios quilombolas em sete dos nove estados que compõem a Amazônia Legal. Acre e Roraima foram as duas exceções. Dos dados indicam que os limites de 146 comunidades, em 85 municípios já foram identificados pelo Incra. Apenas 79 comunidades já receberam o título do território expedido pelo Incra.
+        Foram identificados e mapeados territórios quilombolas em sete dos nove estados que compõem a Amazônia Legal. Acre e Roraima foram as duas exceções. Dos dados indicam que os limites de 146 comunidades, em 85 municípios já foram identificados pelo Incra. <StoryMedia
+                media={{
+                  id: "image-8",
+                  type: "image",
+                  data: {
+                    credits: "Bruno Kelly/Amazônia Real",
+                    src: require("photos/matacavalo_2-2.jpg")
+                  }
+                }}
+              >
+                Apenas 79 comunidades já receberam o título do território expedido pelo Incra</StoryMedia>.
       </Paragraph>
 
       <Paragraph>
@@ -180,7 +304,17 @@ export default () => (
       </Paragraph>
 
       <Paragraph>
-        Mas os críticos dizem que essa exigência pode criar um problema futuro para as comunidades quilombolas, principalmente para aquelas que ainda não tiveram a situação fundiária resolvida.
+      <StoryMedia
+              media={{
+                id: "image-9",
+                type: "image",
+                data: {
+                  credits: "Bruno Kelly/Amazônia Real",
+                  src: require("photos/matacavalo_2-3.jpg")
+                }
+              }}
+            >
+              Mas os críticos dizem que essa exigência pode criar um problema futuro para as comunidades quilombolas</StoryMedia>, principalmente para aquelas que ainda não tiveram a situação fundiária resolvida.
       </Paragraph>
 
       <Paragraph>
@@ -188,7 +322,17 @@ export default () => (
       </Paragraph>
 
       <Paragraph>
-        O advogado argumenta ainda que as exigências para a adesão ao CAR atentam contra direitos das comunidades tradicionais garantidos pela Constituição e pela Convenção 169 da Organização Internacional do Trabalho, da qual o Brasil é signatário. Pedro Martins sustenta que as comunidades sejam consultadas sobre as exigências. “Se ela é obrigada a declarar a reserva legal, e isso não faz parte do seu sistema de vida, então não estão respeitando o modo de vida das comunidades”, alega o advogado.
+      <StoryMedia
+              media={{
+                id: "image-10",
+                type: "image",
+                data: {
+                  credits: "Bruno Kelly/Amazônia Real",
+                  src: require("photos/matacavalo_2-4.jpg")
+                }
+              }}
+            >
+              O advogado argumenta ainda que as exigências para a adesão ao CAR atentam contra direitos das comunidades tradicionais garantidos pela Constituição e pela Convenção 169 da Organização Internacional do Trabalho</StoryMedia>, da qual o Brasil é signatário. Pedro Martins sustenta que as comunidades sejam consultadas sobre as exigências. “Se ela é obrigada a declarar a reserva legal, e isso não faz parte do seu sistema de vida, então não estão respeitando o modo de vida das comunidades”, alega o advogado.
       </Paragraph>
 
       <Paragraph>
@@ -285,9 +429,9 @@ export default () => (
         No Mata Cavalo, os remanescentes quilombolas que já resistiram a invasões por mais de cem anos, continuam com dúvidas quanto às consequências do Cadastro Ambiental Rural sobre a integridade do território. E bastaria uma medida para resolver essa insegurança, a titulação das terras pelo Incra.
       </Paragraph>
       <RelatedNews
-        sectionTitle={"Confira também: "}
-        title={"Documentário “O Mata Cavalo”"}
-        subtitle={"O território foi formado no século 19, quando negros africanos compraram ou ganharam as terras após o fim da escravidão no Brasil. Agora enfrentam dificuldades para aderir o Cadastro Ambiental Rural." }
+        sectionTitle={"Assista também: "}
+        title={"O Mata Cavalo"}
+        subtitle={"Neste documentário da Amazônia Real, os herdeiros dos ancestrais africanos contam histórias da origem do Complexo Territorial Mato Cavalo." }
         imageUrl={require("images/matacavalo_doc.jpg")}
         href={"http://infoam-template-video.herokuapp.com/"}
       />

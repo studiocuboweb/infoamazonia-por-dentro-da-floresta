@@ -78,7 +78,7 @@ const About = ({ intl, lastPath }) => {
           <Paragraph big>
             <FormattedMessage
               id="about.intro"
-              defaultMessage="Esta reportagem foi produzida pela {amazoniareal} com apoio da {clua} e faz parte do especial “Olhando por Dentro da Floresta Amazônica”."
+              defaultMessage="Esta reportagem foi produzida pela {amazoniareal} com apoio da {clua} e faz parte do especial “{olhandopordentrodafloresta}”."
               values={{
                 infoamazonia: (
                   <strong>
@@ -98,6 +98,13 @@ const About = ({ intl, lastPath }) => {
                       Aliança pelo Clima e Uso da Terra (CLUA)
                     </a>
                   </strong>
+                ),
+                olhandopordentrodafloresta: (
+                  <strong>
+                    <a href="http://amazoniareal.com.br/espera-da-terra-firme/">
+                      Olhando por Dentro da Floresta Amazônica
+                    </a>
+                  </strong>
                 )
               }}
             />
@@ -113,7 +120,7 @@ const About = ({ intl, lastPath }) => {
             <strong>
               <FormattedMessage
                 id="about.photos_videos"
-                defaultMessage="Fotos"
+                defaultMessage="Fotos e vídeos"
               />
             </strong>
             <br />
@@ -128,6 +135,36 @@ const About = ({ intl, lastPath }) => {
             </strong>
             <br />
             Kátia Brasil
+          </Paragraph>
+          <Paragraph>
+            <strong>
+              <FormattedMessage
+                id="about.editor_photo"
+                defaultMessage="Editor de fotografia"
+              />
+            </strong>
+            <br />
+            Alberto César Araújo
+          </Paragraph>
+          <Paragraph>
+            <strong>
+              <FormattedMessage
+                id="about.editor_content"
+                defaultMessage="Editora de conteúdo"
+              />
+            </strong>
+            <br />
+            Elaíze Farias
+          </Paragraph>
+          <Paragraph>
+            <strong>
+              <FormattedMessage
+                id="about.intern"
+                defaultMessage="Estagiária"
+              />
+            </strong>
+            <br />
+            Maria Cecília Costa
           </Paragraph>
           <Paragraph>
             <strong>
@@ -147,13 +184,6 @@ const About = ({ intl, lastPath }) => {
             <a href="https://github.com/studiocuboweb/infoamazonia-por-dentro-da-floresta">Paulo Campos (Studio Cubo Web)</a> e Caio Alcântara, com base no trabalho desenvolvido por <a href="https://github.com/aparabolica/arco-mineiro">Miguel Peixe (aparabólica)</a>
           </Paragraph>
           <Paragraph>
-            <strong>
-              <FormattedMessage
-                id="about.supporter"
-                defaultMessage="Financiamento"
-              />
-            </strong>
-            <br />
             <img
               src={require("images/partners/clua.png")}
               alt="Climate And Land Use Alliance"

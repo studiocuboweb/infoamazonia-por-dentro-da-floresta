@@ -6,16 +6,16 @@ import { Helmet } from "react-helmet";
 const messages = defineMessages({
   title: {
     id: "head.title",
-    defaultMessage: "Especial Olhando por Dentro da Floresta Amazônica"
+    defaultMessage: "A luta dos herdeiros de Mata Cavalo pelo título do quilombo"
   },
   description: {
     id: "head.description",
     defaultMessage:
-      "A luta dos herdeiros de Mata Cavalo pelo título do quilombo"
+      "O território foi formado no século 19, quando negros africanos compraram ou ganharam as terras após o fim da escravidão no Brasil. Agora enfrentam dificuldades para aderir o Cadastro Ambiental Rural (CAR)"
   },
   keywords: {
     id: "head.keywords",
-    defaultMessage: "venezuela, mining arc"
+    defaultMessage: "mata cavalo, quilombolas"
   }
 });
 

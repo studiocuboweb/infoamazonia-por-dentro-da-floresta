@@ -267,7 +267,7 @@ class Scene extends Component {
           <h2>
             <FormattedMessage
               id="general.author"
-              defaultMessage="por Vandré Fonseca"
+              defaultMessage="por Vandré Fonseca e Bruno Kelly"
             />
           </h2>
           <h3>
