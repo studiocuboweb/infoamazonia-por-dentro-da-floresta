@@ -5,7 +5,7 @@ import StoryMedia from "components/StoryMedia";
 import ExternalLink from "components/ExternalLink";
 import FileLink from "components/FileLink";
 import Paragraph from "components/blocks/Paragraph";
-import Subtitle from "components/blocks/subtitle";
+import Subtitle from "components/blocks/Subtitle";
 import FullBlock from "components/blocks/Full";
 import ImageBlock from "components/blocks/Image";
 import Title from "components/blocks/Title";
