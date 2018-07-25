@@ -54,16 +54,16 @@ export default () => (
               },
               {
                 src: require("photos/galeria/galeria_9.jpg")
-              }
+              },
               {
                 src: require("photos/galeria/galeria_10.jpg")
-              }
+              },
               {
                 src: require("photos/galeria/galeria_11.jpg")
-              }
+              },
               {
                 src: require("photos/galeria/galeria_12.jpg")
-              }
+              },
               {
                 src: require("photos/galeria/galeria_13.jpg")
               }
