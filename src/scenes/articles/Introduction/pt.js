@@ -300,6 +300,13 @@ export default () => (
       <Paragraph>
         No Mata Cavalo, os remanescentes quilombolas que já resistiram a invasões por mais de cem anos, continuam com dúvidas quanto às consequências do Cadastro Ambiental Rural sobre a integridade do território. E bastaria uma medida para resolver essa insegurança, a titulação das terras pelo Incra.
       </Paragraph>
+      <RelatedNews
+        sectionTitle={"Confira também: "}
+        title={"Documentário “O Mata Cavalo”"}
+        subtitle={"Breve descrição do vídeo entra aqui. Lorem ipsum dolor sit amet." }
+        imageUrl={"images/matacavalo_doc.jpg"}
+        href={"http://infoam-template-video.herokuapp.com/"}
+      />
     </Container>
   </article>
 );

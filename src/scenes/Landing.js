@@ -277,7 +277,7 @@ class Scene extends Component {
         <Top>
           <div className="partners">
             <img src={require("images/partners/amazonia-real.png")} />
-            <img src={require("images/partners/infoamazonia.png")} />
+            <!-- <img src={require("images/partners/infoamazonia.png")} /> -->
           </div>
           <SiteTitle />
           <h2>
@@ -326,7 +326,6 @@ class Scene extends Component {
                 </Link>
               )}
             </div>
-          )}
         </Middle>
       </Wrapper>
     );
