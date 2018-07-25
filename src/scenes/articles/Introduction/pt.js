@@ -21,7 +21,7 @@ export default () => (
     <Container>
       <Note>
         <p>
-          No Complexo Territorial Mata Cavalo, no Mato Grosso, comunidades remanescentes de quilombolas lutam pela garantia da área a que têm direito. Ainda sem o título definitivo, eles enfrentam agora a dificuldade de adesão ao Cadastro Ambiental Rural (CAR), desconfiados de que a exigência da lei ambiental possa trazer novas ameaças aos territórios deixados pelos seus ancestrais. A luta de Mata Cavalo, que fica no município de Nossa Senhora do Livramento, distante a 55 quilômetros de Cuiabá, é a mesma de milhares de outros territórios quilombolas espalhados pelos estados brasileiros, entre eles aqueles que formam a Amazônia Legal.
+          <strong>No Complexo Territorial Mata Cavalo</strong>, no Mato Grosso, comunidades remanescentes de quilombolas lutam pela garantia da área a que têm direito. Ainda sem o título definitivo, eles enfrentam agora a dificuldade de adesão ao Cadastro Ambiental Rural (CAR), desconfiados de que a exigência da lei ambiental possa trazer novas ameaças aos territórios deixados pelos seus ancestrais. A luta de Mata Cavalo, que fica no município de Nossa Senhora do Livramento, distante a 55 quilômetros de Cuiabá, é a mesma de milhares de outros territórios quilombolas espalhados pelos estados brasileiros, entre eles aqueles que formam a Amazônia Legal.
         </p>
       </Note>
       {/* <Paragraph>
@@ -43,7 +43,18 @@ export default () => (
       </Paragraph> */}
 
       <Paragraph>
-        Mata Cavalo é um complexo territorial onde homens e mulheres remanescentes de quilombolas conseguiram resistir por mais de um século ao assédio de fazendeiros e invasores nos sertões do Mato Grosso. Embora os limites do território já tenham sido reconhecidos pelo Instituto Nacional de Colonização e Reforma Agrária (Incra), as comunidades, reconhecidas pela Fundação Cultural Palmares, ainda não receberam o título para registro em cartório.
+        Mata Cavalo é um complexo territorial onde <StoryMedia
+          media={{
+            id: "image-2",
+            type: "image",
+            data: {
+              credits: "Bruno Kelly/Amazônia Real",
+              src: require("photos/matacavalo_2.jpg")
+            }
+          }}
+        >
+          homens e mulheres remanescentes de quilombolas conseguiram resistir por mais de um século ao assédio de fazendeiros e invasores nos sertões do Mato Grosso
+        </StoryMedia>. Embora os limites do território já tenham sido reconhecidos pelo Instituto Nacional de Colonização e Reforma Agrária (Incra), as comunidades, reconhecidas pela Fundação Cultural Palmares, ainda não receberam o título para registro em cartório.
       </Paragraph>
 
       <Paragraph>
@@ -62,11 +73,11 @@ export default () => (
         Ao longo do século 20, o território foi sendo moldado pelos que trabalharam nessas terras e por outros que chegavam. Muitos lotes foram vendidos pelos próprios remanescentes para fazendeiros, de forma pacífica ou sob pressão. Outros, simplesmente foram invadidos. Fazendeiros fizeram pasto e cercaram a área. Jagunços circulavam pela região para evitar a entrada dos moradores locais na fazenda. Época em que muitos deixaram a região.
       </Paragraph>
 
-      <Quote author="dona Zulmira Maria Lúcio, mulher de seu Neto">
-        Meus pais contavam que essas terras aqui foram de briga, uma herança do nosso tataravô, Marcelino Paes de Barros
-      </Quote>
+      <Paragraph>
+        “Meus pais contavam que essas terras aqui foram de briga, uma herança do nosso tataravô, Marcelino Paes de Barros”, conta dona Zulmira Maria Lúcio, mulher de seu Neto.
+      </Paragraph>
 
-      <Quote author="dona Ana Tavares">
+      <Quote author="Ana da Silva Tavares">
         Dessa terra, eles não abriam mão e deixavam para todos os netos, bisnetos e tataranetos tomarem conta. Eles queriam que nós estudássemos para tomar conta
       </Quote>
 
@@ -86,9 +97,9 @@ export default () => (
         “Essa questão da regularização fundiária aqui do território do Mata Cavalo, na verdade, é um sonho que vem se arrastando há anos e anos desde que a gente se identificou como quilombolas”, lamenta Laura Ferreira da Silva, uma das líderes da comunidade Mutuca. “A gente vê que falta um pouco no sentido dos poderes políticos de solucionar a regularização fundiária. Eles alegam o tempo todo que é falta de recursos para fazer a devida desapropriação, para fazer as indenizações.”
       </Paragraph>
 
-      <FeaturedText>
+      <h3>
         Sobreposição é ameaça ao território
-      </FeaturedText>
+      </h3>
 
       <Paragraph>
         Um levantamento realizado pela reportagem encontrou 171 Cadastros Ambientais Rurais sobrepostos ao Complexo Mata Cavalo. Eles cobrem mais de metade do território tradicional. Embora não seja possível identificar se os dados se referem a fazendas ou lotes de remanescentes quilombolas que tenham optado por fazer o cadastramento individual de lotes.
@@ -118,15 +129,26 @@ export default () => (
         Após o reconhecimento da comunidade pela Fundação Palmares, os territórios ainda precisam ser delimitados pelo Incra, que produz um Relatório Técnico de Identificação e Delimitação (RTID). Esse relatório, após publicado, pode ser questionado em até 90 dias. O processo de identificação termina após a publicação da Portaria nos diários oficiais dos estados e da União. O título pode ser expedido, sem custos para a comunidade, após os processos de desapropriação, se necessários.
       </Paragraph>
 
-      <FeaturedText>
+      <h3>
         Cadastros devem ser anulados
-      </FeaturedText>
+      </h3>
 
       <Paragraph>
-        O advogado Pedro Martins, da organização Terra de Direitos, é a favor da anulação de cadastros individuais sobrepostos às áreas quilombolas, mesmo que o território ainda não tenha sido titulado. Ele lembra que o direito ao território coletivo é reconhecido pela Constituição e pelo Decreto 4887, de 2013.
+        O advogado Pedro Martins, da organização Terra de Direitos, é a favor da anulação de cadastros individuais sobrepostos às áreas quilombolas, mesmo que o território ainda não tenha sido titulado. <StoryMedia
+          media={{
+            id: "image-3",
+            type: "image",
+            data: {
+              credits: "Bruno Kelly/Amazônia Real",
+              src: require("photos/matacavalo_3.jpg")
+            }
+          }}
+        >
+          Ele lembra que o direito ao território coletivo é reconhecido pela Constituição e pelo Decreto 4887, de 2013
+        </StoryMedia>.
       </Paragraph>
 
-      <Quote author="defende Pedro Martins">
+      <Quote author="Pedro Martins">
         Na hora em que o sistema aponta uma sobreposição, é ideal que os cadastros fiquem pendentes, tanto dos invasores quanto das comunidades quilombolas, mas no momento da análise de validação seja considerado o critério étnico, ou seja, a Comunidade Quilombola não pode ter o seu CAR cancelado por falta de documento de terras
       </Quote>
 
@@ -138,12 +160,23 @@ export default () => (
         A promotora concorda que mesmo cadastros sobrepostos a territórios não titulados devem ser cancelados. “Juridicamente não existe diferença, não existe uma situação melhor do não titulado para o titulado, o impacto maior é na elaboração da prova, no caso de questionamento jurídico”, explica a promotora.
       </Paragraph>
 
-      <FeaturedText>
+      <h3>
         Vida e preservação ambiental
-      </FeaturedText>
+      </h3>
 
       <Paragraph>
-        Apesar de três adiamentos e alterações no sistema de registro, o movimento quilombola continuam com dificuldades para o Cadastro Ambiental Rural (CAR) de territórios tradicionais. A Conaq aponta como principais problemas enfrentados a sobreposição de declarações de fazendeiros, falta de apoio para comunidades e não adequação de conceitos presentes no Código Florestal à cultura dos povos tradicionais.
+        Apesar de três adiamentos e alterações no sistema de registro, o movimento quilombola continuam com dificuldades para o Cadastro Ambiental Rural (CAR) de territórios tradicionais. <StoryMedia
+          media={{
+            id: "image-4",
+            type: "image",
+            data: {
+              credits: "Bruno Kelly/Amazônia Real",
+              src: require("photos/matacavalo_4.jpg")
+            }
+          }}
+        >
+          A Conaq aponta como principais problemas enfrentados a sobreposição de declarações de fazendeiros, falta de apoio para comunidades
+        </StoryMedia> e não adequação de conceitos presentes no Código Florestal à cultura dos povos tradicionais.
       </Paragraph>
 
       <Paragraph>
@@ -182,9 +215,9 @@ export default () => (
         “O sistema foi pensado para propriedade privada individual e a forma como o território como os povos tradicionais estão organizados é completamente diferente. Se você faz o cadastro individual, você sabe o que você quer da sua propriedade, você faz o seu planejamento. Agora quando você tem 100 ou 150 famílias naquele espaço, você tem que discutir conjuntamente, coletivamente”, completa Ivy.
       </Paragraph>
 
-      <FeaturedText>
+      <h3>
         A defesa e apoio às comunidades
-      </FeaturedText>
+      </h3>
 
       <Paragraph>
         Mesmo após o prazo de adesão, o sistema do CAR permanece aberto, conforme lembra Raimundo Deusdará. “O cadastro é de natureza permanente”, esclarece do diretor geral do SFB. “Ele não vai ficar. Esse prazo (31 de maio) é referencial para o cumprimento dos dispositivos do Código Florestal, mas a gente continua dando apoio às comunidades, até porque nós temos uma série de iniciativas planejadas, para continuar apoiando os estados na elaboração na busca ativa dessas populações e comunidades tradicionais”, completa.
@@ -207,27 +240,49 @@ export default () => (
       </Paragraph>
 
       <Paragraph>
-        Raimundo Deusdará reforça que o CAR não é a solução ou a causa dos problemas fundiários, mas um grande diagnóstico da situação. Para ele, o sistema tem revelado a necessidade de novas políticas públicas adequadas para as populações tradicionais.
+        Raimundo Deusdará reforça que o CAR não é a solução ou a causa dos problemas fundiários, mas um grande diagnóstico da situação. <StoryMedia
+          media={{
+            id: "image-5",
+            type: "image",
+            data: {
+              credits: "Bruno Kelly/Amazônia Real",
+              src: require("photos/matacavalo_5.jpg")
+            }
+          }}
+        >
+          Para ele, o sistema tem revelado a necessidade de novas políticas públicas adequadas para as populações tradicionais
+        </StoryMedia>.
       </Paragraph>
 
-      <FeaturedText>
+      <h3>
         O temor das invasões
-      </FeaturedText>
+      </h3>
 
       <Paragraph>
         Na comunidade Mutuca, uma das seis que formam o Complexo Territorial Mata Cavalo, no Mato Grosso, as dificuldades para atender as exigências do cadastro levaram os moradores a apelar, a contragosto, a cadastros individuais. Uma escolha para evitar problemas maiores, como o risco de perder acesso a programas de fomento e até o temor de invasores usarem o CAR como argumento na apropriação do território tradicional.
       </Paragraph>
 
-      <Quote author="acredita Laura, uma das líderes da comunidade do Rio Mutuca.">
-        O interessante seria fazer coletivo, mas a gente esbarra em uma burocracia
-      </Quote>
+      <Paragraph>
+        “O interessante seria fazer coletivo, mas a gente esbarra em uma burocracia”, acredita Laura, uma das líderes da comunidade do Rio Mutuca.
+      </Paragraph>
 
-      <Quote author="Laura">
+      <Quote author="Laura Ferreira da Silva">
         Nós não temos o documento da terra, tendo em vista que foram montados outros títulos em cima daqueles documentos antigos dos nossos ancestrais. Então fazer o individual é uma forma de dizer que, se o fazendeiro quiser fazer o cadastro ambiental da área, que nós já fizemos o nosso
       </Quote>
 
       <Paragraph>
-        O movimento quilombola destaca que o Estado Brasileiro reconhece o direito coletivo às terras e vê riscos à integridade dos territórios no cadastro individual. O país, conforme o argumento do coordenador nacional da Conaq, não tem controle sobre a questão fundiária. O CAR, apesar de não ser um documento de posse ou propriedade, poderia ser usado com a apropriação de territórios.
+      <StoryMedia
+        media={{
+          id: "image-6",
+          type: "image",
+          data: {
+            credits: "Bruno Kelly/Amazônia Real",
+            src: require("photos/matacavalo_6.jpg")
+          }
+        }}
+      >
+        O movimento quilombola destaca que o Estado Brasileiro reconhece o direito coletivo às terras e vê riscos à integridade dos territórios no cadastro individual
+      </StoryMedia>. O país, conforme o argumento do coordenador nacional da Conaq, não tem controle sobre a questão fundiária. O CAR, apesar de não ser um documento de posse ou propriedade, poderia ser usado com a apropriação de territórios.
       </Paragraph>
 
       <Paragraph>
@@ -244,12 +299,6 @@ export default () => (
 
       <Paragraph>
         No Mata Cavalo, os remanescentes quilombolas que já resistiram a invasões por mais de cem anos, continuam com dúvidas quanto às consequências do Cadastro Ambiental Rural sobre a integridade do território. E bastaria uma medida para resolver essa insegurança, a titulação das terras pelo Incra.
-      </Paragraph>
-
-      <Paragraph>
-        <strong>
-          O Especial Olhando por Dentro da Floresta Amazônica é uma parceria da Amazônia Real e do InfoAmazônia e conta com o financiado da <a href="http://amazoniareal.com.br/apoio-financeiro/" target="_blank">Aliança pelo Clima e Uso da Terra – CLUA</a> – para ampliar a cobertura jornalística sobre temas como a invisibilidade das violações de direitos socioambientais dos povos tradicionais da região amazônica.
-        </strong>
       </Paragraph>
     </Container>
   </article>

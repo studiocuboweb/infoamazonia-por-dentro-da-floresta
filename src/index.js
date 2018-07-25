@@ -76,7 +76,7 @@ const findLocale = language => {
 
 window.locale = findLocale(language);
 
-const messages = localeData[locale] || localeData.en;
+const messages = localeData[locale] || localeData.pt;
 
 const store = configureStore();
 const history = createHistory();

@@ -5,13 +5,10 @@ import { FormattedMessage } from "react-intl";
 import { connect } from "react-redux";
 import { resetContext } from "actions/context";
 import { media, color } from "styles/utils";
-import Countdown from "react-countdown-now";
 
 import SiteTitle from "components/SiteTitle";
 
 import { Link } from "react-router-dom";
-
-const launchDate = process.env.LAUNCH_DATE;
 
 const Wrapper = styled.section`
   position: fixed;
@@ -273,13 +270,6 @@ class Scene extends Component {
   constructor(props) {
     super(props);
   }
-  isLaunchDate() {
-    if (launchDate) {
-      return moment(launchDate).isAfter(window.currentDate);
-    } else {
-      return false;
-    }
-  }
   render() {
     const { lastPath, resetContext } = this.props;
     return (
@@ -311,22 +301,6 @@ class Scene extends Component {
               defaultMessage="O território foi formado no século 19, quando negros africanos compraram ou ganharam as terras após o fim da escravidão no Brasil. Agora enfrentam dificuldades para aderir o Cadastro Ambiental Rural (CAR)"
             />
           </p>
-          {this.isLaunchDate() ? (
-            <span className="countdown">
-              <span className="count">
-                <Countdown
-                  date={launchDate}
-                  onComplete={() => location.reload()}
-                />
-              </span>
-              <span className="desc">
-                <FormattedMessage
-                  id="general.publishRemaining"
-                  defaultMessage="remaining for launch"
-                />
-              </span>
-            </span>
-          ) : (
             <div>
               {lastPath ? (
                 <div>

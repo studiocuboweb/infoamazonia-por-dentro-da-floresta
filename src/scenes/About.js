@@ -131,10 +131,10 @@ const About = ({ intl, lastPath }) => {
           </Paragraph>
           <Paragraph>
             <strong>
-              <FormattedMessage id="about.editors" defaultMessage="Coordenação de desenvolvimento web" />
+              <FormattedMessage id="about.coordwebdev" defaultMessage="Coordenação de desenvolvimento web" />
             </strong>
             <br />
-            Stefano Wrobleski/InfoAmazonia
+            Stefano Wrobleski (InfoAmazonia)
           </Paragraph>
           <Paragraph>
             <strong>
@@ -144,7 +144,7 @@ const About = ({ intl, lastPath }) => {
               />
             </strong>
             <br />
-            <a href="https://github.com/studiocuboweb/infoamazonia-por-dentro-da-floresta">Paulo Campos/Studio Cubo Web</a> e Caio Alcântara, com base no trabalho desenvolvido por <a href="https://github.com/aparabolica/arco-mineiro">Miguel Peixe/aparabólica</a>
+            <a href="https://github.com/studiocuboweb/infoamazonia-por-dentro-da-floresta">Paulo Campos (Studio Cubo Web)</a> e Caio Alcântara, com base no trabalho desenvolvido por <a href="https://github.com/aparabolica/arco-mineiro">Miguel Peixe (aparabólica)</a>
           </Paragraph>
           <Paragraph>
             <strong>
