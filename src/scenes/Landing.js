@@ -235,21 +235,6 @@ const Middle = styled.div`
       margin: 0 0 1rem;
     `};
   }
-  .countdown {
-    display: inline-block;
-    background: #333;
-    color: #f0f0f0;
-    text-shadow: 0 0 0;
-    padding: 1rem 2rem;
-    font-size: 0.6em;
-    span {
-      display: block;
-    }
-    .count {
-      font-family: monospace;
-      font-size: 2em;
-    }
-  }
   a {
     font-family: 'Merriweather', serif;
     font-size: 0.5em;
