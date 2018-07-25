@@ -126,7 +126,7 @@ const VideoControlls = styled.div`
   }
   .text-chapter {
     font-size:0.5em !important;
-    padding-left:10vh!important;
+    padding-left:2vh!important;
   }
   a:hover {
     color: #ffffff !important;
