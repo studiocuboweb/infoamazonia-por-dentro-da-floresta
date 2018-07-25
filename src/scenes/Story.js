@@ -22,19 +22,9 @@ import Story from "components/Story";
 import Modal from "components/Modal";
 
 import Introduction from "./articles/Introduction";
-import GoldMining from "./articles/GoldMining";
-import GripOfTheGuerrilla from "./articles/GripOfTheGuerrilla";
-import ColtanCountry from "./articles/ColtanCountry";
-import Malaria from "./articles/Malaria";
-import Gambling from "./articles/Gambling";
 
 const articles = [
   "/story",
-  "/story/gold-mining",
-  "/story/grip-of-the-guerrilla",
-  "/story/coltan-country",
-  "/story/malaria",
-  "/story/gambling"
 ];
 
 class Scene extends Component {
@@ -133,20 +123,6 @@ class Scene extends Component {
             >
               <Switch location={location}>
                 <Route exact path={`${match.url}`} component={Introduction} />
-                <Route
-                  path={`${match.url}/gold-mining`}
-                  component={GoldMining}
-                />
-                <Route
-                  path={`${match.url}/grip-of-the-guerrilla`}
-                  component={GripOfTheGuerrilla}
-                />
-                <Route
-                  path={`${match.url}/coltan-country`}
-                  component={ColtanCountry}
-                />
-                <Route path={`${match.url}/malaria`} component={Malaria} />
-                <Route path={`${match.url}/gambling`} component={Gambling} />
                 <Route
                   render={() => (
                     <Helmet>
