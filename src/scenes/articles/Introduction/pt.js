@@ -5,6 +5,7 @@ import StoryMedia from "components/StoryMedia";
 import ExternalLink from "components/ExternalLink";
 import FileLink from "components/FileLink";
 import Paragraph from "components/blocks/Paragraph";
+import Subtitle from "components/blocks/subtitle";
 import FullBlock from "components/blocks/Full";
 import ImageBlock from "components/blocks/Image";
 import Title from "components/blocks/Title";
@@ -24,23 +25,6 @@ export default () => (
           <strong>No Complexo Territorial Mata Cavalo</strong>, no Mato Grosso, comunidades remanescentes de quilombolas lutam pela garantia da área a que têm direito. Ainda sem o título definitivo, eles enfrentam agora a dificuldade de adesão ao Cadastro Ambiental Rural (CAR), desconfiados de que a exigência da lei ambiental possa trazer novas ameaças aos territórios deixados pelos seus ancestrais. A luta de Mata Cavalo, que fica no município de Nossa Senhora do Livramento, distante a 55 quilômetros de Cuiabá, é a mesma de milhares de outros territórios quilombolas espalhados pelos estados brasileiros, entre eles aqueles que formam a Amazônia Legal.
         </p>
       </Note>
-      {/* <Paragraph>
-        <StoryMedia
-          media={{
-            id: "video-1",
-            type: "youtube",
-            data: {
-              id: "6sWVoFaH7Nc"
-            }
-          }}
-        >
-          <strong>With muddy hands</strong>, a miner throws mineral-rich rocks
-          into a spinning mechanical mill that crushes the stones to be
-          processed with mercury
-        </StoryMedia>. At a small distance, a few soldiers hang around. The
-        military escorted us during our visit to the green hills next to El
-        Callao, one of many heavily contested mining hotspots in Venezuela.
-      </Paragraph> */}
 
       <Paragraph>
         Mata Cavalo é um complexo territorial onde <StoryMedia
@@ -97,9 +81,9 @@ export default () => (
         “Essa questão da regularização fundiária aqui do território do Mata Cavalo, na verdade, é um sonho que vem se arrastando há anos e anos desde que a gente se identificou como quilombolas”, lamenta Laura Ferreira da Silva, uma das líderes da comunidade Mutuca. “A gente vê que falta um pouco no sentido dos poderes políticos de solucionar a regularização fundiária. Eles alegam o tempo todo que é falta de recursos para fazer a devida desapropriação, para fazer as indenizações.”
       </Paragraph>
 
-      <h3>
+      <Subtitle>
         Sobreposição é ameaça ao território
-      </h3>
+      </Subtitle>
 
       <Paragraph>
         Um levantamento realizado pela reportagem encontrou 171 Cadastros Ambientais Rurais sobrepostos ao Complexo Mata Cavalo. Eles cobrem mais de metade do território tradicional. Embora não seja possível identificar se os dados se referem a fazendas ou lotes de remanescentes quilombolas que tenham optado por fazer o cadastramento individual de lotes.
@@ -129,9 +113,9 @@ export default () => (
         Após o reconhecimento da comunidade pela Fundação Palmares, os territórios ainda precisam ser delimitados pelo Incra, que produz um Relatório Técnico de Identificação e Delimitação (RTID). Esse relatório, após publicado, pode ser questionado em até 90 dias. O processo de identificação termina após a publicação da Portaria nos diários oficiais dos estados e da União. O título pode ser expedido, sem custos para a comunidade, após os processos de desapropriação, se necessários.
       </Paragraph>
 
-      <h3>
+      <Subtitle>
         Cadastros devem ser anulados
-      </h3>
+      </Subtitle>
 
       <Paragraph>
         O advogado Pedro Martins, da organização Terra de Direitos, é a favor da anulação de cadastros individuais sobrepostos às áreas quilombolas, mesmo que o território ainda não tenha sido titulado. <StoryMedia
@@ -160,9 +144,9 @@ export default () => (
         A promotora concorda que mesmo cadastros sobrepostos a territórios não titulados devem ser cancelados. “Juridicamente não existe diferença, não existe uma situação melhor do não titulado para o titulado, o impacto maior é na elaboração da prova, no caso de questionamento jurídico”, explica a promotora.
       </Paragraph>
 
-      <h3>
+      <Subtitle>
         Vida e preservação ambiental
-      </h3>
+      </Subtitle>
 
       <Paragraph>
         Apesar de três adiamentos e alterações no sistema de registro, o movimento quilombola continuam com dificuldades para o Cadastro Ambiental Rural (CAR) de territórios tradicionais. <StoryMedia
@@ -215,9 +199,9 @@ export default () => (
         “O sistema foi pensado para propriedade privada individual e a forma como o território como os povos tradicionais estão organizados é completamente diferente. Se você faz o cadastro individual, você sabe o que você quer da sua propriedade, você faz o seu planejamento. Agora quando você tem 100 ou 150 famílias naquele espaço, você tem que discutir conjuntamente, coletivamente”, completa Ivy.
       </Paragraph>
 
-      <h3>
+      <Subtitle>
         A defesa e apoio às comunidades
-      </h3>
+      </Subtitle>
 
       <Paragraph>
         Mesmo após o prazo de adesão, o sistema do CAR permanece aberto, conforme lembra Raimundo Deusdará. “O cadastro é de natureza permanente”, esclarece do diretor geral do SFB. “Ele não vai ficar. Esse prazo (31 de maio) é referencial para o cumprimento dos dispositivos do Código Florestal, mas a gente continua dando apoio às comunidades, até porque nós temos uma série de iniciativas planejadas, para continuar apoiando os estados na elaboração na busca ativa dessas populações e comunidades tradicionais”, completa.
@@ -254,9 +238,9 @@ export default () => (
         </StoryMedia>.
       </Paragraph>
 
-      <h3>
+      <Subtitle>
         O temor das invasões
-      </h3>
+      </Subtitle>
 
       <Paragraph>
         Na comunidade Mutuca, uma das seis que formam o Complexo Territorial Mata Cavalo, no Mato Grosso, as dificuldades para atender as exigências do cadastro levaram os moradores a apelar, a contragosto, a cadastros individuais. Uma escolha para evitar problemas maiores, como o risco de perder acesso a programas de fomento e até o temor de invasores usarem o CAR como argumento na apropriação do território tradicional.
@@ -303,8 +287,8 @@ export default () => (
       <RelatedNews
         sectionTitle={"Confira também: "}
         title={"Documentário “O Mata Cavalo”"}
-        subtitle={"Breve descrição do vídeo entra aqui. Lorem ipsum dolor sit amet." }
-        imageUrl={"images/matacavalo_doc.jpg"}
+        subtitle={"O território foi formado no século 19, quando negros africanos compraram ou ganharam as terras após o fim da escravidão no Brasil. Agora enfrentam dificuldades para aderir o Cadastro Ambiental Rural." }
+        imageUrl={require("images/matacavalo_doc.jpg")}
         href={"http://infoam-template-video.herokuapp.com/"}
       />
     </Container>
