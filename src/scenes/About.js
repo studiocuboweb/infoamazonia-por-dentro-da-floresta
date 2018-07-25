@@ -194,7 +194,7 @@ const About = ({ intl, lastPath }) => {
                     <span className="fa fa-arrow-left" />
                     <FormattedMessage
                       id="about.close"
-                      defaultMessage="Continuar lendo"
+                      defaultMessage="Continuar assistindo"
                     />
                   </Link>
               }
