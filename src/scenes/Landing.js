@@ -312,7 +312,7 @@ class Scene extends Component {
           <p className="description">
             <FormattedMessage
               id="general.tagline"
-              defaultMessage="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+              defaultMessage="O território foi formado no século 19, quando negros africanos compraram ou ganharam as terras após o fim da escravidão no Brasil. Agora enfrentam dificuldades para aderir o Cadastro Ambiental Rural (CAR)."
             />
           </p>
             <div>
@@ -340,7 +340,6 @@ class Scene extends Component {
                 </Link>
               )}
             </div>
-          )}
         {/* <Spacer>
           {
             !playing &&

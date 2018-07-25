@@ -97,14 +97,13 @@ class Header extends Component {
       <Top>
       <div className="partners">
         <div className="partners-logo">
-          <img src={require("images/partners/infoamazonia.png")} />
           <img src={require("images/partners/amazonia-real.png")} />
         </div>
         <nav className="help-box">
-          <NavLink to="/about" className="color-white" title="Learn more">
+          <NavLink to="/about" className="color-white" title="Sobre este trabalho">
             <span className="fa fa-info"></span>
           </NavLink>
-          <NavLink to="/share" className="color-white" title="Share">
+          <NavLink to="/share" className="color-white" title="Compartilhe">
             <span className="fa fa-share-alt"></span>
           </NavLink>
         </nav>
