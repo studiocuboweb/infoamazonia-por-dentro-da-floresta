@@ -4,11 +4,6 @@ import { FormattedMessage } from 'react-intl';
 import { media, color } from 'styles/utils';
 import { Link } from 'react-router-dom';
 
-const logos = [
-  require('images/logo_3.svg'),
-  require('images/logo_3_black.svg')
-];
-
 const Title = styled.h1`
   display: block;
   margin: 0;
@@ -52,7 +47,9 @@ const Title = styled.h1`
     font-size: .8em;
     white-space: nowrap;
     &.title-1 {
-      font-size: .55em;
+      font-size: 0.54em;
+      font-weight: 700;
+      letter-spacing: -.03em;
     }
     &.title-2 {
       font-size: .3em;
