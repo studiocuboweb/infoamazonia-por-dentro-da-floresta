@@ -18,11 +18,11 @@ import { Link } from "react-router-dom";
 const messages = defineMessages({
   title: {
     id: "about.title",
-    defaultMessage: "About"
+    defaultMessage: "Sobre"
   },
   siteTitle: {
     id: "head.title",
-    defaultMessage: "Especial Olhando por Dentro da Floresta Amazônica"
+    defaultMessage: "A luta dos herdeiros de Mata Cavalo pelo título do quilombo"
   }
 });
 
@@ -30,7 +30,7 @@ const Button = styled.div`
   widht:100%;
   margin-top:50px;
   text-align: center;
-  a{ 
+  a{
     margin:0 auto;
     font-family: 'Merriweather', serif;
     font-size: 0.5em;
@@ -69,7 +69,7 @@ const About = ({ intl, lastPath }) => {
                   <span className="fa fa-arrow-left" />
                   <FormattedMessage
                     id="about.close"
-                    defaultMessage="Continue Reading"
+                    defaultMessage="Continuar lendo"
                   />
                 </Link>
             }
@@ -78,152 +78,85 @@ const About = ({ intl, lastPath }) => {
           <Paragraph big>
             <FormattedMessage
               id="about.intro"
-              defaultMessage="This story was produced by {infoamazonia} in partnership with {correo} and support from {pulitzer} through “{grant}” funding."
+              defaultMessage="Esta reportagem foi produzida pela {amazoniareal} com apoio da {clua} e faz parte do especial “Olhando por Dentro da Floresta Amazônica”."
               values={{
                 infoamazonia: (
                   <strong>
                     <a href="http://infoamazonia.org/">InfoAmazonia</a>
                   </strong>
                 ),
-                correo: (
+                amazoniareal: (
                   <strong>
-                    <a href="http://www.correodelcaroni.com/">
-                      Correo del Caroní 
+                    <a href="http://amazoniareal.com.br/">
+                      Amazônia Real
                     </a>
                   </strong>
                 ),
-                pulitzer: (
+                clua: (
                   <strong>
-                    <a href="http://pulitzercenter.org">
-                      Pulitzer Center on Crisis Reporting
+                    <a href="http://www.climateandlandusealliance.org/">
+                      Aliança pelo Clima e Uso da Terra (CLUA)
                     </a>
                   </strong>
-                ),
-                grant: <em>Data Journalism and Property Rights Grants</em>
+                )
               }}
             />
           </Paragraph>
           <Paragraph>
             <strong>
-              <FormattedMessage id="about.reporter" defaultMessage="Reporter" />
+              <FormattedMessage id="about.reporter" defaultMessage="Repórter" />
             </strong>
             <br />
-            Bram Ebus
+            Vandré Fonseca
           </Paragraph>
           <Paragraph>
             <strong>
               <FormattedMessage
                 id="about.photos_videos"
-                defaultMessage="Photos & videos"
+                defaultMessage="Fotos"
               />
             </strong>
             <br />
-            Bram Ebus/InfoAmazonia <br />
-            Wilmer González/Correo del Caroní
+            Bruno Kelly
           </Paragraph>
           <Paragraph>
             <strong>
               <FormattedMessage
                 id="about.editor_chief"
-                defaultMessage="Editor in chief, maps, charts and translation to Portuguese"
+                defaultMessage="Editora-chefe"
               />
             </strong>
             <br />
-            Stefano Wrobleski
+            Kátia Brasil
           </Paragraph>
           <Paragraph>
             <strong>
-              <FormattedMessage id="about.editors" defaultMessage="Editors" />
+              <FormattedMessage id="about.editors" defaultMessage="Coordenação de desenvolvimento web" />
             </strong>
             <br />
-            Gustavo Faleiros/InfoAmazonia<br />
-            Oscar Murillo/Correo del Caroní
-          </Paragraph>
-          <Paragraph>
-            <strong>
-              <FormattedMessage
-                id="about.trans_spanish"
-                defaultMessage="Translation to Spanish"
-              />
-            </strong>
-            <br />
-            Leonardo Suárez Montoya/Correo del Caroní
-          </Paragraph>
-          <Paragraph>
-            <strong>
-              <FormattedMessage
-                id="about.copy_editors"
-                defaultMessage="Copy editors"
-              />
-            </strong>
-            <br />
-            Alex Kemman<br />
-            Joe Parkin Daniels<br />
-            Thomas Martinelli<br />
-            Kamran Rahman/Pulitzer Center
+            Stefano Wrobleski/InfoAmazonia
           </Paragraph>
           <Paragraph>
             <strong>
               <FormattedMessage
                 id="about.dev"
-                defaultMessage="Web Development and Design"
+                defaultMessage="Desenvolvimento web e design"
               />
             </strong>
             <br />
-            Miguel Peixe/aparabólica
-          </Paragraph>
-          <Paragraph>
-            <strong>
-              <FormattedMessage
-                id="about.thanks"
-                defaultMessage="Special thanks"
-              />
-            </strong>
-            <br />
-            Lexys Rendón<br />
-            Maria de los Ángeles/Correo del Caroní<br />
-            Noraima Ángel/Vicariato de Puerto Ayacucho<br />
-            Pedro Ortíz/Red de Defensores y Defensoras Indígenas<br />
-            Yonnier Rivera
-          </Paragraph>
-          <Paragraph>
-            <strong>
-              <FormattedMessage
-                id="about.pub_partners"
-                defaultMessage="Publishing partners"
-              />
-            </strong>
-            <br />
-            <a href="https://armando.info/Reportajes/Resume/2386">
-              Armando.info
-            </a>,{" "}
-            <a href="https://www.elespectador.com/noticias/medio-ambiente/explorando-el-arco-minero-articulo-733555">
-              El Espectador
-            </a>,{" "}
-            <a href="http://www1.folha.uol.com.br/ambiente/2018/01/1950328-mineracao-leva-violencia-e-malaria-a-venezuela.shtml">
-              Folha de S. Paulo
-            </a>,{" "}
-            <a href="https://news.mongabay.com/2018/01/venezuelas-mining-arc-boom-sweeps-up-indigenous-people-and-cultures/">
-              Mongabay
-            </a>,{" "}
-            <a href="https://www.nrc.nl/nieuws/2018/01/15/leger-smokkelt-naar-abc-eilanden-a1588361">
-              NRC
-            </a>,{" "}
-            <a href="https://www.trouw.nl/home/venezolaans-leger-faciliteert-smokkel-naar-antillen~abe0a09b/">
-              Trouw
-            </a>.
+            <a href="https://github.com/studiocuboweb/infoamazonia-por-dentro-da-floresta">Paulo Campos/Studio Cubo Web</a> e Caio Alcântara, com base no trabalho desenvolvido por <a href="https://github.com/aparabolica/arco-mineiro">Miguel Peixe/aparabólica</a>
           </Paragraph>
           <Paragraph>
             <strong>
               <FormattedMessage
                 id="about.supporter"
-                defaultMessage="Supporter"
+                defaultMessage="Financiamento"
               />
             </strong>
             <br />
             <img
-              src={require("images/partners/pulitzer-center.png")}
-              alt="Pulitzer Center"
+              src={require("images/partners/clua.png")}
+              alt="Climate And Land Use Alliance"
             />
           </Paragraph>
           <Button>
@@ -234,7 +167,7 @@ const About = ({ intl, lastPath }) => {
                     <span className="fa fa-arrow-left" />
                     <FormattedMessage
                       id="about.close"
-                      defaultMessage="Continue Reading"
+                      defaultMessage="Continuar lendo"
                     />
                   </Link>
               }
@@ -244,7 +177,7 @@ const About = ({ intl, lastPath }) => {
           <Paragraph small>
             <FormattedMessage
               id="about.license"
-              defaultMessage="Except for the maps, which have different licenses, all the content published at this website is licensed using the Creative Commons BY-ND 4.0 license. For any other use, please write us at contact@infoamazonia.org"
+              defaultMessage="Todo o conteúdo publicado neste site está licenciado usando a licença Creative Commons – Atribuição 4.0 Internacional. Para qualquer outro uso, escreva-nos em redacao@amazoniareal.com.br"
             />
           </Paragraph>
         </Container>

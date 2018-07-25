@@ -134,12 +134,12 @@ const Top = styled.div`
       border-bottom: none;
       margin-bottom: 0rem;
       padding-bottom: 0rem;
-   `} 
+   `}
     ${media.desktop`
       border-bottom: 1px solid #fff;
       margin-bottom: 2rem;
       padding-bottom: 1rem;
-    `}  
+    `}
     img {
       width: auto;
       height: auto;
@@ -186,7 +186,7 @@ const Top = styled.div`
     padding: 0.5rem 2rem;
     ${media.phablet`
       margin: 1rem 0 0;
-    `} 
+    `}
     ${media.tablet`
       font-size: 1em;
     `} ${media.desktopHD`
@@ -293,13 +293,13 @@ class Scene extends Component {
           <h2>
             <FormattedMessage
               id="general.author"
-              defaultMessage="by Bram Ebus"
+              defaultMessage="por Vandré Fonseca"
             />
           </h2>
           <h3>
             <FormattedMessage
               id="general.publishDate"
-              defaultMessage="January 15, 2018"
+              defaultMessage="25 de julho de 2018"
             />
           </h3>
         </Top>
@@ -308,7 +308,7 @@ class Scene extends Component {
           <p className="description">
             <FormattedMessage
               id="general.tagline"
-              defaultMessage="The destruction of 44 thousand square miles of forests in the largest mining project in Venezuela"
+              defaultMessage="O território foi formado no século 19, quando negros africanos compraram ou ganharam as terras após o fim da escravidão no Brasil. Agora enfrentam dificuldades para aderir o Cadastro Ambiental Rural (CAR)"
             />
           </p>
           {this.isLaunchDate() ? (
@@ -333,13 +333,13 @@ class Scene extends Component {
                   <Link to="/story" onClick={resetContext}>
                     <FormattedMessage
                       id="general.startOver"
-                      defaultMessage="Start Over"
+                      defaultMessage="Começar do início"
                     />
                   </Link>
                   <Link to={lastPath}>
                     <FormattedMessage
                       id="general.continueReading"
-                      defaultMessage="Continue Reading"
+                      defaultMessage="Continuar lendo"
                     />
                   </Link>
                 </div>
@@ -347,7 +347,7 @@ class Scene extends Component {
                 <Link to="/story">
                   <FormattedMessage
                     id="general.readStory"
-                    defaultMessage="Read the Story"
+                    defaultMessage="Leia a reportagem"
                   />
                 </Link>
               )}
