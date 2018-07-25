@@ -5,13 +5,10 @@ import { FormattedMessage } from "react-intl";
 import { connect } from "react-redux";
 import { resetContext } from "actions/context";
 import { media, color } from "styles/utils";
-import Countdown from "react-countdown-now";
 
 import SiteTitle from "components/SiteTitle";
 
 import { Link } from "react-router-dom";
-
-const launchDate = process.env.LAUNCH_DATE;
 
 const Wrapper = styled.section`
   position: fixed;
@@ -134,7 +131,7 @@ const Top = styled.div`
       border-bottom: none;
       margin-bottom: 0rem;
       padding-bottom: 0rem;
-   `}    
+   `}
     img {
       width: auto;
       height: auto;
@@ -181,10 +178,10 @@ const Top = styled.div`
     padding: 0.5rem 2rem;
     ${media.phablet`
       margin: 1rem 0 0;
-    `} 
+    `}
     ${media.tablet`
       font-size: 1em;
-    `} 
+    `}
     ${media.desktopHD`
       margin: 3rem 0 0;
     `};
@@ -284,7 +281,7 @@ class Scene extends Component {
     const elapsedTime = 0;
     const videoID = 0;
     const videoCached = { elapsedTime, videoID }
-  
+
     localStorage.setItem('elapsed-time', JSON.stringify(videoCached));
   }
 
@@ -294,20 +291,19 @@ class Scene extends Component {
       <Wrapper className="scene landing">
         <Top>
           <div className="partners">
-            <img src={require("images/partners/infoamazonia.png")} />
             <img src={require("images/partners/amazonia-real.png")} />
           </div>
           <SiteTitle />
           <h2>
             <FormattedMessage
               id="general.author"
-              defaultMessage="by Bram Ebus"
+              defaultMessage="por Vandré Fonseca"
             />
           </h2>
           <h3>
             <FormattedMessage
               id="general.publishDate"
-              defaultMessage="January 15, 2018"
+              defaultMessage="25 de julho de 2018"
             />
           </h3>
         </Top>
@@ -319,35 +315,19 @@ class Scene extends Component {
               defaultMessage="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
             />
           </p>
-          {this.isLaunchDate() ? (
-            <span className="countdown">
-              <span className="count">
-                <Countdown
-                  date={launchDate}
-                  onComplete={() => location.reload()}
-                />
-              </span>
-              <span className="desc">
-                <FormattedMessage
-                  id="general.publishRemaining"
-                  defaultMessage="remaining for launch"
-                />
-              </span>
-            </span>
-          ) : (
             <div>
               {lastPath ? (
                 <div>
                   <Link to='/story' onClick={this._clearVideoContext}>
                     <FormattedMessage
                       id="general.startOver"
-                      defaultMessage="Start Over"
+                      defaultMessage="Começar do início"
                     />
                   </Link>
                   <Link to={lastPath}>
                     <FormattedMessage
                       id="general.continueReading"
-                      defaultMessage="Continue Reading"
+                      defaultMessage="Continuar assistindo"
                     />
                   </Link>
                 </div>
@@ -355,7 +335,7 @@ class Scene extends Component {
                 <Link to="/story">
                   <FormattedMessage
                     id="general.readStory"
-                    defaultMessage="Read the Story"
+                    defaultMessage="Assistir o vídeo"
                   />
                 </Link>
               )}

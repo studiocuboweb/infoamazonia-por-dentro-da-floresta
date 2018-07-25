@@ -20,11 +20,11 @@ import { Link } from "react-router-dom";
 const messages = defineMessages({
   title: {
     id: "share.title",
-    defaultMessage: "Share this article"
+    defaultMessage: "Compartilhe este vídeo"
   },
   siteTitle: {
     id: "head.title",
-    defaultMessage: "Digging into the Mining Arc"
+    defaultMessage: "Documentário “O Mata Cavalo”"
   }
 });
 
@@ -33,7 +33,7 @@ const Button = styled.div`
   widht:100%;
   margin-top:50px;
   text-align: center;
-  a{ 
+  a{
     margin:0 auto;
     font-family: 'Merriweather', serif;
     font-size: 0.5em;
@@ -103,14 +103,14 @@ const Share = ({ intl, lastPath }) => {
           <Title as="h2">
             <FormattedMessage
               id="share.title"
-              defaultMessage="Share this article"
+              defaultMessage="Compartilhe este vídeo"
             />
           </Title>
           <Buttons>
             <FacebookShareButton url={url} quote={siteTitle}>
               <span className="fa fa-facebook" />
             </FacebookShareButton>
-            <TwitterShareButton url={url} title={siteTitle} via="infoamazonia">
+            <TwitterShareButton url={url} title={siteTitle} via="amazonia_real">
               <span className="fa fa-twitter" />
             </TwitterShareButton>
             <TelegramShareButton url={url} title={siteTitle}>
@@ -127,7 +127,7 @@ const Share = ({ intl, lastPath }) => {
                     <span className="fa fa-arrow-left" />
                     <FormattedMessage
                       id="about.close"
-                      defaultMessage="Continue Reading"
+                      defaultMessage="Continuar assistindo"
                     />
                   </Link>
               }

@@ -35,7 +35,7 @@ var divStyle2 = {
   'position': 'fixed',
   'right': '0',
   'top': '200px',
-  'minWidth': '100%', 
+  'minWidth': '100%',
   'minHeight': '100%'
 };
 const VideoContentEnd = ({ data }) => (
@@ -44,16 +44,16 @@ const VideoContentEnd = ({ data }) => (
       <span>{data}</span>
       <RelatedNews className='related-alternative'
           sectionTitle={"Confira também: "}
-          title={"Lorem ipsum 2"}
-          subtitle={"The situation in venzuela is critical, the people is suffering and beeing smashed everyday." }
-          imageUrl={"http://darkroom-cdn.s3.amazonaws.com/2016/09/APphoto_Venezuela-Opposition-Protest-9.jpg"}
-          href={"http://runrun.es/nacional/292903/tsj-declaro-nulas-las-sesiones-del-5-y-el-9-de-enero-de-la-asamblea-nacional.html"}
+          title={"A luta dos herdeiros de Mata Cavalo pelo título do quilombo"}
+          subtitle={"O território foi formado no século 19, quando negros africanos compraram ou ganharam as terras após o fim da escravidão no Brasil. Agora enfrentam dificuldades para aderir o Cadastro Ambiental Rural (CAR)" }
+          imageUrl=url(${require("images/matacavalo_related.jpg")})
+          href={"https://infoam-template-multimedia.herokuapp.com/"}
         />
         <div className="link-back">
           <Link to="/">
             <FormattedMessage
               id="general.backToHome"
-              defaultMessage="Start Over"
+              defaultMessage="Começar do início"
             />
           </Link>
         </div>

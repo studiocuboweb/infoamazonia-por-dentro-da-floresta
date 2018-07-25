@@ -13,9 +13,6 @@ import YouTubeVideo from "components/YouTube";
 
 import Rcslider from "rc-slider";
 
-
-const launchDate = process.env.LAUNCH_DATE;
-
 const Wrapper = styled.section`
   position: fixed;
   z-index: 9999;
@@ -300,7 +297,7 @@ class Scene extends Component {
     // }
     return (
       <Fragment>
-        <Fragment>     
+        <Fragment>
           {
             videoChapters.map((video, idx) => {
               const { name, seek } = video
@@ -361,7 +358,7 @@ class Scene extends Component {
       const storedData = localStorage.getItem('elapsed-time')
       if (storedData) {
         const activeChapter = JSON.parse(storedData).elapsedTime
-        
+
         if (activeChapter) this.setState({
           elapsedTime: true,
           activeChapter: this.searchActiveChapter(videoChapters, activeChapter),
@@ -391,7 +388,7 @@ class Scene extends Component {
     // this.setState({cursor: {cursor:'default'}});
     this.setState({menuClass: 'move-up'});
   }
-  setAnimationTime = setTimeout(() => { 
+  setAnimationTime = setTimeout(() => {
     this.setState({menuClass: 'move-down'});
     this.setState({cursor: {cursor:'none'}});
     //document.body.style.cursor = 'none';
@@ -416,7 +413,7 @@ class Scene extends Component {
                     { ...this.state.playing }
                     chapter={chapter}
                     autoplay={!elapsedTime ? true : false}
-                    data={{ id: "b0MjlZWd4Tk" }}
+                    data={{ id: "QjwMWDcNSqg" }}
                     displayVideoEnd={ this._setVideoEnd }
                     preview={false}
                     playing={playing}
@@ -426,7 +423,7 @@ class Scene extends Component {
             </div>
         }
         {
-          isMobile && 
+          isMobile &&
             <div className={"video-content "} style={{textAlign:'center'}}>
             {
             !ended &&
@@ -458,7 +455,7 @@ class Scene extends Component {
                   onClick={() => this._resumeVideo()}>
                   <span className="fa fa-play"></span>
                 </Link>
-              } 
+              }
               {
                 playing &&
                 <Link
@@ -466,17 +463,17 @@ class Scene extends Component {
                   onClick={() => this._pauseVideo()}>
                   <span className="fa fa-pause"></span>
                 </Link>
-              }                    
+              }
                 <Link
                   to="#"
                   onClick={() => this._openChaptersMenu()} className="text-chapter">
                   <span><img src={require("images/chapters_icon.png")} style={{width:'20px'}}/></span> Capítulos <span className={this.state.arrowButtonClass}></span>
-                </Link> 
+                </Link>
                 <div className="video-time">
                   {this._video.formatTime(Math.round(this._video.state.position))} / {this._video.formatTime(this._video.state.duration)}
                 </div>
               </div>
-              <div style={{width:'25%',display:'block',float:'left',margin:'0',textAlign:'right'}}>  
+              <div style={{width:'25%',display:'block',float:'left',margin:'0',textAlign:'right'}}>
                 <Link
                   to="#"
                   onClick={() => this._fullScreenVideo()}>
@@ -505,7 +502,7 @@ class Scene extends Component {
       elem.mozRequestFullScreen();
     } else if (elem.webkitRequestFullscreen) {
       elem.webkitRequestFullscreen();
-    }  
+    }
   }
 
   _goToChapter = ({ seek }) => this.setState({ chapter: { start: seek }});

@@ -1,8 +1,6 @@
 import React from "react";
 import { injectIntl, intlShape } from "react-intl";
 
-import en from "./en.js";
-import es from "./es.js";
 import pt from "./pt.js";
 
 const map = {
@@ -18,7 +16,7 @@ class VideoTemplate extends React.Component {
     if (map[window.locale]) {
       Article = map[window.locale];
     } else {
-      Article = map["en"];
+      Article = map["pt"];
     }
     return <Article />;
   }
