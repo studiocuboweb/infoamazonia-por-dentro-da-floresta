@@ -33,7 +33,7 @@ const Wrapper = styled.section`
     left: 0;
     bottom: 0;
     right: 0;
-    background-image: url('https://images3.alphacoders.com/853/85305.jpg');
+    background-image: url(${require("images/bg-1.jpg")});
     background-size: cover;
     background-position: center;
     z-index: -1;
@@ -297,13 +297,13 @@ class Scene extends Component {
           <h2>
             <FormattedMessage
               id="general.author"
-              defaultMessage="por Vandré Fonseca"
+              defaultMessage="Direção e roteiro: Vandré Fonseca / Fotografia e vídeos: Bruno Kelly"
             />
           </h2>
           <h3>
             <FormattedMessage
               id="general.publishDate"
-              defaultMessage="25 de julho de 2018"
+              defaultMessage="26 de julho de 2018"
             />
           </h3>
         </Top>
@@ -312,7 +312,7 @@ class Scene extends Component {
           <p className="description">
             <FormattedMessage
               id="general.tagline"
-              defaultMessage="O território foi formado no século 19, quando negros africanos compraram ou ganharam as terras após o fim da escravidão no Brasil. Agora enfrentam dificuldades para aderir o Cadastro Ambiental Rural (CAR)."
+              defaultMessage="Um documentário sobre a origem do território herdado por remanescentes de quilombolas no Mato Grosso."
             />
           </p>
             <div>

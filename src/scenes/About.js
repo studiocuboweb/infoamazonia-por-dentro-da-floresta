@@ -75,7 +75,7 @@ const About = ({ intl, lastPath }) => {
           <Paragraph big>
             <FormattedMessage
               id="about.intro"
-              defaultMessage="Esta reportagem foi produzida pela {amazoniareal} com apoio da {clua} e faz parte do especial “Olhando por Dentro da Floresta Amazônica”."
+              defaultMessage="Esta reportagem foi produzida pela {amazoniareal} com apoio da {clua} e faz parte do especial “{olhandopordentrodafloresta}”."
               values={{
                 infoamazonia: (
                   <strong>
@@ -95,13 +95,20 @@ const About = ({ intl, lastPath }) => {
                       Aliança pelo Clima e Uso da Terra (CLUA)
                     </a>
                   </strong>
+                ),
+                olhandopordentrodafloresta: (
+                  <strong>
+                    <a href="http://amazoniareal.com.br/espera-da-terra-firme/">
+                      Olhando por Dentro da Floresta Amazônica
+                    </a>
+                  </strong>
                 )
               }}
             />
           </Paragraph>
           <Paragraph>
             <strong>
-              <FormattedMessage id="about.reporter" defaultMessage="Roteiro, reportagem e direção" />
+              <FormattedMessage id="about.director" defaultMessage="Direção e roteiro" />
             </strong>
             <br />
             Vandré Fonseca
@@ -110,7 +117,7 @@ const About = ({ intl, lastPath }) => {
             <strong>
               <FormattedMessage
                 id="about.photos_videos"
-                defaultMessage="Imagens e fotografia"
+                defaultMessage="Fotografia e vídeos"
               />
             </strong>
             <br />
@@ -129,8 +136,8 @@ const About = ({ intl, lastPath }) => {
           <Paragraph>
             <strong>
               <FormattedMessage
-                id="about.transcript"
-                defaultMessage="Transcrição"
+                id="about.intern"
+                defaultMessage="Estagiária"
               />
             </strong>
             <br />
@@ -145,16 +152,6 @@ const About = ({ intl, lastPath }) => {
             </strong>
             <br />
             Rony Vieira
-          </Paragraph>
-          <Paragraph>
-            <strong>
-              <FormattedMessage
-                id="about.editor_chief"
-                defaultMessage="Editora-chefe"
-              />
-            </strong>
-            <br />
-            Kátia Brasil
           </Paragraph>
           <Paragraph>
             <strong>
@@ -177,7 +174,7 @@ const About = ({ intl, lastPath }) => {
             <strong>
               <FormattedMessage
                 id="about.supporter"
-                defaultMessage="Financiamento"
+                defaultMessage="Apoio"
               />
             </strong>
             <br />

@@ -6,16 +6,16 @@ import { Helmet } from "react-helmet";
 const messages = defineMessages({
   title: {
     id: "head.title",
-    defaultMessage: "A Veneza de Belo Monte"
+    defaultMessage: "Documentário “O Mata Cavalo”"
   },
   description: {
     id: "head.description",
     defaultMessage:
-      "Lorem ipsum dolre sit amet"
+      "Um documentário sobre a origem do território herdado por remanescentes de quilombolas no Mato Grosso"
   },
   keywords: {
     id: "head.keywords",
-    defaultMessage: "Lorem ipsum dolre"
+    defaultMessage: "mata cavalo, quilombola"
   }
 });
 
@@ -39,8 +39,16 @@ class Head extends React.Component {
         <meta property="og:url" content={`${url}${location.pathname}`} />
         <meta
           property="og:image"
-          content={`${url}${require("images/facebook-poster.jpg")}`}
+          content={`${url}${require("images/socialmedia.jpg")}`}
         />
+        <meta property="og:title" content="{title}" />
+        <meta property="og:description" content="{description}" />
+        <meta property="og:type" content="video.movie" />
+        <meta name="twitter:card" content="summary_large_image"/>
+        <meta name="twitter:image:src" content="http://matacavalo.amazoniareal.com.br/9ae3f77178e2a7265205140cb85945dc.jpg"/>
+        <meta name="twitter:site" content="@amazonia_real"/>
+        <meta name="twitter:domain" content="Amazônia Real"/>
+        <meta name="twitter:creator" content="@amazonia_real"/>
       </Helmet>
     );
   }
