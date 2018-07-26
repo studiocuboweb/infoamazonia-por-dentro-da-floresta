@@ -45,7 +45,7 @@ class Head extends React.Component {
         <meta property="og:description" content="{description}" />
         <meta property="og:type" content="video.movie" />
         <meta name="twitter:card" content="summary_large_image"/>
-        <meta name="twitter:image:src" content="http://matacavalo.amazoniareal.com.br/9ae3f77178e2a7265205140cb85945dc.jpg"/>
+        <meta name="twitter:image:src" content={`${url}${require("images/socialmedia.jpg")}`}/>
         <meta name="twitter:site" content="@amazonia_real"/>
         <meta name="twitter:domain" content="Amazônia Real"/>
         <meta name="twitter:creator" content="@amazonia_real"/>
