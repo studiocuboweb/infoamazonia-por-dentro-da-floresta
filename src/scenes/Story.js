@@ -243,24 +243,20 @@ const Middle = styled.div`
 `;
 const videoChapters = [
   {
-    seek: 48.607915,
-    name: "Lorem ipsum",
+    seek: 0,
+    name: "Início",
   },
   {
-    seek: 117.35867002098084,
-    name: "Dolor Sit amet",
+    seek: 172,
+    name: "Vida cotidiana",
   },
   {
-    seek: 124.4310686015831,
-    name: "Consectetur adipiscing elit",
+    seek: 310,
+    name: "Titulação da terra",
   },
   {
-    seek: 134.4310686015831,
-    name: "Sed do",
-  },
-  {
-    seek: 144.371942,
-    name: "Sunt in culpa",
+    seek: 449,
+    name: "Créditos",
   }
 ]
 
@@ -278,7 +274,7 @@ class Scene extends Component {
     cursor: {cursor:'none'},
     menuClass: '',
     displayChapterMenu: {display:'none'},
-    arrowButtonClass: 'fa fa-arrow-up'
+    arrowButtonClass: 'fa fa-arrow-up',
   }
 
   toogleMenu = () => {
@@ -342,7 +338,6 @@ class Scene extends Component {
   // }
 
   componentDidMount = () => {
-    console.log('componentDidMout Story')
     //document.getElementById('video-player').scrollTo(0,10000);
     if (typeof window !== 'undefined' ) {
       this.setState({ width: window.innerWidth })
@@ -375,7 +370,6 @@ class Scene extends Component {
   }
   timeout;
   onMouseMoveHandler(ev) {
-    console.log('mouseoverHandler')
     this.setState({cursor: {cursor:'default'}});
     //document.body.style.cursor = 'default';
     this.setState({menuClass: 'move-up'});
@@ -506,7 +500,9 @@ class Scene extends Component {
     }
   }
 
-  _goToChapter = ({ seek }) => this.setState({ chapter: { start: seek }});
+  _goToChapter = ({ seek }) => {
+    this.setState({ chapter: { start: seek }})
+  };
 
   _setVideoEnd = () => this.setState({ ended: true, playing: false });
 

@@ -107,8 +107,6 @@ class YouTubeVideo extends Component {
   }
 
   setDuration(duration) {
-    console.log("duration")
-    console.log(duration)
     this.setState({duration});
   }
 
@@ -117,8 +115,6 @@ class YouTubeVideo extends Component {
   }
 
   componentDidMount() {
-    console.log('componentDidMout')
-    console.log(this.props)
     this.props.onRef(this)
     window.addEventListener('onbeforeunload', this._handleWindowClose);
     this.interval =  setInterval(() => {
@@ -139,7 +135,6 @@ class YouTubeVideo extends Component {
 
   componentWillUnmount() {
     this.props.onRef(undefined)
-    console.log('component unmount');
     clearInterval(this.interval)
     clearInterval(this.slideBar)
     this._saveVideoState();
@@ -158,9 +153,10 @@ class YouTubeVideo extends Component {
     if (nextProps.chapter) {
       const { chapter: newChapter } = nextProps;
       const { chapter: oldChapter } = this.props;
-
-      if (newChapter && oldChapter) {
-        if(newChapter.start !== oldChapter.start) this.node.seekTo(newChapter.start)
+      if (newChapter) {
+        if((oldChapter === undefined) || (newChapter.start !== oldChapter.start)) {
+          this.node.seekTo(newChapter.start)
+        }
       }
     }
   }
@@ -181,8 +177,6 @@ class YouTubeVideo extends Component {
     }
 
     if (storedObject) {
-      console.log('--we have current video state', storedObject)
-
       const restoredElapsedTime = storedObject.elapsedTime
       const restoredVideoID = storedObject.videoID
       if (restoredElapsedTime > 0 && (this.node.getVideoData().video_id === restoredVideoID)) {
@@ -254,14 +248,9 @@ class YouTubeVideo extends Component {
       const elapsedTime = this.node.getCurrentTime()
       const videoID = this.node.getVideoData().video_id
       const videoCached = { elapsedTime, videoID }
-  
-      console.log('elapsedTime');
-      console.log(elapsedTime);
-
       if (elapsedTime > 0 && !currentVideoState) localStorage.setItem('elapsed-time', JSON.stringify(videoCached))
 
       if (currentVideoState && currentVideoState.elapsedTime < elapsedTime) {
-        console.info('--INFOAMAZONIA, Saving current video state')
         localStorage.setItem('elapsed-time', JSON.stringify(videoCached))
       }
     }
