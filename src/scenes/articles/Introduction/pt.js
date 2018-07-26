@@ -30,42 +30,55 @@ export default () => (
           data: {
             items: [
               {
+                credits: "Bruno Kelly/Amazônia Real",
                 src: require("photos/galeria/galeria_1.jpg")
               },
               {
+                credits: "Bruno Kelly/Amazônia Real",
                 src: require("photos/galeria/galeria_2.jpg")
               },
               {
+                credits: "Bruno Kelly/Amazônia Real",
                 src: require("photos/galeria/galeria_3.jpg")
               },
               {
+                credits: "Bruno Kelly/Amazônia Real",
                 src: require("photos/galeria/galeria_4.jpg")
               },
               {
+                credits: "Bruno Kelly/Amazônia Real",
                 src: require("photos/galeria/galeria_5.jpg")
               },
               {
+                credits: "Bruno Kelly/Amazônia Real",
                 src: require("photos/galeria/galeria_6.jpg")
               },
               {
+                credits: "Bruno Kelly/Amazônia Real",
                 src: require("photos/galeria/galeria_7.jpg")
               },
               {
+                credits: "Bruno Kelly/Amazônia Real",
                 src: require("photos/galeria/galeria_8.jpg")
               },
               {
+                credits: "Bruno Kelly/Amazônia Real",
                 src: require("photos/galeria/galeria_9.jpg")
               },
               {
+                credits: "Bruno Kelly/Amazônia Real",
                 src: require("photos/galeria/galeria_10.jpg")
               },
               {
+                credits: "Bruno Kelly/Amazônia Real",
                 src: require("photos/galeria/galeria_11.jpg")
               },
               {
+                credits: "Bruno Kelly/Amazônia Real",
                 src: require("photos/galeria/galeria_12.jpg")
               },
               {
+                credits: "Bruno Kelly/Amazônia Real",
                 src: require("photos/galeria/galeria_13.jpg")
               }
             ]
@@ -73,7 +86,7 @@ export default () => (
         }}
         >
         No Complexo Territorial Mata Cavalo, no Mato Grosso, comunidades remanescentes de quilombolas lutam pela garantia da área a que têm direito
-        </StoryMedia>.”
+        </StoryMedia>.
            Ainda sem o título definitivo, eles enfrentam agora a dificuldade de adesão ao Cadastro Ambiental Rural (CAR), desconfiados de que a exigência da lei ambiental possa trazer novas ameaças aos territórios deixados pelos seus ancestrais. A luta de Mata Cavalo, que fica no município de Nossa Senhora do Livramento, distante a 55 quilômetros de Cuiabá, é a mesma de milhares de outros territórios quilombolas espalhados pelos estados brasileiros, entre eles aqueles que formam a Amazônia Legal.
         </p>
       </Note>
