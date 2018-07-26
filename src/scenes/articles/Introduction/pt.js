@@ -18,7 +18,7 @@ import Tableau from "react-tableau-report";
 export default () => (
   <article>
     <Helmet>
-      <title>Introdução</title>
+      <title>A luta dos herdeiros de Mata Cavalo pelo título do quilombo</title>
     </Helmet>
     <Container>
       <Note>
@@ -28,57 +28,45 @@ export default () => (
           id: "galery-1",
           type: "gallery",
           data: {
+            credits: "Bruno Kelly/Amazônia Real",
             items: [
               {
-                credits: "Bruno Kelly/Amazônia Real",
                 src: require("photos/galeria/galeria_1.jpg")
               },
               {
-                credits: "Bruno Kelly/Amazônia Real",
                 src: require("photos/galeria/galeria_2.jpg")
               },
               {
-                credits: "Bruno Kelly/Amazônia Real",
                 src: require("photos/galeria/galeria_3.jpg")
               },
               {
-                credits: "Bruno Kelly/Amazônia Real",
                 src: require("photos/galeria/galeria_4.jpg")
               },
               {
-                credits: "Bruno Kelly/Amazônia Real",
                 src: require("photos/galeria/galeria_5.jpg")
               },
               {
-                credits: "Bruno Kelly/Amazônia Real",
                 src: require("photos/galeria/galeria_6.jpg")
               },
               {
-                credits: "Bruno Kelly/Amazônia Real",
                 src: require("photos/galeria/galeria_7.jpg")
               },
               {
-                credits: "Bruno Kelly/Amazônia Real",
                 src: require("photos/galeria/galeria_8.jpg")
               },
               {
-                credits: "Bruno Kelly/Amazônia Real",
                 src: require("photos/galeria/galeria_9.jpg")
               },
               {
-                credits: "Bruno Kelly/Amazônia Real",
                 src: require("photos/galeria/galeria_10.jpg")
               },
               {
-                credits: "Bruno Kelly/Amazônia Real",
                 src: require("photos/galeria/galeria_11.jpg")
               },
               {
-                credits: "Bruno Kelly/Amazônia Real",
                 src: require("photos/galeria/galeria_12.jpg")
               },
               {
-                credits: "Bruno Kelly/Amazônia Real",
                 src: require("photos/galeria/galeria_13.jpg")
               }
             ]
