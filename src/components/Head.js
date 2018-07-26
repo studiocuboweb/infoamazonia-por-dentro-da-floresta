@@ -42,6 +42,8 @@ class Head extends React.Component {
           content={`${url}${require("images/socialmedia.jpg")}`}
         />
         <meta property="og:title" content="{title}" />
+        <meta property="og:description" content="{description}" />
+        <meta property="og:type" content="article" />
       </Helmet>
     );
   }
