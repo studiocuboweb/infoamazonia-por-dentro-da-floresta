@@ -47,7 +47,7 @@ const Title = styled.h1`
     font-size: .8em;
     white-space: nowrap;
     &.title-1 {
-      font-size: 0.54em;
+      font-size: .8em;
       font-weight: 700;
       letter-spacing: -.03em;
     }

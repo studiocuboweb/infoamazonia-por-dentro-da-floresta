@@ -105,11 +105,11 @@ if (process.env.LAUNCH_DATE) {
   init();
 }
 
-if (process.env.GOOGLE_ANALYTICS) {
-  ReactGA.initialize(process.env.GOOGLE_ANALYTICS);
+//if (process.env.GOOGLE_ANALYTICS) {
+  ReactGA.initialize('UA-32852801-3');
   ReactGA.pageview(window.location.pathname + window.location.search);
   history.listen((location, action) => {
     ReactGA.set({ page: location.pathname });
     ReactGA.pageview(location.pathname);
   });
-}
+//}

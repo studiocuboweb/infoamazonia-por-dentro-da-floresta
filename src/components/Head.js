@@ -39,7 +39,7 @@ class Head extends React.Component {
         <meta property="og:url" content={`${url}${location.pathname}`} />
         <meta
           property="og:image"
-          content={`${url}${require("images/facebook-poster.jpg")}`}
+          content={`${url}${require("images/socialmedia.jpg")}`}
         />
       </Helmet>
     );
