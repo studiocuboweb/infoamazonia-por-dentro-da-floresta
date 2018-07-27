@@ -41,7 +41,7 @@ heroku apps:info
 https://infoam-template-video.herokuapp.com/
 
 heroku git:remote -a infoam-template-multimedia
-git checkout template-multimidia
+git checkout related-news
 git push heroku master
 
 # DEPLOY EM infoam-template-multimedia
@@ -50,3 +50,25 @@ https://infoam-template-multimedia.herokuapp.com/
 heroku git:remote -a infoam-template-video
 git checkout template-video
 git push heroku master
+
+# OUTROS PROCEDIMENTOS:
+- Apagando o local Storage do browser:
+Abrir o console dev do browser e rodar:
+localStorage.clear()
+localStorage.removeItem('elapsed-time')
+
+#BUILD EM PRODUCAO SEM DOCKER
+1- Instalar o yarn (falei node, mas estamos utilizando o yarn)
+https://yarnpkg.com/lang/en/docs/install/#debian-stable
+
+2- Instalar as dependências
+Na raiz do projeto onde está o package.json rodar o comando:
+
+yarn install
+
+Vai instalar as dependencias na pasta node_modules 
+
+3- Fazer o build
+na raiz do projeto rodar o comando:
+
+npm run build
