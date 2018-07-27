@@ -303,7 +303,7 @@ class Scene extends Component {
           <h3>
             <FormattedMessage
               id="general.publishDate"
-              defaultMessage="26 de julho de 2018"
+              defaultMessage="31 de julho de 2018"
             />
           </h3>
         </Top>
