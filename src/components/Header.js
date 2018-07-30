@@ -110,7 +110,10 @@ class Header extends Component {
       <Wrapper>
         <div className="header-content">
             <div className="site-title clearfix">
-              <img src={require("images/partners/amazonia-real.png")} />
+                <a href="//amazoniareal.com.br/" target="_blank">
+                  <img src={require("images/partners/amazonia-real.png")} />
+                </a>
+              </div>
             </div>
           <nav>
           {

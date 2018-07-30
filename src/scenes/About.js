@@ -184,6 +184,39 @@ const About = ({ intl, lastPath }) => {
             <a href="https://github.com/studiocuboweb/infoamazonia-por-dentro-da-floresta">Paulo Campos (Studio Cubo Web)</a> e Caio Alcântara, com base no trabalho desenvolvido por <a href="https://github.com/aparabolica/arco-mineiro">Miguel Peixe (aparabólica)</a>
           </Paragraph>
           <Paragraph>
+            <strong>
+              <FormattedMessage
+                id="about.maker"
+                defaultMessage="Realização"
+              />
+            </strong>
+            <br />
+            <img
+              src={require("images/partners/amazonia-real-p.png")}
+              alt="Amazônia Real"
+            />
+          </Paragraph>
+          <Paragraph>
+            <strong>
+              <FormattedMessage
+                id="about.partnership"
+                defaultMessage="Parceria"
+              />
+            </strong>
+            <br />
+            <img
+              src={require("images/partners/infoamazonia.png")}
+              alt="InfoAmazonia"
+            />
+          </Paragraph>
+          <Paragraph>
+            <strong>
+              <FormattedMessage
+                id="about.supporter"
+                defaultMessage="Apoio"
+              />
+            </strong>
+            <br />
             <img
               src={require("images/partners/clua.png")}
               alt="Climate And Land Use Alliance"
