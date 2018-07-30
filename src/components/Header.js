@@ -113,7 +113,6 @@ class Header extends Component {
                 <a href="//amazoniareal.com.br/" target="_blank">
                   <img src={require("images/partners/amazonia-real.png")} />
                 </a>
-              </div>
             </div>
           <nav>
           {
