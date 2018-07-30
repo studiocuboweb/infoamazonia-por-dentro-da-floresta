@@ -173,6 +173,32 @@ const About = ({ intl, lastPath }) => {
           <Paragraph>
             <strong>
               <FormattedMessage
+                id="about.maker"
+                defaultMessage="Realização"
+              />
+            </strong>
+            <br />
+            <img
+              src={require("images/partners/amazonia-real-p.png")}
+              alt="Amazônia Real"
+            />
+          </Paragraph>
+          <Paragraph>
+            <strong>
+              <FormattedMessage
+                id="about.partnership"
+                defaultMessage="Parceria"
+              />
+            </strong>
+            <br />
+            <img
+              src={require("images/partners/infoamazonia.png")}
+              alt="InfoAmazonia"
+            />
+          </Paragraph>
+          <Paragraph>
+            <strong>
+              <FormattedMessage
                 id="about.supporter"
                 defaultMessage="Apoio"
               />

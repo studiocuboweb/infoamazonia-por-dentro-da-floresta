@@ -97,7 +97,9 @@ class Header extends Component {
       <Top>
       <div className="partners">
         <div className="partners-logo">
-          <img src={require("images/partners/amazonia-real.png")} />
+          <a href="//amazoniareal.com.br/" target="_blank">
+            <img src={require("images/partners/amazonia-real.png")} />
+          </a>
         </div>
         <nav className="help-box">
           <NavLink to="/about" className="color-white" title="Sobre este trabalho">
