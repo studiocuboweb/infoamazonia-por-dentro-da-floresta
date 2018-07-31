@@ -16,11 +16,11 @@ import { Link } from "react-router-dom";
 const messages = defineMessages({
   title: {
     id: "about.title",
-    defaultMessage: "About"
+    defaultMessage: "Sobre"
   },
   siteTitle: {
     id: "head.title",
-    defaultMessage: "A Veneza de Belo Monte"
+    defaultMessage: "O Mata Cavalo"
   }
 });
 

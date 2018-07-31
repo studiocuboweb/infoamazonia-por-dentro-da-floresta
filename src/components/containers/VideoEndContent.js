@@ -47,7 +47,7 @@ const VideoContentEnd = ({ data }) => (
           title={"A luta dos herdeiros de Mata Cavalo pelo título do quilombo"}
           subtitle={"O território foi formado no século 19, quando negros africanos compraram ou ganharam as terras após o fim da escravidão no Brasil. Agora enfrentam dificuldades para aderir o Cadastro Ambiental Rural (CAR)" }
           imageUrl={require("images/matacavalo_related.jpg")}
-          href={"https://infoam-template-multimedia.herokuapp.com/"}
+          href={"//matacavalo.amazoniareal.com.br/"}
         />
         <div className="link-back">
           <Link to="/">
