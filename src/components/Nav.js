@@ -118,50 +118,11 @@ class ArticleNav extends Component {
             <NavLink exact to="/story">
               <FormattedMessage
                 id="articles.introduction"
-                defaultMessage="Introduction" />
+                defaultMessage="Reportagem" />
               <ProgressBar path="/story" />
             </NavLink>
           </li>
           <li>
-            <NavLink to="/story/gold-mining">
-              <FormattedMessage
-                id="articles.gold_mining"
-                defaultMessage="Gold Mining" />
-              <ProgressBar path="/story/gold-mining" />
-            </NavLink>
-          </li>
-          <li>
-            <NavLink to="/story/grip-of-the-guerrilla">
-              <FormattedMessage
-                id="articles.grip_of_the_guerrilla"
-                defaultMessage="Grip of the Guerrilla" />
-              <ProgressBar path="/story/grip-of-the-guerrilla" />
-            </NavLink>
-          </li>
-          <li>
-            <NavLink to="/story/coltan-country">
-              <FormattedMessage
-                id="articles.coltan_country"
-                defaultMessage="Coltan Country" />
-              <ProgressBar path="/story/coltan-country" />
-            </NavLink>
-          </li>
-          <li>
-            <NavLink to="/story/malaria">
-              <FormattedMessage
-                id="articles.malaria"
-                defaultMessage="Malaria" />
-              <ProgressBar path="/story/malaria" />
-            </NavLink>
-          </li>
-          <li>
-            <NavLink to="/story/gambling">
-              <FormattedMessage
-                id="articles.gambling"
-                defaultMessage="Gambling" />
-              <ProgressBar path="/story/gambling" />
-            </NavLink>
-          </li>
         </ol>
       </Wrapper>
     )
