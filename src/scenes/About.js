@@ -129,32 +129,12 @@ const About = ({ intl, lastPath }) => {
           <Paragraph>
             <strong>
               <FormattedMessage
-                id="about.editor_chief"
-                defaultMessage="Editora-chefe"
-              />
-            </strong>
-            <br />
-            Kátia Brasil
-          </Paragraph>
-          <Paragraph>
-            <strong>
-              <FormattedMessage
                 id="about.editor_photo"
                 defaultMessage="Editor de fotografia"
               />
             </strong>
             <br />
             Alberto César Araújo
-          </Paragraph>
-          <Paragraph>
-            <strong>
-              <FormattedMessage
-                id="about.editor_content"
-                defaultMessage="Editora de conteúdo"
-              />
-            </strong>
-            <br />
-            Elaíze Farias
           </Paragraph>
           <Paragraph>
             <strong>
