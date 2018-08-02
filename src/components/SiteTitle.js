@@ -74,17 +74,17 @@ class SiteTitle extends Component {
               <span className="title-item title-1">
                 <FormattedMessage
                   id="general.siteTitle1"
-                  defaultMessage="Lorem" />
+                  defaultMessage=" " />
               </span>
               <span className="title-item title-2">
                 <FormattedMessage
                   id="general.siteTitle2"
-                  defaultMessage="into the" />
+                  defaultMessage=" " />
               </span>
               <span className="title-item title-3">
                 <FormattedMessage
                   id="general.siteTitle3"
-                  defaultMessage="Lorem title" />
+                  defaultMessage="O Mata Cavalo" />
               </span>
             </span>
           </Link>
