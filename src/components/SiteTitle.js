@@ -80,17 +80,17 @@ class SiteTitle extends Component {
               <span className="title-item title-1">
                 <FormattedMessage
                   id="general.siteTitle1"
-                  defaultMessage="Lorem" />
+                  defaultMessage="A luta dos herdeiros de" />
               </span>
               <span className="title-item title-2">
                 <FormattedMessage
                   id="general.siteTitle2"
-                  defaultMessage="Ipsum dolore" />
+                  defaultMessage=" " />
               </span>
               <span className="title-item title-3">
                 <FormattedMessage
                   id="general.siteTitle3"
-                  defaultMessage="Sit ammet dominus tecum" />
+                  defaultMessage="Mata Cavalo pelo título do quilombo" />
               </span>
             </span>
           </Link>
