@@ -82,11 +82,6 @@ class SiteTitle extends Component {
                   id="general.siteTitle1"
                   defaultMessage="A luta dos herdeiros de" />
               </span>
-              <span className="title-item title-2">
-                <FormattedMessage
-                  id="general.siteTitle2"
-                  defaultMessage=" " />
-              </span>
               <span className="title-item title-3">
                 <FormattedMessage
                   id="general.siteTitle3"
