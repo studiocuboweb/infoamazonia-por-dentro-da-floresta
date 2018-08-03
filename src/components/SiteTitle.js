@@ -74,12 +74,12 @@ class SiteTitle extends Component {
               <span className="title-item title-1">
                 <FormattedMessage
                   id="general.siteTitle1"
-                  defaultMessage=" " />
+                  defaultMessage="&nbsp;" />
               </span>
               <span className="title-item title-2">
                 <FormattedMessage
                   id="general.siteTitle2"
-                  defaultMessage=" " />
+                  defaultMessage="&nbsp;" />
               </span>
               <span className="title-item title-3">
                 <FormattedMessage
