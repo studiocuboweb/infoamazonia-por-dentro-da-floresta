@@ -149,7 +149,7 @@ export default () => (
       </Subtitle>
 
       <Paragraph>
-        <Tableau url='https://public.tableau.com/shared/MJDB2FJNY?:display_count=no' />
+        <Tableau url='https://public.tableau.com/shared/G4MX5S5RP?:display_count=no' />
       </Paragraph>
 
       <Paragraph>
