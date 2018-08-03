@@ -71,16 +71,6 @@ class SiteTitle extends Component {
         <Title {...props}>
           <Link to="/">
             <span className="title-text">
-              <span className="title-item title-1">
-                <FormattedMessage
-                  id="general.siteTitle1"
-                  defaultMessage="&nbsp;" />
-              </span>
-              <span className="title-item title-2">
-                <FormattedMessage
-                  id="general.siteTitle2"
-                  defaultMessage="&nbsp;" />
-              </span>
               <span className="title-item title-3">
                 <FormattedMessage
                   id="general.siteTitle3"
