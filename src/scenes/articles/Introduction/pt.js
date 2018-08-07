@@ -149,7 +149,7 @@ export default () => (
       </Subtitle>
 
       <Paragraph>
-        <Tableau url='https://public.tableau.com/views/Quilombolas_CAR/Painel3?:embed=y&:display_count=no' />
+        <Tableau url='https://public.tableau.com/views/Quilombolas_CAR/Painel3' />
       </Paragraph>
 
       <Paragraph>
