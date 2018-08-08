@@ -35,15 +35,25 @@ const Wrapper = styled.div`
         props.active &&
         css`
           height: 50vh;
-        `} ${media.desktop`
-      flex: 0 0 45%;
-      border-top: 0;
-      max-width: 1000px;
-      height: auto;
-      box-shadow: 0 0 0;
-    `} ${media.desktopHD`
-      flex: 0 0 40%;
-    `};
+      `} 
+      ${media.desktop`
+        display: flex !important;
+        flex: 0 0 45%;
+        border-top: 0;
+        max-width: 1000px;
+        height: auto;
+        box-shadow: 0 0 0;
+      `} 
+      ${media.desktopHD`
+        display: flex !important;
+        flex: 0 0 40%;
+      `}
+      ${media.phone`
+        display:none;
+      `};
+      ${media.phablet`
+        display:none;
+      `};
     `} &.clickable {
     cursor: pointer;
   }
@@ -54,6 +64,36 @@ const Wrapper = styled.div`
     border-radius: inherit;
     overflow: hidden;
   }
+  ${props =>
+    props.parallax &&
+    css`
+      box-shadow: 0 0 5rem rgba(0, 0, 0, 0.2);
+      border-top: 1px solid #444;
+      flex: 0 0 auto;
+      height: 90px;
+    ${props =>
+      true &&
+      css`
+        height: 50vh;
+      `} ${media.desktop`
+    flex: 0 0 45%;
+    border-top: 0;
+    max-width: 1000px;
+    height: auto;
+    box-shadow: 0 0 0;
+  `} ${media.desktopHD`
+    flex: 0 0 40%;
+  `};
+  `} &.clickable {
+  cursor: pointer;
+    .parallax-container {
+      width: 100%;
+      min-height: 100%;
+      position: absolute;
+    } &.clickable {
+    cursor: pointer;
+  }
+  
 `;
 
 const Expand = styled.div`
@@ -123,7 +163,7 @@ class Media extends Component {
   }
   render() {
     const { active } = this.state;
-    const { media, preview, children } = this.props;
+    const { media, preview, children, parallax } = this.props;
 
     let credits;
     if (media && media.data)
@@ -161,7 +201,7 @@ class Media extends Component {
       }
       case "mapbox": {
         return (
-          <Wrapper preview={preview} active={active}>
+          <Wrapper preview={preview} parallax={parallax} active={active} className='parallax-container'>
             <MapBox {...media.data} />
           </Wrapper>
         );

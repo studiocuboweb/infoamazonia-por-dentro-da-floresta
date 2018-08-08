@@ -180,7 +180,7 @@ class Scene extends Component {
           {redirect &&
             redirect !== location.pathname && <Redirect to={redirect} />}
         </Story>
-        <Media media={media} preview={true} />
+        <Media media={media} preview={true} parallax={false} />
         {media.expanded && (
           <Modal close={this.unexpand}>
             <Media media={media} />
