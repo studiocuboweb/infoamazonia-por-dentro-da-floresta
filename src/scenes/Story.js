@@ -28,12 +28,10 @@ import ColtanCountry from "./articles/ColtanCountry";
 import Malaria from "./articles/Malaria";
 import Gambling from "./articles/Gambling";
 import styled, { css } from "styled-components";
+import { media } from "styles/utils";
 
 const Parallax = styled.div`
-  position: relative;
-  overflow:auto;
-  .content{
-    position: relative;
+  .foreground {
     z-index: 100;
   }
   .background{
@@ -42,6 +40,12 @@ const Parallax = styled.div`
       top: 0;
       left: 0;
       z-index: -100;
+      ${media.desktop`
+        display:none;
+      `} 
+      ${media.desktopHD`
+        display:none;
+      `}
   }
 `;
 const articles = [
@@ -134,76 +138,73 @@ class Scene extends Component {
     const { location, match, media } = this.props;
     return (
       <Page>
-        <Parallax>
-          <div className="content">
-            <Helmet>
-              <meta property="og:type" content="article" />
-            </Helmet>
-            <Story className="content">
-              <TransitionGroup>
-                <CSSTransition
-                  key={location.pathname}
-                  classNames="pages-transition"
-                  timeout={600}
-                  onEnter={this.onStoryEnter}
-                  onEntered={this.onStoryEntered}
-                >
-                  <Switch location={location}>
-                    <Route exact path={`${match.url}`} component={Introduction} />
-                    <Route
-                      path={`${match.url}/gold-mining`}
-                      component={GoldMining}
-                    />
-                    <Route
-                      path={`${match.url}/grip-of-the-guerrilla`}
-                      component={GripOfTheGuerrilla}
-                    />
-                    <Route
-                      path={`${match.url}/coltan-country`}
-                      component={ColtanCountry}
-                    />
-                    <Route path={`${match.url}/malaria`} component={Malaria} />
-                    <Route path={`${match.url}/gambling`} component={Gambling} />
-                    <Route
-                      render={() => (
-                        <Helmet>
-                          <meta name="prerender-status-code" content="404" />
-                        </Helmet>
-                      )}
-                    />
-                  </Switch>
-                </CSSTransition>
-              </TransitionGroup>
-              {!entering ? (
-                <footer>
-                  <Container>
-                    {!this.isLastArticle() ? (
-                      <Paragraph>
-                        <a
-                          className="continue"
-                          onClick={() => this.nextArticle()}
-                          href="javascript:void(0);"
-                        >
-                          <FormattedMessage
-                            id="story.continueReading"
-                            defaultMessage="Continue reading"
-                          />
-                          <span className="fa fa-chevron-right" />
-                        </a>
-                      </Paragraph>
-                    ) : null}
-                  </Container>
-                </footer>
-              ) : null}
-              {redirect &&
-                redirect !== location.pathname && <Redirect to={redirect} />}
-            </Story>
-            
-          </div>
-          <div className='background'>
-            <Media media={media} />
-          </div>
-        </Parallax>
+        <Helmet>
+          <meta property="og:type" content="article" />
+        </Helmet>
+        <Story className="content">
+          <Parallax>
+            <TransitionGroup>
+              <CSSTransition
+                key={location.pathname}
+                classNames="pages-transition"
+                timeout={600}
+                onEnter={this.onStoryEnter}
+                onEntered={this.onStoryEntered}
+              >
+                <Switch location={location}>
+                  <Route exact path={`${match.url}`} component={Introduction} />
+                  <Route
+                    path={`${match.url}/gold-mining`}
+                    component={GoldMining}
+                  />
+                  <Route
+                    path={`${match.url}/grip-of-the-guerrilla`}
+                    component={GripOfTheGuerrilla}
+                  />
+                  <Route
+                    path={`${match.url}/coltan-country`}
+                    component={ColtanCountry}
+                  />
+                  <Route path={`${match.url}/malaria`} component={Malaria} />
+                  <Route path={`${match.url}/gambling`} component={Gambling} />
+                  <Route
+                    render={() => (
+                      <Helmet>
+                        <meta name="prerender-status-code" content="404" />
+                      </Helmet>
+                    )}
+                  />
+                </Switch>
+              </CSSTransition>
+            </TransitionGroup>
+            {!entering ? (
+              <footer>
+                <Container>
+                  {!this.isLastArticle() ? (
+                    <Paragraph>
+                      <a
+                        className="continue"
+                        onClick={() => this.nextArticle()}
+                        href="javascript:void(0);"
+                      >
+                        <FormattedMessage
+                          id="story.continueReading"
+                          defaultMessage="Continue reading"
+                        />
+                        <span className="fa fa-chevron-right" />
+                      </a>
+                    </Paragraph>
+                  ) : null}
+                </Container>
+              </footer>
+            ) : null}
+            {redirect &&
+              redirect !== location.pathname && <Redirect to={redirect} />}
+            <div className='background'>
+              <Media media={media} />
+            </div>
+          </Parallax> 
+        </Story>
         <Media media={media} preview={true} parallax={false} />
       </Page>
     );

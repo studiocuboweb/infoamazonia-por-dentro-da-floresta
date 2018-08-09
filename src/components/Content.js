@@ -16,6 +16,7 @@ export default styled.section`
     flex-direction: row;
   `}
   .content {
+    background-color:#fff;
     flex: 1 1 100%;
     overflow-y: auto;
     overflow-x: hidden;

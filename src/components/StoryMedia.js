@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { findDOMNode } from "react-dom";
 import styled, { css } from "styled-components";
-import { media } from "styles/utils";
 import { updateMedia, removeMedia } from "actions/media";
 
 import { connect } from "react-redux";

@@ -8,9 +8,16 @@ import Title from "components/blocks/Title";
 import Paragraph from "components/blocks/Paragraph";
 import Quote from "components/blocks/Quote";
 import FeaturedText from "components/blocks/FeaturedText";
+import styled, { css } from "styled-components";
+
+const Article = styled.article`
+  .content {
+    background-color:red;
+  }
+`;
 
 export default () => (
-  <article>
+  <Article>
     <Helmet>
       <title>Amazonas and Western-Bolívar: in the guerrillas’ grip | Digging into the Mining Arc</title>
     </Helmet>
@@ -32,6 +39,7 @@ export default () => (
         >
           native communities in Amazonas and Bolívar states
         </StoryMedia>{" "}
+        <div style={{width:'100px',height:'100px'}}   className='content'></div>
         that have been usurped in both legal and illegal mining economies.
         Colombian guerrilla groups – referred to by the locals as{" "}
         <em>patagomas</em> (rubber feet) – are expanding their mining operations
@@ -99,5 +107,5 @@ export default () => (
         in indigenous territories.
       </Paragraph>
     </Container>
-  </article>
+  </Article>
 );
