@@ -6,3 +6,4 @@ node_modules
 .DS_Store
 design
 files/photos/raw
+.DS_Store
