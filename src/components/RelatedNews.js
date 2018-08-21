@@ -6,19 +6,22 @@ import { media } from '../styles/utils';
 const Wrapper = styled.div`
   margin: 0 auto;
   max-width: 500px;
+  display: block;
+  background-color:#ffffff;
   padding: 1rem 1rem 3rem;
-    .more-content {
       a {
         max-height: 12rem;
         display: flex;
       }
       .related-content {
         margin-left: .5rem;
+        padding: 10px 0;
         h3 {
           color: black;
           font-size: .9rem;
         }
         p {
+          word-wrap: break-word;
           font-size: .8rem;
           color: #333;
         }
@@ -30,6 +33,8 @@ const Wrapper = styled.div`
     }
   ${media.phablet`
     .more-content {
+      padding:10px 0;
+      height:400px;
       a {
         max-height: 12rem;
         display: flex;

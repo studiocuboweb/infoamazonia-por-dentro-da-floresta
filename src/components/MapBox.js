@@ -17,13 +17,15 @@ class MapBox extends Component {
     stateLayerType:null,
     stateSourceLayer:null,
     stateLayoutVisibility:null,
+    stateLayoutData:{},
+    statePaint:{},
     updated:true
   }
   
   componentWillReceiveProps(nextProps) {
     console.log('componentWillReceiveProps');
-    const { sourceOptionType,sourceOptionUrl,coordinates,style,sourceId,layerType,sourceLayer,layoutVisibility,layerId } = nextProps;
-    const { sourceOptionType:oldSourceOptionType,sourceOptionUrl:oldSourceOptionUrl,coordinates:oldCoordinates,style:oldStyle,sourceId:oldSourceId,layerType:oldLayerType,sourceLayer:oldSourceLayer,layoutVisibility:oldLayoutVisibility,layerId:oldLayerId } = this.props
+    const { sourceOptionType,sourceOptionUrl,coordinates,style,sourceId,layerType,sourceLayer,layoutVisibility,layerId,layoutData,paintData } = nextProps;
+    const { sourceOptionType:oldSourceOptionType,sourceOptionUrl:oldSourceOptionUrl,coordinates:oldCoordinates,style:oldStyle,sourceId:oldSourceId,layerType:oldLayerType,sourceLayer:oldSourceLayer,layoutVisibility:oldLayoutVisibility,layerId:oldLayerId,layoutData:oldlayoutData,paintData:oldPaintData} = this.props
 
     if (sourceOptionType !== oldSourceOptionType) {
       this.setState({
@@ -74,6 +76,16 @@ class MapBox extends Component {
         stateLayoutVisibility: layoutVisibility
       })
     }
+    if (layoutData !== oldlayoutData) {
+      this.setState({
+        stateLayoutData: layoutData
+      })
+    }
+    if (paintData !== oldPaintData) {
+      this.setState({
+        statePaintData: paintData
+      })
+    }
     this.setState({updated:false})
     setTimeout(
       function() {
@@ -86,8 +98,8 @@ class MapBox extends Component {
    
   }
   render() {
-    const { sourceOptionType,sourceOptionUrl,coordinates,style,sourceId,layerType,sourceLayer,layoutVisibility,layerId} = this.props;
-    const { stateSourceOptionType,stateSourceOptionUrl,center,stateStyle,stateSourceId,stateLayerType,stateSourceLayer,stateLayoutVisibility,stateLayerId,updated} = this.state 
+    const { sourceOptionType,sourceOptionUrl,coordinates,style,sourceId,layerType,sourceLayer,layoutVisibility,layerId,layoutData,paintData} = this.props;
+    const { stateSourceOptionType,stateSourceOptionUrl,center,stateStyle,stateSourceId,stateLayerType,stateSourceLayer,stateLayoutVisibility,stateLayerId,updated,stateLayoutData,statePaintData} = this.state 
     return (
       <Map
         center={center  || coordinates}
@@ -130,7 +142,8 @@ class MapBox extends Component {
               id={layerId || stateLayerId}
               sourceId={sourceId || stateSourceId}
               sourceLayer={sourceLayer || stateSourceLayer}
-              layout={{'visibility': layoutVisibility || stateLayoutVisibility}}
+              layout={layoutData || stateLayoutData}
+              paint={paintData || statePaintData}
             ></Layer>
         }
       </Map>

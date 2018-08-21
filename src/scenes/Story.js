@@ -20,6 +20,7 @@ import Page from "components/Page";
 import Media from "components/Media";
 import Story from "components/Story";
 import Modal from "components/Modal";
+import Parallax from "components/Parallax";
 
 import Introduction from "./articles/Introduction";
 
@@ -124,20 +125,6 @@ class Scene extends Component {
               >
                 <Switch location={location}>
                   <Route exact path={`${match.url}`} component={Introduction} />
-                  <Route
-                    path={`${match.url}/gold-mining`}
-                    component={GoldMining}
-                  />
-                  <Route
-                    path={`${match.url}/grip-of-the-guerrilla`}
-                    component={GripOfTheGuerrilla}
-                  />
-                  <Route
-                    path={`${match.url}/coltan-country`}
-                    component={ColtanCountry}
-                  />
-                  <Route path={`${match.url}/malaria`} component={Malaria} />
-                  <Route path={`${match.url}/gambling`} component={Gambling} />
                   <Route
                     render={() => (
                       <Helmet>
