@@ -27,27 +27,8 @@ import GripOfTheGuerrilla from "./articles/GripOfTheGuerrilla";
 import ColtanCountry from "./articles/ColtanCountry";
 import Malaria from "./articles/Malaria";
 import Gambling from "./articles/Gambling";
-import styled, { css } from "styled-components";
-import { media } from "styles/utils";
+import Parallax from "components/Parallax";
 
-const Parallax = styled.div`
-  .foreground {
-    z-index: 100;
-  }
-  .background{
-      color: #999999;
-      position: fixed;
-      top: 0;
-      left: 0;
-      z-index: -100;
-      ${media.desktop`
-        display:none;
-      `} 
-      ${media.desktopHD`
-        display:none;
-      `}
-  }
-`;
 const articles = [
   "/story",
   "/story/gold-mining",
@@ -178,35 +159,37 @@ class Scene extends Component {
               </CSSTransition>
             </TransitionGroup>
             {!entering ? (
-              <footer>
-                <Container>
-                  {!this.isLastArticle() ? (
-                    <Paragraph>
-                      <a
-                        className="continue"
-                        onClick={() => this.nextArticle()}
-                        href="javascript:void(0);"
-                      >
-                        <FormattedMessage
-                          id="story.continueReading"
-                          defaultMessage="Continue reading"
-                        />
-                        <span className="fa fa-chevron-right" />
-                      </a>
-                    </Paragraph>
-                  ) : null}
-                </Container>
-              </footer>
+              <div style={{backgroundColor:'white',float:'left',display:'block',textAlign:'right',width:'100%'}}>
+                <footer>
+                  <Container>
+                    {!this.isLastArticle() ? (
+                      <Paragraph>
+                        <a
+                          className="continue"
+                          onClick={() => this.nextArticle()}
+                          href="javascript:void(0);"
+                        >
+                          <FormattedMessage
+                            id="story.continueReading"
+                            defaultMessage="Continue reading"
+                          />
+                          <span className="fa fa-chevron-right" />
+                        </a>
+                      </Paragraph>
+                    ) : null}
+                  </Container>
+                </footer>
+              </div>
             ) : null}
             {redirect &&
               redirect !== location.pathname && <Redirect to={redirect} />}
             <div className='background'>
               <Media media={media} />
             </div>
-          </Parallax> 
+          </Parallax>
         </Story>
         <Media media={media} preview={true} parallax={false} />
-      </Page>
+        </Page>
     );
   }
 }

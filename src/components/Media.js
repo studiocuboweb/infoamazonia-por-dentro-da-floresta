@@ -201,7 +201,7 @@ class Media extends Component {
       }
       case "mapbox": {
         return (
-          <Wrapper preview={preview} parallax={parallax} active={active} className='parallax-container'>
+          <Wrapper preview={preview} parallax={parallax} active={active}>
             <MapBox {...media.data} />
           </Wrapper>
         );
