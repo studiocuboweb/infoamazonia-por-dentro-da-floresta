@@ -9,7 +9,7 @@ services:
     volumes_from:
       - yarn-cache
     environment:
-      - NODE_ENV=production
+      - NODE_ENV=development
   # The Web Server
   web:
     build:

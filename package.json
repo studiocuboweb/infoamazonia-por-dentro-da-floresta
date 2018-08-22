@@ -7,7 +7,7 @@
     "start": "node_modules/.bin/webpack-dev-server --host 0.0.0.0",
     "test": "echo \"Error: no test specified\" && exit 1",
     "setup": "rm -rf public/*",
-    "build": "webpack --config webpack.config.js -p",
+    "build": "npm run setup && webpack --config webpack.config.js -d",
     "watch": "npm run setup && webpack --config webpack.config.js --watch",
     "deploy": "npm run build && cp public/index.html public/404.html && gh-pages -d public",
     "manage:translations": "node ./translationRunner.js"
