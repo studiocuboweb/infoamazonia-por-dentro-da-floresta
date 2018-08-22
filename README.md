@@ -37,6 +37,10 @@ heroku login
 - verificando APP atual
 heroku apps:info
 
+
+#HEROKU BASH
+- heroku run bash
+
 # DEPLOY EM infoam-template-video
 https://infoam-template-video.herokuapp.com/
 
@@ -49,6 +53,13 @@ https://infoam-template-multimedia.herokuapp.com/
 
 heroku git:remote -a infoam-template-video
 git checkout template-video
+git push heroku master
+
+# DEPLOY EM ifoam-template-mapas
+https://infoam-template-multimedia.herokuapp.com/
+
+heroku git:remote -a ifoam-template-mapas
+git checkout template-mapa
 git push heroku master
 
 # OUTROS PROCEDIMENTOS:

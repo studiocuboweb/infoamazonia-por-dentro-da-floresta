@@ -4,6 +4,7 @@ const WebpackPwaManifest = require("webpack-pwa-manifest");
 const OfflinePlugin = require("offline-plugin");
 const FaviconsWebpackPlugin = require("favicons-webpack-plugin");
 const HTMLWebpackPlugin = require("html-webpack-plugin");
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 
 let config = {
   entry: {
@@ -107,6 +108,14 @@ const html404 = new HTMLWebpackPlugin({
   filename: "404.html",
   inject: "body"
 });
+
+const uglifyjs = new UglifyJsPlugin({
+    uglifyOptions: {
+      compress: false
+    }
+  });
+
+
 
 const offline = new OfflinePlugin({
   ServiceWorker: {
