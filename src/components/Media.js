@@ -40,7 +40,7 @@ const Wrapper = styled.div`
         display: flex !important;
         flex: 0 0 45%;
         border-top: 0;
-        max-width: 1000px;
+        max-width: 600px;
         height: auto;
         box-shadow: 0 0 0;
       `} 
@@ -78,7 +78,7 @@ const Wrapper = styled.div`
       `} ${media.desktop`
     flex: 0 0 45%;
     border-top: 0;
-    max-width: 1000px;
+    max-width: 600px;
     height: auto;
     box-shadow: 0 0 0;
   `} ${media.desktopHD`
