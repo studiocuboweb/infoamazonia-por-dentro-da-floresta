@@ -16,6 +16,7 @@ var referPath;
 const initialState = {
   lastPath: false,
   aboutPath: false,
+  sharePath: false,
   storyScroll: {},
   storyHeight: {}
 };
@@ -36,18 +37,21 @@ export default function reducer (state = initialState, action) {
       return Object.assign({}, initialState);
     }
     case LOCATION_CHANGE : {
-      console.log('LOCATION CHANGE');
       if(action.payload.pathname !== '/' && action.payload.pathname !== '/about' && action.payload.pathname !== '/share') {
         referPath = action.payload.pathname;
-        console.log('not about');
         return Object.assign({}, initialState, state, {
           lastPath: action.payload.pathname,
-          aboutPath: '/about'
+          aboutPath: '/about',
+          sharePath: '/share',
         });
       } else if (action.payload.pathname == '/about') { 
-        console.log('yes about');
         return Object.assign({}, initialState, state, {
-          aboutPath: referPath
+          aboutPath: referPath,
+        });
+      } else if (action.payload.pathname == '/share') { 
+        console.log('LOCATION CHANGE');
+        return Object.assign({}, initialState, state, {
+          sharePath: referPath,
         });
       }
       return state;

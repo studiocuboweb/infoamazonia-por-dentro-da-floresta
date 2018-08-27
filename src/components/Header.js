@@ -17,7 +17,7 @@ const Wrapper = styled.header`
     margin: 0 auto;
   }
   ${media.phablet`
-    padding: 1rem;
+    padding: 0.4rem;
     font-size: 1em;
   `}
   ${media.desktop`
@@ -105,7 +105,7 @@ const Wrapper = styled.header`
 
 class Header extends Component {
   render () {
-    const { lastPath,aboutPath } = this.props;
+    const { lastPath,aboutPath, sharePath } = this.props;
     return (
       <Wrapper>
         <div className="header-content">
@@ -121,9 +121,12 @@ class Header extends Component {
               <span className="fa fa-info"></span>
             </NavLink>
           }
-            <NavLink to="/share" title="Share">
+          {
+            sharePath &&
+            <NavLink to={aboutPath} title="Share">
               <span className="fa fa-share-alt"></span>
             </NavLink>
+           }
           </nav>
         </div>
       </Wrapper>
@@ -134,7 +137,8 @@ class Header extends Component {
 const mapStateToProps = (state, ownProps) => {
   return {
     lastPath: state.context.lastPath,
-    aboutPath: state.context.aboutPath
+    aboutPath: state.context.aboutPath,
+    sharePath: state.context.sharePath
   };
 };
 
