@@ -17,7 +17,7 @@ const Wrapper = styled.header`
     margin: 0 auto;
   }
   ${media.phablet`
-    padding: 0.4rem;
+    padding: 0.4rem 2rem 0.4rem 0.4rem; 
     font-size: 1em;
   `}
   ${media.desktop`
@@ -123,7 +123,7 @@ class Header extends Component {
           }
           {
             sharePath &&
-            <NavLink to={aboutPath} title="Share">
+            <NavLink to={sharePath} title="Share">
               <span className="fa fa-share-alt"></span>
             </NavLink>
            }
