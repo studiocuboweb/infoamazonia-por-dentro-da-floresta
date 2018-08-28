@@ -20,9 +20,18 @@ const Wrapper = styled.div`
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  width:100vw;
+  height:100vh;
   .media-embed {
     width: 100%;
     height: 100%;
+  }
+  .placeholder-background {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width:100%;
+    height:100vh;
   }
   ${props =>
     props.preview &&
@@ -218,10 +227,12 @@ class Media extends Component {
       }
       case "mapbox": {
         return (
-          <Wrapper preview={preview} parallax={parallax} active={active} style={{'backgroundImage':`url(${media.backgroundAlternative})`}}>
-          {this.detectWebGLContext() &&
-            <MapBox {...media.data} />
-          }
+          <Wrapper preview={preview} parallax={parallax} active={active}>
+            <div className='placeholder-background' style={{'backgroundImage':`url(${media.backgroundAlternative})`}}>
+              {this.detectWebGLContext() &&
+                <MapBox {...media.data} />
+              }
+            </div>
           </Wrapper>
         );
       }
