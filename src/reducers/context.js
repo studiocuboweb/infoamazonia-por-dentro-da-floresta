@@ -49,7 +49,6 @@ export default function reducer (state = initialState, action) {
           aboutPath: referPath,
         });
       } else if (action.payload.pathname == '/share') { 
-        console.log('LOCATION CHANGE');
         return Object.assign({}, initialState, state, {
           sharePath: referPath,
         });

@@ -66,7 +66,6 @@ class StoryMedia extends Component {
   }
   
   _updateMedia() {
-    console.log('here updating')
     const { media, library, updateMedia, pathname } = this.props;
     
     const inLibrary = library[this._getMediaId(media)];

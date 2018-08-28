@@ -23,7 +23,6 @@ class MapBox extends Component {
   }
   
   componentWillReceiveProps(nextProps) {
-    console.log('componentWillReceiveProps');
     const { sourceOptionType,sourceOptionUrl,coordinates,style,sourceId,layerType,sourceLayer,layoutVisibility,layerId,layoutData,paintData } = nextProps;
     const { sourceOptionType:oldSourceOptionType,sourceOptionUrl:oldSourceOptionUrl,coordinates:oldCoordinates,style:oldStyle,sourceId:oldSourceId,layerType:oldLayerType,sourceLayer:oldSourceLayer,layoutVisibility:oldLayoutVisibility,layerId:oldLayerId,layoutData:oldlayoutData,paintData:oldPaintData} = this.props
 
@@ -89,7 +88,6 @@ class MapBox extends Component {
     this.setState({updated:false})
     setTimeout(
       function() {
-        console.log('timeout! true')
         this.setState({updated:true})
       }
       .bind(this),
@@ -116,7 +114,7 @@ class MapBox extends Component {
           height: "100vh",
           width: "100vw"
         }}>
-        {console.log(updated)}
+        {/* {console.log(updated)}
         {console.log("sourceOptionType")}
         {console.log('LayerType')}
         {console.log(layerType || stateLayerType)}
@@ -130,7 +128,7 @@ class MapBox extends Component {
         {console.log(sourceOptionUrl || stateSourceOptionUrl)}
         {console.log('sourceLayer')}
         {console.log(sourceLayer || stateSourceLayer)}
-        {console.log(sourceLayer || stateSourceLayer)}
+        {console.log(sourceLayer || stateSourceLayer)} */}
         {
           updated &&
             <Source id={sourceId || stateSourceId} tileJsonSource={{"type": sourceOptionType || stateSourceOptionType,"url": sourceOptionUrl || stateSourceOptionUrl}} />

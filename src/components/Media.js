@@ -157,6 +157,23 @@ class Media extends Component {
       this.setState({ active: true });
     }
   }
+  detectWebGLContext () {
+    // https://developer.mozilla.org/en-US/docs/Learn/WebGL/By_example/Detect_WebGL
+    // Create canvas element. The canvas is not added to the
+    // document itself, so it is never displayed in the
+    // browser window.
+    var canvas = document.createElement("canvas");
+    // Get WebGLRenderingContext from canvas element.
+    var gl = canvas.getContext("webgl") || canvas.getContext("experimental-webgl");
+    // Report the result.
+    if (gl && gl instanceof WebGLRenderingContext) {
+      console.log('YES, BROWSER HAS WEBGL SUPPORT. SHOWING MAPBOX!');
+      return true;
+    } else {
+      console.log('BROWSER NOT SUPPORTS WEBGL RENDERING CONTEXT TO OPEN MAPBOX. SHOWING BACKGROUND IMAGE INSTEAD.');
+      return false
+    }
+  }
   _handleClick(ev) {
     ev.preventDefault();
     this.props.expandMedia(true);
@@ -202,7 +219,9 @@ class Media extends Component {
       case "mapbox": {
         return (
           <Wrapper preview={preview} parallax={parallax} active={active} style={{'backgroundImage':`url(${media.backgroundAlternative})`}}>
-            {<MapBox {...media.data} /> }
+          {this.detectWebGLContext() &&
+            <MapBox {...media.data} />
+          }
           </Wrapper>
         );
       }
