@@ -34,6 +34,7 @@ export default () => (
                 media={{
                   id: "map-1",
                   type: "mapbox",
+                  backgroundAlternative: require("images/bg-mapbox-placeholder-1.png"),
                   data: {
                     layerId: "PDigital2000_2016_AMZ_shp-7s3enh2",
                     sourceOptionType: "vector",
@@ -65,6 +66,7 @@ export default () => (
                 media={{
                   id: "map-2",
                   type: "mapbox",
+                  backgroundAlternative: require("images/bg-mapbox-placeholder-2.png"),
                   data: {
                     layerId: "Sementes-dbky3y2",
                     sourceOptionType: "vector",
@@ -96,6 +98,7 @@ export default () => (
                 media={{
                   id: "map-3",
                   type: "mapbox",
+                  backgroundAlternative: require("images/bg-mapbox-placeholder-3.png"),
                   data: {
                     layerId: "Assentamentos_incra-2wyd2b2",
                     sourceOptionType: "vector",
@@ -127,6 +130,7 @@ export default () => (
                 media={{
                   id: "map-4",
                   type: "mapbox",
+                  backgroundAlternative: require("images/bg-mapbox-placeholder-4.png"),
                   data: {
                     layerId: "ongs-atuacao-amazonia-58ujje2",
                     sourceOptionType: "vector",
