@@ -59,8 +59,6 @@ export default () => (
             </Paragraph>
           </div>
 
-
-          <div className='background-color margin-bottom-1'>
             <Paragraph>
                     <StoryMedia
             media={{
@@ -116,7 +114,6 @@ export default () => (
             </StoryMedia>.
                Ainda sem o título definitivo, eles enfrentam agora a dificuldade de adesão ao Cadastro Ambiental Rural (CAR), desconfiados de que a exigência da lei ambiental possa trazer novas ameaças aos territórios deixados pelos seus ancestrais. A luta de Mata Cavalo, que fica no município de Nossa Senhora do Livramento, distante a 55 quilômetros de Cuiabá, é a mesma de milhares de outros territórios quilombolas espalhados pelos estados brasileiros, entre eles aqueles que formam a Amazônia Legal.
                </Paragraph>
-             </div>
 
 
 
@@ -153,7 +150,6 @@ export default () => (
             </Paragraph>
           </div>
 
-          <div className='background-color margin-bottom-1'>
             <Paragraph>
               <StoryMedia
                 media={{
@@ -175,7 +171,6 @@ export default () => (
               entusiasticamente sobre o comportamento violento aplicado por grupos
               armados que lutaram pelo acesso a esta mesma mina.
             </Paragraph>
-          </div>
 
           <div className='background-color margin-bottom-1'>
             <Paragraph>
@@ -210,7 +205,6 @@ export default () => (
             </Paragraph>
           </div>
 
-          <div className='background-color margin-bottom-1'>
             <Paragraph>
               Mata Cavalo é um complexo territorial onde <StoryMedia
                 media={{
@@ -225,7 +219,6 @@ export default () => (
                 homens e mulheres remanescentes de quilombolas conseguiram resistir por mais de um século ao assédio de fazendeiros e invasores nos sertões do Mato Grosso
               </StoryMedia>. Embora os limites do território já tenham sido reconhecidos pelo Instituto Nacional de Colonização e Reforma Agrária (Incra), as comunidades, reconhecidas pela Fundação Cultural Palmares, ainda não receberam o título para registro em cartório.
             </Paragraph>
-          </div>
 
           <div className='background-color margin-bottom-1'>
             <Paragraph>
