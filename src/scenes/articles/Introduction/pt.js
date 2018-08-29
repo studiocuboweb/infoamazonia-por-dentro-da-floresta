@@ -58,6 +58,68 @@ export default () => (
               in indigenous territories.
             </Paragraph>
           </div>
+
+
+          <div className='background-color margin-bottom-1'>
+            <Paragraph>
+                    <StoryMedia
+            media={{
+              id: "galery-1",
+              type: "gallery",
+              data: {
+                credits: "Bruno Kelly/Amazônia Real",
+                items: [
+                  {
+                    src: require("photos/galeria/galeria_1.jpg")
+                  },
+                  {
+                    src: require("photos/galeria/galeria_2.jpg")
+                  },
+                  {
+                    src: require("photos/galeria/galeria_3.jpg")
+                  },
+                  {
+                    src: require("photos/galeria/galeria_4.jpg")
+                  },
+                  {
+                    src: require("photos/galeria/galeria_5.jpg")
+                  },
+                  {
+                    src: require("photos/galeria/galeria_6.jpg")
+                  },
+                  {
+                    src: require("photos/galeria/galeria_7.jpg")
+                  },
+                  {
+                    src: require("photos/galeria/galeria_8.jpg")
+                  },
+                  {
+                    src: require("photos/galeria/galeria_9.jpg")
+                  },
+                  {
+                    src: require("photos/galeria/galeria_10.jpg")
+                  },
+                  {
+                    src: require("photos/galeria/galeria_11.jpg")
+                  },
+                  {
+                    src: require("photos/galeria/galeria_12.jpg")
+                  },
+                  {
+                    src: require("photos/galeria/galeria_13.jpg")
+                  }
+                ]
+              }
+            }}
+            >
+            No Complexo Territorial Mata Cavalo, no Mato Grosso, comunidades remanescentes de quilombolas lutam pela garantia da área a que têm direito
+            </StoryMedia>.
+               Ainda sem o título definitivo, eles enfrentam agora a dificuldade de adesão ao Cadastro Ambiental Rural (CAR), desconfiados de que a exigência da lei ambiental possa trazer novas ameaças aos territórios deixados pelos seus ancestrais. A luta de Mata Cavalo, que fica no município de Nossa Senhora do Livramento, distante a 55 quilômetros de Cuiabá, é a mesma de milhares de outros territórios quilombolas espalhados pelos estados brasileiros, entre eles aqueles que formam a Amazônia Legal.
+               </Paragraph>
+             </div>
+
+
+
           <div className='background-color margin-bottom-1'>
             <Paragraph>
               The ones bearing the brunt of Venezuela’s mining bonanza are the{" "}
@@ -90,6 +152,31 @@ export default () => (
               in indigenous territories.
             </Paragraph>
           </div>
+
+          <div className='background-color margin-bottom-1'>
+            <Paragraph>
+              <StoryMedia
+                media={{
+                  id: "video-1",
+                  type: "youtube",
+                  data: {
+                    id: "6sWVoFaH7Nc"
+                  }
+                }}
+              >
+                <strong>Com suas mãos cheias de barro</strong>, um mineiro lança
+                rochas ricas em minerais em um moinho mecânico giratório que esmaga as
+                pedras para serem processadas com mercúrio
+              </StoryMedia>. A uma pequena distância, alguns soldados nos esperam. Os
+              militares nos escoltaram durante a nossa visita às colinas verdes
+              próximo de El Callao, um dos muitos pontos de mineração fortemente
+              contestados na Venezuela. “Um tiroteio ou um massacre poderiam acontecer
+              a qualquer momento, todos os dias eram assim”, outro mineiro fala
+              entusiasticamente sobre o comportamento violento aplicado por grupos
+              armados que lutaram pelo acesso a esta mesma mina.
+            </Paragraph>
+          </div>
+
           <div className='background-color margin-bottom-1'>
             <Paragraph>
               The ones bearing the brunt of Venezuela’s mining bonanza are the{" "}
@@ -122,6 +209,24 @@ export default () => (
               in indigenous territories.
             </Paragraph>
           </div>
+
+          <div className='background-color margin-bottom-1'>
+            <Paragraph>
+              Mata Cavalo é um complexo territorial onde <StoryMedia
+                media={{
+                  id: "image-2",
+                  type: "image",
+                  data: {
+                    credits: "Bruno Kelly/Amazônia Real",
+                    src: require("photos/matacavalo_2.jpg")
+                  }
+                }}
+              >
+                homens e mulheres remanescentes de quilombolas conseguiram resistir por mais de um século ao assédio de fazendeiros e invasores nos sertões do Mato Grosso
+              </StoryMedia>. Embora os limites do território já tenham sido reconhecidos pelo Instituto Nacional de Colonização e Reforma Agrária (Incra), as comunidades, reconhecidas pela Fundação Cultural Palmares, ainda não receberam o título para registro em cartório.
+            </Paragraph>
+          </div>
+
           <div className='background-color margin-bottom-1'>
             <Paragraph>
               The ones bearing the brunt of Venezuela’s mining bonanza are the{" "}
