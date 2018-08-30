@@ -20,8 +20,14 @@ const Wrapper = styled.div`
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  width:100vw;
-  height:100vh;
+
+
+  @media(max-width: 800px) {
+    width:100vw;
+    height:100vh;
+    border:1px solid blue; 
+  }
+  
   .media-embed {
     width: 100%;
     height: 100%;

@@ -166,6 +166,11 @@ class Scene extends Component {
           </Parallax>
         </Story>
         <Media media={media} preview={true} parallax={false} />
+        {media.expanded && (
+          <Modal close={this.unexpand}>
+            <Media media={media} />
+          </Modal>
+        )}
         </Page>
     );
   }
