@@ -58,6 +58,12 @@ const Title = styled.h1`
       font-size: 1.6em;
       font-weight: 700;
       padding: 0;
+      ${media.phone`
+        font-size: 1em;
+      `}
+      ${media.phablet`
+        font-size: 1.4em;
+      `}
     }
   }
 `

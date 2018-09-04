@@ -180,7 +180,15 @@ const Top = styled.div`
       margin: 1rem 0 0;
     `}
     ${media.tablet`
-      font-size: 1em;
+      font-size: 0.8em;
+    `}
+    ${media.phablet`
+      font-size: 0.8em;
+    `}
+    ${media.phone`
+      font-size: 0.7em;
+      white-space: normal;
+      text-align:center;
     `}
     ${media.desktopHD`
       margin: 3rem 0 0;
