@@ -7,7 +7,7 @@ import mediaLibrary from './mediaLibrary';
 import { routerReducer } from 'react-router-redux';
 
 const storage = localForage.createInstance({
-  name: 'O Mata Cavalo',
+  name: 'BR 319: Bem-Vindo à Realidade',
   description: 'Persistant application state'
 });
 

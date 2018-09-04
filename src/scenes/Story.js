@@ -247,16 +247,16 @@ const videoChapters = [
     name: "Início",
   },
   {
-    seek: 172,
-    name: "Vida cotidiana",
+    seek: 32,
+    name: "Os empresários",
   },
   {
-    seek: 310,
-    name: "Titulação da terra",
+    seek: 129,
+    name: "Os pioneiros",
   },
   {
-    seek: 449,
-    name: "Créditos",
+    seek: 266,
+    name: "Desmatamento",
   }
 ]
 
@@ -408,7 +408,7 @@ class Scene extends Component {
                     { ...this.state.playing }
                     chapter={chapter}
                     autoplay={!elapsedTime ? true : false}
-                    data={{ id: "M_OMutaeexI" }}
+                    data={{ id: "DLALJUekbW" }}
                     displayVideoEnd={ this._setVideoEnd }
                     preview={false}
                     playing={playing}

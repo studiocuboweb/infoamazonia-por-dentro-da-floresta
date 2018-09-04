@@ -292,18 +292,19 @@ class Scene extends Component {
         <Top>
           <div className="partners">
             <img src={require("images/partners/amazonia-real.png")} />
+            <img src={require("images/partners/infoamazonia.png")} />
           </div>
           <SiteTitle />
           <h2>
             <FormattedMessage
               id="general.author"
-              defaultMessage="Direção e roteiro: Vandré Fonseca / Fotografia e vídeos: Bruno Kelly"
+              defaultMessage="Reportagem e roteiro: Gustavo Faleiros / Fotografia e montagem: Márcio Isensee e Sá"
             />
           </h2>
           <h3>
             <FormattedMessage
               id="general.publishDate"
-              defaultMessage="31 de julho de 2018"
+              defaultMessage="5 de setembro de 2018"
             />
           </h3>
         </Top>
@@ -312,7 +313,7 @@ class Scene extends Component {
           <p className="description">
             <FormattedMessage
               id="general.tagline"
-              defaultMessage="Um documentário sobre a origem do território herdado por remanescentes de quilombolas no Mato Grosso."
+              defaultMessage="Uma vila localizada na estrada mais erma do Brasil se torna a nova fronteira para madeireiros de Rondônia. A cada dia novos moradores abrindo novos negócios, em busca de oportunidades na Amazônia"
             />
           </p>
             <div>

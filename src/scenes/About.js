@@ -20,7 +20,7 @@ const messages = defineMessages({
   },
   siteTitle: {
     id: "head.title",
-    defaultMessage: "O Mata Cavalo"
+    defaultMessage: "BR 319: Bem-Vindo à Realidade"
   }
 });
 
@@ -108,50 +108,30 @@ const About = ({ intl, lastPath }) => {
           </Paragraph>
           <Paragraph>
             <strong>
-              <FormattedMessage id="about.director" defaultMessage="Direção e roteiro" />
+              <FormattedMessage id="about.director" defaultMessage="Reportagem e roteiro" />
             </strong>
             <br />
-            Vandré Fonseca
+            Gustavo Faleiros
           </Paragraph>
           <Paragraph>
             <strong>
               <FormattedMessage
-                id="about.photos_videos"
-                defaultMessage="Fotografia e vídeos"
+                id="about.photos_montage"
+                defaultMessage="Fotografia e montagem"
               />
             </strong>
             <br />
-            Bruno Kelly
+            Márcio Isensee e Sá
           </Paragraph>
           <Paragraph>
             <strong>
               <FormattedMessage
-                id="about.montage"
-                defaultMessage="Montagem"
+                id="about.logistics"
+                defaultMessage="Logística"
               />
             </strong>
             <br />
-            César Nogueira
-          </Paragraph>
-          <Paragraph>
-            <strong>
-              <FormattedMessage
-                id="about.intern"
-                defaultMessage="Estagiária"
-              />
-            </strong>
-            <br />
-            Maria Cecília Costa
-          </Paragraph>
-          <Paragraph>
-            <strong>
-              <FormattedMessage
-                id="about.driver"
-                defaultMessage="Motorista"
-              />
-            </strong>
-            <br />
-            Rony Vieira
+            Áureo César de Oliveira
           </Paragraph>
           <Paragraph>
             <strong>
@@ -182,14 +162,6 @@ const About = ({ intl, lastPath }) => {
               src={require("images/partners/amazonia-real-p.png")}
               alt="Amazônia Real"
             />
-          </Paragraph>
-          <Paragraph>
-            <strong>
-              <FormattedMessage
-                id="about.partnership"
-                defaultMessage="Parceria"
-              />
-            </strong>
             <br />
             <img
               src={require("images/partners/infoamazonia.png")}

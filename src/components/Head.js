@@ -6,16 +6,16 @@ import { Helmet } from "react-helmet";
 const messages = defineMessages({
   title: {
     id: "head.title",
-    defaultMessage: "Documentário “O Mata Cavalo”"
+    defaultMessage: "Documentário “BR 319: Bem-Vindo à Realidade”"
   },
   description: {
     id: "head.description",
     defaultMessage:
-      "Um documentário sobre a origem do território herdado por remanescentes de quilombolas no Mato Grosso"
+      "Uma vila localizada na estrada mais erma do Brasil se torna a nova fronteira para madeireiros de Rondônia. A cada dia novos moradores abrindo novos negócios, em busca de oportunidades na Amazônia"
   },
   keywords: {
     id: "head.keywords",
-    defaultMessage: "mata cavalo, quilombola"
+    defaultMessage: "desmatamento, Amazonas, Amazônia, Rondônia, BR 319"
   }
 });
 
