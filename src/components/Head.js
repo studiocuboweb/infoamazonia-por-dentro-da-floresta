@@ -11,7 +11,7 @@ const messages = defineMessages({
   description: {
     id: "head.description",
     defaultMessage:
-      "Uma vila localizada na estrada mais erma do Brasil se torna a nova fronteira para madeireiros de Rondônia. A cada dia novos moradores abrindo novos negócios, em busca de oportunidades na Amazônia"
+      "Uma vila localizada na estrada mais erma do Brasil se torna a nova fronteira para madeireiros de Rondônia. A cada dia, novos moradores chegam abrindo negócios, em busca de oportunidades na Amazônia"
   },
   keywords: {
     id: "head.keywords",

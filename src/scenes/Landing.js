@@ -321,7 +321,7 @@ class Scene extends Component {
           <p className="description">
             <FormattedMessage
               id="general.tagline"
-              defaultMessage="Uma vila localizada na estrada mais erma do Brasil se torna a nova fronteira para madeireiros de Rondônia. A cada dia novos moradores abrindo novos negócios, em busca de oportunidades na Amazônia"
+              defaultMessage="Uma vila localizada na estrada mais erma do Brasil se torna a nova fronteira para madeireiros de Rondônia. A cada dia, novos moradores chegam abrindo negócios, em busca de oportunidades na Amazônia"
             />
           </p>
             <div>
