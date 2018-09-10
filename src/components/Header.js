@@ -10,6 +10,7 @@ const Wrapper = styled.header`
   flex: 0 0 auto;
   padding: .5rem 1rem;
   background: #f3f3f3;
+  z-index: 999999;
   .header-content {
     display: flex;
     flex-direction: row;

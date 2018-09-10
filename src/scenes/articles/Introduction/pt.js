@@ -17,50 +17,13 @@ export default () => (
           <title>Amazonas and Western-Bolívar: in the guerrillas’ grip | Digging into the Mining Arc</title>
         </Helmet>
         <Container>
-          <div className='background-color padding-header margin-bottom-1'>
-            <Title as="h2">
-              Amazonas and Western-Bolívar: in the guerrillas’ grip
-            </Title>
+          <div className='background-color pointer-events-all end-of-content margin-bottom-photo-gallery'>
             <Paragraph>
-              Colombian guerrilla groups – referred to by the locals as
-              <em>patagomas</em> (rubber feet) – are expanding their mining operations
-              in western Venezuela, and recently announced their first mining projects
-              in indigenous territories.
-            </Paragraph>
-            <Paragraph>
-              The ones bearing the brunt of Venezuela’s mining bonanza are the{" "}
+            No Complexo Territorial Mata Cavalo, no Mato Grosso, comunidades remanescentes de quilombolas lutam pela garantia da área a que têm direito
+            No Complexo Territorial Mata Cavalo, no Mato Grosso, comunidades remanescentes de quilombolas lutam pela garantia da área a que têm direito
+            No Complexo Territorial Mata Cavalo, no Mato Grosso, comunidades remanescentes de quilombolas lutam pela garantia da área a que têm direito
+            No Complexo Territorial Mata Cavalo, no Mato Grosso, comunidades remanescentes de quilombolas lutam pela garantia da área a que têm direito
               <StoryMedia
-                icon="map"
-                media={{
-                  id: "map-1",
-                  type: "mapbox",
-                  backgroundAlternative: require("images/bg-mapbox-placeholder-1.png"),
-                  data: {
-                    layerId: "PDigital2000_2016_AMZ_shp-7s3enh2",
-                    sourceOptionType: "vector",
-                    sourceOptionUrl: "mapbox://infoamazonia.cds2byee",
-                    coordinates: [-54.372,-2.636],
-                    style: "mapbox://styles/infoamazonia/ciqwmpsz1000cbgno5jpumkcw",
-                    sourceId: "source1",
-                    layerType: "fill",
-                    sourceLayer: "PDigital2000_2016_AMZ_shp-7s3enh",
-                    layoutData: {"visibility":"visible"},
-                    paintData: {"fill-color":"#ea1f1f"}
-                  }
-                }}
-              >
-                native communities in Amazonas and Bolívar states
-              </StoryMedia>{" "}
-              that have been usurped in both legal and illegal mining economies.
-              Colombian guerrilla groups – referred to by the locals as{" "}
-              <em>patagomas</em> (rubber feet) – are expanding their mining operations
-              in western Venezuela, and recently announced their first mining projects
-              in indigenous territories.
-            </Paragraph>
-          </div>
-
-            <Paragraph>
-                    <StoryMedia
             media={{
               id: "galery-1",
               type: "gallery",
@@ -113,11 +76,50 @@ export default () => (
             No Complexo Territorial Mata Cavalo, no Mato Grosso, comunidades remanescentes de quilombolas lutam pela garantia da área a que têm direito
             </StoryMedia>.
                Ainda sem o título definitivo, eles enfrentam agora a dificuldade de adesão ao Cadastro Ambiental Rural (CAR), desconfiados de que a exigência da lei ambiental possa trazer novas ameaças aos territórios deixados pelos seus ancestrais. A luta de Mata Cavalo, que fica no município de Nossa Senhora do Livramento, distante a 55 quilômetros de Cuiabá, é a mesma de milhares de outros territórios quilombolas espalhados pelos estados brasileiros, entre eles aqueles que formam a Amazônia Legal.
-               </Paragraph>
-
-
-
-          <div className='background-color margin-bottom-1'>
+            </Paragraph>
+          </div>
+          <div className='background-color pointer-events-none end-of-content margin-bottom-map'>
+            <Title as="h2">
+              Amazonas and Western-Bolívar: in the guerrillas’ grip
+            </Title>
+            <Paragraph>
+              Colombian guerrilla groups – referred to by the locals as
+              <em>patagomas</em> (rubber feet) – are expanding their mining operations
+              in western Venezuela, and recently announced their first mining projects
+              in indigenous territories.
+            </Paragraph>
+            <Paragraph>
+              The ones bearing the brunt of Venezuela’s mining bonanza are the{" "}
+              <StoryMedia
+                icon="map"
+                media={{
+                  id: "map-1",
+                  type: "mapbox",
+                  backgroundAlternative: require("images/bg-mapbox-placeholder-1.png"),
+                  data: {
+                    layerId: "PDigital2000_2016_AMZ_shp-7s3enh2",
+                    sourceOptionType: "vector",
+                    sourceOptionUrl: "mapbox://infoamazonia.cds2byee",
+                    coordinates: [-54.372,-2.636],
+                    style: "mapbox://styles/infoamazonia/ciqwmpsz1000cbgno5jpumkcw",
+                    sourceId: "source1",
+                    layerType: "fill",
+                    sourceLayer: "PDigital2000_2016_AMZ_shp-7s3enh",
+                    layoutData: {"visibility":"visible"},
+                    paintData: {"fill-color":"#ea1f1f"}
+                  }
+                }}
+              >
+                native communities in Amazonas and Bolívar states
+              </StoryMedia>{" "}
+              that have been usurped in both legal and illegal mining economies.
+              Colombian guerrilla groups – referred to by the locals as{" "}
+              <em>patagomas</em> (rubber feet) – are expanding their mining operations
+              in western Venezuela, and recently announced their first mining projects
+              in indigenous territories.
+            </Paragraph>
+          </div>
+          <div className='background-color pointer-events-none end-of-content margin-bottom-map'>
             <Paragraph>
               The ones bearing the brunt of Venezuela’s mining bonanza are the{" "}
               <StoryMedia
@@ -149,30 +151,23 @@ export default () => (
               in indigenous territories.
             </Paragraph>
           </div>
-
+          <div className='background-color pointer-events-none end-of-content margin-bottom-photo-gallery'>
             <Paragraph>
-              <StoryMedia
+              Mata Cavalo é um complexo territorial onde <StoryMedia
                 media={{
-                  id: "video-1",
-                  type: "youtube",
+                  id: "image-2",
+                  type: "image",
                   data: {
-                    id: "6sWVoFaH7Nc"
+                    credits: "Bruno Kelly/Amazônia Real",
+                    src: require("photos/matacavalo_2.jpg")
                   }
                 }}
               >
-                <strong>Com suas mãos cheias de barro</strong>, um mineiro lança
-                rochas ricas em minerais em um moinho mecânico giratório que esmaga as
-                pedras para serem processadas com mercúrio
-              </StoryMedia>. A uma pequena distância, alguns soldados nos esperam. Os
-              militares nos escoltaram durante a nossa visita às colinas verdes
-              próximo de El Callao, um dos muitos pontos de mineração fortemente
-              contestados na Venezuela. “Um tiroteio ou um massacre poderiam acontecer
-              a qualquer momento, todos os dias eram assim”, outro mineiro fala
-              entusiasticamente sobre o comportamento violento aplicado por grupos
-              armados que lutaram pelo acesso a esta mesma mina.
+                homens e mulheres remanescentes de quilombolas conseguiram resistir por mais de um século ao assédio de fazendeiros e invasores nos sertões do Mato Grosso
+              </StoryMedia>. Embora os limites do território já tenham sido reconhecidos pelo Instituto Nacional de Colonização e Reforma Agrária (Incra), as comunidades, reconhecidas pela Fundação Cultural Palmares, ainda não receberam o título para registro em cartório.
             </Paragraph>
-
-          <div className='background-color margin-bottom-1'>
+          </div>
+          <div className='background-color pointer-events-none end-of-content margin-bottom-map'>
             <Paragraph>
               The ones bearing the brunt of Venezuela’s mining bonanza are the{" "}
               <StoryMedia
@@ -203,55 +198,7 @@ export default () => (
               in western Venezuela, and recently announced their first mining projects
               in indigenous territories.
             </Paragraph>
-          </div>
-
-            <Paragraph>
-              Mata Cavalo é um complexo territorial onde <StoryMedia
-                media={{
-                  id: "image-2",
-                  type: "image",
-                  data: {
-                    credits: "Bruno Kelly/Amazônia Real",
-                    src: require("photos/matacavalo_2.jpg")
-                  }
-                }}
-              >
-                homens e mulheres remanescentes de quilombolas conseguiram resistir por mais de um século ao assédio de fazendeiros e invasores nos sertões do Mato Grosso
-              </StoryMedia>. Embora os limites do território já tenham sido reconhecidos pelo Instituto Nacional de Colonização e Reforma Agrária (Incra), as comunidades, reconhecidas pela Fundação Cultural Palmares, ainda não receberam o título para registro em cartório.
-            </Paragraph>
-
-          <div className='background-color margin-bottom-1'>
-            <Paragraph>
-              The ones bearing the brunt of Venezuela’s mining bonanza are the{" "}
-              <StoryMedia
-                icon="map"
-                media={{
-                  id: "map-4",
-                  type: "mapbox",
-                  backgroundAlternative: require("images/bg-mapbox-placeholder-4.png"),
-                  data: {
-                    layerId: "ongs-atuacao-amazonia-58ujje2",
-                    sourceOptionType: "vector",
-                    sourceOptionUrl: "mapbox://infoamazonia.0pei8v8p",
-                    coordinates: [-56.261,-10.2],
-                    style: "mapbox://styles/infoamazonia/ciqwmpsz1000cbgno5jpumkcw",
-                    sourceId: "source4",
-                    layerType: "circle",
-                    sourceLayer: "ONGs_Atuacao_Amazonia-58ujje",
-                    layoutData: {"visibility":"visible"},
-                    // paintData: {"fill-color":"#ea1f1f"}
-                  }
-                }}
-              >
-                native communities in Amazonas and Bolívar states
-              </StoryMedia>{" "}
-              that have been usurped in both legal and illegal mining economies.
-              Colombian guerrilla groups – referred to by the locals as{" "}
-              <em>patagomas</em> (rubber feet) – are expanding their mining operations
-              in western Venezuela, and recently announced their first mining projects
-              in indigenous territories.
-            </Paragraph>
-          </div>
+          </div>          
           <div className='background-color end-of-content'>
             <RelatedNews
               sectionTitle={"Assista também: "}
