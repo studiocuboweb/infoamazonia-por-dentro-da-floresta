@@ -3,7 +3,8 @@ import PropTypes from 'prop-types';
 import ReactMapboxGl, { Layer, Source } from "react-mapbox-gl";
 
 const Map = ReactMapboxGl({
-  accessToken: "pk.eyJ1IjoiaW5mb2FtYXpvbmlhIiwiYSI6InItajRmMGsifQ.JnRnLDiUXSEpgn7bPDzp7g"
+  accessToken: "pk.eyJ1IjoiaW5mb2FtYXpvbmlhIiwiYSI6InItajRmMGsifQ.JnRnLDiUXSEpgn7bPDzp7g",
+  interactive: ((typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1)) ? false : true
 });
 
 class MapBox extends Component {

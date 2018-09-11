@@ -33,7 +33,7 @@ ${media.desktopHD`
     float:none;
   `}
 }
-.margin-bottom-1 {
+.margin-bottom-map {
   margin-bottom:600px;
   padding-top:10px;
   padding-bottom:10px;
@@ -48,15 +48,38 @@ ${media.desktopHD`
     padding-bottom:0px;
   `}
 }
+.margin-bottom-photo-gallery {
+  margin-bottom:200px;
+  padding-top:10px;
+  padding-bottom:10px;
+  ${media.desktop`
+    padding-top:0px;
+    margin-bottom:0px;
+    padding-bottom:0px;
+  `} 
+  ${media.desktopHD`
+    padding-top:0px;
+    margin-bottom:0px;
+    padding-bottom:0px;
+  `}
+}
+.pointer-events-none {
+  pointer-evets:none;
+}
+.pointer-events-all {
+  pointer-evets:all;
+}
 .foreground {
   z-index: 100;
+  pointer-evets:none;
+  position:relative;
 }
 .background{
     color: #999999;
     position: fixed;
-    top: 0;
+    top: 9px;
     left: 0;
-    z-index: -100;
+    z-index: 99;
     ${media.desktop`
       display:none;
     `} 

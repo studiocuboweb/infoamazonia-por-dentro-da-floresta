@@ -55,8 +55,7 @@
     "redux-persist": "^5.2.0",
     "redux-promise-middleware": "^4.4.1",
     "redux-thunk": "^2.2.0",
-    "styled-components": "^2.2.0",
-    "react-tableau-report": "ˆ1.0.4"
+    "styled-components": "^2.2.0"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
