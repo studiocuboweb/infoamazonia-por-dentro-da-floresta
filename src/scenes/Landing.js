@@ -181,12 +181,26 @@ const Top = styled.div`
     border-top: 1px solid #fff;
     margin: 2rem 0 0;
     padding: 0.5rem 2rem;
-    ${media.phablet`
-      margin: 1rem 0 0;
-    `}
     ${media.tablet`
       font-size: 1em;
-    `} ${media.desktopHD`
+    `} 
+    ${media.phablet`
+      margin: 1rem 0 0;
+      font-size: 0.6em;
+      white-space: normal;
+      text-align:center;
+    `}
+    ${media.phone`
+      font-size: 0.7em;
+      white-space: normal;
+      text-align:center;
+    `}
+    ${media.desktop`
+      font-size: 1em;
+      white-space: normal;
+      text-align:center;
+    `}
+    ${media.desktopHD`
       margin: 3rem 0 0;
     `};
   }
@@ -267,7 +281,7 @@ class Scene extends Component {
           <h2>
             <FormattedMessage
               id="general.author"
-              defaultMessage="por Vandré Fonseca e Bruno Kelly"
+              defaultMessage="Reportagem e roteiro: Gustavo Faleiros / Fotografia e montagem: Márcio Isensee e Sá"
             />
           </h2>
           <h3>

@@ -64,6 +64,15 @@ const Title = styled.h1`
       ${media.tablet`
       font-size: .8em;
     `}
+    ${media.phone`
+      font-size: 0.6em;
+    `}
+    ${media.phablet`
+      font-size: 0.8em;
+    `}
+    ${media.desktop`
+      font-size: 1.4em;
+    `}
     }
   }
 `
