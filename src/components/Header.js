@@ -12,10 +12,13 @@ const Wrapper = styled.header`
   background: #f3f3f3;
   z-index: 999999;
   .logo-infoamazonia {
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
     vertical-align: middle;
     ${media.phablet`
-    margin-bottom: 0px!important;
+      margin-bottom: 0.4rem!important;
+    `}
+    ${media.desktop`
+    margin-bottom: 0.6rem!important;
   `}
   }
   .logo-am {
@@ -122,7 +125,7 @@ class Header extends Component {
         <div className="header-content">
             <div className="site-title clearfix">
                 <a href="//amazoniareal.com.br/" target="_blank">
-                  <img src={require("images/partners/amazonia-real.png")}  className="logo-am" />
+                  <img src={require("images/partners/amazonia-real-p.png")}  className="logo-am" />
                 </a>
                 <a href="//infoamazonia.org/en/" target="_blank">
                   <img src={require("images/partners/infoamazonia-p.png")} className="logo-infoamazonia" />
