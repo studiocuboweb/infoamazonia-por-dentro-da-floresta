@@ -26,6 +26,8 @@ export default () => (
           </Paragraph>
           <Paragraph>
             O casal vinha num caminhão de Arenapólis, Mato Grosso, fugindo do garimpo, expulsos por fazendeiros. Com seis filhos, passaram dias dormindo na rodoviária de Porto Velho, até que um ônibus os levou para Humaitá (AM). Ali, acamparam em frente ao quartel (ainda em construção) do 5º Batalhão de Engenharia do Exército. De carona com um soldado (em um fusca) foram levados ao igarapé Realidade, onde novas terras eram oferecidas pelo governo.{" "}
+            </Paragraph>
+            <Paragraph>
             <StoryMedia
               icon="map"
               media={{
@@ -36,25 +38,37 @@ export default () => (
                   layerId: "Assentamentos_incra-2wyd2b",
                   sourceOptionType: "vector",
                   sourceOptionUrl: "mapbox://infoamazonia.1kti1hxh",
-                  coordinates: [-54.372,-2.636],
+                  coordinates: [-62.355,-5.494],
                   style: "mapbox://styles/infoamazonia/cjlf77k1x01k82slobkyq10bq",
                   sourceId: "source1",
                   layerType: "fill",
                   sourceLayer: "Assentamentos_incra-2wyd2b",
-                  layoutData: {"visibility":"visible"},
+                  layoutData: {"visibility":""},
                   paintData: {"fill-color":"#ea1f1f"}
                 }
               }}
             >
               Na margem direita da nova rodovia, estabeleceu-se um assentamento da reforma agrária.
             </StoryMedia>{" "}
-            that have been usurped in both legal and illegal mining economies.
-            Colombian guerrilla groups – referred to by the locals as{" "}
-            <em>patagomas</em> (rubber feet) – are expanding their mining operations
-            in western Venezuela, and recently announced their first mining projects
-            in indigenous territories.
           </Paragraph>
         </div>
+        <div className='background-color pointer-events-none end-of-content margin-bottom-photo-gallery'>
+           <Paragraph>
+           Aos 79 anos, Nilza Francisca Santana, trabalha na venda que está na frente de sua casa, cuida do neto de 15 anos que vive com ela, faz refeições para vender a quem chega na Realidade. Ela vê com bons olhos a chegada de novos moradores e os novos negócios que abrem na Vila.
+              <StoryMedia
+               media={{
+                 id: "image-2",
+                 type: "image",
+                 data: {
+                   credits: "Marcio Isensee e Sá/Amazônia Real",
+                   src: require("photos/br319_2.jpg")
+                 }
+               }}
+             >
+               homens e mulheres remanescentes de quilombolas conseguiram resistir por mais de um século ao assédio de fazendeiros e invasores nos sertões do Mato Grosso
+             </StoryMedia>. Embora os limites do território já tenham sido reconhecidos pelo Instituto Nacional de Colonização e Reforma Agrária (Incra), as comunidades, reconhecidas pela Fundação Cultural Palmares, ainda não receberam o título para registro em cartório.
+           </Paragraph>
+         </div>
         <div className='background-color pointer-events-all end-of-content margin-bottom-video'>
             <Paragraph>
             <em>Viajamos pela BR 319 por 6 dias no mês de agosto, de Porto Velho a Manaus. No caminho, entrevistamos moradores, madeireiros, agricultores, caminhoneiros, autoridades e ativistas.
