@@ -20,17 +20,28 @@ export default () => (
         <div className='background-color pointer-events-all end-of-content margin-bottom-video'>
             <Paragraph>
             <em>Viajamos pela BR 319 por 6 dias no mês de agosto, de Porto Velho a Manaus. No caminho, entrevistamos moradores, madeireiros, agricultores, caminhoneiros, autoridades e ativistas.
-            Depois de duas décadas praticamente fechada, a rodovia está transitável. Graças a obras de manutenção, o meião do Amazonas se transforma com a chegada de migrantes, abertura de serrarias, pastagens e novas áreas de cultivo. Para alguns, é a o início do desenvolvimento econômico. Para outros, a certeza do desmatamento desenfreado, a consolidação do modelo que devastou as florestas de Rondônia</em>
+            Depois de duas décadas praticamente fechada, a rodovia está transitável. Graças a obras de manutenção, o meião do Amazonas se transforma
+            com a chegada de migrantes, abertura de serrarias, pastagens e novas áreas de cultivo. Para alguns, é a o início do desenvolvimento econômico.
+            Para outros, a certeza do desmatamento desenfreado, a consolidação do modelo que devastou as florestas de Rondônia</em>
+            </Paragraph>
+            <Paragraph>
+            Previsão feita há dez anos,  a chegada de uma nova frente de ocupação e desmatamento da Amazônia através da rodovia que liga Porto Velho a Manaus está enfim se concretizando. Há quatro anos, a BR 319 se tornou trafegável, ainda que sem asfalto por 405 km . Ela atrai migrantes de todo o Brasil, mas especialmente de Rondônia.
+            </Paragraph>
+            <Paragraph>
+            Temerosos do efeito desta nova fronteira sobre as matas amazônicas, em especial o impacto nas unidades de conservação, ambientalistas e estudiosos da região alertam para a “rondonização” do Amazonas. Uma referência ao modelo baseado em grandes desmatamentos no estado vizinho.
+            </Paragraph>
+            <Paragraph>
+            Uma das ambientalistas mais atuantes e vocais do estado de Rondônia, Ivaneide Bandeira, fundadora da ONG Kanindé afirma que a pavimentação da rodovia atende aos interesses de grupos econômicos de estado. “Tudo vai dançar”, diz Neidinha, como é conhecida.{" "}
               <StoryMedia
             media={{
             id: "video-1",
             type: "youtube",
             data: {
-              id: "6sWVoFaH7Nc"
+              id: "rTQRPmLq41o"
             }
             }}
             >
-            No Complexo Territorial Mata Cavalo, no Mato Grosso, comunidades remanescentes de quilombolas lutam pela garantia da área a que têm direito
+Como se exauriu o recurso natural em Rondônia, ela diz, os empresários madeireiros e pecuaristas migram o para o sul do Amazonas, abrindo novas áreas na floresta.
             </StoryMedia>.
                Ainda sem o título definitivo, eles enfrentam agora a dificuldade de adesão ao Cadastro Ambiental Rural (CAR), desconfiados de que a exigência da lei ambiental possa trazer novas ameaças aos territórios deixados pelos seus ancestrais. A luta de Mata Cavalo, que fica no município de Nossa Senhora do Livramento, distante a 55 quilômetros de Cuiabá, é a mesma de milhares de outros territórios quilombolas espalhados pelos estados brasileiros, entre eles aqueles que formam a Amazônia Legal.
             </Paragraph>
