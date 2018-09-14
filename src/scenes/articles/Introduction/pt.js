@@ -14,63 +14,20 @@ export default () => (
   <article>
       <div className='foreground'>
         <Helmet>
-          <title>Amazonas and Western-Bolívar: in the guerrillas’ grip | Digging into the Mining Arc</title>
+          <title>Sul do Amazonas: de atoleiro à rondonização</title>
         </Helmet>
         <Container>
-        <div className='background-color pointer-events-all end-of-content margin-bottom-photo-gallery'>
+        <div className='background-color pointer-events-all end-of-content margin-bottom-video'>
             <Paragraph>
-            No Complexo Territorial Mata Cavalo, no Mato Grosso, comunidades remanescentes de quilombolas lutam pela garantia da área a que têm direito
-            No Complexo Territorial Mata Cavalo, no Mato Grosso, comunidades remanescentes de quilombolas lutam pela garantia da área a que têm direito
-            No Complexo Territorial Mata Cavalo, no Mato Grosso, comunidades remanescentes de quilombolas lutam pela garantia da área a que têm direito
-            No Complexo Territorial Mata Cavalo, no Mato Grosso, comunidades remanescentes de quilombolas lutam pela garantia da área a que têm direito
+            <em>Viajamos pela BR 319 por 6 dias no mês de agosto, de Porto Velho a Manaus. No caminho, entrevistamos moradores, madeireiros, agricultores, caminhoneiros, autoridades e ativistas.
+            Depois de duas décadas praticamente fechada, a rodovia está transitável. Graças a obras de manutenção, o meião do Amazonas se transforma com a chegada de migrantes, abertura de serrarias, pastagens e novas áreas de cultivo. Para alguns, é a o início do desenvolvimento econômico. Para outros, a certeza do desmatamento desenfreado, a consolidação do modelo que devastou as florestas de Rondônia</em>
               <StoryMedia
             media={{
-              id: "galery-1",
-              type: "gallery",
-              data: {
-                credits: "Bruno Kelly/Amazônia Real",
-                items: [
-                  {
-                    src: require("photos/galeria/galeria_1.jpg")
-                  },
-                  {
-                    src: require("photos/galeria/galeria_2.jpg")
-                  },
-                  {
-                    src: require("photos/galeria/galeria_3.jpg")
-                  },
-                  {
-                    src: require("photos/galeria/galeria_4.jpg")
-                  },
-                  {
-                    src: require("photos/galeria/galeria_5.jpg")
-                  },
-                  {
-                    src: require("photos/galeria/galeria_6.jpg")
-                  },
-                  {
-                    src: require("photos/galeria/galeria_7.jpg")
-                  },
-                  {
-                    src: require("photos/galeria/galeria_8.jpg")
-                  },
-                  {
-                    src: require("photos/galeria/galeria_9.jpg")
-                  },
-                  {
-                    src: require("photos/galeria/galeria_10.jpg")
-                  },
-                  {
-                    src: require("photos/galeria/galeria_11.jpg")
-                  },
-                  {
-                    src: require("photos/galeria/galeria_12.jpg")
-                  },
-                  {
-                    src: require("photos/galeria/galeria_13.jpg")
-                  }
-                ]
-              }
+            id: "video-1",
+            type: "youtube",
+            data: {
+              id: "6sWVoFaH7Nc"
+            }
             }}
             >
             No Complexo Territorial Mata Cavalo, no Mato Grosso, comunidades remanescentes de quilombolas lutam pela garantia da área a que têm direito
@@ -80,7 +37,7 @@ export default () => (
           </div>
           <div className='background-color pointer-events-none end-of-content margin-bottom-map'>
             <Title as="h2">
-              Amazonas and Western-Bolívar: in the guerrillas’ grip
+              Chegada na Vila de Realidade
             </Title>
             <Paragraph>
               Colombian guerrilla groups – referred to by the locals as
