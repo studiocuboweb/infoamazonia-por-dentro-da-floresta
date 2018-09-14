@@ -17,6 +17,44 @@ export default () => (
           <title>Sul do Amazonas: de atoleiro à rondonização</title>
         </Helmet>
         <Container>
+        <div className='background-color pointer-events-none end-of-content margin-bottom-map'>
+          <Title as="h2">
+            Chegada na Vila de Realidade
+          </Title>
+          <Paragraph>
+          Quando o “seu” Cuiabano e a “vovó” Nilza chegaram em Realidade, não havia nada. Quer dizer, quase nada, quase ninguém. Era o fim dos anos 60 e só estavam ali os trabalhadores da empreiteira que construía a estrada - a BR-319. Obra da ditadura militar.
+          </Paragraph>
+          <Paragraph>
+            O casal vinha num caminhão de Arenapólis, Mato Grosso, fugindo do garimpo, expulsos por fazendeiros. Com seis filhos, passaram dias dormindo na rodoviária de Porto Velho, até que um ônibus os levou para Humaitá (AM). Ali, acamparam em frente ao quartel (ainda em construção) do 5º Batalhão de Engenharia do Exército. De carona com um soldado (em um fusca) foram levados ao igarapé Realidade, onde novas terras eram oferecidas pelo governo.{" "}
+            <StoryMedia
+              icon="map"
+              media={{
+                id: "map-1",
+                type: "mapbox",
+                backgroundAlternative: require("images/bg-mapbox-placeholder-1.png"),
+                data: {
+                  layerId: "Assentamentos_incra-2wyd2b",
+                  sourceOptionType: "vector",
+                  sourceOptionUrl: "mapbox://infoamazonia.1kti1hxh",
+                  coordinates: [-54.372,-2.636],
+                  style: "mapbox://styles/infoamazonia/cjlf77k1x01k82slobkyq10bq",
+                  sourceId: "source1",
+                  layerType: "fill",
+                  sourceLayer: "Assentamentos_incra-2wyd2b",
+                  layoutData: {"visibility":"visible"},
+                  paintData: {"fill-color":"#ea1f1f"}
+                }
+              }}
+            >
+              Na margem direita da nova rodovia, estabeleceu-se um assentamento da reforma agrária.
+            </StoryMedia>{" "}
+            that have been usurped in both legal and illegal mining economies.
+            Colombian guerrilla groups – referred to by the locals as{" "}
+            <em>patagomas</em> (rubber feet) – are expanding their mining operations
+            in western Venezuela, and recently announced their first mining projects
+            in indigenous territories.
+          </Paragraph>
+        </div>
         <div className='background-color pointer-events-all end-of-content margin-bottom-video'>
             <Paragraph>
             <em>Viajamos pela BR 319 por 6 dias no mês de agosto, de Porto Velho a Manaus. No caminho, entrevistamos moradores, madeireiros, agricultores, caminhoneiros, autoridades e ativistas.
@@ -44,47 +82,6 @@ export default () => (
 Como se exauriu o recurso natural em Rondônia, ela diz, os empresários madeireiros e pecuaristas migram o para o sul do Amazonas, abrindo novas áreas na floresta.
             </StoryMedia>.
                Ainda sem o título definitivo, eles enfrentam agora a dificuldade de adesão ao Cadastro Ambiental Rural (CAR), desconfiados de que a exigência da lei ambiental possa trazer novas ameaças aos territórios deixados pelos seus ancestrais. A luta de Mata Cavalo, que fica no município de Nossa Senhora do Livramento, distante a 55 quilômetros de Cuiabá, é a mesma de milhares de outros territórios quilombolas espalhados pelos estados brasileiros, entre eles aqueles que formam a Amazônia Legal.
-            </Paragraph>
-          </div>
-          <div className='background-color pointer-events-none end-of-content margin-bottom-map'>
-            <Title as="h2">
-              Chegada na Vila de Realidade
-            </Title>
-            <Paragraph>
-              Colombian guerrilla groups – referred to by the locals as
-              <em>patagomas</em> (rubber feet) – are expanding their mining operations
-              in western Venezuela, and recently announced their first mining projects
-              in indigenous territories.
-            </Paragraph>
-            <Paragraph>
-              The ones bearing the brunt of Venezuela’s mining bonanza are the{" "}
-              <StoryMedia
-                icon="map"
-                media={{
-                  id: "map-1",
-                  type: "mapbox",
-                  backgroundAlternative: require("images/bg-mapbox-placeholder-1.png"),
-                  data: {
-                    layerId: "PDigital2000_2016_AMZ_shp-7s3enh2",
-                    sourceOptionType: "vector",
-                    sourceOptionUrl: "mapbox://infoamazonia.cds2byee",
-                    coordinates: [-54.372,-2.636],
-                    style: "mapbox://styles/infoamazonia/ciqwmpsz1000cbgno5jpumkcw",
-                    sourceId: "source1",
-                    layerType: "fill",
-                    sourceLayer: "PDigital2000_2016_AMZ_shp-7s3enh",
-                    layoutData: {"visibility":"visible"},
-                    paintData: {"fill-color":"#ea1f1f"}
-                  }
-                }}
-              >
-                native communities in Amazonas and Bolívar states
-              </StoryMedia>{" "}
-              that have been usurped in both legal and illegal mining economies.
-              Colombian guerrilla groups – referred to by the locals as{" "}
-              <em>patagomas</em> (rubber feet) – are expanding their mining operations
-              in western Venezuela, and recently announced their first mining projects
-              in indigenous territories.
             </Paragraph>
           </div>
           <div className='background-color pointer-events-none end-of-content margin-bottom-map'>
