@@ -17,6 +17,16 @@ export default () => (
           <title>Amazonas and Western-Bolívar: in the guerrillas’ grip | Digging into the Mining Arc</title>
         </Helmet>
         <Container>
+        <Note>
+       <p>
+       Viajamos pela BR 319 por 6 dias no mês de agosto, de Porto Velho a Manaus.
+       No caminho, entrevistamos moradores, madeireiros, agricultores, caminhoneiros, autoridades e ativistas.
+       Depois de duas décadas praticamente fechada, a rodovia está transitável.
+       Graças a obras de manutenção, o meião do Amazonas se transforma com a chegada de migrantes,
+       abertura de serrarias, pastagens e novas áreas de cultivo. Para alguns, é a o início do desenvolvimento econômico.
+       Para outros, a certeza do desmatamento desenfreado, a consolidação do modelo que devastou as florestas de Rondônia.
+       </p>
+     </Note>
           <div className='background-color pointer-events-all end-of-content margin-bottom-photo-gallery'>
             <Paragraph>
             No Complexo Territorial Mata Cavalo, no Mato Grosso, comunidades remanescentes de quilombolas lutam pela garantia da área a que têm direito
@@ -198,7 +208,7 @@ export default () => (
               in western Venezuela, and recently announced their first mining projects
               in indigenous territories.
             </Paragraph>
-          </div>          
+          </div>
           <div className='background-color end-of-content'>
             <RelatedNews
               sectionTitle={"Assista também: "}
