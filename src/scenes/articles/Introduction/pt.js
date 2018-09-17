@@ -17,8 +17,13 @@ export default () => (
           <title>De atoleiro à rondonização</title>
         </Helmet>
         <Container>
+        <em>Viajamos pela BR 319 por 6 dias no mês de agosto, de Porto Velho a Manaus. No caminho, entrevistamos moradores, madeireiros, agricultores, caminhoneiros, autoridades e ativistas.
+Depois de duas décadas praticamente fechada, a rodovia está transitável. Graças a obras de manutenção, o meião do Amazonas se transforma com a chegada de migrantes, abertura de serrarias, pastagens e novas áreas de cultivo. Para alguns, é a o início do desenvolvimento econômico. Para outros, a consolidação no sul do estado o modelo que devastou as florestas de Rondônia.</em>
+        <Title as="h2">
+        Chegando à Vila de Realidade
+        </Title>
         <div className='background-color pointer-events-none end-of-content margin-bottom-photo-gallery'
-          <Title as="h2">
+
           <StoryMedia
            media={{
              id: "image-2",
@@ -29,9 +34,8 @@ export default () => (
              }
            }}
          >
-            A Vila de Realidade
-              </StoryMedia>{" "}
-              </Title>
+              </StoryMedia>
+          </div>
           <div className='background-color pointer-events-none end-of-content margin-bottom-map'>
           <Paragraph>
           Quando o “seu” Cuiabano e a “vovó” Nilza chegaram em Realidade, não havia nada. Quer dizer, quase nada, quase ninguém. Era o fim dos anos 60 e só estavam ali os trabalhadores da empreiteira que construía a estrada - a BR-319. Obra da ditadura militar.
