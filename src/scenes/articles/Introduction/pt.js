@@ -70,11 +70,12 @@ export default () => (
              Aos 79 anos, Nilza Francisca Santana, trabalha na venda que está na frente de sua casa, cuida do neto de 15 anos que vive com ela, faz refeições para vender a quem chega na Realidade.
              Ela vê com bons olhos a chegada de novos moradores e os novos negócios que abrem na Vila.
              </StoryMedia>{" "}
+             </Paragraph´>
          </div>
+         <div className='background-color pointer-events-none end-of-content margin-bottom-map'>
          <Paragraph>
          Agora, já são cerca de sete mil habitantes, incluindo quem vive nas estradas vicinais. Na região, desde 2000, foram abertos 17 km de estradas não oficiais a cada ano, indica um novo estudo. Estradas que servem para puxar madeira de dentro da mata para pelo menos quatro serrarias que funcionam na Vila.
-       </Paragraph>
-         <div className='background-color pointer-events-none end-of-content margin-bottom-map'>
+       </Paragraph>  
            <Paragraph>
            Seu esposo, João Ferreira Santana, o Cuiabano, é um homem baixo, de pele bronzeada e cabelos brancos. Com 87 anos, ele perdeu a vista de um dos olhos e caminha com dificuldade. O terreno em que viveram por décadas foi vendido para uma serraria. No local, tinham roça e criação de animais, o que precisavam para alimentar os filhos. {" "}
            <StoryMedia
@@ -89,11 +90,22 @@ export default () => (
                Ele, como muitos pioneiros, não perdem esperança no potencial da estrada. “Se conservar esta estrada ninguém passa mais fome aqui não”, diz.
              </StoryMedia>{" "}
              </Paragraph>
+             </div>
              <Paragraph>
              Caminhando mais um pouco na Vila da Realidade, encontramos outro pioneiro, Vasco Antônio da Silva, o Vasco da Sorveteria. Acabara de chover e um silêncio pairava sobre a pequena cidade.  Na frente de sua sorveteria, ele estava descascando alho. Dente por dente com uma paciência que parecia não ser de hoje.  Contou do tempo em que não havia ônibus, ou qualquer transporte público que permitisse viajar até a Realidade.
            </Paragraph>
-         </div>
-         <div className='background-color pointer-events-none end-of-content margin-bottom-photo-gallery'>
+           <Paragraph>
+           “Aqui melhorou muito”, disse com a fala pausada e o sotaque sertanejo, ele vindo de Colniza, norte do Mato Grosso.
+           </Paragraph>
+           Mas quando ele chegou ali em 2004 com outros dois empreendedores, vinha de Ariquemes, Rondônia. Seus colegas dedicavam-se a prospectar áreas para extração de madeira, terras que futuramente também poderiam se transformam em pastos. Ele, mestre de obras, ajudou a construir a escola de Realidade.
+           </Paragraph>
+           <Paragraph>
+           Há poucos anos ele vendeu por R$ 100 mil um lote que havia comprado por R$ 5 mil. “Com terra eu não mexo mais não”, desabafa. Sua preocupação é com o futuro dos moradores de Realidade, a maioria são ocupantes de terras griladas.
+           </Paragraph>
+           <Paragraph>
+           Embora relativamente menor que o desmatamento em outras áreas de fronteira no sul do Amazonas, a devastação das florestas sob zona de influência de Realidade cresceu 62% entre 2000 e 2016, segundo dados do Instituto Nacional de Pesquisas Espaciais (INPE) analisados pela ONG Idesam em seu estudo recém lançado.
+           </Paragraph>
+          <div className='background-color pointer-events-none end-of-content margin-bottom-photo-gallery'>
            <Paragraph>
              Mata Cavalo é um complexo territorial onde <StoryMedia
                media={{
