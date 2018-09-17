@@ -50,10 +50,10 @@ export default () => (
              No inverno - a temporada de chuvas - carro nenhum passava. Para chegar à Humaitá, apenas 120 km ao sul, podia se levar um, dois dias.
             </StoryMedia>{" "}
                 </Paragraph>
+                  </div>
                 <Paragraph>
             O casal vinha num caminhão de Arenapólis, Mato Grosso, fugindo do garimpo, expulsos por fazendeiros. Com seis filhos, passaram dias dormindo na rodoviária de Porto Velho, até que um ônibus os levou para Humaitá (AM). Ali, acamparam em frente ao quartel (ainda em construção) do 5º Batalhão de Engenharia do Exército. De carona com um soldado (em um fusca) foram levados ao igarapé Realidade, onde novas terras eram oferecidas pelo governo.  Na margem direita da nova rodovia, estabeleceu-se um assentamento da reforma agrária.
             </Paragraph>
-            </div>
         <div className='background-color pointer-events-none end-of-content margin-bottom-photo-gallery'>
               <StoryMedia
                media={{
