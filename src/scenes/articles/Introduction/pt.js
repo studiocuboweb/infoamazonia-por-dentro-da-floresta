@@ -56,7 +56,6 @@ export default () => (
             </Paragraph>
             <Paragraph>
               A chegada de novos migrantes tem relação com a atual manutenção feita na BR-319, que não ocorria há duas  décadas. Pela primeira vez, desde os anos 80, a rodovia está transitável tanto no período da seca como no período das chuvas.
-              <Paragraph>
               <StoryMedia
                media={{
                  id: "image-2",
@@ -183,6 +182,49 @@ export default () => (
             </StoryMedia>.
             </Paragraph>
           </div>
+          <div className='background-color pointer-events-all end-of-content margin-bottom-video'>
+              <Paragraph>
+              É curioso escutar o madeireiro Sidney Poletini, ele mesmo vindo de Rondônia, concordar com o que diz Neidinha. Com palavras diferentes eles têm previsões semelhantes para o futuro desta parte da Amazônia “Um dia isso tudo aqui vai acabar“, diz Sidney, que é proprietário da Amazonas Madeiras, ao longo da BR 319, na Vila de Realidade.
+              </Paragraph>
+              <Paragraph>
+            O desmatamento desenfreado já é uma tendência consolidada do sul do Amazonas, principalmente quando se olha para os municípios de Lábrea e Apuí, dois que listam sempre na lista dos 10 mais desmatados de toda a Amazônia. Em relação ao Mato Grosso e o Pará, o maior estado da região amazônica ainda representa pouco no total, apenas 2,6% da extensão do desmatamento.               </Paragraph>
+              <Paragraph>
+              Mas é a taxa de crescimento que tem chamado atenção. No biênio 2015/2016, o Amazonas apresentou a maior taxa de crescimento do desmatamento de toda a Amazônia, 59% comparado ao período anterior. E apesar de ter havido uma redução de 11% no biênio 2016/2017, o total desmatado foi o dobro do que ocorrera somente há três anos, em 2014. {" "}
+                <StoryMedia
+              media={{
+              id: "video-1",
+              type: "youtube",
+              data: {
+                id: "rTQRPmLq41o"
+              }
+              }}
+              >
+              E apesar de ter havido uma redução de 11% no biênio 2016/2017, o total desmatado foi o dobro do que ocorrera somente há três anos, em 2014.
+              </StoryMedia>.
+              </Paragraph>
+            </div>
+            <Title as="h2">
+              Conservação pela metade
+            </Title>
+            <div className='background-color pointer-events-all end-of-content margin-bottom-video'>
+                <Paragraph>
+                Viajando cerca de 200 km ao norte de Realidade, cruzamos o grande mosaico de unidades de conservação que rodeia praticamente toda a rodovia. Neste trecho está o único parque nacional da região, o Nascentes do Lago Jari, um gigante com mais de 800 mil hectares localizado à esquerda de quem viaja para Manaus.
+                </Paragraph>
+                <Paragraph>
+                Mais a frente encontra-se a Reserva de Desenvolvimento Sustentável do Igapó Açu, onde Jorge Nildo, membro do conselho gestor da Unidade de Conservação, nos contou sobre os benefícios que a criação da área protegida. A caça e a pesca melhoraram. {" "}
+                  <StoryMedia
+                media={{
+                id: "video-1",
+                type: "youtube",
+                data: {
+                  id: "Qojupw2hVhU"
+                }
+                }}
+                >
+                Ele também acredita que existe um grande potencial para o turismo na região
+                </StoryMedia>{" "}
+                </Paragraph>
+              </div>
             <div className='background-color end-of-content'>
             <RelatedNews
               sectionTitle={"Assista também: "}
