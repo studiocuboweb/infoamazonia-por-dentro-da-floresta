@@ -70,12 +70,12 @@ export default () => (
              Aos 79 anos, Nilza Francisca Santana, trabalha na venda que está na frente de sua casa, cuida do neto de 15 anos que vive com ela, faz refeições para vender a quem chega na Realidade.
              Ela vê com bons olhos a chegada de novos moradores e os novos negócios que abrem na Vila.
              </StoryMedia>{" "}
-             </Paragraph´>
+             </Paragraph>
          </div>
          <div className='background-color pointer-events-none end-of-content margin-bottom-map'>
          <Paragraph>
          Agora, já são cerca de sete mil habitantes, incluindo quem vive nas estradas vicinais. Na região, desde 2000, foram abertos 17 km de estradas não oficiais a cada ano, indica um novo estudo. Estradas que servem para puxar madeira de dentro da mata para pelo menos quatro serrarias que funcionam na Vila.
-       </Paragraph>  
+       </Paragraph>
            <Paragraph>
            Seu esposo, João Ferreira Santana, o Cuiabano, é um homem baixo, de pele bronzeada e cabelos brancos. Com 87 anos, ele perdeu a vista de um dos olhos e caminha com dificuldade. O terreno em que viveram por décadas foi vendido para uma serraria. No local, tinham roça e criação de animais, o que precisavam para alimentar os filhos. {" "}
            <StoryMedia
@@ -107,23 +107,24 @@ export default () => (
            </Paragraph>
           <div className='background-color pointer-events-none end-of-content margin-bottom-photo-gallery'>
            <Paragraph>
-             Mata Cavalo é um complexo territorial onde <StoryMedia
+             Empresários madeireiros começaram a chegar na última década.{" "}
+             <StoryMedia
                media={{
                  id: "image-2",
                  type: "image",
                  data: {
-                   credits: "Bruno Kelly/Amazônia Real",
-                   src: require("photos/matacavalo_2.jpg")
+                   credits: "Marcio Insensee e Sá/Amazônia Real",
+                   src: require("photos/br319_1.jpg")
                  }
                }}
              >
-               homens e mulheres remanescentes de quilombolas conseguiram resistir por mais de um século ao assédio de fazendeiros e invasores nos sertões do Mato Grosso
-             </StoryMedia>. Embora os limites do território já tenham sido reconhecidos pelo Instituto Nacional de Colonização e Reforma Agrária (Incra), as comunidades, reconhecidas pela Fundação Cultural Palmares, ainda não receberam o título para registro em cartório.
-           </Paragraph>
+             Há em Realidade oito serrarias instaladas. Elas não funcionam simultaneamente. Quando estivemos ali, metade delas estavam em atividade.
+             </StoryMedia>.
+             </Paragraph>
          </div>
          <div className='background-color pointer-events-none end-of-content margin-bottom-map'>
            <Paragraph>
-             The ones bearing the brunt of Venezuela’s mining bonanza are the{" "}
+             Uma interpretação comum  é a da migração da atividade econômica, geralmente ilegal, que ocorre ao longo da BR 230, a Transamazônica para o eixo da BR 319.{" "}
              <StoryMedia
                icon="map"
                media={{
@@ -144,15 +145,22 @@ export default () => (
                  }
                }}
              >
-               native communities in Amazonas and Bolívar states
+             É o caso de Santo Antônio do Matupi, ou o “180”, como é conhecido o distrito localizado a 180 quilômetros de Humaitá. Uma ocupação explosiva
              </StoryMedia>{" "}
-             that have been usurped in both legal and illegal mining economies.
-             Colombian guerrilla groups – referred to by the locals as{" "}
-             <em>patagomas</em> (rubber feet) – are expanding their mining operations
-             in western Venezuela, and recently announced their first mining projects
-             in indigenous territories.
+           </Paragraph>
+           <Paragraph>
+           Escutamos mais de uma vez que a Vila de Realidade era um “rebatimento do 180”. Ou seja, buscando novas oportunidade, trabalhadores, posseiros, pecuaristas de Santo Antônio do Matupi começaram a migrar para as beiras da BR 319.  As coisas parecem mesmo interligadas. Muitos que chegam à Realidade vem no ônibus da viação Matupi .
+           </Paragraph>
+           <Paragraph>
+           Wagner Reinoso, 24 anos anos, é um dos que chegaram à vila atraídos pela chance de um emprego e escaldados pelas mudanças no eixo da Transamazônica. Professor da escola de Realidade, ele conta que no Matupi a atividade econômica decaiu após um série de ações do Ibama que fizeram com que as serrarias fechassem no Matupi. “Minha mãe e meu irmão trabalhavam na serraria. Depois que o Ibama passou por lá, ficou difícil.”
+           </Paragraph>
+           <Paragraph>
+           Hugo Loss, chefe Técnico-Ambiental do Ibama, que coordena as fiscalizações, explicou que as ações de combate ao desmatamento no sul do Amazonas são frequentes. O foco principal da repressão às atividades ilegais ainda se concentra nas cidades, distritos e vilas ao longo da Transamazônica,incluindo o distrito do 180. Ele indica também que há uma pressão de desmatamento na região de Realidade. Ações de fiscalização já foram intensificadas. “Há um aquecimento daquela economia, com a abertura de novas serrarias e migração de pessoas.”
            </Paragraph>
          </div>
+         <Title as="h2">
+           A Rondonização
+         </Title>
         <div className='background-color pointer-events-all end-of-content margin-bottom-video'>
             <Paragraph>
             Previsão feita há dez anos,  a chegada de uma nova frente de ocupação e desmatamento da Amazônia através da rodovia que liga Porto Velho a Manaus está enfim se concretizando. Há quatro anos, a BR 319 se tornou trafegável, ainda que sem asfalto por 405 km . Ela atrai migrantes de todo o Brasil, mas especialmente de Rondônia.
