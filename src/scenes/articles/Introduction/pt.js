@@ -91,24 +91,24 @@ export default () => (
              </Paragraph>
              </div>
           <div className='background-color pointer-events-none end-of-content margin-bottom-photo-gallery'>
-          <Paragraph>
+            <Paragraph>
           Caminhando mais um pouco na Vila da Realidade, encontramos outro pioneiro, Vasco Antônio da Silva, o Vasco da Sorveteria. Acabara de chover e um silêncio pairava sobre a pequena cidade.  Na frente de sua sorveteria, ele estava descascando alho. Dente por dente com uma paciência que parecia não ser de hoje.  Contou do tempo em que não havia ônibus, ou qualquer transporte público que permitisse viajar até a Realidade.
-        </Paragraph>
-        <Paragraph>
-        “Aqui melhorou muito”, disse com a fala pausada e o sotaque sertanejo, ele vindo de Colniza, norte do Mato Grosso.
-        </Paragraph>
-        <Paragraph>
-        Mas quando ele chegou ali em 2004 com outros dois empreendedores, vinha de Ariquemes, Rondônia. Seus colegas dedicavam-se a prospectar áreas para extração de madeira, terras que futuramente também poderiam se transformam em pastos. Ele, mestre de obras, ajudou a construir a escola de Realidade.
-        </Paragraph>
-        <Paragraph>
-        Há poucos anos ele vendeu por R$ 100 mil um lote que havia comprado por R$ 5 mil. “Com terra eu não mexo mais não”, desabafa. Sua preocupação é com o futuro dos moradores de Realidade, a maioria são ocupantes de terras griladas.
-        </Paragraph>
-        <Paragraph>
-        Embora relativamente menor que o desmatamento em outras áreas de fronteira no sul do Amazonas, a devastação das florestas sob zona de influência de Realidade cresceu 62% entre 2000 e 2016, segundo dados do Instituto Nacional de Pesquisas Espaciais (INPE) analisados pela ONG Idesam em seu estudo recém lançado.
-        </Paragraph>
-           <Paragraph>
-             Empresários madeireiros começaram a chegar na última década.{" "}
-             <StoryMedia
+            </Paragraph>
+            <Paragraph>
+            “Aqui melhorou muito”, disse com a fala pausada e o sotaque sertanejo, ele vindo de Colniza, norte do Mato Grosso.
+            </Paragraph>
+            <Paragraph>
+            Mas quando ele chegou ali em 2004 com outros dois empreendedores, vinha de Ariquemes, Rondônia. Seus colegas dedicavam-se a prospectar áreas para extração de madeira, terras que futuramente também poderiam se transformam em pastos. Ele, mestre de obras, ajudou a construir a escola de Realidade.
+            </Paragraph>
+            <Paragraph>
+            Há poucos anos ele vendeu por R$ 100 mil um lote que havia comprado por R$ 5 mil. “Com terra eu não mexo mais não”, desabafa. Sua preocupação é com o futuro dos moradores de Realidade, a maioria são ocupantes de terras griladas.
+            </Paragraph>
+            <Paragraph>
+            Embora relativamente menor que o desmatamento em outras áreas de fronteira no sul do Amazonas, a devastação das florestas sob zona de influência de Realidade cresceu 62% entre 2000 e 2016, segundo dados do Instituto Nacional de Pesquisas Espaciais (INPE) analisados pela ONG Idesam em seu estudo recém lançado.
+            </Paragraph>
+            <Paragraph>
+            Empresários madeireiros começaram a chegar na última década.{" "}
+            <StoryMedia
                media={{
                  id: "image-2",
                  type: "image",
@@ -253,11 +253,16 @@ export default () => (
                 </Title>
                 <div className='background-color pointer-events-all end-of-content margin-bottom-video'>
                     <Paragraph>
-                    Viajando cerca de 200 km ao norte de Realidade, cruzamos o grande mosaico de unidades de conservação que rodeia praticamente toda a rodovia. Neste trecho está o único parque nacional da região, o Nascentes do Lago Jari, um gigante com mais de 800 mil hectares localizado à esquerda de quem viaja para Manaus.
+                    Desde que foi inaugurada em 1976 pelo general Ernesto Geisel, a BR 319 se tornou a única ligação por terra de Manaus com o resto do Brasil. Mas ainda que tenha sido inicialmente asfaltada, a falta de manutenção levou à rápida deterioração e em pouco mais de dez anos, em 1988, ela foi fechada.
                     </Paragraph>
                     <Paragraph>
-                    Mais a frente encontra-se a Reserva de Desenvolvimento Sustentável do Igapó Açu, onde Jorge Nildo, membro do conselho gestor da Unidade de Conservação, nos contou sobre os benefícios que a criação da área protegida. A caça e a pesca melhoraram. {" "}
-                      <StoryMedia
+                    Com o tráfego de veículos interrompido, a rodovia deixou de ser foco de atenção dos governo federal. Isso durou até o início dos anos 2000, quando Lula, então recém eleito indicou como ministro dos Transportes o político amazonense Alfredo Nascimento. A BR-319 entrou como prioridade das obras de infraestrutura do novo governo. Passou a fazer parte do PAC, o programa de aceleração de crescimento, plano de governo que alçou a então ministra da Casa Civil Dilma Rousseff na corrida à Presidência.
+                    </Paragraph>
+                    <Paragraph>
+                    Assim como o BR-163, outra rodovia cujo asfaltamento era cobrado por ligar a região produtora de grãos do Mato Grosso ao porto fluvial de Santarém, a BR 319 sempre foi temida por seu potencial de vetor de desmatamento. Por esta razão, a estratégia adotada foi a criação de áreas protegidas para evitar a grilagem de terras e invasões no momento do anúncio das obras. Coordenou-se portanto o asfaltamento com a implementação de medidas de conservação.
+                    </Paragraph>
+
+                    <StoryMedia
                     media={{
                     id: "video-1",
                     type: "youtube",
