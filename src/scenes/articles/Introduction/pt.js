@@ -89,22 +89,22 @@ export default () => (
                Ele, como muitos pioneiros, não perdem esperança no potencial da estrada. “Se conservar esta estrada ninguém passa mais fome aqui não”, diz.
              </StoryMedia>{" "}
              </Paragraph>
-             <Paragraph>
-             Caminhando mais um pouco na Vila da Realidade, encontramos outro pioneiro, Vasco Antônio da Silva, o Vasco da Sorveteria. Acabara de chover e um silêncio pairava sobre a pequena cidade.  Na frente de sua sorveteria, ele estava descascando alho. Dente por dente com uma paciência que parecia não ser de hoje.  Contou do tempo em que não havia ônibus, ou qualquer transporte público que permitisse viajar até a Realidade.
-           </Paragraph>
-           <Paragraph>
-           “Aqui melhorou muito”, disse com a fala pausada e o sotaque sertanejo, ele vindo de Colniza, norte do Mato Grosso.
-           </Paragraph>
-           Mas quando ele chegou ali em 2004 com outros dois empreendedores, vinha de Ariquemes, Rondônia. Seus colegas dedicavam-se a prospectar áreas para extração de madeira, terras que futuramente também poderiam se transformam em pastos. Ele, mestre de obras, ajudou a construir a escola de Realidade.
-           </Paragraph>
-           <Paragraph>
-           Há poucos anos ele vendeu por R$ 100 mil um lote que havia comprado por R$ 5 mil. “Com terra eu não mexo mais não”, desabafa. Sua preocupação é com o futuro dos moradores de Realidade, a maioria são ocupantes de terras griladas.
-           </Paragraph>
-           <Paragraph>
-           Embora relativamente menor que o desmatamento em outras áreas de fronteira no sul do Amazonas, a devastação das florestas sob zona de influência de Realidade cresceu 62% entre 2000 e 2016, segundo dados do Instituto Nacional de Pesquisas Espaciais (INPE) analisados pela ONG Idesam em seu estudo recém lançado.
-           </Paragraph>
-             </div>    
+             </div>
           <div className='background-color pointer-events-none end-of-content margin-bottom-photo-gallery'>
+          <Paragraph>
+          Caminhando mais um pouco na Vila da Realidade, encontramos outro pioneiro, Vasco Antônio da Silva, o Vasco da Sorveteria. Acabara de chover e um silêncio pairava sobre a pequena cidade.  Na frente de sua sorveteria, ele estava descascando alho. Dente por dente com uma paciência que parecia não ser de hoje.  Contou do tempo em que não havia ônibus, ou qualquer transporte público que permitisse viajar até a Realidade.
+        </Paragraph>
+        <Paragraph>
+        “Aqui melhorou muito”, disse com a fala pausada e o sotaque sertanejo, ele vindo de Colniza, norte do Mato Grosso.
+        </Paragraph>
+        Mas quando ele chegou ali em 2004 com outros dois empreendedores, vinha de Ariquemes, Rondônia. Seus colegas dedicavam-se a prospectar áreas para extração de madeira, terras que futuramente também poderiam se transformam em pastos. Ele, mestre de obras, ajudou a construir a escola de Realidade.
+        </Paragraph>
+        <Paragraph>
+        Há poucos anos ele vendeu por R$ 100 mil um lote que havia comprado por R$ 5 mil. “Com terra eu não mexo mais não”, desabafa. Sua preocupação é com o futuro dos moradores de Realidade, a maioria são ocupantes de terras griladas.
+        </Paragraph>
+        <Paragraph>
+        Embora relativamente menor que o desmatamento em outras áreas de fronteira no sul do Amazonas, a devastação das florestas sob zona de influência de Realidade cresceu 62% entre 2000 e 2016, segundo dados do Instituto Nacional de Pesquisas Espaciais (INPE) analisados pela ONG Idesam em seu estudo recém lançado.
+        </Paragraph>
            <Paragraph>
              Empresários madeireiros começaram a chegar na última década.{" "}
              <StoryMedia
@@ -225,6 +225,28 @@ export default () => (
                 </StoryMedia>{" "}
                 </Paragraph>
               </div>
+              <div className='background-color pointer-events-all end-of-content margin-bottom-video'>
+                  <Paragraph>
+                  A invasão das unidades de conservação e pressão sobre terras indígenas é uma das principais preocupações neste momento em que o asfaltamento da BR-319 é dado como certo. (Quantas terras são e quais são?). Ouvimos de um funcionário da construtora CMM, cujo o acampamento está bem em frente, que todos os meses, há grupos de invasores que entram com equipamentos de topografia dentro do parque.
+                  </Paragraph>
+                  <Paragraph>
+                  O Instituto Chico Mendes de Conservação da Biodiversidade (ICMBIO) não tem funcionários dentro da unidade. Toda a gestão era feita através da base em Humaitá. Mas com o ataque de garimpeiros sofrido no final do ano passado, os gestores foram transferidos para Porto Velho. Em entrevista, o chefe do parque Rafael Pereira, afirmou que as ações de fiscalização permanecem no mesmo ritmo que anteriormente.
+                  </Paragraph>
+                  <Paragraph>
+                  A falta da implementação das unidades de conservação pelo órgão federal gerou uma ação cívil pelo Ministério Público Federal. No processo, os promotores pedem ao ICMBio que estabeleça prazos para a implementação de conselhos gestores e {" "}
+                    <StoryMedia
+                  media={{
+                  id: "video-1",
+                  type: "youtube",
+                  data: {
+                    id: "Qojupw2hVhU"
+                  }
+                  }}
+                  >
+                  planos de manejo para as UCs federais ao longo da BR-319.
+                  </StoryMedia>{" "}
+                  </Paragraph>
+                </div>
             <div className='background-color end-of-content'>
             <RelatedNews
               sectionTitle={"Assista também: "}
