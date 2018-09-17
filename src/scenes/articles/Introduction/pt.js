@@ -89,7 +89,6 @@ export default () => (
                Ele, como muitos pioneiros, não perdem esperança no potencial da estrada. “Se conservar esta estrada ninguém passa mais fome aqui não”, diz.
              </StoryMedia>{" "}
              </Paragraph>
-             </div>
              <Paragraph>
              Caminhando mais um pouco na Vila da Realidade, encontramos outro pioneiro, Vasco Antônio da Silva, o Vasco da Sorveteria. Acabara de chover e um silêncio pairava sobre a pequena cidade.  Na frente de sua sorveteria, ele estava descascando alho. Dente por dente com uma paciência que parecia não ser de hoje.  Contou do tempo em que não havia ônibus, ou qualquer transporte público que permitisse viajar até a Realidade.
            </Paragraph>
@@ -104,6 +103,7 @@ export default () => (
            <Paragraph>
            Embora relativamente menor que o desmatamento em outras áreas de fronteira no sul do Amazonas, a devastação das florestas sob zona de influência de Realidade cresceu 62% entre 2000 e 2016, segundo dados do Instituto Nacional de Pesquisas Espaciais (INPE) analisados pela ONG Idesam em seu estudo recém lançado.
            </Paragraph>
+             </div>    
           <div className='background-color pointer-events-none end-of-content margin-bottom-photo-gallery'>
            <Paragraph>
              Empresários madeireiros começaram a chegar na última década.{" "}
