@@ -275,28 +275,60 @@ export default () => (
                     <Paragraph>
                     Assim como o BR-163, outra rodovia cujo asfaltamento era cobrado por ligar a região produtora de grãos do Mato Grosso ao porto fluvial de Santarém, a BR 319 sempre foi temida por seu potencial de vetor de desmatamento. Por esta razão, a estratégia adotada foi a criação de áreas protegidas para evitar a grilagem de terras e invasões no momento do anúncio das obras. Coordenou-se portanto o asfaltamento com a implementação de medidas de conservação.
                     </Paragraph>
-                    <Paragraph
+                    <Paragraph>
                     Em 2008 e 2009, o Ministério do Meio Ambiente, então sob o comando de Carlos Minc, e a Secretária Estadual de Meio Ambiente do Amazonas, na gestão de Eduardo Braga (PMDB), anunciaram a criação de 8,4 milhões de hectares de unidades de conservação.{""}
                     <StoryMedia
-                    media={{
-                    id: "video-1",
-                    type: "youtube",
-                    data: {
-                      id: "Qojupw2hVhU"
-                    }
-                    }}
+                      icon="map"
+                      media={{
+                        id: "map-3",
+                        type: "mapbox",
+                        backgroundAlternative: require("images/bg-mapbox-placeholder-3.png"),
+                        data: {
+                          layerId: "Assentamentos_incra-2wyd2b2",
+                          sourceOptionType: "vector",
+                          sourceOptionUrl: "mapbox://infoamazonia.1kti1hxh",
+                          coordinates: [-54.372,-2.636],
+                          style: "mapbox://styles/infoamazonia/ciqwmpsz1000cbgno5jpumkcw",
+                          sourceId: "source3",
+                          layerType: "fill",
+                          sourceLayer: "Assentamentos_incra-2wyd2b",
+                          layoutData: {"visibility":"visible"},
+                          paintData: {"fill-color":"hsla(250, 47%, 33%, 0.27)"}
+                        }
+                      }}
                     >
                     A área total equivale a três vezes e meia o território do estado de Alagoas
                     </StoryMedia>{" "}
+                    </Paragraph>
+                    <Paragraph>
+                    Aos olhos da população local e dos empreendedores, a criação de parques e reservas já teria sido suficiente para liberar as obras. Mas desde que a decisão da reabertura foi tomada durante o governo Lula, ficou acordado com organizações da sociedade civil de que haveria o licenciamento ambiental da obra.
+                    </Paragraph>
+                    <Paragraph>
+                    O Departamento Nacional de Infraestrutura de transportes, o DNIT, autarquia do governo federal, é o empreendedor responsável. Dois estudos anteriores, um no ano de xx e outro no ano de xx, sequer foram analisados pelo Ibama devido a qualidade.
+                    </Paragraph>
+                    <Paragraph>
+                    Agora, segundo a superintendente de Meio Ambiente do DNIT, Angela Parente, o Estudo de Impacto Ambiental das obras de reconstrução do pavimento da BR-319 entre trecho do Km 250 ao km 655,7 no Amazonas tem previsão de ser entregue ao IBAMA no primeiro semestre de 2019.
+                    </Paragraph>
+                    <Paragraph>
+                    A diferença com os anos anteriores é que a manutenção da rodovia indica que a pavimentação é um caminho sem volta. Polêmicas entre os órgão de controle ambiental, as obras paliativas são vistas como uma estratégia de fato consumado, ou ainda em um aspecto legal, o fracionamento do licenciamento.
+                    </Paragraph>
+                    <Paragraph>
+                    O Ministério Público Federal, através de sua câmara de meio ambiente, se opõe a mais de uma licença ao empreendimento. Mas a pressão pela trafegabilidade na estrada parece maior.
+                    </Paragraph>
+                    <Paragraph>
+                    Os serviços de manutenção estão respaldados pela Licença de Instalação – LI nº 1.111/2016 (Renovada) emitida pelo IBAMA em 12/05/2017, com validade de 24 meses. Para a conclusão e entrega do Estudo de Impacto Ambiental faltam apenas consultas às populações indígenas.
+                    </Paragraph>
+                    <Paragraph>
+                    “O asfaltamento da BR 319 são favas contadas”, é um comentário comum por aqueles que vem trabalhando na região.  Dioneia Ferreira, nativa de Humaitá, a cidade polo no Sul do Amazonas, no entroncamento da BR 319 com a Transamazônica, é uma das ativistas mais vocais  “A verdade é que existe um dragão de boca aberta subindo a BR , Quem está lá na frente não vai ser poupado.”, ela alerta.
                     </Paragraph>
                   </div>
             <div className='background-color end-of-content'>
             <RelatedNews
               sectionTitle={"Assista também: "}
-              title={"O Mata Cavalo"}
-              subtitle={"Neste documentário da Amazônia Real, os herdeiros dos ancestrais africanos contam histórias da origem do Complexo Territorial Mato Cavalo." }
-              imageUrl={require("images/matacavalo_doc.jpg")}
-              href={"//documentario.matacavalo.amazoniareal.com.br/"}
+              title={"Bem-vindo a Realidade"}
+              subtitle={"Uma vila localizada na estrada mais erma do Brasil - a rodovia que liga Porto Velho a Manaus - se torna a nova fronteira para madeireiros de Rondônia." }
+              imageUrl={require("images/realidade_doc.jpg")}
+              href={"//realidade.amazoniareal.com.br/"}
             />
           </div>
           </Container>
