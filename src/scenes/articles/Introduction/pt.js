@@ -50,7 +50,7 @@ export default () => (
              type: "image",
              data: {
                credits: "Marcio Isensee e Sá/Amazônia Real",
-               src: require("images/bg-mapbox-placeholder.png")
+               src: require("photos/mapa_1.png")
              }
            }}
          > Na margem direita da nova rodovia, estabeleceu-se um assentamento da reforma agrária.{" "}
@@ -87,15 +87,15 @@ export default () => (
              type: "mapbox",
              backgroundAlternative: require("images/bg-mapbox-placeholder-1.png"),
              data: {
-               layerId: "Assentamentos_incra-2wyd2b",
+               layerId: "estradas_bioma_2012_geo-5kwra9",
                sourceOptionType: "vector",
-               sourceOptionUrl: "mapbox://infoamazonia.1kti1hxh",
+               sourceOptionUrl: "mapbox://infoamazonia.cwig28rm",
                coordinates: [-61.865,-6.514],
                style: "mapbox://styles/infoamazonia/civwnqdp7000q2jltj0lq1nkp",
                sourceId: "source1",
                layerType: "fill",
                sourceLayer: "Assentamentos_incra-2wyd2b",
-               layoutData: {"visibility":""},
+               layoutData: {"visibility":"estradas_bioma_2012_geo-5kwra9"},
                paintData: {"fill-color":"#ea1f1f"}
              }
            }}
@@ -115,7 +115,7 @@ export default () => (
           }
           }}
              >
-               Ele, como muitos pioneiros, não perdem esperança no potencial da estrada. “Se conservar esta estrada ninguém passa mais fome aqui não”, diz.
+               Ele, como muitos pioneiros, acredita no potencial da estrada. “Se conservar esta estrada ninguém passa mais fome aqui não”, diz.
              </StoryMedia>{" "}
              </Paragraph>
              </div>
