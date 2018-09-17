@@ -17,9 +17,21 @@ export default () => (
           <title>De atoleiro à rondonização</title>
         </Helmet>
         <Container>
+        <div className='background-color pointer-events-none end-of-content margin-bottom-photo-gallery'
           <Title as="h2">
+          <StoryMedia
+           media={{
+             id: "image-2",
+             type: "image",
+             data: {
+               credits: "Marcio Isensee e Sá/Amazônia Real",
+               src: require("photo/br319_3.jpg")
+             }
+           }}
+         >
             A Vila de Realidade
-          </Title>
+              </StoryMedia>{" "}
+              </Title>
           <div className='background-color pointer-events-none end-of-content margin-bottom-map'>
           <Paragraph>
           Quando o “seu” Cuiabano e a “vovó” Nilza chegaram em Realidade, não havia nada. Quer dizer, quase nada, quase ninguém. Era o fim dos anos 60 e só estavam ali os trabalhadores da empreiteira que construía a estrada - a BR-319. Obra da ditadura militar.
@@ -36,7 +48,7 @@ export default () => (
                   layerId: "Assentamentos_incra-2wyd2b",
                   sourceOptionType: "vector",
                   sourceOptionUrl: "mapbox://infoamazonia.1kti1hxh",
-                  coordinates: [-61.355,-5.494],
+                  coordinates: [-62.355,-5.6],
                   style: "mapbox://styles/infoamazonia/cjlf77k1x01k82slobkyq10bq",
                   sourceId: "source1",
                   layerType: "fill",
@@ -67,10 +79,10 @@ export default () => (
                }}
              >
              Aos 79 anos, Nilza Francisca Santana, trabalha na venda que está na frente de sua casa, cuida do neto de 15 anos que vive com ela, faz refeições para vender a quem chega na Realidade.
-             Ela vê com bons olhos a chegada de novos moradores e os novos negócios que abrem na Vila.
              </StoryMedia>{" "}
+            Ela vê com bons olhos a chegada de novos moradores e os novos negócios que abrem na Vila.
              </Paragraph>
-                  </div>
+            </div>
          <div className='background-color pointer-events-none end-of-content margin-bottom-map'>
          <Paragraph>
          Agora, já são cerca de sete mil habitantes, incluindo quem vive nas estradas vicinais. Na região, desde 2000, foram abertos 17 km de estradas não oficiais a cada ano, indica um novo estudo. Estradas que servem para puxar madeira de dentro da mata para pelo menos quatro serrarias que funcionam na Vila.
@@ -135,12 +147,12 @@ export default () => (
                    layerId: "Assentamentos_incra-2wyd2b2",
                    sourceOptionType: "vector",
                    sourceOptionUrl: "mapbox://infoamazonia.1kti1hxh",
-                   coordinates: [-54.372,-2.636],
-                   style: "mapbox://styles/infoamazonia/ciqwmpsz1000cbgno5jpumkcw",
+                   coordinates: [-54.372,-5.636],
+                   style: "mapbox://styles/infoamazonia/civwnqdp7000q2jltj0lq1nkp",
                    sourceId: "source3",
                    layerType: "fill",
                    sourceLayer: "Assentamentos_incra-2wyd2b",
-                   layoutData: {"visibility":"visible"},
+                   layoutData: {"visibility":""},
                    paintData: {"fill-color":"hsla(250, 47%, 33%, 0.27)"}
                  }
                }}
@@ -327,7 +339,7 @@ export default () => (
               sectionTitle={"Assista também: "}
               title={"Bem-vindo a Realidade"}
               subtitle={"Uma vila localizada na estrada mais erma do Brasil - a rodovia que liga Porto Velho a Manaus - se torna a nova fronteira para madeireiros de Rondônia." }
-              imageUrl={require("images/realidade_doc.jpg")}
+              imageUrl={require("images/realidade.jpg")}
               href={"//realidade.amazoniareal.com.br/"}
             />
           </div>
