@@ -18,12 +18,12 @@ export default () => (
         </Helmet>
         <Container>
           <Title as="h2">
-            Chegada na Vila de Realidade
+            A Vila de Realidade
           </Title>
+          <div className='background-color pointer-events-none end-of-content margin-bottom-map'>
           <Paragraph>
           Quando o “seu” Cuiabano e a “vovó” Nilza chegaram em Realidade, não havia nada. Quer dizer, quase nada, quase ninguém. Era o fim dos anos 60 e só estavam ali os trabalhadores da empreiteira que construía a estrada - a BR-319. Obra da ditadura militar.
           </Paragraph>
-          <div className='background-color pointer-events-none end-of-content margin-bottom-map'>
           <Paragraph>
           Até poucos anos atrás, as coisas não tinham mudado muito. A Vila de Realidade não passava de meia dúzia de casas.{" "}
             <StoryMedia
@@ -37,6 +37,7 @@ export default () => (
                   sourceOptionType: "vector",
                   sourceOptionUrl: "mapbox://infoamazonia.1kti1hxh",
                   coordinates: [-61.355,-5.494],
+                  zoom:
                   style: "mapbox://styles/infoamazonia/cjlf77k1x01k82slobkyq10bq",
                   sourceId: "source1",
                   layerType: "fill",
@@ -51,11 +52,12 @@ export default () => (
                 </Paragraph>
                   </div>
                 <Paragraph>
+                <div className='background-color pointer-events-none end-of-content margin-bottom-photo-gallery'>
             O casal vinha num caminhão de Arenapólis, Mato Grosso, fugindo do garimpo, expulsos por fazendeiros. Com seis filhos, passaram dias dormindo na rodoviária de Porto Velho, até que um ônibus os levou para Humaitá (AM). Ali, acamparam em frente ao quartel (ainda em construção) do 5º Batalhão de Engenharia do Exército. De carona com um soldado (em um fusca) foram levados ao igarapé Realidade, onde novas terras eram oferecidas pelo governo.  Na margem direita da nova rodovia, estabeleceu-se um assentamento da reforma agrária.
             </Paragraph>
-        <div className='background-color pointer-events-none end-of-content margin-bottom-photo-gallery'>
-              <Paragraph>
+            <Paragraph>
               A chegada de novos migrantes tem relação com a atual manutenção feita na BR-319, que não ocorria há duas  décadas. Pela primeira vez, desde os anos 80, a rodovia está transitável tanto no período da seca como no período das chuvas.
+              <Paragraph>
               Seu esposo, João Ferreira Santana, o Cuiabano, é um homem baixo, de pele bronzeada e cabelos brancos. Com 87 anos, ele perdeu a vista de um dos olhos e caminha com dificuldade. O terreno em que viveram por décadas foi vendido para uma serraria. No local, tinham roça e criação de animais, o que precisavam para alimentar os filhos. Ele, como muitos pioneiros, não perdem esperança no potencial da estrada. “Se conservar esta estrada ninguém passa mais fome aqui não”, diz.
               <StoryMedia
                media={{
@@ -92,7 +94,6 @@ export default () => (
             >
             Como se exauriu o recurso natural em Rondônia, ela diz, os empresários madeireiros e pecuaristas migram o para o sul do Amazonas, abrindo novas áreas na floresta.
             </StoryMedia>.
-               Ainda sem o título definitivo, eles enfrentam agora a dificuldade de adesão ao Cadastro Ambiental Rural (CAR), desconfiados de que a exigência da lei ambiental possa trazer novas ameaças aos territórios deixados pelos seus ancestrais. A luta de Mata Cavalo, que fica no município de Nossa Senhora do Livramento, distante a 55 quilômetros de Cuiabá, é a mesma de milhares de outros territórios quilombolas espalhados pelos estados brasileiros, entre eles aqueles que formam a Amazônia Legal.
             </Paragraph>
           </div>
           <div className='background-color pointer-events-none end-of-content margin-bottom-map'>
