@@ -71,11 +71,11 @@ export default () => (
              Ela vê com bons olhos a chegada de novos moradores e os novos negócios que abrem na Vila.
              </StoryMedia>{" "}
              </Paragraph>
-         </div>
+                  </div>
          <div className='background-color pointer-events-none end-of-content margin-bottom-map'>
          <Paragraph>
          Agora, já são cerca de sete mil habitantes, incluindo quem vive nas estradas vicinais. Na região, desde 2000, foram abertos 17 km de estradas não oficiais a cada ano, indica um novo estudo. Estradas que servem para puxar madeira de dentro da mata para pelo menos quatro serrarias que funcionam na Vila.
-       </Paragraph>
+        </Paragraph>
            <Paragraph>
            Seu esposo, João Ferreira Santana, o Cuiabano, é um homem baixo, de pele bronzeada e cabelos brancos. Com 87 anos, ele perdeu a vista de um dos olhos e caminha com dificuldade. O terreno em que viveram por décadas foi vendido para uma serraria. No local, tinham roça e criação de animais, o que precisavam para alimentar os filhos. {" "}
            <StoryMedia
