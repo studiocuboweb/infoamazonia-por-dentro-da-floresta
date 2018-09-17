@@ -17,17 +17,17 @@ export default () => (
           <title>De atoleiro à rondonização</title>
         </Helmet>
         <Container>
+        <div className='background-color pointer-events-none end-of-content margin-bottom-photo-gallery'>
         <em>Viajamos pela BR319 por 6 dias no mês de agosto, de Porto Velho a Manaus. No caminho, entrevistamos moradores, madeireiros, agricultores, caminhoneiros, autoridades e ativistas.
-Depois de duas décadas praticamente fechada, a rodovia está transitável. Graças a obras de manutenção, o meião do Amazonas se transforma com a chegada de migrantes, abertura de serrarias, pastagens e novas áreas de cultivo. Para alguns, é a o início do desenvolvimento econômico. Para outros, a consolidação no sul do estado o modelo que devastou as florestas de Rondônia.</em>
+        Depois de duas décadas praticamente fechada, a rodovia está transitável. Graças a obras de manutenção, o meião do Amazonas se transforma com a chegada de migrantes, abertura de serrarias, pastagens e novas áreas de cultivo. Para alguns, é a o início do desenvolvimento econômico. Para outros, a consolidação no sul do estado o modelo que devastou as florestas de Rondônia.</em>
         <Title as="h2">
         Chegando à Vila de Realidade
         </Title>
-        <div className='background-color pointer-events-none end-of-content margin-bottom-photo-gallery'>
-        <Paragraph>
-        Quando o “seu” Cuiabano e a “vovó” Nilza chegaram em Realidade, não havia nada. Quer dizer, quase nada, quase ninguém. Era o fim dos anos 60 e só estavam ali os trabalhadores da empreiteira que construía a estrada - a BR319. Obra da ditadura militar.
+                <Paragraph>
+        Quando o “seu” Cuiabano e a “vovó” Nilza chegaram em Realidade, não havia nada. Quer dizer, quase nada, quase ninguém. Era o fim dos anos 60 e só estavam ali os trabalhadores da empreiteira que construía a estrada, a BR319. Obra da ditadura militar.
         </Paragraph>
         <Paragraph>
-        Até poucos anos atrás, as coisas não tinham mudado muito. A Vila de Realidade não passava de meia dúzia de casas.{" "}
+        Até poucos anos, as coisas não tinham mudado muito. A Vila de Realidade não passava de meia dúzia de casas.{" "}
           <StoryMedia
            media={{
              id: "image-3",
@@ -37,34 +37,24 @@ Depois de duas décadas praticamente fechada, a rodovia está transitável. Gra�
                src: require("photos/br319_3.jpg")
              }
            }}
-         > No inverno - a temporada de chuvas - carro nenhum passava. Para chegar à Humaitá, apenas 120 km ao sul, podia se levar um, dois dias.{" "}
+         > No inverno - a temporada de chuvas - carro nenhum passava. Para chegar à Humaitá, apenas a 120 km ao sul, podia se levar um, dois dias.{" "}
               </StoryMedia>
               </Paragraph>
           </div>
           <div className='background-color pointer-events-none end-of-content margin-bottom-map'>
           <Paragraph>
-          O casal vinha num caminhão de Arenapólis, Mato Grosso, fugindo do garimpo, expulsos por fazendeiros. Com seis filhos, passaram dias dormindo na rodoviária de Porto Velho, até que um ônibus os levou para Humaitá (AM). Ali, acamparam em frente ao quartel (ainda em construção) do 5º Batalhão de Engenharia do Exército. De carona com um soldado (em um fusca) foram levados ao igarapé Realidade, onde novas terras eram oferecidas pelo governo.
-            <StoryMedia
-              icon="map"
-              media={{
-                id: "map-1",
-                type: "mapbox",
-                backgroundAlternative: require("images/bg-mapbox-placeholder-1.png"),
-                data: {
-                  layerId: "Assentamentos_incra-2wyd2b",
-                  sourceOptionType: "vector",
-                  sourceOptionUrl: "mapbox://infoamazonia.1kti1hxh",
-                  coordinates: [-62.355,-5.6],
-                  style: "mapbox://styles/infoamazonia/cjlf77k1x01k82slobkyq10bq",
-                  sourceId: "source1",
-                  layerType: "fill",
-                  sourceLayer: "Assentamentos_incra-2wyd2b",
-                  layoutData: {"visibility":"Assentamentos_incra-2wyd2b"},
-                  paintData: {"fill-color":"#ea1f1f"}
-                }
-              }}
-            > Na margem direita da nova rodovia, estabeleceu-se um assentamento da reforma agrária.
-            </StoryMedia>{" "}
+          O casal vinha num caminhão de Arenapólis, Mato Grosso, fugindo do garimpo, expulsos por fazendeiros. Passaram dias, com os seis filhos, dormindo na rodoviária de Porto Velho, até que um ônibus os levou para Humaitá (AM). Ali, acamparam em frente ao quartel (ainda em construção) do 5º Batalhão de Engenharia de Construção do Exército. De carona com um soldado (em um fusca) foram levados ao igarapé Realidade, onde novas terras eram oferecidas pelo governo.
+          <StoryMedia
+           media={{
+             id: "image-3",
+             type: "image",
+             data: {
+               credits: "Marcio Isensee e Sá/Amazônia Real",
+               src: require("images/bg-mapbox-placeholder.png")
+             }
+           }}
+         > Na margem direita da nova rodovia, estabeleceu-se um assentamento da reforma agrária.{" "}
+              </StoryMedia
                 </Paragraph>
                   </div>
             <div className='background-color pointer-events-none end-of-content margin-bottom-photo-gallery'>
