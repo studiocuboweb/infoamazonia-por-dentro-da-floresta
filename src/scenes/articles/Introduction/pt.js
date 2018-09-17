@@ -22,8 +22,7 @@ Depois de duas décadas praticamente fechada, a rodovia está transitável. Gra�
         <Title as="h2">
         Chegando à Vila de Realidade
         </Title>
-        <div className='background-color pointer-events-none end-of-content margin-bottom-photo-gallery'
-
+        <div className='background-color pointer-events-none end-of-content margin-bottom-photo-gallery'>
           <StoryMedia
            media={{
              id: "image-2",
