@@ -54,12 +54,14 @@ export default () => (
              }
            }}
          > Na margem direita da nova rodovia, estabeleceu-se um assentamento da reforma agrária.{" "}
-              </StoryMedia
+              </StoryMedia>
                 </Paragraph>
                   </div>
             <div className='background-color pointer-events-none end-of-content margin-bottom-photo-gallery'>
             <Paragraph>
-              A chegada de novos migrantes tem relação com a atual manutenção feita na BR-319, que não ocorria há duas  décadas. Pela primeira vez, desde os anos 80, a rodovia está transitável tanto no período da seca como no período das chuvas.
+              A chegada de novos migrantes tem relação com a manutenção feita na BR-319,algo que não ocorria há duas  décadas. Pela primeira vez, desde os anos 80, a rodovia está transitável tanto no período da seca como no período das chuvas.
+              </Paragraph>
+              <Paragraph>
               <StoryMedia
                media={{
                  id: "image-2",
@@ -88,12 +90,12 @@ export default () => (
                layerId: "Assentamentos_incra-2wyd2b",
                sourceOptionType: "vector",
                sourceOptionUrl: "mapbox://infoamazonia.1kti1hxh",
-               coordinates: [-62.355,-5.6],
-               style: "mapbox://styles/infoamazonia/cjlf77k1x01k82slobkyq10bq",
+               coordinates: [-61.865,-6.514],
+               style: "mapbox://styles/infoamazonia/civwnqdp7000q2jltj0lq1nkp",
                sourceId: "source1",
                layerType: "fill",
                sourceLayer: "Assentamentos_incra-2wyd2b",
-               layoutData: {"visibility":"Assentamentos_incra-2wyd2b"},
+               layoutData: {"visibility":""},
                paintData: {"fill-color":"#ea1f1f"}
              }
            }}
