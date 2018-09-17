@@ -97,6 +97,7 @@ export default () => (
         <Paragraph>
         “Aqui melhorou muito”, disse com a fala pausada e o sotaque sertanejo, ele vindo de Colniza, norte do Mato Grosso.
         </Paragraph>
+        <Paragraph>
         Mas quando ele chegou ali em 2004 com outros dois empreendedores, vinha de Ariquemes, Rondônia. Seus colegas dedicavam-se a prospectar áreas para extração de madeira, terras que futuramente também poderiam se transformam em pastos. Ele, mestre de obras, ajudou a construir a escola de Realidade.
         </Paragraph>
         <Paragraph>
@@ -247,6 +248,28 @@ export default () => (
                   </StoryMedia>{" "}
                   </Paragraph>
                 </div>
+                <Title as="h2">
+                  Caminho sem volta
+                </Title>
+                <div className='background-color pointer-events-all end-of-content margin-bottom-video'>
+                    <Paragraph>
+                    Viajando cerca de 200 km ao norte de Realidade, cruzamos o grande mosaico de unidades de conservação que rodeia praticamente toda a rodovia. Neste trecho está o único parque nacional da região, o Nascentes do Lago Jari, um gigante com mais de 800 mil hectares localizado à esquerda de quem viaja para Manaus.
+                    </Paragraph>
+                    <Paragraph>
+                    Mais a frente encontra-se a Reserva de Desenvolvimento Sustentável do Igapó Açu, onde Jorge Nildo, membro do conselho gestor da Unidade de Conservação, nos contou sobre os benefícios que a criação da área protegida. A caça e a pesca melhoraram. {" "}
+                      <StoryMedia
+                    media={{
+                    id: "video-1",
+                    type: "youtube",
+                    data: {
+                      id: "Qojupw2hVhU"
+                    }
+                    }}
+                    >
+                    Ele também acredita que existe um grande potencial para o turismo na região
+                    </StoryMedia>{" "}
+                    </Paragraph>
+                  </div>
             <div className='background-color end-of-content'>
             <RelatedNews
               sectionTitle={"Assista também: "}
