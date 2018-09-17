@@ -34,7 +34,7 @@ Depois de duas décadas praticamente fechada, a rodovia está transitável. Gra�
              type: "image",
              data: {
                credits: "Marcio Isensee e Sá/Amazônia Real",
-               src: require("photo/br319_3.jpg")
+               src: require("photos/br319_3.jpg")
              }
            }}
          > No inverno - a temporada de chuvas - carro nenhum passava. Para chegar à Humaitá, apenas 120 km ao sul, podia se levar um, dois dias.{" "}
@@ -249,7 +249,7 @@ Depois de duas décadas praticamente fechada, a rodovia está transitável. Gra�
                    type: "image",
                    data: {
                      credits: "Marcio Insensee e Sá/Amazônia Real",
-                     src: require("photos/br319_4).jpg")
+                     src: require("photos/br319_4.jpg")
                    }
                  }}
                >
