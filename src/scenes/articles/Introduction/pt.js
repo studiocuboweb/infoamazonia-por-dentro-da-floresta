@@ -37,7 +37,6 @@ export default () => (
                   sourceOptionType: "vector",
                   sourceOptionUrl: "mapbox://infoamazonia.1kti1hxh",
                   coordinates: [-61.355,-5.494],
-                  zoom:
                   style: "mapbox://styles/infoamazonia/cjlf77k1x01k82slobkyq10bq",
                   sourceId: "source1",
                   layerType: "fill",
@@ -51,8 +50,8 @@ export default () => (
             </StoryMedia>{" "}
                 </Paragraph>
                   </div>
-                <Paragraph>
-                <div className='background-color pointer-events-none end-of-content margin-bottom-photo-gallery'>
+            <div className='background-color pointer-events-none end-of-content margin-bottom-photo-gallery'>
+            <Paragraph>
             O casal vinha num caminhão de Arenapólis, Mato Grosso, fugindo do garimpo, expulsos por fazendeiros. Com seis filhos, passaram dias dormindo na rodoviária de Porto Velho, até que um ônibus os levou para Humaitá (AM). Ali, acamparam em frente ao quartel (ainda em construção) do 5º Batalhão de Engenharia do Exército. De carona com um soldado (em um fusca) foram levados ao igarapé Realidade, onde novas terras eram oferecidas pelo governo.  Na margem direita da nova rodovia, estabeleceu-se um assentamento da reforma agrária.
             </Paragraph>
             <Paragraph>
@@ -70,8 +69,89 @@ export default () => (
                }}
              >
              Aos 79 anos, Nilza Francisca Santana, trabalha na venda que está na frente de sua casa, cuida do neto de 15 anos que vive com ela, faz refeições para vender a quem chega na Realidade.
-             Ela vê com bons olhos a chegada de novos moradores e os novos negócios que abrem na Vila.Agora, já são cerca de sete mil habitantes, incluindo quem vive nas estradas vicinais. Na região, desde 2000, foram abertos 17 km de estradas não oficiais a cada ano, indica um novo estudo. Estradas que servem para puxar madeira de dentro da mata para pelo menos quatro serrarias que funcionam na Vila.
+             Ela vê com bons olhos a chegada de novos moradores e os novos negócios que abrem na Vila.
              </StoryMedia>{" "}
+             Agora, já são cerca de sete mil habitantes, incluindo quem vive nas estradas vicinais. Na região, desde 2000, foram abertos 17 km de estradas não oficiais a cada ano, indica um novo estudo. Estradas que servem para puxar madeira de dentro da mata para pelo menos quatro serrarias que funcionam na Vila.
+           </Paragraph>
+         </div>
+         <div className='background-color pointer-events-none end-of-content margin-bottom-map'>
+           <Paragraph>
+           A chegada de novos migrantes tem relação com a atual manutenção feita na BR-319, que não ocorria há duas  décadas. Pela primeira vez, desde os anos 80, a rodovia está transitável tanto no período da seca como no período das chuvas.{" "}
+             <StoryMedia
+               icon="map"
+               media={{
+                 id: "map-2",
+                 type: "mapbox",
+                 backgroundAlternative: require("images/bg-mapbox-placeholder-2.png"),
+                 data: {
+                   layerId: "Sementes-dbky3y2",
+                   sourceOptionType: "vector",
+                   sourceOptionUrl: "mapbox://infoamazonia.de1tfaxh",
+                   coordinates: [-54.945,-2.800],
+                   style: "mapbox://styles/infoamazonia/ciqwmpsz1000cbgno5jpumkcw",
+                   sourceId: "source2",
+                   layerType: "circle",
+                   sourceLayer: "Sementes-dbky3y",
+                   layoutData: {"visibility":"visible"},
+                   paintData: {"circle-color":"#eb5252","circle-stroke-color":"#000000"}
+                 }
+               }}
+             >
+               native communities in Amazonas and Bolívar states
+             </StoryMedia>{" "}
+             that have been usurped in both legal and illegal mining economies.
+             Colombian guerrilla groups – referred to by the locals as{" "}
+             <em>patagomas</em> (rubber feet) – are expanding their mining operations
+             in western Venezuela, and recently announced their first mining projects
+             in indigenous territories.
+           </Paragraph>
+         </div>
+         <div className='background-color pointer-events-none end-of-content margin-bottom-photo-gallery'>
+           <Paragraph>
+             Mata Cavalo é um complexo territorial onde <StoryMedia
+               media={{
+                 id: "image-2",
+                 type: "image",
+                 data: {
+                   credits: "Bruno Kelly/Amazônia Real",
+                   src: require("photos/matacavalo_2.jpg")
+                 }
+               }}
+             >
+               homens e mulheres remanescentes de quilombolas conseguiram resistir por mais de um século ao assédio de fazendeiros e invasores nos sertões do Mato Grosso
+             </StoryMedia>. Embora os limites do território já tenham sido reconhecidos pelo Instituto Nacional de Colonização e Reforma Agrária (Incra), as comunidades, reconhecidas pela Fundação Cultural Palmares, ainda não receberam o título para registro em cartório.
+           </Paragraph>
+         </div>
+         <div className='background-color pointer-events-none end-of-content margin-bottom-map'>
+           <Paragraph>
+             The ones bearing the brunt of Venezuela’s mining bonanza are the{" "}
+             <StoryMedia
+               icon="map"
+               media={{
+                 id: "map-3",
+                 type: "mapbox",
+                 backgroundAlternative: require("images/bg-mapbox-placeholder-3.png"),
+                 data: {
+                   layerId: "Assentamentos_incra-2wyd2b2",
+                   sourceOptionType: "vector",
+                   sourceOptionUrl: "mapbox://infoamazonia.1kti1hxh",
+                   coordinates: [-54.372,-2.636],
+                   style: "mapbox://styles/infoamazonia/ciqwmpsz1000cbgno5jpumkcw",
+                   sourceId: "source3",
+                   layerType: "fill",
+                   sourceLayer: "Assentamentos_incra-2wyd2b",
+                   layoutData: {"visibility":"visible"},
+                   paintData: {"fill-color":"hsla(250, 47%, 33%, 0.27)"}
+                 }
+               }}
+             >
+               native communities in Amazonas and Bolívar states
+             </StoryMedia>{" "}
+             that have been usurped in both legal and illegal mining economies.
+             Colombian guerrilla groups – referred to by the locals as{" "}
+             <em>patagomas</em> (rubber feet) – are expanding their mining operations
+             in western Venezuela, and recently announced their first mining projects
+             in indigenous territories.
            </Paragraph>
          </div>
         <div className='background-color pointer-events-all end-of-content margin-bottom-video'>
@@ -96,87 +176,7 @@ export default () => (
             </StoryMedia>.
             </Paragraph>
           </div>
-          <div className='background-color pointer-events-none end-of-content margin-bottom-map'>
-            <Paragraph>
-              The ones bearing the brunt of Venezuela’s mining bonanza are the{" "}
-              <StoryMedia
-                icon="map"
-                media={{
-                  id: "map-2",
-                  type: "mapbox",
-                  backgroundAlternative: require("images/bg-mapbox-placeholder-2.png"),
-                  data: {
-                    layerId: "Sementes-dbky3y2",
-                    sourceOptionType: "vector",
-                    sourceOptionUrl: "mapbox://infoamazonia.de1tfaxh",
-                    coordinates: [-54.945,-2.800],
-                    style: "mapbox://styles/infoamazonia/ciqwmpsz1000cbgno5jpumkcw",
-                    sourceId: "source2",
-                    layerType: "circle",
-                    sourceLayer: "Sementes-dbky3y",
-                    layoutData: {"visibility":"visible"},
-                    paintData: {"circle-color":"#eb5252","circle-stroke-color":"#000000"}
-                  }
-                }}
-              >
-                native communities in Amazonas and Bolívar states
-              </StoryMedia>{" "}
-              that have been usurped in both legal and illegal mining economies.
-              Colombian guerrilla groups – referred to by the locals as{" "}
-              <em>patagomas</em> (rubber feet) – are expanding their mining operations
-              in western Venezuela, and recently announced their first mining projects
-              in indigenous territories.
-            </Paragraph>
-          </div>
-          <div className='background-color pointer-events-none end-of-content margin-bottom-photo-gallery'>
-            <Paragraph>
-              Mata Cavalo é um complexo territorial onde <StoryMedia
-                media={{
-                  id: "image-2",
-                  type: "image",
-                  data: {
-                    credits: "Bruno Kelly/Amazônia Real",
-                    src: require("photos/matacavalo_2.jpg")
-                  }
-                }}
-              >
-                homens e mulheres remanescentes de quilombolas conseguiram resistir por mais de um século ao assédio de fazendeiros e invasores nos sertões do Mato Grosso
-              </StoryMedia>. Embora os limites do território já tenham sido reconhecidos pelo Instituto Nacional de Colonização e Reforma Agrária (Incra), as comunidades, reconhecidas pela Fundação Cultural Palmares, ainda não receberam o título para registro em cartório.
-            </Paragraph>
-          </div>
-          <div className='background-color pointer-events-none end-of-content margin-bottom-map'>
-            <Paragraph>
-              The ones bearing the brunt of Venezuela’s mining bonanza are the{" "}
-              <StoryMedia
-                icon="map"
-                media={{
-                  id: "map-3",
-                  type: "mapbox",
-                  backgroundAlternative: require("images/bg-mapbox-placeholder-3.png"),
-                  data: {
-                    layerId: "Assentamentos_incra-2wyd2b2",
-                    sourceOptionType: "vector",
-                    sourceOptionUrl: "mapbox://infoamazonia.1kti1hxh",
-                    coordinates: [-54.372,-2.636],
-                    style: "mapbox://styles/infoamazonia/ciqwmpsz1000cbgno5jpumkcw",
-                    sourceId: "source3",
-                    layerType: "fill",
-                    sourceLayer: "Assentamentos_incra-2wyd2b",
-                    layoutData: {"visibility":"visible"},
-                    paintData: {"fill-color":"hsla(250, 47%, 33%, 0.27)"}
-                  }
-                }}
-              >
-                native communities in Amazonas and Bolívar states
-              </StoryMedia>{" "}
-              that have been usurped in both legal and illegal mining economies.
-              Colombian guerrilla groups – referred to by the locals as{" "}
-              <em>patagomas</em> (rubber feet) – are expanding their mining operations
-              in western Venezuela, and recently announced their first mining projects
-              in indigenous territories.
-            </Paragraph>
-          </div>
-          <div className='background-color end-of-content'>
+            <div className='background-color end-of-content'>
             <RelatedNews
               sectionTitle={"Assista também: "}
               title={"O Mata Cavalo"}
