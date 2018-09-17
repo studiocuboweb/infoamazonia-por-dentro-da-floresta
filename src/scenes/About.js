@@ -22,7 +22,7 @@ const messages = defineMessages({
   },
   siteTitle: {
     id: "head.title",
-    defaultMessage: "A luta dos herdeiros de Mata Cavalo pelo título do quilombo"
+    defaultMessage: "BR-319: de atoleiro à rondonização"
   }
 });
 
@@ -78,7 +78,7 @@ const About = ({ intl, lastPath }) => {
           <Paragraph big>
             <FormattedMessage
               id="about.intro"
-              defaultMessage="Esta reportagem foi produzida pela {amazoniareal} com apoio da {clua} e faz parte do especial “{olhandopordentrodafloresta}”."
+              defaultMessage="Esta reportagem foi produzida pela {amazoniareal} em parceria com o {infoamazonia} com apoio da {clua} e faz parte do especial “{olhandopordentrodafloresta}”."
               values={{
                 infoamazonia: (
                   <strong>
@@ -114,7 +114,7 @@ const About = ({ intl, lastPath }) => {
               <FormattedMessage id="about.reporter" defaultMessage="Repórter" />
             </strong>
             <br />
-            Vandré Fonseca
+            Gustavo Faleiros
           </Paragraph>
           <Paragraph>
             <strong>
@@ -124,7 +124,7 @@ const About = ({ intl, lastPath }) => {
               />
             </strong>
             <br />
-            Bruno Kelly
+            Marcio Isensee e Sá
           </Paragraph>
           <Paragraph>
             <strong>

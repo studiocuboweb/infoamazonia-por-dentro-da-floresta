@@ -204,9 +204,23 @@ export default () => (
               </StoryMedia>.
               </Paragraph>
             </div>
+            <div className='background-color pointer-events-none end-of-content margin-bottom-photo-gallery'>
             <Title as="h2">
+              <StoryMedia
+                 media={{
+                   id: "image-2",
+                   type: "image",
+                   data: {
+                     credits: "Marcio Insensee e Sá/Amazônia Real",
+                     src: require("photos/br319_3(3).jpg")
+                   }
+                 }}
+               >
               Conservação pela metade
-            </Title>
+               </StoryMedia>.
+               </Title>
+           </div>
+
             <div className='background-color pointer-events-all end-of-content margin-bottom-video'>
                 <Paragraph>
                 Viajando cerca de 200 km ao norte de Realidade, cruzamos o grande mosaico de unidades de conservação que rodeia praticamente toda a rodovia. Neste trecho está o único parque nacional da região, o Nascentes do Lago Jari, um gigante com mais de 800 mil hectares localizado à esquerda de quem viaja para Manaus.
@@ -261,7 +275,8 @@ export default () => (
                     <Paragraph>
                     Assim como o BR-163, outra rodovia cujo asfaltamento era cobrado por ligar a região produtora de grãos do Mato Grosso ao porto fluvial de Santarém, a BR 319 sempre foi temida por seu potencial de vetor de desmatamento. Por esta razão, a estratégia adotada foi a criação de áreas protegidas para evitar a grilagem de terras e invasões no momento do anúncio das obras. Coordenou-se portanto o asfaltamento com a implementação de medidas de conservação.
                     </Paragraph>
-
+                    <Paragraph
+                    Em 2008 e 2009, o Ministério do Meio Ambiente, então sob o comando de Carlos Minc, e a Secretária Estadual de Meio Ambiente do Amazonas, na gestão de Eduardo Braga (PMDB), anunciaram a criação de 8,4 milhões de hectares de unidades de conservação.{""}
                     <StoryMedia
                     media={{
                     id: "video-1",
@@ -271,7 +286,7 @@ export default () => (
                     }
                     }}
                     >
-                    Ele também acredita que existe um grande potencial para o turismo na região
+                    A área total equivale a três vezes e meia o território do estado de Alagoas
                     </StoryMedia>{" "}
                     </Paragraph>
                   </div>

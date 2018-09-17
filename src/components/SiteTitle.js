@@ -89,12 +89,12 @@ class SiteTitle extends Component {
               <span className="title-item title-1">
                 <FormattedMessage
                   id="general.siteTitle1"
-                  defaultMessage="A luta das herdeiras de" />
+                  defaultMessage="BR 319" />
               </span>
               <span className="title-item title-3">
                 <FormattedMessage
                   id="general.siteTitle3"
-                  defaultMessage="Mata Cavalo pelo título do quilombo" />
+                  defaultMessage="De atoleiro à rondonização" />
               </span>
             </span>
           </Link>

@@ -25,7 +25,7 @@ const messages = defineMessages({
   },
   siteTitle: {
     id: "head.title",
-    defaultMessage: "A luta dos herdeiros de Mata Cavalo pelo título do quilombo"
+    defaultMessage: "BR319: de atoleiro à rondonização"
   }
 });
 
