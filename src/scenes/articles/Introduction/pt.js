@@ -17,13 +17,13 @@ export default () => (
           <title>De atoleiro à rondonização</title>
         </Helmet>
         <Container>
-        <div className='background-color pointer-events-none end-of-content margin-bottom-map'>
           <Title as="h2">
             Chegada na Vila de Realidade
           </Title>
           <Paragraph>
           Quando o “seu” Cuiabano e a “vovó” Nilza chegaram em Realidade, não havia nada. Quer dizer, quase nada, quase ninguém. Era o fim dos anos 60 e só estavam ali os trabalhadores da empreiteira que construía a estrada - a BR-319. Obra da ditadura militar.
           </Paragraph>
+          <div className='background-color pointer-events-none end-of-content margin-bottom-map'>
           <Paragraph>
           Até poucos anos atrás, as coisas não tinham mudado muito. A Vila de Realidade não passava de meia dúzia de casas.{" "}
             <StoryMedia
@@ -68,7 +68,6 @@ export default () => (
              Ela vê com bons olhos a chegada de novos moradores e os novos negócios que abrem na Vila.Agora, já são cerca de sete mil habitantes, incluindo quem vive nas estradas vicinais. Na região, desde 2000, foram abertos 17 km de estradas não oficiais a cada ano, indica um novo estudo. Estradas que servem para puxar madeira de dentro da mata para pelo menos quatro serrarias que funcionam na Vila.
              A chegada de novos migrantes tem relação com a atual manutenção feita na BR-319, que não ocorria há duas  décadas. Pela primeira vez, desde os anos 80, a rodovia está transitável tanto no período da seca como no período das chuvas.
              Seu esposo, João Ferreira Santana, o Cuiabano, é um homem baixo, de pele bronzeada e cabelos brancos. Com 87 anos, ele perdeu a vista de um dos olhos e caminha com dificuldade. O terreno em que viveram por décadas foi vendido para uma serraria. No local, tinham roça e criação de animais, o que precisavam para alimentar os filhos. Ele, como muitos pioneiros, não perdem esperança no potencial da estrada. “Se conservar esta estrada ninguém passa mais fome aqui não”, diz.
-
              </StoryMedia>{" "}
            </Paragraph>
          </div>
@@ -90,7 +89,7 @@ export default () => (
             }
             }}
             >
-Como se exauriu o recurso natural em Rondônia, ela diz, os empresários madeireiros e pecuaristas migram o para o sul do Amazonas, abrindo novas áreas na floresta.
+            Como se exauriu o recurso natural em Rondônia, ela diz, os empresários madeireiros e pecuaristas migram o para o sul do Amazonas, abrindo novas áreas na floresta.
             </StoryMedia>.
                Ainda sem o título definitivo, eles enfrentam agora a dificuldade de adesão ao Cadastro Ambiental Rural (CAR), desconfiados de que a exigência da lei ambiental possa trazer novas ameaças aos territórios deixados pelos seus ancestrais. A luta de Mata Cavalo, que fica no município de Nossa Senhora do Livramento, distante a 55 quilômetros de Cuiabá, é a mesma de milhares de outros territórios quilombolas espalhados pelos estados brasileiros, entre eles aqueles que formam a Amazônia Legal.
             </Paragraph>
