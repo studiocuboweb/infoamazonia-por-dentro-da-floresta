@@ -18,7 +18,6 @@ export default () => (
         </Helmet>
         <Container>
         <div className='background-color pointer-events-none end-of-content margin-bottom-map'>
-        </Paragraph>
           <Title as="h2">
             Chegada na Vila de Realidade
           </Title>
