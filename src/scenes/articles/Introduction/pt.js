@@ -209,7 +209,7 @@ Depois de duas décadas praticamente fechada, a rodovia está transitável. Gra�
             Uma das ambientalistas mais atuantes e vocais do estado de Rondônia, Ivaneide Bandeira, fundadora da ONG Kanindé afirma que a pavimentação da rodovia atende aos interesses de grupos econômicos de estado. “Tudo vai dançar”, diz Neidinha, como é conhecida.{" "}
               <StoryMedia
             media={{
-            id: "video-1",
+            id: "video-2",
             type: "youtube",
             data: {
               id: "rTQRPmLq41o"
@@ -230,7 +230,7 @@ Depois de duas décadas praticamente fechada, a rodovia está transitável. Gra�
               Mas é a taxa de crescimento que tem chamado atenção. No biênio 2015/2016, o Amazonas apresentou a maior taxa de crescimento do desmatamento de toda a Amazônia, 59% comparado ao período anterior. E apesar de ter havido uma redução de 11% no biênio 2016/2017, o total desmatado foi o dobro do que ocorrera somente há três anos, em 2014. {" "}
                 <StoryMedia
               media={{
-              id: "video-1",
+              id: "video-3",
               type: "youtube",
               data: {
                 id: "rTQRPmLq41o"
@@ -249,7 +249,7 @@ Depois de duas décadas praticamente fechada, a rodovia está transitável. Gra�
                    type: "image",
                    data: {
                      credits: "Marcio Insensee e Sá/Amazônia Real",
-                     src: require("photos/br319_3(3).jpg")
+                     src: require("photos/br319_4).jpg")
                    }
                  }}
                >
@@ -266,7 +266,7 @@ Depois de duas décadas praticamente fechada, a rodovia está transitável. Gra�
                 Mais a frente encontra-se a Reserva de Desenvolvimento Sustentável do Igapó Açu, onde Jorge Nildo, membro do conselho gestor da Unidade de Conservação, nos contou sobre os benefícios que a criação da área protegida. A caça e a pesca melhoraram. {" "}
                   <StoryMedia
                 media={{
-                id: "video-1",
+                id: "video-5",
                 type: "youtube",
                 data: {
                   id: "Qojupw2hVhU"
@@ -288,7 +288,7 @@ Depois de duas décadas praticamente fechada, a rodovia está transitável. Gra�
                   A falta da implementação das unidades de conservação pelo órgão federal gerou uma ação cívil pelo Ministério Público Federal. No processo, os promotores pedem ao ICMBio que estabeleça prazos para a implementação de conselhos gestores e {" "}
                     <StoryMedia
                   media={{
-                  id: "video-1",
+                  id: "video-4",
                   type: "youtube",
                   data: {
                     id: "Qojupw2hVhU"
