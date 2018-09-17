@@ -17,30 +17,33 @@ export default () => (
           <title>De atoleiro à rondonização</title>
         </Helmet>
         <Container>
-        <em>Viajamos pela BR 319 por 6 dias no mês de agosto, de Porto Velho a Manaus. No caminho, entrevistamos moradores, madeireiros, agricultores, caminhoneiros, autoridades e ativistas.
+        <em>Viajamos pela BR319 por 6 dias no mês de agosto, de Porto Velho a Manaus. No caminho, entrevistamos moradores, madeireiros, agricultores, caminhoneiros, autoridades e ativistas.
 Depois de duas décadas praticamente fechada, a rodovia está transitável. Graças a obras de manutenção, o meião do Amazonas se transforma com a chegada de migrantes, abertura de serrarias, pastagens e novas áreas de cultivo. Para alguns, é a o início do desenvolvimento econômico. Para outros, a consolidação no sul do estado o modelo que devastou as florestas de Rondônia.</em>
         <Title as="h2">
         Chegando à Vila de Realidade
         </Title>
         <div className='background-color pointer-events-none end-of-content margin-bottom-photo-gallery'>
+        <Paragraph>
+        Quando o “seu” Cuiabano e a “vovó” Nilza chegaram em Realidade, não havia nada. Quer dizer, quase nada, quase ninguém. Era o fim dos anos 60 e só estavam ali os trabalhadores da empreiteira que construía a estrada - a BR319. Obra da ditadura militar.
+        </Paragraph>
+        <Paragraph>
+        Até poucos anos atrás, as coisas não tinham mudado muito. A Vila de Realidade não passava de meia dúzia de casas.{" "}
           <StoryMedia
            media={{
-             id: "image-2",
+             id: "image-3",
              type: "image",
              data: {
                credits: "Marcio Isensee e Sá/Amazônia Real",
                src: require("photo/br319_3.jpg")
              }
            }}
-         >
+         > No inverno - a temporada de chuvas - carro nenhum passava. Para chegar à Humaitá, apenas 120 km ao sul, podia se levar um, dois dias.{" "}
               </StoryMedia>
+              </Paragraph>
           </div>
           <div className='background-color pointer-events-none end-of-content margin-bottom-map'>
           <Paragraph>
-          Quando o “seu” Cuiabano e a “vovó” Nilza chegaram em Realidade, não havia nada. Quer dizer, quase nada, quase ninguém. Era o fim dos anos 60 e só estavam ali os trabalhadores da empreiteira que construía a estrada - a BR-319. Obra da ditadura militar.
-          </Paragraph>
-          <Paragraph>
-          Até poucos anos atrás, as coisas não tinham mudado muito. A Vila de Realidade não passava de meia dúzia de casas.{" "}
+          O casal vinha num caminhão de Arenapólis, Mato Grosso, fugindo do garimpo, expulsos por fazendeiros. Com seis filhos, passaram dias dormindo na rodoviária de Porto Velho, até que um ônibus os levou para Humaitá (AM). Ali, acamparam em frente ao quartel (ainda em construção) do 5º Batalhão de Engenharia do Exército. De carona com um soldado (em um fusca) foram levados ao igarapé Realidade, onde novas terras eram oferecidas pelo governo.
             <StoryMedia
               icon="map"
               media={{
@@ -56,19 +59,15 @@ Depois de duas décadas praticamente fechada, a rodovia está transitável. Gra�
                   sourceId: "source1",
                   layerType: "fill",
                   sourceLayer: "Assentamentos_incra-2wyd2b",
-                  layoutData: {"visibility":""},
+                  layoutData: {"visibility":"Assentamentos_incra-2wyd2b"},
                   paintData: {"fill-color":"#ea1f1f"}
                 }
               }}
-            >
-             No inverno - a temporada de chuvas - carro nenhum passava. Para chegar à Humaitá, apenas 120 km ao sul, podia se levar um, dois dias.
+            > Na margem direita da nova rodovia, estabeleceu-se um assentamento da reforma agrária.
             </StoryMedia>{" "}
                 </Paragraph>
                   </div>
             <div className='background-color pointer-events-none end-of-content margin-bottom-photo-gallery'>
-            <Paragraph>
-            O casal vinha num caminhão de Arenapólis, Mato Grosso, fugindo do garimpo, expulsos por fazendeiros. Com seis filhos, passaram dias dormindo na rodoviária de Porto Velho, até que um ônibus os levou para Humaitá (AM). Ali, acamparam em frente ao quartel (ainda em construção) do 5º Batalhão de Engenharia do Exército. De carona com um soldado (em um fusca) foram levados ao igarapé Realidade, onde novas terras eram oferecidas pelo governo.  Na margem direita da nova rodovia, estabeleceu-se um assentamento da reforma agrária.
-            </Paragraph>
             <Paragraph>
               A chegada de novos migrantes tem relação com a atual manutenção feita na BR-319, que não ocorria há duas  décadas. Pela primeira vez, desde os anos 80, a rodovia está transitável tanto no período da seca como no período das chuvas.
               <StoryMedia
@@ -88,8 +87,31 @@ Depois de duas décadas praticamente fechada, a rodovia está transitável. Gra�
             </div>
          <div className='background-color pointer-events-none end-of-content margin-bottom-map'>
          <Paragraph>
-         Agora, já são cerca de sete mil habitantes, incluindo quem vive nas estradas vicinais. Na região, desde 2000, foram abertos 17 km de estradas não oficiais a cada ano, indica um novo estudo. Estradas que servem para puxar madeira de dentro da mata para pelo menos quatro serrarias que funcionam na Vila.
+         Agora, já são cerca de sete mil habitantes, incluindo quem vive nas estradas vicinais. Na região, desde 2000, foram abertos 17 km de estradas não oficiais a cada ano, indica um novo estudo.
+         <StoryMedia
+           icon="map"
+           media={{
+             id: "map-1",
+             type: "mapbox",
+             backgroundAlternative: require("images/bg-mapbox-placeholder-1.png"),
+             data: {
+               layerId: "Assentamentos_incra-2wyd2b",
+               sourceOptionType: "vector",
+               sourceOptionUrl: "mapbox://infoamazonia.1kti1hxh",
+               coordinates: [-62.355,-5.6],
+               style: "mapbox://styles/infoamazonia/cjlf77k1x01k82slobkyq10bq",
+               sourceId: "source1",
+               layerType: "fill",
+               sourceLayer: "Assentamentos_incra-2wyd2b",
+               layoutData: {"visibility":"Assentamentos_incra-2wyd2b"},
+               paintData: {"fill-color":"#ea1f1f"}
+             }
+           }}
+         > Estradas que servem para puxar madeira de dentro da mata para pelo menos quatro serrarias que funcionam na Vila.
+         </StoryMedia>{" "}
         </Paragraph>
+        </div>
+          <div className='background-color pointer-events-all end-of-content margin-bottom-video'>
            <Paragraph>
            Seu esposo, João Ferreira Santana, o Cuiabano, é um homem baixo, de pele bronzeada e cabelos brancos. Com 87 anos, ele perdeu a vista de um dos olhos e caminha com dificuldade. O terreno em que viveram por décadas foi vendido para uma serraria. No local, tinham roça e criação de animais, o que precisavam para alimentar os filhos. {" "}
            <StoryMedia
@@ -125,7 +147,7 @@ Depois de duas décadas praticamente fechada, a rodovia está transitável. Gra�
             Empresários madeireiros começaram a chegar na última década.{" "}
             <StoryMedia
                media={{
-                 id: "image-2",
+                 id: "image-1",
                  type: "image",
                  data: {
                    credits: "Marcio Insensee e Sá/Amazônia Real",
