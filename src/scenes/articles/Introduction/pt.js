@@ -18,14 +18,14 @@ export default () => (
         </Helmet>
         <Container>
         <div className='background-color pointer-events-none end-of-content margin-bottom-photo-gallery'>
-          <Note>
+
             <p>
             Viajamos pela BR-319 por seis dias no mês de agosto, de Porto Velho
             a Manaus. No caminho, entrevistamos moradores, madeireiros,
             agricultores, caminhoneiros, autoridades e ativistas. Depois de duas
             décadas praticamente fechada, a rodovia está transitável.
             </p>
-          </Note>
+
         <Title as="h2">
         Chegando à Vila de Realidade
         </Title>
