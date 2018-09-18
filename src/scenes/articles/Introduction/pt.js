@@ -464,6 +464,7 @@ export default () => (
                 </StoryMedia>.
               </Paragraph>
 							</div>
+							<div className='background-color pointer-events-none end-of-content margin-bottom-map'>
               <Paragraph>
                 Aos olhos da população local e dos empreendedores, a criação de
                 parques e reservas já teria sido suficiente para liberar as
