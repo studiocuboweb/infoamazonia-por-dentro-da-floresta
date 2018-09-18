@@ -31,7 +31,7 @@ const Wrapper = styled.header`
     margin: 0 auto;
   }
   ${media.phablet`
-    padding: 0.4rem 2rem 0.4rem 0.4rem; 
+    padding: 0.4rem 2rem 0.4rem 0.4rem;
     font-size: 1em;
   `}
   ${media.desktop`
@@ -124,23 +124,23 @@ class Header extends Component {
       <Wrapper>
         <div className="header-content">
             <div className="site-title clearfix">
-                <a href="//amazoniareal.com.br/" target="_blank">
+                <a href="http://amazoniareal.com.br/" target="_blank">
                   <img src={require("images/partners/amazonia-real-p.png")}  className="logo-am" />
                 </a>
-                <a href="//infoamazonia.org/en/" target="_blank">
+                <a href="https://infoamazonia.org/" target="_blank">
                   <img src={require("images/partners/infoamazonia-p.png")} className="logo-infoamazonia" />
                 </a>
             </div>
           <nav>
           {
             aboutPath &&
-            <NavLink to={aboutPath} title="Learn more">
+            <NavLink to={aboutPath} title="Créditos">
               <span className="fa fa-info"></span>
             </NavLink>
           }
           {
             sharePath &&
-            <NavLink to={sharePath} title="Share">
+            <NavLink to={sharePath} title="Compartilhe">
               <span className="fa fa-share-alt"></span>
             </NavLink>
            }

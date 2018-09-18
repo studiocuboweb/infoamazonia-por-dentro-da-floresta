@@ -235,7 +235,7 @@ export default () => (
              É o caso de Santo Antônio do Matupi, ou o “180”, como é conhecido o
              distrito localizado a 180 quilômetros de Humaitá. Uma ocupação
              explosiva
-             </StoryMedia>{" "}
+             </StoryMedia>.
            </Paragraph>
            <Paragraph>
 	           Escutamos mais de uma vez que a Vila de Realidade era um
@@ -266,10 +266,10 @@ export default () => (
 	           pessoas.”
            </Paragraph>
 					 </div>
+					 <div className='background-color pointer-events-all end-of-content margin-bottom-video'>
 	         <Title as="h2">
 	           A Rondonização
 	         </Title>
-					 <div className='background-color pointer-events-all end-of-content margin-bottom-video'>
 					 <Paragraph>
             Previsão feita há dez anos, a chegada de uma nova frente de
             ocupação e desmatamento da Amazônia através da rodovia que liga
@@ -284,6 +284,8 @@ export default () => (
             referência ao modelo baseado em grandes desmatamentos no estado
             vizinho.
 					 </Paragraph>
+					 </div>
+					 <div className='background-color pointer-events-all end-of-content margin-bottom-video'>
 					 <Paragraph>
             Uma das ambientalistas mais atuantes e vocais do estado de Rondônia,
             Ivaneide Bandeira, fundadora da ONG Kanindé afirma que a
@@ -430,6 +432,8 @@ export default () => (
               invasões no momento do anúncio das obras. Coordenou-se portanto o
               asfaltamento com a implementação de medidas de conservação.
             </Paragraph>
+						</div>
+						<div className='background-color pointer-events-none end-of-content margin-bottom-map'>
             <Paragraph>
               Em 2008 e 2009, o Ministério do Meio Ambiente, então sob o comando
               de Carlos Minc, e a Secretária Estadual de Meio Ambiente do
@@ -459,6 +463,7 @@ export default () => (
                 	estado de Alagoas
                 </StoryMedia>.
               </Paragraph>
+							</div>
               <Paragraph>
                 Aos olhos da população local e dos empreendedores, a criação de
                 parques e reservas já teria sido suficiente para liberar as
