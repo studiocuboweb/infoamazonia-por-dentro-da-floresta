@@ -9,6 +9,7 @@ import Paragraph from "components/blocks/Paragraph";
 import Quote from "components/blocks/Quote";
 import FeaturedText from "components/blocks/FeaturedText";
 import RelatedNews from "components/RelatedNews";
+import Note from "components/blocks/Note";
 
 export default () => (
   <article>
@@ -18,14 +19,14 @@ export default () => (
         </Helmet>
         <Container>
         <div className='background-color pointer-events-none end-of-content margin-bottom-photo-gallery'>
-
+      		<Note>
             <p>
             Viajamos pela BR-319 por seis dias no mês de agosto, de Porto Velho
             a Manaus. No caminho, entrevistamos moradores, madeireiros,
             agricultores, caminhoneiros, autoridades e ativistas. Depois de duas
             décadas praticamente fechada, a rodovia está transitável.
             </p>
-
+      		</Note>
         <Title as="h2">
         Chegando à Vila de Realidade
         </Title>
@@ -49,8 +50,8 @@ export default () => (
            }}
          	>
           No inverno - a temporada de chuvas - carro nenhum passava. Para chegar
-          à Humaitá, apenas a 120 km ao sul, podia se levar um, dois dias.{" "}
-          </StoryMedia>
+          à Humaitá, apenas a 120 km ao sul, podia se levar um, dois dias
+          </StoryMedia>.
         </Paragraph>
         </div>
         <div className='background-color pointer-events-none end-of-content margin-bottom-map'>
@@ -73,8 +74,8 @@ export default () => (
            }}
 	         >
 				 	Na margem direita da nova rodovia, estabeleceu-se um assentamento
-				 	da reforma agrária.{" "}
-        	</StoryMedia>
+				 	da reforma agrária
+        	</StoryMedia>.
         </Paragraph>
         </div>
         <div className='background-color pointer-events-none end-of-content margin-bottom-photo-gallery'>
@@ -91,8 +92,8 @@ export default () => (
          >
          Aos 79 anos, Nilza Francisca Santana, trabalha na venda que está na
          frente de sua casa, cuida do neto de 15 anos que vive com ela, faz
-         refeições para vender a quem chega na Realidade.
-          </StoryMedia>{" "}
+         refeições para vender a quem chega na Realidade
+          </StoryMedia>.
          Ela vê com bons olhos a chegada de novos moradores e os novos negócios
          que abrem na Vila.
         </Paragraph>
@@ -129,8 +130,8 @@ export default () => (
            }}
          >
 				 	Estradas que servem para puxar madeira de dentro da mata para pelo
-				 	menos quatro serrarias que funcionam na Vila.
-         </StoryMedia>{" "}
+				 	menos quatro serrarias que funcionam na Vila
+         </StoryMedia>.
         </Paragraph>
         </div>
         <div className='background-color pointer-events-all end-of-content margin-bottom-video'>
@@ -150,8 +151,8 @@ export default () => (
           			}}
             >
              Ele, como muitos pioneiros, acredita no potencial da estrada. “Se
-             conservar esta estrada ninguém passa mais fome aqui não”, diz.
-          </StoryMedia>{" "}
+             conservar esta estrada ninguém passa mais fome aqui não”, diz
+          </StoryMedia>.
           </Paragraph>
           </div>
           <div className='background-color pointer-events-none end-of-content margin-bottom-photo-gallery'>
@@ -192,7 +193,7 @@ export default () => (
             Empresários madeireiros começaram a chegar na última década.{" "}
             <StoryMedia
                media={{
-                 id: "image-1",
+                 id: "image-4",
                  type: "image",
                  data: {
                    credits: "Marcio Insensee e Sá/Amazônia Real",
@@ -202,7 +203,7 @@ export default () => (
              >
 	             Há em Realidade oito serrarias instaladas. Elas não funcionam
 	             simultaneamente. Quando estivemos ali, metade delas estavam em
-	             atividade.
+	             atividade
              </StoryMedia>.
           </Paragraph>
          	</div>
@@ -214,7 +215,7 @@ export default () => (
              <StoryMedia
                icon="map"
                media={{
-                 id: "map-3",
+                 id: "map-2",
                  type: "mapbox",
                  backgroundAlternative: require("images/bg-mapbox-placeholder-3.png"),
                  data: {
@@ -299,7 +300,7 @@ export default () => (
 	            >
             	Como se exauriu o recurso natural em Rondônia, ela diz, os
             	empresários madeireiros e pecuaristas migram o para o sul do
-            	Amazonas, abrindo novas áreas na floresta.
+            	Amazonas, abrindo novas áreas na floresta
             </StoryMedia>.
            </Paragraph>
            </div>
@@ -338,7 +339,7 @@ export default () => (
 						rodovia. Neste trecho está o único parque nacional da região, o{" "}
             <StoryMedia
                media={{
-                 id: "image-4",
+                 id: "image-5",
                  type: "image",
                  data: {
                    credits: "Marcio Insensee e Sá/Amazônia Real",
@@ -348,8 +349,7 @@ export default () => (
              >
 						 Nascentes do Lago Jari, um gigante com 812,4 mil hectares
 						 localizado à esquerda de quem viaja para Manaus
-             </StoryMedia>
-						.
+             </StoryMedia>.
 					 </Paragraph>
            </div>
            <div className='background-color pointer-events-all end-of-content margin-bottom-video'>
@@ -360,7 +360,7 @@ export default () => (
             protegida. A caça e a pesca melhoraram. {" "}
             <StoryMedia
               media={{
-              id: "video-5",
+              id: "video-3",
               type: "youtube",
               data: {
                 id: "Qojupw2hVhU"
@@ -369,7 +369,7 @@ export default () => (
               >
                 Ele também acredita que existe um grande potencial para o
                 turismo na região
-              </StoryMedia>{" "}
+              </StoryMedia>.
             </Paragraph>
             </div>
             <div className='background-color pointer-events-all end-of-content margin-bottom-video'>
@@ -457,7 +457,7 @@ export default () => (
                 >
                 	A área total equivale a três vezes e meia o território do
                 	estado de Alagoas
-                </StoryMedia>{" "}
+                </StoryMedia>.
               </Paragraph>
               <Paragraph>
                 Aos olhos da população local e dos empreendedores, a criação de
