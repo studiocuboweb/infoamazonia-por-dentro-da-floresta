@@ -20,6 +20,7 @@ const MediaReference = styled.div`
   height: 30px;
   transform: rotate(45deg);
   transition top .5s linear;
+  z-index:99999999999999999999999999;
   ${media.desktop`
     display: block;
   `}
@@ -169,6 +170,8 @@ class Story extends Component {
     return (
       <div id={id} className={className}>
         {this.props.children}
+        {console.log("REF TOP")}
+        {console.log(this.refTop)}
         {this.refTop ? (
           <MediaReference
             ref={node => {
