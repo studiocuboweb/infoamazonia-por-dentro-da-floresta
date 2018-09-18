@@ -18,8 +18,8 @@ export default () => (
         </Helmet>
         <Container>
         <div className='background-color pointer-events-none end-of-content margin-bottom-photo-gallery'>
-        <em>Viajamos pela BR319 por 6 dias no mês de agosto, de Porto Velho a Manaus. No caminho, entrevistamos moradores, madeireiros, agricultores, caminhoneiros, autoridades e ativistas.
-        Depois de duas décadas praticamente fechada, a rodovia está transitável. Graças a obras de manutenção, o meião do Amazonas se transforma com a chegada de migrantes, abertura de serrarias, pastagens e novas áreas de cultivo. Para alguns, é a o início do desenvolvimento econômico. Para outros, a consolidação no sul do estado o modelo que devastou as florestas de Rondônia.</em>
+        <em>Viajamos pela BR-319 por seis dias no mês de agosto, de Porto Velho a Manaus. No caminho, entrevistamos moradores, madeireiros, agricultores, caminhoneiros, autoridades e ativistas.
+        Depois de duas décadas praticamente fechada, a rodovia está transitável.</em>
         <Title as="h2">
         Chegando à Vila de Realidade
         </Title>
@@ -30,7 +30,7 @@ export default () => (
         Até poucos anos, as coisas não tinham mudado muito. A Vila de Realidade não passava de meia dúzia de casas.{" "}
           <StoryMedia
            media={{
-             id: "image-3",
+             id: "image-1",
              type: "image",
              data: {
                credits: "Marcio Isensee e Sá/Amazônia Real",
@@ -46,7 +46,7 @@ export default () => (
           O casal vinha num caminhão de Arenapólis, Mato Grosso, fugindo do garimpo, expulsos por fazendeiros. Passaram dias, com os seis filhos, dormindo na rodoviária de Porto Velho, até que um ônibus os levou para Humaitá (AM). Ali, acamparam em frente ao quartel (ainda em construção) do 5º Batalhão de Engenharia de Construção do Exército. De carona com um soldado (em um fusca) foram levados ao igarapé Realidade, onde novas terras eram oferecidas pelo governo.
           <StoryMedia
            media={{
-             id: "image-3",
+             id: "image-2",
              type: "image",
              data: {
                credits: "Marcio Isensee e Sá/Amazônia Real",
@@ -58,13 +58,10 @@ export default () => (
                 </Paragraph>
                   </div>
             <div className='background-color pointer-events-none end-of-content margin-bottom-photo-gallery'>
-            <Paragraph>
-              A chegada de novos migrantes tem relação com a manutenção feita na BR-319,algo que não ocorria há duas  décadas. Pela primeira vez, desde os anos 80, a rodovia está transitável tanto no período da seca como no período das chuvas.
-              </Paragraph>
               <Paragraph>
               <StoryMedia
                media={{
-                 id: "image-2",
+                 id: "image-3",
                  type: "image",
                  data: {
                    credits: "Marcio Isensee e Sá/Amazônia Real",
@@ -76,6 +73,9 @@ export default () => (
              </StoryMedia>{" "}
             Ela vê com bons olhos a chegada de novos moradores e os novos negócios que abrem na Vila.
              </Paragraph>
+             <Paragraph>
+               A chegada de novos migrantes tem relação com a manutenção feita na BR-319,algo que não ocorria há duas  décadas. Pela primeira vez, desde os anos 80, a rodovia está transitável tanto no período da seca como no período das chuvas.
+               </Paragraph>
             </div>
          <div className='background-color pointer-events-none end-of-content margin-bottom-map'>
          <Paragraph>
@@ -130,7 +130,7 @@ export default () => (
             Mas quando ele chegou ali em 2004 com outros dois empreendedores, vinha de Ariquemes, Rondônia. Seus colegas dedicavam-se a prospectar áreas para extração de madeira, terras que futuramente também poderiam se transformam em pastos. Ele, mestre de obras, ajudou a construir a escola de Realidade.
             </Paragraph>
             <Paragraph>
-            Há poucos anos ele vendeu por R$ 100 mil um lote que havia comprado por R$ 5 mil. “Com terra eu não mexo mais não”, desabafa. Sua preocupação é com o futuro dos moradores de Realidade, a maioria são ocupantes de terras griladas.
+            Há poucos anos ele vendeu por R$ 100 mil um lote que havia comprado por R$ 5 mil. “Com terra eu não mexo mais não”, desabafa. Sua preocupação é com o futuro dos moradores de Realidade, a maioria ocupa de terras griladas.
             </Paragraph>
             <Paragraph>
             Embora relativamente menor que o desmatamento em outras áreas de fronteira no sul do Amazonas, a devastação das florestas sob zona de influência de Realidade cresceu 62% entre 2000 e 2016, segundo dados do Instituto Nacional de Pesquisas Espaciais (INPE) analisados pela ONG Idesam em seu estudo recém lançado.
@@ -220,24 +220,16 @@ export default () => (
             O desmatamento desenfreado já é uma tendência consolidada do sul do Amazonas, principalmente quando se olha para os municípios de Lábrea e Apuí, dois que listam sempre na lista dos 10 mais desmatados de toda a Amazônia. Em relação ao Mato Grosso e o Pará, o maior estado da região amazônica ainda representa pouco no total, apenas 2,6% da extensão do desmatamento.               </Paragraph>
               <Paragraph>
               Mas é a taxa de crescimento que tem chamado atenção. No biênio 2015/2016, o Amazonas apresentou a maior taxa de crescimento do desmatamento de toda a Amazônia, 59% comparado ao período anterior. E apesar de ter havido uma redução de 11% no biênio 2016/2017, o total desmatado foi o dobro do que ocorrera somente há três anos, em 2014. {" "}
-                <StoryMedia
-              media={{
-              id: "video-3",
-              type: "youtube",
-              data: {
-                id: "rTQRPmLq41o"
-              }
-              }}
-              >
-              E apesar de ter havido uma redução de 11% no biênio 2016/2017, o total desmatado foi o dobro do que ocorrera somente há três anos, em 2014.
-              </StoryMedia>.
               </Paragraph>
             </div>
             <div className='background-color pointer-events-none end-of-content margin-bottom-photo-gallery'>
             <Title as="h2">
+            Conservação pela metade
+            </Title>
+
               <StoryMedia
                  media={{
-                   id: "image-2",
+                   id: "image-4",
                    type: "image",
                    data: {
                      credits: "Marcio Insensee e Sá/Amazônia Real",
@@ -245,17 +237,14 @@ export default () => (
                    }
                  }}
                >
-              Conservação pela metade
-               </StoryMedia>.
-               </Title>
+               </StoryMedia>
            </div>
-
             <div className='background-color pointer-events-all end-of-content margin-bottom-video'>
                 <Paragraph>
                 Viajando cerca de 200 km ao norte de Realidade, cruzamos o grande mosaico de unidades de conservação que rodeia praticamente toda a rodovia. Neste trecho está o único parque nacional da região, o Nascentes do Lago Jari, um gigante com mais de 800 mil hectares localizado à esquerda de quem viaja para Manaus.
                 </Paragraph>
                 <Paragraph>
-                Mais a frente encontra-se a Reserva de Desenvolvimento Sustentável do Igapó Açu, onde Jorge Nildo, membro do conselho gestor da Unidade de Conservação, nos contou sobre os benefícios que a criação da área protegida. A caça e a pesca melhoraram. {" "}
+                Mais à frente encontra-se a Reserva de Desenvolvimento Sustentável do Igapó Açu, onde Jorge Nildo, membro do conselho gestor da Unidade de Conservação, nos contou sobre os benefícios que a criação da área protegida. A caça e a pesca melhoraram. {" "}
                   <StoryMedia
                 media={{
                 id: "video-5",
@@ -271,35 +260,25 @@ export default () => (
               </div>
               <div className='background-color pointer-events-all end-of-content margin-bottom-video'>
                   <Paragraph>
-                  A invasão das unidades de conservação e pressão sobre terras indígenas é uma das principais preocupações neste momento em que o asfaltamento da BR-319 é dado como certo. (Quantas terras são e quais são?). Ouvimos de um funcionário da construtora CMM, cujo o acampamento está bem em frente, que todos os meses, há grupos de invasores que entram com equipamentos de topografia dentro do parque.
+                  A invasão das unidades de conservação e pressão sobre terras indígenas é uma das principais preocupações neste momento em que o asfaltamento da BR-319 é dado como certo. Ao todo são 11 áreas protegidas e seis terras indígenas com influência direta da rodavia. Ouvimos de um funcionário da construtora CMM, cujo o acampamento está bem em frente, que todos os meses, há grupos de invasores que entram com equipamentos de topografia dentro do parque.
                   </Paragraph>
                   <Paragraph>
                   O Instituto Chico Mendes de Conservação da Biodiversidade (ICMBIO) não tem funcionários dentro da unidade. Toda a gestão era feita através da base em Humaitá. Mas com o ataque de garimpeiros sofrido no final do ano passado, os gestores foram transferidos para Porto Velho. Em entrevista, o chefe do parque Rafael Pereira, afirmou que as ações de fiscalização permanecem no mesmo ritmo que anteriormente.
                   </Paragraph>
                   <Paragraph>
-                  A falta da implementação das unidades de conservação pelo órgão federal gerou uma ação cívil pelo Ministério Público Federal. No processo, os promotores pedem ao ICMBio que estabeleça prazos para a implementação de conselhos gestores e {" "}
-                    <StoryMedia
-                  media={{
-                  id: "video-4",
-                  type: "youtube",
-                  data: {
-                    id: "Qojupw2hVhU"
-                  }
-                  }}
-                  >
+                  A falta da implementação das unidades de conservação pelo órgão federal gerou uma ação cívil pelo Ministério Público Federal. No processo, os promotores pedem ao ICMBio que estabeleça prazos para a implementação de conselhos gestores e
                   planos de manejo para as UCs federais ao longo da BR-319.
-                  </StoryMedia>{" "}
                   </Paragraph>
                 </div>
-                <Title as="h2">
-                  Caminho sem volta
-                </Title>
                 <div className='background-color pointer-events-all end-of-content margin-bottom-video'>
                     <Paragraph>
-                    Desde que foi inaugurada em 1976 pelo general Ernesto Geisel, a BR 319 se tornou a única ligação por terra de Manaus com o resto do Brasil. Mas ainda que tenha sido inicialmente asfaltada, a falta de manutenção levou à rápida deterioração e em pouco mais de dez anos, em 1988, ela foi fechada.
+                    <Title as="h2">
+                      Caminho sem volta
+                    </Title>
+                    Desde que foi inaugurada em 1976 pelo general Ernesto Geisel, a BR-319 se tornou a única ligação por terra de Manaus com o resto do Brasil. Mas ainda que tenha sido inicialmente asfaltada, a falta de manutenção levou à rápida deterioração e, em pouco mais de dez anos, em 1988, ela foi fechada.
                     </Paragraph>
                     <Paragraph>
-                    Com o tráfego de veículos interrompido, a rodovia deixou de ser foco de atenção dos governo federal. Isso durou até o início dos anos 2000, quando Lula, então recém eleito indicou como ministro dos Transportes o político amazonense Alfredo Nascimento. A BR-319 entrou como prioridade das obras de infraestrutura do novo governo. Passou a fazer parte do PAC, o programa de aceleração de crescimento, plano de governo que alçou a então ministra da Casa Civil Dilma Rousseff na corrida à Presidência.
+                    Com o tráfego de veículos interrompido, a rodovia deixou de ser foco de atenção dos governo federal. Isso durou até o início dos anos 2000, quando Lula, então recém-eleito indicou como ministro dos Transportes o político amazonense Alfredo Nascimento. A BR-319 entrou como prioridade das obras de infraestrutura do novo governo. Passou a fazer parte do PAC, o programa de aceleração de crescimento, plano de governo que alçou a então ministra da Casa Civil Dilma Rousseff na corrida à Presidência.
                     </Paragraph>
                     <Paragraph>
                     Assim como o BR-163, outra rodovia cujo asfaltamento era cobrado por ligar a região produtora de grãos do Mato Grosso ao porto fluvial de Santarém, a BR 319 sempre foi temida por seu potencial de vetor de desmatamento. Por esta razão, a estratégia adotada foi a criação de áreas protegidas para evitar a grilagem de terras e invasões no momento do anúncio das obras. Coordenou-se portanto o asfaltamento com a implementação de medidas de conservação.
@@ -333,7 +312,7 @@ export default () => (
                     Aos olhos da população local e dos empreendedores, a criação de parques e reservas já teria sido suficiente para liberar as obras. Mas desde que a decisão da reabertura foi tomada durante o governo Lula, ficou acordado com organizações da sociedade civil de que haveria o licenciamento ambiental da obra.
                     </Paragraph>
                     <Paragraph>
-                    O Departamento Nacional de Infraestrutura de transportes, o DNIT, autarquia do governo federal, é o empreendedor responsável. Dois estudos anteriores, um no ano de xx e outro no ano de xx, sequer foram analisados pelo Ibama devido a qualidade.
+                    O Departamento Nacional de Infraestrutura de transportes, o DNIT, autarquia do governo federal, é o empreendedor responsável. Dois estudos anteriores sequer foram analisados pelo Ibama devido a qualidade.
                     </Paragraph>
                     <Paragraph>
                     Agora, segundo a superintendente de Meio Ambiente do DNIT, Angela Parente, o Estudo de Impacto Ambiental das obras de reconstrução do pavimento da BR-319 entre trecho do Km 250 ao km 655,7 no Amazonas tem previsão de ser entregue ao IBAMA no primeiro semestre de 2019.

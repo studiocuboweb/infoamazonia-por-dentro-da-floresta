@@ -183,7 +183,7 @@ const Top = styled.div`
     padding: 0.5rem 2rem;
     ${media.tablet`
       font-size: 1em;
-    `} 
+    `}
     ${media.phablet`
       margin: 1rem 0 0;
       font-size: 0.6em;
@@ -282,13 +282,13 @@ class Scene extends Component {
           <h2>
             <FormattedMessage
               id="general.author"
-              defaultMessage="Reportagem e roteiro: Gustavo Faleiros / Fotografia e montagem: Márcio Isensee e Sá"
+              defaultMessage="Texto: Gustavo Faleiros / Imagens: Marcio Isensee e Sá"
             />
           </h2>
           <h3>
             <FormattedMessage
               id="general.publishDate"
-              defaultMessage="31 de julho de 2018"
+              defaultMessage="19 de setembro de 2018"
             />
           </h3>
         </Top>
@@ -297,7 +297,7 @@ class Scene extends Component {
           <p className="description">
             <FormattedMessage
               id="general.tagline"
-              defaultMessage="O território foi formado no século 19, quando negros africanos compraram ou ganharam as terras após o fim da escravidão no Brasil. Agora enfrentam dificuldades para aderir o Cadastro Ambiental Rural (CAR)"
+              defaultMessage="O meião do Amazonas se transforma com a chegada de migrantes, abertura de serrarias, pastagens e novas áreas de cultivo. Para alguns, é a o início do desenvolvimento econômico. Para outros, a consolidação no estado do modelo que devastou as florestas de Rondônia."
             />
           </p>
             <div>

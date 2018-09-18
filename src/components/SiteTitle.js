@@ -89,7 +89,7 @@ class SiteTitle extends Component {
               <span className="title-item title-1">
                 <FormattedMessage
                   id="general.siteTitle1"
-                  defaultMessage="BR 319" />
+                  defaultMessage="Rodovia BR-319" />
               </span>
               <span className="title-item title-3">
                 <FormattedMessage
