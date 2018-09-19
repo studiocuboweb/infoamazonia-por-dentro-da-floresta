@@ -211,7 +211,12 @@ class Media extends Component {
       case "youtube": {
         return (
           <Wrapper preview={preview}>
-            <YouTube data={media.data} preview={preview || false} />
+          {console.log(preview)}
+          {preview !== undefined &&
+            <YouTube data={media.data} preview={preview || false}>
+                      {console.log('preview youtube')}
+            </YouTube>
+          }
           </Wrapper>
         );
       }
@@ -287,6 +292,7 @@ class Media extends Component {
       default: {
         return (
           <Wrapper preview={preview} active={active}>
+            { }
             {children}
           </Wrapper>
         );

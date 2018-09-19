@@ -85,11 +85,13 @@ class YouTubeVideo extends Component {
     }
   }
   _onReady(ev) {
+    console.log('READ')
     this.node = ev.target;
     const { preview } = this.props;
+    console.log(preview)
     if (preview) {
       ev.target.mute();
-    } else {
+    } else if (preview === false) {
       ev.target.unMute();
       ev.target.seekTo(0);
     }
@@ -101,6 +103,7 @@ class YouTubeVideo extends Component {
     }
   }
   _handleClick(ev) {
+    console.log("CLICK HANDLE")
     if (!this.props.expanded && this.props.preview) {
       this.props.expandMedia(true);
     }
@@ -110,7 +113,8 @@ class YouTubeVideo extends Component {
     let playerVars = {
       showinfo: 0,
       rel: 0,
-      autoplay: 1
+      autoplay: ((typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1)) ? 0 : 1,
+      muted:1
     };
     if (preview) {
       Object.assign(playerVars, {

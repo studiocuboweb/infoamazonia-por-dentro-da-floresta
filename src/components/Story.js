@@ -20,7 +20,7 @@ const MediaReference = styled.div`
   height: 30px;
   transform: rotate(45deg);
   transition top .5s linear;
-  z-index:99999999999999999999999999;
+  z-index:100;
   ${media.desktop`
     display: block;
   `}
