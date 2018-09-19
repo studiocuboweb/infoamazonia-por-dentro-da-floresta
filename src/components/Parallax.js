@@ -48,6 +48,21 @@ ${media.desktopHD`
     padding-bottom:0px;
   `}
 }
+.margin-bottom-video {
+  margin-bottom:200px;
+  padding-top:10px;
+  padding-bottom:10px;
+  ${media.desktop`
+    padding-top:0px;
+    margin-bottom:0px;
+    padding-bottom:0px;
+  `} 
+  ${media.desktopHD`
+    padding-top:0px;
+    margin-bottom:0px;
+    padding-bottom:0px;
+  `}
+}
 .margin-bottom-photo-gallery {
   margin-bottom:200px;
   padding-top:10px;
