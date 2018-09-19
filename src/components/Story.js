@@ -170,8 +170,6 @@ class Story extends Component {
     return (
       <div id={id} className={className}>
         {this.props.children}
-        {console.log("REF TOP")}
-        {console.log(this.refTop)}
         {this.refTop ? (
           <MediaReference
             ref={node => {
