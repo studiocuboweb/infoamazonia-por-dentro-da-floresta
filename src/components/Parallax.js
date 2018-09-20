@@ -10,6 +10,9 @@ ${media.desktop`
 ${media.desktopHD`
   margin-top:0px;
 `}
+${media.tablet`
+  margin-top:0px;
+`}
 .background-color {
   background-color:white;
   z-index:-100;
@@ -22,6 +25,9 @@ ${media.desktopHD`
   ${media.desktopHD`
     padding-top:0px;
   `}
+  ${media.tablet`
+    margin-top:0px;
+  `}
 }
 .end-of-content {
   display:block;
@@ -30,6 +36,9 @@ ${media.desktopHD`
     float:none;
   `} 
   ${media.desktopHD`
+    float:none;
+  `}
+  ${media.tablet`
     float:none;
   `}
 }
@@ -43,6 +52,11 @@ ${media.desktopHD`
     padding-bottom:0px;
   `} 
   ${media.desktopHD`
+    padding-top:0px;
+    margin-bottom:0px;
+    padding-bottom:0px;
+  `}
+  ${media.tablet`
     padding-top:0px;
     margin-bottom:0px;
     padding-bottom:0px;
@@ -62,6 +76,11 @@ ${media.desktopHD`
     margin-bottom:0px;
     padding-bottom:0px;
   `}
+  ${media.tablet`
+    padding-top:0px;
+    margin-bottom:0px;
+    padding-bottom:0px;
+  `}
 }
 .margin-bottom-photo-gallery {
   margin-bottom:200px;
@@ -73,6 +92,11 @@ ${media.desktopHD`
     padding-bottom:0px;
   `} 
   ${media.desktopHD`
+    padding-top:0px;
+    margin-bottom:0px;
+    padding-bottom:0px;
+  `}
+  ${media.tablet`
     padding-top:0px;
     margin-bottom:0px;
     padding-bottom:0px;
@@ -99,6 +123,9 @@ ${media.desktopHD`
       display:none;
     `} 
     ${media.desktopHD`
+      display:none;
+    `}
+    ${media.tablet`
       display:none;
     `}
 }

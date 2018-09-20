@@ -5,6 +5,7 @@ import styled, { css } from 'styled-components';
 import { media } from 'styles/utils';
 import { Map, Marker, Popup, TileLayer } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
+import detectIt from 'detect-it';
 
 import L from 'leaflet';
 const imagePath = '/';
@@ -39,7 +40,7 @@ class MainMap extends Component {
   }
   componentDidMount () {
     this.node = findDOMNode(this);
-    window.addEventListener('touchstart', this.handleTouchStart);
+    window.addEventListener('touchstart', this.handleTouchStart,detectIt.passiveEvents ? {passive:true} : false);
   }
   componentWillUnmount() {
     window.removeEventListener('touchstart', this.handleTouchStart);

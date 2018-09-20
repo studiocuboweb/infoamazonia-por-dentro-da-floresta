@@ -11,6 +11,7 @@ import YouTube from "./YouTube";
 import Map from "./Map";
 import MapBox from "./MapBox";
 import Gallery from "./Gallery";
+import detectIt from 'detect-it';
 
 const Wrapper = styled.div`
   position: relative;
@@ -22,10 +23,10 @@ const Wrapper = styled.div`
   background-repeat: no-repeat;
 
 
-  @media(max-width: 800px) {
-    width:100vw;
-    height:100vh;
-  }
+  // @media(max-width: 800px) {
+  //   width:100vw;
+  //   height:100vh;
+  // }
   
   .media-embed {
     width: 100%;
@@ -67,6 +68,10 @@ const Wrapper = styled.div`
       `};
       ${media.phablet`
         display:none;
+      `};
+      ${media.tablet`
+      display: flex !important;
+      flex: 0 0 10%;
       `};
     `} &.clickable {
     cursor: pointer;
@@ -120,7 +125,8 @@ const Expand = styled.div`
   color: #fff;
   ${media.desktop`
     display: none;
-  `} .fa {
+  `}
+    .fa {
     font-size: 2em;
     margin: 5%;
   }
@@ -156,7 +162,7 @@ class Media extends Component {
   }
   componentDidMount() {
     this.node = findDOMNode(this);
-    window.addEventListener("touchstart", this.handleTouchStart);
+    window.addEventListener("touchstart", this.handleTouchStart,detectIt.passiveEvents ? {passive:true} : false);
   }
   componentWillUnmount() {
     window.removeEventListener("touchstart", this.handleTouchStart);
