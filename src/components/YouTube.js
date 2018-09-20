@@ -14,6 +14,12 @@ const Wrapper = styled.div`
     display: block;
     margin: 0;
   }
+
+  ${media.phablet`
+    .video-container {
+      width: 100vw;
+    }
+  `}
   ${media.desktop`
     iframe {
       min-height: 60vh;
@@ -29,17 +35,19 @@ const Wrapper = styled.div`
         overflow: hidden;
         .video-container,
         iframe {
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
+          position: absolute !important;
+          top: 0 !important;
+          left: 0 !important;
+          width: 100% !important;
+          height: 100% !important;
         }
         .video-container {
-          width: 300%;
-          left: -100%;
+          border:1px solid green !important;
+          width: 300% !important;
+          left: -100% !important;
         }
-      `} .play {
+      `} 
+    .play {
     position: absolute;
     top: 0;
     left: 0;

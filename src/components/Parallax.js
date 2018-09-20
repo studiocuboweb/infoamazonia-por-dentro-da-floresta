@@ -63,7 +63,7 @@ ${media.tablet`
   `}
 }
 .margin-bottom-video {
-  margin-bottom:200px;
+  margin-bottom:250px;
   padding-top:10px;
   padding-bottom:10px;
   ${media.desktop`
