@@ -125,7 +125,8 @@ export default () => (
                layerType: "fill",
                sourceLayer: "Assentamentos_incra-2wyd2b",
                layoutData: {"visibility":"estradas_bioma_2012_geo-5kwra9"},
-               paintData: {"fill-color":"#ea1f1f"}
+               paintData: {"fill-color":"#ea1f1f"},
+               zoomNumber: "11",
              }
            }}
          >
@@ -228,7 +229,8 @@ export default () => (
                    layerType: "fill",
                    sourceLayer: "Assentamentos_incra-2wyd2b",
                    layoutData: {"visibility":""},
-                   paintData: {"fill-color":"hsla(250, 47%, 33%, 0.27)"}
+                   paintData: {"fill-color":"hsla(250, 47%, 33%, 0.27)"},
+                   zoomNumber: "8",
                  }
                }}
              >
@@ -455,7 +457,8 @@ export default () => (
                       layerType: "fill",
                       sourceLayer: "Assentamentos_incra-2wyd2b",
                       layoutData: {"visibility":"visible"},
-                      paintData: {"fill-color":"hsla(250, 47%, 33%, 0.27)"}
+                      paintData: {"fill-color":"hsla(250, 47%, 33%, 0.27)"},
+                      zoomNumber: "0",
                     }
                   }}
                 >

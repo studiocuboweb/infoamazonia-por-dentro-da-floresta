@@ -1,3 +1,5 @@
+import detectIt from 'detect-it';
+
 export default function swipe (el, callback) {
 
   let direction,
@@ -34,8 +36,8 @@ export default function swipe (el, callback) {
       callback(direction);
   }
 
-  el.addEventListener('touchstart', start);
-  el.addEventListener('touchend', end);
+  el.addEventListener('touchstart', start,detectIt.passiveEvents ? {passive:true} : false);
+  el.addEventListener('touchend', end,detectIt.passiveEvents ? {passive:true} : false);
 
   return function removeListener () {
     el.removeEventListener('touchstart', start);

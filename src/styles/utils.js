@@ -7,7 +7,7 @@ export const sizes = [
   },
   {
     device: 'phoneHorizontal',
-    width: 480
+    width: 740
   },  
   {
     device: 'phablet',
@@ -15,7 +15,7 @@ export const sizes = [
   },
   {
     device: 'tablet',
-    width: 750
+    width: 740
   },
   {
     device: 'desktop',
