@@ -4,6 +4,8 @@ import ReactMapboxGl, { Layer, Source } from "react-mapbox-gl";
 
 const Map = ReactMapboxGl({
   accessToken: "pk.eyJ1IjoiaW5mb2FtYXpvbmlhIiwiYSI6InItajRmMGsifQ.JnRnLDiUXSEpgn7bPDzp7g",
+  // minZoom: 8,
+  // maxZoom: 10,
   interactive: ((typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1)) ? false : true
 });
 
@@ -13,6 +15,7 @@ class MapBox extends Component {
     stateSourceOptionType:null,
     stateSourceOptionUrl:null,
     center: null,
+    stateZoomNumber: null,
     stateStyle:null,
     stateSourceId:null,
     stateLayerType:null,
@@ -24,8 +27,8 @@ class MapBox extends Component {
   }
   
   componentWillReceiveProps(nextProps) {
-    const { sourceOptionType,sourceOptionUrl,coordinates,style,sourceId,layerType,sourceLayer,layoutVisibility,layerId,layoutData,paintData } = nextProps;
-    const { sourceOptionType:oldSourceOptionType,sourceOptionUrl:oldSourceOptionUrl,coordinates:oldCoordinates,style:oldStyle,sourceId:oldSourceId,layerType:oldLayerType,sourceLayer:oldSourceLayer,layoutVisibility:oldLayoutVisibility,layerId:oldLayerId,layoutData:oldlayoutData,paintData:oldPaintData} = this.props
+    const { sourceOptionType,sourceOptionUrl,coordinates,style,sourceId,layerType,sourceLayer,layoutVisibility,layerId,layoutData,paintData,zoomNumber } = nextProps;
+    const { sourceOptionType:oldSourceOptionType,sourceOptionUrl:oldSourceOptionUrl,coordinates:oldCoordinates,style:oldStyle,sourceId:oldSourceId,layerType:oldLayerType,sourceLayer:oldSourceLayer,layoutVisibility:oldLayoutVisibility,layerId:oldLayerId,layoutData:oldlayoutData,paintData:oldPaintData,zoomNumber:oldZoom} = this.props
 
     if (sourceOptionType !== oldSourceOptionType) {
       this.setState({
@@ -86,6 +89,12 @@ class MapBox extends Component {
         statePaintData: paintData
       })
     }
+
+    if (zoomNumber !== oldZoom) {
+      this.setState({
+        stateZoomNumber: zoomNumber
+      })
+    }
     this.setState({updated:false})
     setTimeout(
       function() {
@@ -97,11 +106,12 @@ class MapBox extends Component {
    
   }
   render() {
-    const { sourceOptionType,sourceOptionUrl,coordinates,style,sourceId,layerType,sourceLayer,layoutVisibility,layerId,layoutData,paintData} = this.props;
-    const { stateSourceOptionType,stateSourceOptionUrl,center,stateStyle,stateSourceId,stateLayerType,stateSourceLayer,stateLayoutVisibility,stateLayerId,updated,stateLayoutData,statePaintData} = this.state 
+    const { sourceOptionType,sourceOptionUrl,coordinates,style,sourceId,layerType,sourceLayer,layoutVisibility,layerId,layoutData,paintData,zoomNumber} = this.props;
+    const { stateSourceOptionType,stateSourceOptionUrl,center,stateStyle,stateSourceId,stateLayerType,stateSourceLayer,stateLayoutVisibility,stateLayerId,updated,stateLayoutData,statePaintData,stateZoomNumber} = this.state 
     return (
       <Map
         center={center  || coordinates}
+        zoom={[stateZoomNumber]}
         flyToOptions={{
           center: center || coordinates,
           speed: 0.9,

@@ -51,6 +51,10 @@ const Wrapper = styled.div`
         css`
           height: 50vh;
       `} 
+      ${media.tablet`
+        display: flex !important;
+        flex: 0 0 10%;
+      `};
       ${media.desktop`
         display: flex !important;
         flex: 0 0 45%;
@@ -68,10 +72,6 @@ const Wrapper = styled.div`
       `};
       ${media.phablet`
         display:none;
-      `};
-      ${media.tablet`
-      display: flex !important;
-      flex: 0 0 10%;
       `};
     `} &.clickable {
     cursor: pointer;
