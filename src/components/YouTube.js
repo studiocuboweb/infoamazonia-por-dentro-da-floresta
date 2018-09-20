@@ -93,7 +93,8 @@ class YouTubeVideo extends Component {
     if (preview) {
       ev.target.mute();
     } else if (preview === false) {
-      if ((typeof window.orientation === "undefined") || (navigator.userAgent.indexOf('IEMobile') === -1)) {
+      if (((typeof window.orientation == "undefined") && (navigator.userAgent.indexOf('IEMobile') == -1))) {
+        console.log('ENTROU NO UNMUTE');
         ev.target.unMute();
         ev.target.seekTo(0);
       }
