@@ -4,6 +4,9 @@ import { media } from 'styles/utils';
 
 export default styled.div`
 margin-top: -35px;
+@media(min-width: 540px) {
+  padding-top:0px;
+};
 ${media.desktop`
   margin-top:0px;
 `} 
@@ -19,6 +22,9 @@ ${media.tablet`
 }
 .padding-header {
   padding-top:35px;
+  @media(min-width: 540px) {
+    padding-top:0px;
+  };
   ${media.desktop`
     padding-top:0px;
   `} 
@@ -32,6 +38,9 @@ ${media.tablet`
 .end-of-content {
   display:block;
   float:left;
+  @media(min-width: 540px) {
+    float:none;
+  };
   ${media.desktop`
     float:none;
   `} 
@@ -46,6 +55,11 @@ ${media.tablet`
   margin-bottom:600px;
   padding-top:10px;
   padding-bottom:10px;
+  @media(min-width: 540px) {
+    padding-top:0px;
+    margin-bottom:0px;
+    padding-bottom:0px;
+  };
   ${media.desktop`
     padding-top:0px;
     margin-bottom:0px;
@@ -66,6 +80,11 @@ ${media.tablet`
   margin-bottom:250px;
   padding-top:10px;
   padding-bottom:10px;
+  @media(min-width: 540px) {
+    padding-top:0px;
+    margin-bottom:0px;
+    padding-bottom:0px;
+  };
   ${media.desktop`
     padding-top:0px;
     margin-bottom:0px;
@@ -86,6 +105,11 @@ ${media.tablet`
   margin-bottom:200px;
   padding-top:10px;
   padding-bottom:10px;
+  @media(min-width: 540px) {
+    padding-top:0px;
+    margin-bottom:0px;
+    padding-bottom:0px;
+  };
   ${media.desktop`
     padding-top:0px;
     margin-bottom:0px;
@@ -119,6 +143,9 @@ ${media.tablet`
     top: 9px;
     left: 0;
     z-index: 99;
+    @media(min-width: 540px) {
+      display:none;
+    };
     ${media.desktop`
       display:none;
     `} 

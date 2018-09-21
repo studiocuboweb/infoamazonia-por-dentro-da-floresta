@@ -51,10 +51,12 @@ const Wrapper = styled.div`
         css`
           height: 50vh;
       `} 
-      ${media.tablet`
+      @media(min-width: 540px) {
         display: flex !important;
-        flex: 0 0 10%;
-      `};
+        flex: 0 0 45%;
+        border-top: 0;
+        box-shadow: 0 0 0;
+      };
       ${media.desktop`
         display: flex !important;
         flex: 0 0 45%;
