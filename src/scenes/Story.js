@@ -166,10 +166,8 @@ class Scene extends Component {
           </Parallax>
         </Story>
         <Media media={media} preview={true} parallax={false} />
-        {console.log('LOAD MEDIA 1')}
         {media.expanded && (
           <Modal close={this.unexpand}>
-            {console.log('LOAD MEDIA 2')}
             <Media media={media} preview={false} />
           </Modal>
         )}

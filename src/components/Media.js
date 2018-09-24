@@ -226,18 +226,11 @@ class Media extends Component {
       case "youtube": {
         return (
           <Wrapper preview={preview}>
-          {console.log(preview)}
-          {console.log(typeof window.orientation)}
-          {console.log(navigator.userAgent.indexOf('IEMobile'))}
           {(preview == undefined && ((typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1))) &&
-            <YouTube data={media.data} preview={preview || false}>
-                      {console.log('preview youtube mobile')}
-            </YouTube>
+            <YouTube data={media.data} preview={preview || false} />
           }
           {(preview !== undefined && ((typeof window.orientation === "undefined") || (navigator.userAgent.indexOf('IEMobile') === -1))) &&
-            <YouTube data={media.data} preview={preview || false}>
-                      {console.log('preview youtube')}
-            </YouTube>
+            <YouTube data={media.data} preview={preview || false} />
           }
           </Wrapper>
         );
