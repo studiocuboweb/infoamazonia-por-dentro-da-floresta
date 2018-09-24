@@ -39,6 +39,13 @@ const Wrapper = styled.div`
     width:100%;
     height:100vh;
   }
+
+  @media(min-width: 1000px) and (max-width: 1500px){
+    .placeholder-background {
+      float:left;
+      border:1px solid blue;
+    }
+  }
   ${props =>
     props.preview &&
     css`
@@ -254,9 +261,11 @@ class Media extends Component {
         return (
           <Wrapper preview={preview} parallax={parallax} active={active}>
             <div className='placeholder-background' style={{'backgroundImage':`url(${media.backgroundAlternative})`}}>
-              {this.detectWebGLContext() &&
-                <MapBox {...media.data} />
-              }
+              <div style={{'width':'510px'}}>
+                {this.detectWebGLContext() &&
+                  <MapBox {...media.data} />
+                }
+              </div>
             </div>
           </Wrapper>
         );
