@@ -42,8 +42,9 @@ const Wrapper = styled.div`
 
   @media(min-width: 1000px) and (max-width: 1500px){
     .placeholder-background {
-      float:left;
-      border:1px solid blue;
+      .mapboxgl-map {
+        width:100%!important;
+      }
     }
   }
   ${props =>
@@ -253,12 +254,10 @@ class Media extends Component {
       case "mapbox": {
         return (
           <Wrapper preview={preview} parallax={parallax} active={active}>
-            <div className='placeholder-background' style={{'backgroundImage':`url(${media.backgroundAlternative})`}}>
-              <div style={{'width':'510px'}}>
-                {this.detectWebGLContext() &&
-                  <MapBox {...media.data} />
-                }
-              </div>
+            <div className='placeholder-background' style={{'backgroundImage':`url(${media.backgroundAlternative})`}}>            
+              {this.detectWebGLContext() &&
+                <MapBox {...media.data} />
+              }
             </div>
           </Wrapper>
         );
