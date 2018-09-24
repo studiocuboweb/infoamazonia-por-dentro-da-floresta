@@ -288,7 +288,7 @@ class Scene extends Component {
           <h3>
             <FormattedMessage
               id="general.publishDate"
-              defaultMessage="19 de setembro de 2018"
+              defaultMessage="26 de setembro de 2018"
             />
           </h3>
         </Top>
@@ -297,7 +297,7 @@ class Scene extends Component {
           <p className="description">
             <FormattedMessage
               id="general.tagline"
-              defaultMessage="O meião do Amazonas se transforma com a chegada de migrantes, abertura de serrarias, pastagens e novas áreas de cultivo. Para alguns, é a o início do desenvolvimento econômico. Para outros, a consolidação no estado do modelo que devastou as florestas de Rondônia."
+              defaultMessage="O meião do Amazonas se transforma com a chegada de migrantes, abertura de serrarias, pastagens e áreas de cultivo. Para alguns, é o início do desenvolvimento. Para outros, a consolidação no estado do modelo que devastou as florestas de Rondônia."
             />
           </p>
             <div>

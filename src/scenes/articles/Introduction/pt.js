@@ -15,7 +15,7 @@ export default () => (
   <article>
       <div className='foreground'>
         <Helmet>
-          <title>De atoleiro à rondonização</title>
+          <title>Rodavia BR-319: De atoleiro à rondonização</title>
         </Helmet>
         <Container>
         <div className='background-color pointer-events-none end-of-content margin-bottom-photo-gallery'>
@@ -31,7 +31,7 @@ export default () => (
         Chegando à Vila de Realidade
         </Title>
         <Paragraph>
-         Quando o “seu” Cuiabano e a “vovó” Nilza chegaram em Realidade, não
+         Quando o “seo” Cuiabano e a “vovó” Nilza chegaram em Realidade, não
          havia nada. Quer dizer, quase nada, quase ninguém. Era o fim dos anos
          60 e só estavam ali os trabalhadores da empreiteira que construía a
          estrada, a BR319. Obra da ditadura militar.
@@ -58,25 +58,16 @@ export default () => (
         <Paragraph>
          O casal vinha num caminhão de Arenapólis, Mato Grosso, fugindo do
          garimpo, expulsos por fazendeiros. Passaram dias, com os seis filhos,
-         dormindo na rodoviária de Porto Velho, até que um ônibus os levou para
+         dormindo na rodoviária de Porto Velho. Até que um ônibus os levou para
          Humaitá (AM). Ali, acamparam em frente ao quartel (ainda em
          construção) do 5º Batalhão de Engenharia de Construção do Exército. De
          carona com um soldado (em um fusca) foram levados ao igarapé
          Realidade, onde novas terras eram oferecidas pelo governo.
-          <StoryMedia
-           media={{
-             id: "image-2",
-             type: "image",
-             data: {
-               credits: "Marcio Isensee e Sá/Amazônia Real",
-               src: require("photos/mapa_1.png")
-             }
-           }}
-	         >
-				 	Na margem direita da nova rodovia, estabeleceu-se um assentamento
-				 	da reforma agrária
-        	</StoryMedia>.
         </Paragraph>
+        <FeaturedText>
+        Na margem direita da nova rodovia, estabeleceu-se um assentamento
+        da reforma agrária chamado Realidade.
+        </FeaturedText>.
         </div>
         <div className='background-color pointer-events-none end-of-content margin-bottom-photo-gallery'>
         <Paragraph>
@@ -98,17 +89,25 @@ export default () => (
          que abrem na Vila.
         </Paragraph>
         <Paragraph>
-         A chegada de novos migrantes tem relação com a manutenção feita na
-         BR-319,algo que não ocorria há duas  décadas. Pela primeira vez,
+         Novos migrantes chegam animados com a  manutenção na
+         BR-319, algo que não ocorria há duas décadas. Pela primeira vez,
          desde os anos 80, a rodovia está transitável tanto no período da seca
-         como no período das chuvas.
+         como no período das chuvas. O verão e o inverno.
         </Paragraph>
         </div>
         <div className='background-color pointer-events-none end-of-content margin-bottom-map'>
         <Paragraph>
-         Agora, já são cerca de sete mil habitantes, incluindo quem vive nas
-         estradas vicinais. Na região, desde 2000, foram abertos 17 km de
-         estradas não oficiais a cada ano, indica um novo estudo.
+         Já são cerca de sete mil habitantes, incluindo quem vive nas
+         vicinais. Estas se multiplicam. Na região, desde 2000, abriu-se um média de 17 km de
+         estradas 'não oficiais' por ano.
+         <FileLink
+           href={require("https://idesam.org/publicacao/analise-municipios-br319.pdf")}
+           format="pdf"
+           size="8.1MB"
+         >
+         É o que indica um novo estudo do Instituto de Conservação
+         Desenvolvimento Sustentável do Amazonas (Idesam).
+         </FileLink>{" "}
          <StoryMedia
            icon="map"
            media={{
@@ -119,14 +118,14 @@ export default () => (
                layerId: "estradas_bioma_2012_geo-5kwra9",
                sourceOptionType: "vector",
                sourceOptionUrl: "mapbox://infoamazonia.cwig28rm",
-               coordinates: [-61.865,-6.514],
-               style: "mapbox://styles/infoamazonia/civwnqdp7000q2jltj0lq1nkp",
+               coordinates: [-61.650318,-4.782842],
+               style: "mapbox://styles/infoamazonia/cjmgv2m1s2q942spqd4naf2ke",
                sourceId: "source1",
                layerType: "fill",
                sourceLayer: "Assentamentos_incra-2wyd2b",
                layoutData: {"visibility":"estradas_bioma_2012_geo-5kwra9"},
                paintData: {"fill-color":"#ea1f1f"},
-               zoomNumber: "11",
+               zoomNumber: "5",
              }
            }}
          >
@@ -181,14 +180,13 @@ export default () => (
             Há poucos anos ele vendeu por R$ 100 mil um lote que havia comprado
             por R$ 5 mil. “Com terra eu não mexo mais não”, desabafa. Sua
             preocupação é com o futuro dos moradores de Realidade, a maioria
-            ocupa de terras griladas.
+            ocupa terras griladas.
           </Paragraph>
           <Paragraph>
             Embora relativamente menor que o desmatamento em outras áreas de
             fronteira no sul do Amazonas, a devastação das florestas sob zona de
             influência de Realidade cresceu 62% entre 2000 e 2016, segundo dados
-            do Instituto Nacional de Pesquisas Espaciais (INPE) analisados pela
-            ONG Idesam em seu estudo recém lançado.
+            do Instituto Nacional de Pesquisas Espaciais (INPE) analisados pelo Idesam.
           </Paragraph>
           <Paragraph>
             Empresários madeireiros começaram a chegar na última década.{" "}
@@ -211,55 +209,39 @@ export default () => (
          	<div className='background-color pointer-events-none end-of-content margin-bottom-map'>
            <Paragraph>
              Uma interpretação comum é a da migração da atividade econômica,
-             geralmente ilegal, que ocorre ao longo da BR 230, a Transamazônica
-             para o eixo da BR 319.{" "}
-             <StoryMedia
-               icon="map"
-               media={{
-                 id: "map-2",
-                 type: "mapbox",
-                 backgroundAlternative: require("images/bg-mapbox-placeholder-3.png"),
-                 data: {
-                   layerId: "Assentamentos_incra-2wyd2b2",
-                   sourceOptionType: "vector",
-                   sourceOptionUrl: "mapbox://infoamazonia.1kti1hxh",
-                   coordinates: [-54.372,-5.636],
-                   style: "mapbox://styles/infoamazonia/civwnqdp7000q2jltj0lq1nkp",
-                   sourceId: "source3",
-                   layerType: "fill",
-                   sourceLayer: "Assentamentos_incra-2wyd2b",
-                   layoutData: {"visibility":""},
-                   paintData: {"fill-color":"hsla(250, 47%, 33%, 0.27)"},
-                   zoomNumber: "8",
-                 }
-               }}
-             >
-             É o caso de Santo Antônio do Matupi, ou o “180”, como é conhecido o
-             distrito localizado a 180 quilômetros de Humaitá. Uma ocupação
-             explosiva
-             </StoryMedia>.
+             geralmente ilegal, que ocorre ao longo da BR-230 - a Transamazônica -
+             para o eixo da BR-319. É o caso de Santo Antônio do Matupi, ou o “180”, como é conhecido o
+             distrito localizado a 180 quilômetros de Humaitá.
            </Paragraph>
            <Paragraph>
 	           Escutamos mais de uma vez que a Vila de Realidade era um
-	           “rebatimento do 180”. Ou seja, buscando novas oportunidade,
+	           “rebatimento do 180”. Buscando novas oportunidade,
 	           trabalhadores, posseiros, pecuaristas de Santo Antônio do Matupi
-	           começaram a migrar para as beiras da BR 319.  As coisas parecem
-	           mesmo interligadas. Muitos que chegam à Realidade vem no ônibus da
-	           viação Matupi.
+	           começaram a migrar para as beiras da BR-319.
            </Paragraph>
+           <FeaturedText>
+           As coisas parecem
+           mesmo interligadas. Muitos que chegam à Realidade vem no ônibus da
+           viação Matupi.
+           </FeaturedText>
            <Paragraph>
 	           Wagner Reinoso, 24 anos anos, é um dos que chegaram à vila atraídos
 	           pela chance de um emprego e escaldados pelas mudanças no eixo da
 	           Transamazônica. Professor da escola de Realidade, ele conta que no
 	           Matupi a atividade econômica decaiu após um série de ações do Ibama
-	           que fizeram com que as serrarias fechassem no Matupi. “Minha mãe e
+	           que fizeram com que as serrarias fechassem. “Minha mãe e
 	           meu irmão trabalhavam na serraria. Depois que o Ibama passou por
 	           lá, ficou difícil.”
            </Paragraph>
            <Paragraph>
-	           Hugo Loss, chefe Técnico-Ambiental do Ibama, que coordena as
-	           fiscalizações, explicou que as ações de combate ao desmatamento no
-	           sul do Amazonas são frequentes. O foco principal da repressão às
+	           Hugo Loss é chefe Técnico-Ambiental do Ibama - Amazonas e coordena as
+	           fiscalizações. Em sua sala em Manaus, tenso, com dois celulares sobre a mesa
+             e imagens de satélite abertas no computador, ele nos concedeu a entrevista.
+             Explicou que as ações de combate ao desmatamento no
+	           sul do Amazonas são frequentes.
+            </Paragraph>
+            <Paragraph>
+             O foco principal da repressão às
 	           atividades ilegais ainda se concentra nas cidades, distritos e vilas
 	           ao longo da Transamazônica,incluindo o distrito do 180. Ele indica
 	           também que há uma pressão de desmatamento na região de Realidade.
@@ -276,7 +258,7 @@ export default () => (
             Previsão feita há dez anos, a chegada de uma nova frente de
             ocupação e desmatamento da Amazônia através da rodovia que liga
             Porto Velho a Manaus está enfim se concretizando. Há quatro anos, a
-            BR 319 se tornou trafegável, ainda que sem asfalto por 405 km. Ela
+            BR-319 se tornou trafegável, ainda que sem asfalto por 405 km. Ela
             atrai migrantes de todo o Brasil, mas especialmente de Rondônia.
 					 </Paragraph>
 					 <Paragraph>
@@ -290,7 +272,13 @@ export default () => (
 					 <div className='background-color pointer-events-all end-of-content margin-bottom-video'>
 					 <Paragraph>
             Uma das ambientalistas mais atuantes e vocais do estado de Rondônia,
-            Ivaneide Bandeira, fundadora da ONG Kanindé afirma que a
+            Ivaneide Bandeira, fundadora da{" "}
+            <ExternalLink
+              href="http://kaninde.org.br/"
+              language="en"
+            >
+            ONG Kanindé,
+            </ExternalLink>{" "}afirma que a
             pavimentação da rodovia atende aos interesses de grupos econômicos
             de estado. “Tudo vai dançar”, diz Neidinha, como é conhecida.{" "}
             <StoryMedia
@@ -304,13 +292,13 @@ export default () => (
 	            >
             	Como se exauriu o recurso natural em Rondônia, ela diz, os
             	empresários madeireiros e pecuaristas migram o para o sul do
-            	Amazonas, abrindo novas áreas na floresta
-            </StoryMedia>.
+            	Amazonas, abrindo novas áreas na floresta.
+            </StoryMedia>
            </Paragraph>
            </div>
            <div className='background-color pointer-events-all end-of-content margin-bottom-video'>
            <Paragraph>
-            É curioso escutar o madeireiro Sidney Poletini, ele mesmo vindo de
+            É curioso escutar ao madeireiro Sidney Poletini, ele mesmo vindo de
             Rondônia, concordar com o que diz Neidinha. Com palavras diferentes
             eles têm previsões semelhantes para o futuro desta parte da Amazônia
             “Um dia isso tudo aqui vai acabar“, diz Sidney, que é proprietário
@@ -320,14 +308,14 @@ export default () => (
             O desmatamento desenfreado já é uma tendência consolidada do sul do
             Amazonas, principalmente quando se olha para os municípios de Lábrea
             e Apuí, dois que listam sempre na lista dos 10 mais desmatados de
-            toda a Amazônia. Em relação ao Mato Grosso e o Pará, o maior estado
-            da região amazônica ainda representa pouco no total, apenas 2,6% da
+            toda a Amazônia. Em relação ao Mato Grosso e o Pará, o Amazonas, maior estado
+            da região amazônica, ainda representa pouco no total, apenas 2,6% da
             extensão do desmatamento.
 					 </Paragraph>
 					 <Paragraph>
-            Mas é a taxa de crescimento que tem chamado atenção. No biênio
+            Mas é a taxa de crescimento que salta aos olhos. No biênio
             2015/2016, o Amazonas apresentou a maior taxa de crescimento do
-            desmatamento de toda a Amazônia, 59% comparado ao período anterior.
+            desmatamento de toda a Amazônia: 59% comparado ao período anterior.
             E apesar de ter havido uma redução de 11% no biênio 2016/2017, o
             total desmatado foi o dobro do que ocorrera somente há três anos, em
             2014.
@@ -340,20 +328,9 @@ export default () => (
 					 <Paragraph>
 						Viajando cerca de 200 km ao norte de Realidade, cruzamos o grande
 						mosaico de unidades de conservação que rodeia praticamente toda a
-						rodovia. Neste trecho está o único parque nacional da região, o{" "}
-            <StoryMedia
-               media={{
-                 id: "image-5",
-                 type: "image",
-                 data: {
-                   credits: "Marcio Insensee e Sá/Amazônia Real",
-                   src: require("photos/br319_4.jpg")
-                 }
-               }}
-             >
-						 Nascentes do Lago Jari, um gigante com 812,4 mil hectares
-						 localizado à esquerda de quem viaja para Manaus
-             </StoryMedia>.
+						rodovia. Neste trecho está o único parque nacional da região, o
+            Nascentes do Lago Jari, um gigante com 812,4 mil hectares
+						localizado à esquerda de quem viaja para Manaus.
 					 </Paragraph>
            </div>
            <div className='background-color pointer-events-all end-of-content margin-bottom-video'>
