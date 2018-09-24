@@ -84,7 +84,6 @@ class YouTubeVideo extends Component {
     this._handleClick = this._handleClick.bind(this);
   }
   componentWillReceiveProps(nextProps) {
-    console.log('componentWillReceiveProps');
     if (nextProps.preview && this.node) {
       if (nextProps.expanded && !this.props.expanded) {
         this.node.pauseVideo();
@@ -94,30 +93,24 @@ class YouTubeVideo extends Component {
     }
   }
   _onReady(ev) {
-    console.log('READ')
     this.node = ev.target;
     const { preview } = this.props;
-    console.log(preview)
     if (preview) {
       ev.target.mute();
     } else if (preview === false) {
       if (((typeof window.orientation == "undefined") && (navigator.userAgent.indexOf('IEMobile') == -1))) {
-        console.log('ENTROU NO UNMUTE');
         ev.target.unMute();
         ev.target.seekTo(0);
       }
     }
   }
   _onStateChange(ev) {
-    console.log('onStateChange');
     const { preview } = this.props;
     if (preview && ev.data === 0) {
-      console.log('playvideo');
       ev.target.playVideo();
     }
   }
   _handleClick(ev) {
-    console.log("CLICK HANDLE")
     if (!this.props.expanded && this.props.preview) {
       this.props.expandMedia(true);
     }
@@ -138,12 +131,6 @@ class YouTubeVideo extends Component {
     }
     return (
       <Wrapper onClick={this._handleClick} preview={preview}>
-        {console.log("window.orientation")}
-        {console.log(typeof window.orientation)}
-        {console.log("navigator.userAgent.indexOf('IEMobile')")}
-        {console.log(navigator.userAgent.indexOf('IEMobile'))}
-        {console.log("IF RESPONSIVE")}
-        {console.log(((typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1)) ? 0 : 1)}
         <div className="video-container">
           <YouTube
             videoId={data.id}
