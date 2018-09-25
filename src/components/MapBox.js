@@ -111,7 +111,7 @@ class MapBox extends Component {
     return (
       <Map
         center={center  || coordinates}
-        zoom={[stateZoomNumber]}
+        zoom={[zoomNumber]}
         flyToOptions={{
           center: center || coordinates,
           speed: 0.9,
