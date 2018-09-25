@@ -99,15 +99,14 @@ export default () => (
         <Paragraph>
          Já são cerca de sete mil habitantes, incluindo quem vive nas
          vicinais. Estas se multiplicam. Na região, desde 2000, abriu-se um média de 17 km de
-         estradas 'não oficiais' por ano.
-         <FileLink
-           href={require("https://idesam.org/publicacao/analise-municipios-br319.pdf")}
-           format="pdf"
-           size="8.1MB"
+         estradas 'não oficiais' por ano.{" "}
+         <ExternalLink
+           href="https://idesam.org/publicacao/analise-municipios-br319.pdf"
+           language="en"
          >
          É o que indica um novo estudo do Instituto de Conservação
          Desenvolvimento Sustentável do Amazonas (Idesam).
-         </FileLink>{" "}
+         </ExternalLink>
          <StoryMedia
            icon="map"
            media={{
@@ -321,19 +320,20 @@ export default () => (
             2014.
            </Paragraph>
            </div>
-					 <div className='background-color pointer-events-none end-of-content margin-bottom-photo-gallery'>
+					 <div className='background-color pointer-events-all end-of-content margin-bottom-video'>
 					 <Title as="h2">
             Conservação pela metade
            </Title>
 					 <Paragraph>
 						Viajando cerca de 200 km ao norte de Realidade, cruzamos o grande
 						mosaico de unidades de conservação que rodeia praticamente toda a
-						rodovia. Neste trecho está o único parque nacional da região, o
+						rodovia.
+            </Paragraph>
+            <Paragraph>
+            Neste trecho está o único parque nacional da região, o
             Nascentes do Lago Jari, um gigante com 812,4 mil hectares
 						localizado à esquerda de quem viaja para Manaus.
-					 </Paragraph>
-           </div>
-           <div className='background-color pointer-events-all end-of-content margin-bottom-video'>
+			      </Paragraph>
 					 <Paragraph>
             Mais à frente encontra-se a Reserva de Desenvolvimento Sustentável
             do Igapó Açu, onde Jorge Nildo, membro do conselho gestor da Unidade
