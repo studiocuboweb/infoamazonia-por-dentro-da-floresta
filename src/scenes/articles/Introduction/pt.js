@@ -126,7 +126,7 @@ export default () => (
                sourceLayer: "Assentamentos_incra-2wyd2b",
                layoutData: {"visibility":"visible"},
                paintData: {"fill-color":"#ea1f1f"},
-               zoomNumber: "9.37",
+               zoomNumber: 9.37,
              }
            }}
          >
@@ -473,7 +473,7 @@ export default () => (
                       sourceLayer: "Assentamentos_incra-2wyd2b",
                       layoutData: {"visibility":"visible"},
                       paintData: {"fill-color":"hsla(250, 47%, 33%, 0.27)"},
-                      zoomNumber: "7.00",
+                      zoomNumber: 7.00,
                     }
                   }}
                 >
