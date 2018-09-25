@@ -31,10 +31,10 @@ export default () => (
         Chegando à Vila de Realidade
         </Title>
         <Paragraph>
-         Quando o “seo” Cuiabano e a “vovó” Nilza chegaram em Realidade, não
+         Quando o “seu” Cuiabano e a “vovó” Nilza chegaram em Realidade, não
          havia nada. Quer dizer, quase nada, quase ninguém. Era o fim dos anos
          60 e só estavam ali os trabalhadores da empreiteira que construía a
-         estrada, a BR-319. Obra da ditadura militar.
+         estrada, a BR-319. Obra da ditadura militar iniciada em 1968.
         </Paragraph>
         <Paragraph>
          Até poucos anos, as coisas não tinham mudado muito. A Vila de
@@ -57,15 +57,16 @@ export default () => (
         <div className='background-color pointer-events-none end-of-content margin-bottom-photo-gallery'>
         <Paragraph>
          O casal vinha num caminhão de Arenapólis, Mato Grosso, fugindo do
-         garimpo, expulsos por fazendeiros. Passaram dias dormindo na rodoviária de Porto Velho,
-         com os seis filhos. Até que um ônibus os levou para
+         garimpo, expulsos por fazendeiros. Com os seis filhos,
+         passaram dias dormindo na rodoviária de Porto Velho.
+         . Até que um ônibus os levou para
          Humaitá. Ali, acamparam em frente ao quartel (ainda em
          obras) do 5º Batalhão de Engenharia de Construção do Exército. De
          carona com um soldado (em um fusca) foram levados ao igarapé
          Realidade, onde novas terras eram oferecidas pelo governo.
         </Paragraph>
         <FeaturedText>
-        Na margem direita da nova rodovia, estabeleceu-se um assentamento
+        Na margem direita da nova rodovia, havia se estabelecido um assentamento
         da reforma agrária chamado Realidade.
         </FeaturedText>
         <Paragraph>
@@ -95,7 +96,7 @@ export default () => (
          como no período das chuvas. O verão e o inverno.
         </Paragraph>
         <Paragraph>
-         Já são cerca de sete mil habitantes, incluindo quem vive nas numerosas
+         Já são cerca de sete mil habitantes, incluindo quem vive em numerosas
          vicinais. Na região, desde 2000, abriu-se em média de 17 km de
          estradas ‘não oficiais’ por ano. É o que indica um novo{" "}
          <FileLink
@@ -113,7 +114,6 @@ export default () => (
            media={{
              id: "map-1",
              type: "mapbox",
-             backgroundAlternative: require("images/bg-mapbox-placeholder-1.png"),
              data: {
                layerId: "estradas_bioma_2012_geo-5kwra9",
                sourceOptionType: "vector",
@@ -125,7 +125,7 @@ export default () => (
                sourceLayer: "Assentamentos_incra-2wyd2b",
                layoutData: {"visibility":"visible"},
                paintData: {"fill-color":"#ea1f1f"},
-               zoomNumber: [9.37],
+               zoomNumber: [6.63],
              }
            }}
          >
@@ -167,52 +167,66 @@ export default () => (
           	havia ônibus, ou qualquer transporte público que permitisse viajar
           	até a Realidade.
           </Paragraph>
+
+          <Quote author="Vasco Antônio da Silva, mestre de obras">
+          Aqui melhorou muito.
+          </Quote>
+
           <Paragraph>
-            “Aqui melhorou muito”, disse com a fala pausada e o sotaque
-            sertanejo, ele vindo de Colniza, norte do Mato Grosso.
-          </Paragraph>
-          <Paragraph>
-            Mas quando ele chegou ali em 2004 com outros dois empreendedores,
+            Quando ele chegou ali em 2004 com outros dois empreendedores,
             vinha de Ariquemes, Rondônia. Seus colegas dedicavam-se a prospectar
             áreas para extração de madeira, terras que futuramente também
             poderiam se transformam em pastos. Ele, mestre de obras, ajudou a
             construir a escola de Realidade.
           </Paragraph>
           <Paragraph>
-            Há poucos anos ele vendeu por R$ 100 mil um lote que havia comprado
-            por R$ 5 mil. “Com terra eu não mexo mais não”, desabafa. Sua
-            preocupação é com o futuro dos moradores de Realidade, a maioria
-            ocupa terras griladas.
+            Há poucos anos ele vendeu por $100.000 reais um lote que havia comprado
+            por $5000 reais. “Com terra eu não mexo mais não”, desabafa. Sua
+            preocupação é com o futuro de Realidade, a maioria dos habitantes
+            ocupa terras griladas. Embora do lado direito da rodovia esteja o
+            assentamento do Incra, na parte esquerda, as terras são particulares.
           </Paragraph>
           <Paragraph>
             Embora relativamente menor que o desmatamento em outras áreas de
             fronteira no sul do Amazonas, a devastação das florestas sob zona de
-            influência de Realidade cresceu 62% entre 2000 e 2016, segundo dados
-            do Instituto Nacional de Pesquisas Espaciais (INPE) analisados pelo Idesam.
+            influência de Realidade cresceu 62% entre 2000 e 2016. Os dados
+            do Instituto Nacional de Pesquisas Espaciais (INPE) foram computados pelo Idesam.
           </Paragraph>
           <Paragraph>
             Empresários madeireiros começaram a chegar na última década.{" "}
             <StoryMedia
-               media={{
-                 id: "image-4",
-                 type: "image",
-                 data: {
-                   credits: "Marcio Insensee e Sá/Amazônia Real",
-                   src: require("photos/br319_1.jpg")
-                 }
-               }}
-             >
-	             Há em Realidade oito serrarias instaladas. Elas não funcionam
-	             simultaneamente. Quando estivemos ali, metade delas estavam em
-	             atividade
-             </StoryMedia>.
+              media={{
+                id: "galery-1",
+                type: "gallery",
+                data: {
+                  items: [
+                    {
+                      src: require("photos/br319_1.jpg")
+                    },
+                    {
+                      src: require("photos/br319_5.jpg")
+                    },
+                    {
+                      src: require("photos/br319_6.jpg")
+                    },
+                    {
+                      src: require("photos/br319_7.jpg")
+                    }
+                  ]
+                }
+              }}
+            >
+            Há em Realidade oito serrarias instaladas. Elas não funcionam
+            simultaneamente. Quando estivemos ali, metade delas estavam em
+            atividade
+            </StoryMedia>
           </Paragraph>
          	</div>
          	<div className='background-color pointer-events-none end-of-content margin-bottom-video'>
            <Paragraph>
              Uma interpretação comum é a da migração da atividade econômica,
-             geralmente ilegal, que ocorre ao longo da BR-230 - a Transamazônica -
-             para o eixo da BR-319. É o caso de Santo Antônio do Matupi, ou o “Cento-e-Oitenta”, como é conhecido o
+             da BR-230 - a Transamazônica - para o eixo da BR-319.
+             É o caso de Santo Antônio do Matupi, ou o “Cento-e-Oitenta”, como é conhecido o
              distrito localizado a 180 quilômetros de Humaitá.
            </Paragraph>
            <Paragraph>
@@ -300,16 +314,19 @@ export default () => (
             Rondônia, concordar com o que diz Neidinha. Com palavras diferentes
             eles têm previsões semelhantes para o futuro desta parte da Amazônia.
             “Um dia isso tudo aqui vai acabar“, diz Sidney, que é proprietário
-            da Amazonas Madeiras, ao longo da BR-319, na Vila de Realidade.
+            da Amazonas Madeiras, cerca do KM 250 da BR-319, na Vila de Realidade.
            </Paragraph>
 					 <Paragraph>
-            O desmatamento desenfreado já é uma tendência consolidada do sul do
+            O desmatamento desenfreado já é uma tendência no sul do
             Amazonas, principalmente quando se olha para os municípios de Lábrea
-            e Apuí, dois que listam sempre entre os 10 mais desmatados de
-            toda a Amazônia. Comparado ao Mato Grosso ou Pará, o Amazonas, maior estado
+            e Apuí, ambos sobre a Transamazônica. Os dois sempre estão na lista
+            dos 10 municípios mais desmatados da Amazônia.
+            </Paragraph>
+            <FeaturedText>
+            Comparado ao Mato Grosso ou Pará, o Amazonas, maior estado
             da região, ainda representa pouco no total, apenas 2,8% da
             do desmatamento.
-					 </Paragraph>
+            </FeaturedText>
 					 <Paragraph>
             Mas é a taxa de crescimento que salta aos olhos. No biênio
             2015/2016, o Amazonas apresentou a maior taxa de crescimento do
@@ -344,17 +361,27 @@ export default () => (
             </div>
  					  <div className='background-color pointer-events-all end-of-content margin-bottom-video'>
             <Paragraph>
-              A invasão por grileiros das unidades de conservação e pressão sobre terras
+              A invasão das unidades de conservação por grileiros e a pressão sobre terras
               indígenas é uma das principais preocupações neste momento em que o
               asfaltamento da BR-319 é dado como certo.
             </Paragraph>
-            <Paragraph>
+            <FeaturedText>
               Ao todo são 11 áreas
               protegidas e seis terras indígenas com influência direta da
-              rodovia. Ouvimos de um funcionário da construtora CMM, cujo
-              acampamento está bem em frente ao Parque Nacional,
-              que todos os meses há grupos de invasores entram com equipamentos
-              de topografia na mata protegida.
+              rodovia.
+            </FeaturedText>
+            <Paragraph>
+              Ouvimos de um funcionário da{" "}
+              <ExternalLink
+              href="http://www.cmmconstrutora.com.br/"
+              language="pt"
+            > construtora CMM,
+            </ExternalLink>{" "}
+            cujo acampamento está bem em frente ao Parque Nacional,
+              que todos os meses há grupos de invasores que entram com equipamentos
+              de topografia na mata protegida. A informação de que invasõe
+              ocorrem e, na verdade, se intensificam foram mencionadas por outras
+              fonte, a ex-gestora da Reserva Igapó Açu, Dioneia Ferreira
             </Paragraph>
             <Paragraph>
               O Instituto Chico Mendes de Conservação da Biodiversidade (ICMBio),
@@ -363,8 +390,13 @@ export default () => (
             </Paragraph>
             <Paragraph>
               Toda a gestão antes era feita
-              através da base em Humaitá. Por conta de um ataque
-              sofrido no final do ano passado, quando a sede do instituto foi queimada,
+              através da base em Humaitá.{" "}
+              <ExternalLink
+              href="http://amazoniareal.com.br/prefeito-de-humaita-e-vereadores-sao-presos-por-envolvimento-em-ataque-a-predios-do-ibama-e-icmbio/"
+              language="pt"
+              > Por conta de um ataque
+              sofrido no final do ano passado,
+              </ExternalLink>{" "} quando a sede do instituto foi queimada,
               os gestores foram transferidos
               para Porto Velho.
               </Paragraph>
@@ -463,7 +495,7 @@ export default () => (
                       sourceLayer: "Assentamentos_incra-2wyd2b",
                       layoutData: {"visibility":"visible"},
                       paintData: {"fill-color":"hsla(250, 47%, 33%, 0.27)"},
-                      zoomNumber: "7",
+                      zoomNumber: "6",
                     }
                   }}
                 >
