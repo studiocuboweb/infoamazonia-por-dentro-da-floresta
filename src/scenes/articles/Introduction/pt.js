@@ -15,7 +15,7 @@ export default () => (
   <article>
       <div className='foreground'>
         <Helmet>
-          <title>Rodavia BR-319: De atoleiro à rondonização</title>
+          <title>Rodovia BR-319: De atoleiro à rondonização</title>
         </Helmet>
         <Container>
         <div className='background-color pointer-events-none end-of-content margin-bottom-photo-gallery'>
@@ -49,17 +49,17 @@ export default () => (
              }
            }}
          	>
-          No inverno - a temporada de chuvas, carro nenhum passava. Para chegar
-          à Humaitá, apenas a 120 km ao sul, podia se levar um, dois dias
+          No inverno – a temporada de chuvas –, carro nenhum passava. Para chegar
+          a Humaitá (AM), apenas a 120 km ao sul, podia se levar um, dois dias
           </StoryMedia>.
         </Paragraph>
         </div>
-        <div className='background-color pointer-events-none end-of-content margin-bottom-map'>
+        <div className='background-color pointer-events-none end-of-content margin-bottom-photo-gallery'>
         <Paragraph>
          O casal vinha num caminhão de Arenapólis, Mato Grosso, fugindo do
          garimpo, expulsos por fazendeiros. Passaram dias dormindo na rodoviária de Porto Velho,
          com os seis filhos. Até que um ônibus os levou para
-         Humaitá (AM). Ali, acamparam em frente ao quartel (ainda em
+         Humaitá. Ali, acamparam em frente ao quartel (ainda em
          obras) do 5º Batalhão de Engenharia de Construção do Exército. De
          carona com um soldado (em um fusca) foram levados ao igarapé
          Realidade, onde novas terras eram oferecidas pelo governo.
@@ -67,9 +67,7 @@ export default () => (
         <FeaturedText>
         Na margem direita da nova rodovia, estabeleceu-se um assentamento
         da reforma agrária chamado Realidade.
-        </FeaturedText>.
-        </div>
-        <div className='background-color pointer-events-none end-of-content margin-bottom-photo-gallery'>
+        </FeaturedText>
         <Paragraph>
           <StoryMedia
            media={{
@@ -88,26 +86,26 @@ export default () => (
          Ela vê com bons olhos a chegada de novos moradores e os negócios novos
          que abrem na Vila.
         </Paragraph>
+        </div>
+        <div className='background-color pointer-events-none end-of-content margin-bottom-map'>
         <Paragraph>
          Os migrantes chegam animados com a  manutenção na
          BR-319, algo que não ocorria há duas décadas. Pela primeira vez,
          desde os anos 80, a rodovia está transitável tanto no período da seca
          como no período das chuvas. O verão e o inverno.
         </Paragraph>
-        </div>
-        <div className='background-color pointer-events-none end-of-content margin-bottom-map'>
         <Paragraph>
          Já são cerca de sete mil habitantes, incluindo quem vive nas numerosas
          vicinais. Na região, desde 2000, abriu-se em média de 17 km de
-         estradas 'não oficiais' por ano.{" "}
+         estradas ‘não oficiais’ por ano. É o que indica um novo{" "}
          <FileLink
           href="https://idesam.org/publicacao/analise-municipios-br319.pdf"
           format="pdf"
           size="8.1MB"
         >
-        É o que indica um novo estudo do Instituto de Conservação
-        Desenvolvimento Sustentável do Amazonas (Idesam).
-        </FileLink>
+        estudo do Instituto de Conservação Desenvolvimento Sustentável do
+        Amazonas (Idesam)
+        </FileLink>.
          </Paragraph>
          <Paragraph>
          <StoryMedia
@@ -145,6 +143,7 @@ export default () => (
           de animais, o que precisavam para alimentar os filhos. {" "}
           </Paragraph>
           <Paragraph>
+            Ele, como muitos pioneiros, acredita no potencial da estrada.{" "}
           <StoryMedia
           media={{
             id: "video-1",
@@ -154,8 +153,7 @@ export default () => (
           				}
           			}}
             >
-             Ele, como muitos pioneiros, acredita no potencial da estrada. “Se
-             conservar esta estrada ninguém passa mais fome aqui não”, diz
+            “Se conservar esta estrada ninguém passa mais fome aqui não”, diz
           </StoryMedia>.
           </Paragraph>
           </div>
@@ -210,7 +208,7 @@ export default () => (
              </StoryMedia>.
           </Paragraph>
          	</div>
-         	<div className='background-color pointer-events-none end-of-content margin-bottom-map'>
+         	<div className='background-color pointer-events-none end-of-content margin-bottom-video'>
            <Paragraph>
              Uma interpretação comum é a da migração da atividade econômica,
              geralmente ilegal, que ocorre ao longo da BR-230 - a Transamazônica -
@@ -225,7 +223,7 @@ export default () => (
            </Paragraph>
            <FeaturedText>
            As coisas parecem
-           mesmo interligadas. Muitos que chegam à Realidade vem no ônibus da
+           mesmo interligadas. Muitos que chegam a Realidade vêm no ônibus da
            viação Matupi.
            </FeaturedText>
            <Paragraph>
@@ -253,8 +251,6 @@ export default () => (
 	           daquela economia, com a abertura de novas serrarias e migração de
 	           pessoas.”
            </Paragraph>
-					 </div>
-					 <div className='background-color pointer-events-all end-of-content margin-bottom-video'>
 	         <Title as="h2">
 	           A Rondonização
 	         </Title>
@@ -272,8 +268,6 @@ export default () => (
             referência ao modelo baseado em grandes desmatamentos no estado
             vizinho.
 					 </Paragraph>
-					 </div>
-					 <div className='background-color pointer-events-all end-of-content margin-bottom-video'>
 					 <Paragraph>
             Uma das ambientalistas mais atuantes e vocais do estado de Rondônia,
             Ivaneide Bandeira, fundadora da{" "}
@@ -281,8 +275,8 @@ export default () => (
               href="http://kaninde.org.br/"
               language="pt"
             >
-            ONG Kanindé,
-            </ExternalLink>{" "}afirma que a
+            ONG Kanindé
+            </ExternalLink>, afirma que a
             pavimentação da rodovia atende aos interesses de grupos econômicos
             do estado. “Tudo vai dançar”, diz Neidinha, como é conhecida.{" "}
             <StoryMedia
@@ -296,17 +290,17 @@ export default () => (
 	            >
             	Como se exauriu o recurso natural em Rondônia, ela diz, os
             	empresários madeireiros e pecuaristas migram o para o sul do
-            	Amazonas, abrindo novas áreas na floresta.
-            </StoryMedia>
+            	Amazonas, abrindo novas áreas na floresta
+            </StoryMedia>.
            </Paragraph>
            </div>
-           <div className='background-color pointer-events-all end-of-content margin-bottom-video'>
+           <div className='background-color pointer-events-all end-of-content margin-bottom-photo-gallery'>
            <Paragraph>
             É curioso escutar ao madeireiro Sidney Poletini, ele mesmo vindo de
             Rondônia, concordar com o que diz Neidinha. Com palavras diferentes
             eles têm previsões semelhantes para o futuro desta parte da Amazônia.
             “Um dia isso tudo aqui vai acabar“, diz Sidney, que é proprietário
-            da Amazonas Madeiras, ao longo da BR 319, na Vila de Realidade.
+            da Amazonas Madeiras, ao longo da BR-319, na Vila de Realidade.
            </Paragraph>
 					 <Paragraph>
             O desmatamento desenfreado já é uma tendência consolidada do sul do
@@ -324,8 +318,6 @@ export default () => (
             total derrubado foi o dobro do que ocorrera somente há três anos, em
             2014.
            </Paragraph>
-           </div>
-           <div className='background-color pointer-events-none end-of-content margin-bottom-photo-gallery'>
            <Title as="h2">
             Conservação pela metade
            </Title>
@@ -346,9 +338,11 @@ export default () => (
                }}
              > Neste trecho está o único parque nacional da região, o
              Nascentes do Lago Jari, um gigante com 812,4 mil hectares
- 						localizado à esquerda de quem viaja para Manaus.
-             </StoryMedia>
+ 						localizado à esquerda de quem viaja para Manaus
+             </StoryMedia>.
 			      </Paragraph>
+            </div>
+ 					  <div className='background-color pointer-events-all end-of-content margin-bottom-video'>
             <Paragraph>
               A invasão por grileiros das unidades de conservação e pressão sobre terras
               indígenas é uma das principais preocupações neste momento em que o
@@ -357,13 +351,13 @@ export default () => (
             <Paragraph>
               Ao todo são 11 áreas
               protegidas e seis terras indígenas com influência direta da
-              rodavia. Ouvimos de um funcionário da construtora CMM, cujo o
+              rodovia. Ouvimos de um funcionário da construtora CMM, cujo
               acampamento está bem em frente ao Parque Nacional,
-              que todos os meses, há grupos de invasores entram com equipamentos
+              que todos os meses há grupos de invasores entram com equipamentos
               de topografia na mata protegida.
             </Paragraph>
             <Paragraph>
-              O Instituto Chico Mendes de Conservação da Biodiversidade (ICMBIo),
+              O Instituto Chico Mendes de Conservação da Biodiversidade (ICMBio),
               órgão federal responsável pela gestão das áreas protegidas,
               não tem funcionários dentro da unidade.
             </Paragraph>
@@ -384,23 +378,24 @@ export default () => (
             </Paragraph>
             <Paragraph>
               A falta da implementação das unidades de conservação pelo órgão
-              federal gerou uma ação cívil pelo Ministério Público Federal. No
+              federal gerou uma ação civil pelo Ministério Público Federal. No
               processo, os promotores pedem ao ICMBio que estabeleça prazos para
               a implementação de conselhos gestores e planos de manejo para as
-              UCs federais ao longo da BR-319.
+              unidades de conservação federais ao longo da BR-319.
             </Paragraph>
-            </div>
- 					  <div className='background-color pointer-events-all end-of-content margin-bottom-video'>
            <Paragraph>
-            Mais à frente, já há pouco menos de 300 km de Manaus, chegamos
+            Mais à frente, já a pouco menos de 300 km de Manaus, chegamos
             à Reserva de Desenvolvimento Sustentável
             do Igapó Açu. A área homenageia o rio que, como diz o próprio nome,
-            é um grande alagado. A reserva estadual, com seus vastos 400 mil,
-            hectares é a única unidade de  conservação por onde passa a rodovia.
+            é um grande alagado. A reserva estadual, com seus vastos 400 mil
+            hectares, é a única unidade de  conservação por onde passa a rodovia.
             </Paragraph>
             <Paragraph>
-            Já há anos, a reserva do Igapó-Açu tem um conselho gestor bastante atuante.
-            Seu plano de gestão, aprovado e publicado; desde 2014.{" "}
+            Já há anos, a reserva do Igapó-Açu tem um conselho gestor bastante
+            atuante. Seu plano de gestão, aprovado e publicado, desde 2014. Por
+            ali, estivemos com Jorge Nildo, membro do conselho gestor e um guia
+            para pesca e turismo na região. Dormimos em sua casa e na manhã de
+            um domingo, ele nos levou para conhecer os famosos igapós.{" "}
             <StoryMedia
               media={{
               id: "video-3",
@@ -410,16 +405,13 @@ export default () => (
               }
               }}
               >
-              Por ali, estivemos com Jorge Nildo, membro do conselho gestor e um
-              guia para pesca e turismo na região.
-              Dormimos em sua casa e na manhã de um domingo, ele nos levou para conhecer
-              os famosos igapós. Ali, ele nos contou sobre os benefícios que a criação da área
-              protegida. A caça e a pesca melhoraram.
-              Além disso, existe um grande potencial para o turismo.
-              </StoryMedia>{" "}
+              Ali, ele nos contou sobre os benefícios que a criação da área
+              protegida. A caça e a pesca melhoraram. Além disso, existe um
+              grande potencial para o turismo
+              </StoryMedia>.
             </Paragraph>
             </div>
-            <div className='background-color pointer-events-none end-of-content margin-bottom-photo-gallery'>
+            <div className='background-color pointer-events-none end-of-content margin-bottom-photo-map'>
             <Title as="h2">
               Caminho sem volta
             </Title>
@@ -433,7 +425,7 @@ export default () => (
             <Paragraph>
               Com o tráfego de veículos interrompido, a rodovia deixou de ser
               foco de atenção dos governo federal. Isso durou até o início dos
-              anos 2000, quando Lula, então recém-eleito indicou como ministro
+              anos 2000, quando Lula, então recém-eleito, indicou como ministro
               dos Transportes o político amazonense Alfredo Nascimento. A BR-319
               entrou como prioridade das obras de infraestrutura do novo
               governo. Passou a fazer parte do PAC, o programa de aceleração de
@@ -443,19 +435,17 @@ export default () => (
             <Paragraph>
               Assim como o BR-163, outra rodovia cujo asfaltamento era cobrado
               por ligar a região produtora de grãos do Mato Grosso ao porto
-              fluvial de Santarém, a BR 319 sempre foi temida por seu potencial
+              fluvial de Santarém, a BR-319 sempre foi temida por seu potencial
               de vetor de desmatamento. Por esta razão, a estratégia adotada foi
               a criação de áreas protegidas para evitar a grilagem de terras e
-              invasões no momento do anúncio das obras. Coordenou-se portanto o
+              invasões no momento do anúncio das obras. Coordenou-se, portanto, o
               asfaltamento com a implementação de medidas de conservação.
             </Paragraph>
-						</div>
-						<div className='background-color pointer-events-none end-of-content margin-bottom-map'>
             <Paragraph>
               Em 2008 e 2009, o Ministério do Meio Ambiente, então sob o comando
               de Carlos Minc, e a Secretária Estadual de Meio Ambiente do
               Amazonas, na gestão de Eduardo Braga (PMDB), anunciaram a criação
-              de 8,4 milhões de hectares de unidades de conservação.{""}
+              de 8,4 milhões de hectares de unidades de conservação.{" "}
               <StoryMedia
                   icon="map"
                   media={{
@@ -482,25 +472,25 @@ export default () => (
                 </StoryMedia>.
               </Paragraph>
 							</div>
-							<div className='background-color pointer-events-none end-of-content margin-bottom-map'>
+            	<div className='background-color end-of-content'>
               <Paragraph>
                 Aos olhos da população local e dos empreendedores, a criação de
                 parques e reservas já teria sido suficiente para liberar as
                 obras. Mas desde que a decisão da reabertura foi tomada durante
                 o governo Lula, ficou acordado com organizações da sociedade
-                civil de que haveria o licenciamento ambiental da obra.
+                civil que haveria o licenciamento ambiental da obra.
               </Paragraph>
               <Paragraph>
                 O Departamento Nacional de Infraestrutura de transportes, o
                 DNIT, autarquia do governo federal, é o empreendedor
                 responsável. Dois estudos anteriores sequer foram analisados
-                pelo Ibama devido a qualidade dos documentos.
+                pelo Ibama devido à qualidade dos documentos.
               </Paragraph>
               <Paragraph>
                 Agora, segundo a superintendente de Meio Ambiente do DNIT,
                 Angela Parente, o Estudo de Impacto Ambiental das obras de
-                reconstrução do pavimento da BR-319 entre trecho do Km 250 ao km
-                655,7 no Amazonas tem previsão de ser entregue ao IBAMA no
+                reconstrução do pavimento da BR-319 entre trecho do km 250 ao km
+                655,7 no Amazonas tem previsão de ser entregue ao Ibama no
                 primeiro semestre de 2019.
               </Paragraph>
               <Paragraph>
@@ -523,22 +513,20 @@ export default () => (
                 populações indígenas.
               </Paragraph>
               <Paragraph>
-                “O asfaltamento da BR 319 são favas contadas”, é um comentário
-                comum por aqueles que vem trabalhando na região.  Dioneia
-                Ferreira, nativa de Humaitá, a cidade polo no Sul do Amazonas,
-                no entroncamento da BR 319 com a Transamazônica, é uma das
-                ativistas mais vocais  “A verdade é que existe um dragão de boca
-                aberta subindo a BR , Quem está lá na frente não vai ser
-                poupado.”, ela alerta.
+                “O asfaltamento da BR-319 são favas contadas”, é um comentário
+                comum por aqueles que vêm trabalhando na região.  Dioneia
+                Ferreira, nativa de Humaitá, a cidade polo no sul do Amazonas
+                no entroncamento da BR-319 com a Transamazônica, é uma das
+                ativistas mais vocais. “A verdade é que existe um dragão de boca
+                aberta subindo a BR e quem está lá na frente não vai ser
+                poupado”, ela alerta.
               </Paragraph>
-            	</div>
-            	<div className='background-color end-of-content'>
 	            <RelatedNews
 	              sectionTitle={"Assista também: "}
 	              title={"Bem-vindo a Realidade"}
-	              subtitle={"Uma vila localizada na estrada mais erma do Brasil - a rodovia que liga Porto Velho a Manaus - se torna a nova fronteira para madeireiros de Rondônia." }
+	              subtitle={"Uma vila localizada na estrada mais erma do Brasil – a rodovia que liga Porto Velho a Manaus – se torna a nova fronteira para madeireiros de Rondônia." }
 	              imageUrl={require("images/realidade.jpg")}
-	              href={"http://realidade.amazoniareal.com.br/"}
+	              href={"https://realidade.amazoniareal.com.br/"}
 	            />
           	</div>
           </Container>

@@ -83,9 +83,9 @@ const favicons = new FaviconsWebpackPlugin({
 
 const pwa = new WebpackPwaManifest({
   name: "Especial Olhando por Dentro da Floresta Amazônica",
-  short_name: "Especial Olhando por Dentro da Floresta Amazônica",
+  short_name: "Rodovia BR-319: De atoleiro à rondonização",
   description:
-    "The destruction of 110 thousand square kilometers of forests in the largest mining project in Venezuela",
+    "O meião do Amazonas se transforma com a chegada de migrantes, abertura de serrarias, pastagens e áreas de cultivo",
   background_color: "#fff",
   orientation: "portrait",
   start_url: "/?launcher=true",

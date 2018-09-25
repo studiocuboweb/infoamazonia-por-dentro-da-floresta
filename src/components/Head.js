@@ -6,16 +6,16 @@ import { Helmet } from "react-helmet";
 const messages = defineMessages({
   title: {
     id: "head.title",
-    defaultMessage: "A luta dos herdeiros de Mata Cavalo pelo título do quilombo"
+    defaultMessage: "Rodovia BR-319: De atoleiro à rondonização"
   },
   description: {
     id: "head.description",
     defaultMessage:
-      "O território foi formado no século 19, quando negros africanos compraram ou ganharam as terras após o fim da escravidão no Brasil. Agora enfrentam dificuldades para aderir o Cadastro Ambiental Rural (CAR)"
+      "O meião do Amazonas se transforma com a chegada de migrantes, abertura de serrarias, pastagens e áreas de cultivo"
   },
   keywords: {
     id: "head.keywords",
-    defaultMessage: "mata cavalo, quilombolas"
+    defaultMessage: "BR-319, desmatamento, Amazonas"
   }
 });
 
