@@ -100,13 +100,14 @@ export default () => (
          Já são cerca de sete mil habitantes, incluindo quem vive nas numerosas
          vicinais. Na região, desde 2000, abriu-se em média de 17 km de
          estradas 'não oficiais' por ano.{" "}
-         <ExternalLink
-           href="https://idesam.org/publicacao/analise-municipios-br319.pdf"
-           language="en"
-         >
-         É o que indica um novo estudo do Instituto de Conservação
-         Desenvolvimento Sustentável do Amazonas (Idesam).
-         </ExternalLink>
+         <FileLink
+          href="https://idesam.org/publicacao/analise-municipios-br319.pdf"
+          format="pdf"
+          size="8.1MB"
+        >
+        É o que indica um novo estudo do Instituto de Conservação
+        Desenvolvimento Sustentável do Amazonas (Idesam).
+        </FileLink>
          </Paragraph>
          <Paragraph>
          <StoryMedia
@@ -126,7 +127,7 @@ export default () => (
                sourceLayer: "Assentamentos_incra-2wyd2b",
                layoutData: {"visibility":"visible"},
                paintData: {"fill-color":"#ea1f1f"},
-               zoomNumber: 9.37,
+               zoomNumber: [9.37],
              }
            }}
          >
@@ -278,7 +279,7 @@ export default () => (
             Ivaneide Bandeira, fundadora da{" "}
             <ExternalLink
               href="http://kaninde.org.br/"
-              language="en"
+              language="pt"
             >
             ONG Kanindé,
             </ExternalLink>{" "}afirma que a
@@ -399,12 +400,7 @@ export default () => (
             </Paragraph>
             <Paragraph>
             Já há anos, a reserva do Igapó-Açu tem um conselho gestor bastante atuante.
-            Seu plano de gestão, aprovado e publicado; desde 2014.
-            Por ali, estivemos com Jorge Nildo, membro do conselho gestor e um
-            guia para pesca e turismo na região.
-            Dormimos em sua casa e na manhã de um domingo, ele nos levou para conhecer
-            os famosos igapós. Ali, ele nos contou sobre os benefícios que a criação da área
-            protegida. A caça e a pesca melhoraram. {" "}
+            Seu plano de gestão, aprovado e publicado; desde 2014.{" "}
             <StoryMedia
               media={{
               id: "video-3",
@@ -414,9 +410,13 @@ export default () => (
               }
               }}
               >
-                Além disso, existe um grande potencial para o
-                turismo.
-              </StoryMedia>
+              Por ali, estivemos com Jorge Nildo, membro do conselho gestor e um
+              guia para pesca e turismo na região.
+              Dormimos em sua casa e na manhã de um domingo, ele nos levou para conhecer
+              os famosos igapós. Ali, ele nos contou sobre os benefícios que a criação da área
+              protegida. A caça e a pesca melhoraram.
+              Além disso, existe um grande potencial para o turismo.
+              </StoryMedia>{" "}
             </Paragraph>
             </div>
             <div className='background-color pointer-events-none end-of-content margin-bottom-photo-gallery'>
@@ -473,7 +473,7 @@ export default () => (
                       sourceLayer: "Assentamentos_incra-2wyd2b",
                       layoutData: {"visibility":"visible"},
                       paintData: {"fill-color":"hsla(250, 47%, 33%, 0.27)"},
-                      zoomNumber: 7.00,
+                      zoomNumber: "7",
                     }
                   }}
                 >
