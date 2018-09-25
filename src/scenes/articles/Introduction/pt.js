@@ -201,16 +201,16 @@ export default () => (
                 data: {
                   items: [
                     {
-                      src: require("photos/br319_1.jpg")
+                      src: require("photos/galeria/br319_1.jpg")
                     },
                     {
-                      src: require("photos/br319_5.jpg")
+                      src: require("photos/galeria/br319_5.jpg")
                     },
                     {
-                      src: require("photos/br319_6.jpg")
+                      src: require("photos/galeria/br319_6.jpg")
                     },
                     {
-                      src: require("photos/br319_7.jpg")
+                      src: require("photos/galeria/br319_7.jpg")
                     }
                   ]
                 }
@@ -483,7 +483,7 @@ export default () => (
                   media={{
                     id: "map-3",
                     type: "mapbox",
-                    backgroundAlternative: require("images/bg-mapbox-placeholder-3.png"),
+
                     data: {
                       layerId: "Assentamentos_incra-2wyd2b2",
                       sourceOptionType: "vector",
@@ -508,10 +508,13 @@ export default () => (
               <Paragraph>
                 Aos olhos da população local e dos empreendedores, a criação de
                 parques e reservas já teria sido suficiente para liberar as
-                obras. Mas desde que a decisão da reabertura foi tomada durante
-                o governo Lula, ficou acordado com organizações da sociedade
-                civil que haveria o licenciamento ambiental da obra.
+                obras.
               </Paragraph>
+              <FeaturedText>
+              Mas desde que a decisão da reabertura foi tomada durante
+              o governo Lula, ficou acordado com organizações da sociedade
+              civil que haveria o licenciamento ambiental da obra.
+              </FeaturedText>
               <Paragraph>
                 O Departamento Nacional de Infraestrutura de transportes, o
                 DNIT, autarquia do governo federal, é o empreendedor
