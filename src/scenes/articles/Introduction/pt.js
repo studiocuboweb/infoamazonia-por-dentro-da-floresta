@@ -411,7 +411,7 @@ export default () => (
               </StoryMedia>.
             </Paragraph>
             </div>
-            <div className='background-color pointer-events-none end-of-content margin-bottom-photo-map'>
+            <div className='background-color pointer-events-none end-of-content margin-bottom-map'>
             <Title as="h2">
               Caminho sem volta
             </Title>

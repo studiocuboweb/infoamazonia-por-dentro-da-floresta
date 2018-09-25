@@ -135,29 +135,6 @@ class Scene extends Component {
                 </Switch>
               </CSSTransition>
             </TransitionGroup>
-            {!entering ? (
-              <div style={{backgroundColor:'white',float:'left',display:'block',textAlign:'right',width:'100%'}}>
-                <footer>
-                  <Container>
-                    {!this.isLastArticle() ? (
-                      <Paragraph>
-                        <a
-                          className="continue"
-                          onClick={() => this.nextArticle()}
-                          href="javascript:void(0);"
-                        >
-                          <FormattedMessage
-                            id="story.continueReading"
-                            defaultMessage="Continue reading"
-                          />
-                          <span className="fa fa-chevron-right" />
-                        </a>
-                      </Paragraph>
-                    ) : null}
-                  </Container>
-                </footer>
-              </div>
-            ) : null}
             {redirect &&
               redirect !== location.pathname && <Redirect to={redirect} />}
             <div className='background'>
