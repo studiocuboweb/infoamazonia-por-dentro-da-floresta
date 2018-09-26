@@ -66,8 +66,8 @@ export default () => (
          Realidade, onde novas terras eram oferecidas pelo governo.
         </Paragraph>
         <FeaturedText>
-        Na margem direita da nova rodovia, havia se estabelecido um assentamento
-        da reforma agrária chamado Realidade.
+        Na margem direita da nova rodovia, se estabeleceu um assentamento
+        da reforma agrária chamado Realidade, com 42,0 mil hectares.
         </FeaturedText>
         <Paragraph>
           <StoryMedia
@@ -115,17 +115,17 @@ export default () => (
              id: "map-1",
              type: "mapbox",
              data: {
-               layerId: "estradas_bioma_2012_geo-5kwra9",
+               layerId: "",
                sourceOptionType: "vector",
-               sourceOptionUrl: "mapbox://infoamazonia.cwig28rm",
+               sourceOptionUrl: "",
                coordinates: [-63.000,-7.036],
                style: "mapbox://styles/infoamazonia/cjmgv2m1s2q942spqd4naf2ke",
                sourceId: "source1",
                layerType: "fill",
-               sourceLayer: "Assentamentos_incra-2wyd2b",
-               layoutData: {"visibility":"visible"},
+               sourceLayer: "",
+               layoutData: {"visibility":""},
                paintData: {"fill-color":"#ea1f1f"},
-               zoomNumber: [6.63],
+               zoomNumber: [5.11],
              }
            }}
          >
@@ -241,10 +241,10 @@ export default () => (
            viação Matupi.
            </FeaturedText>
            <Paragraph>
-	           Wagner Reinoso, 24 anos anos, é um dos que chegaram à vila atraídos
+	           Wagner Reinoso, 24 anos, é um dos que chegaram à vila atraídos
 	           pela chance de um emprego e escaldados pelas mudanças no eixo da
 	           Transamazônica. Professor da escola de Realidade, ele conta que no
-	           Matupi a atividade econômica decaiu após um série de ações do Ibama
+	           Matupi a atividade econômica decaiu após uma série de ações do Ibama
 	           que fizeram com que as serrarias fechassem. “Minha mãe e
 	           meu irmão trabalhavam na serraria. Depois que o Ibama passou por
 	           lá, ficou difícil.”
@@ -324,8 +324,8 @@ export default () => (
             </Paragraph>
             <FeaturedText>
             Comparado ao Mato Grosso ou Pará, o Amazonas, maior estado
-            da região, ainda representa pouco no total, apenas 2,8% da
-            do desmatamento.
+            da região, representa pouco no desmatamento total, apenas 2,8% das
+            áreas derrubadas.
             </FeaturedText>
 					 <Paragraph>
             Mas é a taxa de crescimento que salta aos olhos. No biênio
@@ -371,7 +371,9 @@ export default () => (
               rodovia.
             </FeaturedText>
             <Paragraph>
-              Ouvimos de um funcionário da{" "}
+            A informação de que invasões
+            ocorrem e, na verdade, se intensificam foi mencionada por algumas
+            fontes durante o percurso. Ouvimos de um funcionário da{" "}
               <ExternalLink
               href="http://www.cmmconstrutora.com.br/"
               language="pt"
@@ -379,9 +381,8 @@ export default () => (
             </ExternalLink>{" "}
             cujo acampamento está bem em frente ao Parque Nacional,
               que todos os meses há grupos de invasores que entram com equipamentos
-              de topografia na mata protegida. A informação de que invasõe
-              ocorrem e, na verdade, se intensificam foram mencionadas por outras
-              fonte, a ex-gestora da Reserva Igapó Açu, Dioneia Ferreira
+              de topografia na mata protegida. A CMM é uma das duas companhias
+              que atualmente fazem a manutenção da rodovia.
             </Paragraph>
             <Paragraph>
               O Instituto Chico Mendes de Conservação da Biodiversidade (ICMBio),
@@ -404,26 +405,46 @@ export default () => (
               Em entrevista no escritório do ICMBio em Porto Velho,
               o chefe do parque, Rafael Pereira,
               afirmou que as ações de fiscalização permanecem no mesmo ritmo que
-              anteriormente. Ele também apontou um avanço: o Plano de Manejo do parque
+              antes. Ele também apontou um avanço: o Plano de Manejo do parque
               foi recentemente aprovado, em 22 de maio. Porém ainda não está publicado no
-              site do órgão.
+              site do órgão. O plano é o documento base que define áreas que
+              poderão ser visitadas pelo público e outras prioritárias à conservação.
             </Paragraph>
             <Paragraph>
               A falta da implementação das unidades de conservação pelo órgão
-              federal gerou uma ação civil pelo Ministério Público Federal. No
-              processo, os promotores pedem ao ICMBio que estabeleça prazos para
+              federal gerou uma{" "}
+              <FileLink
+              href={require("documents/mpfacaoicmbio.pdf")}
+              format="pdf"
+              size="126KB"
+            >
+              uma ação civil pelo Ministério Público Federal.
+            </FileLink>{" "}
+            No processo, o procurados da República Rafael Rocha requer
+            ao ICMBio que estabeleça prazos para
               a implementação de conselhos gestores e planos de manejo para as
               unidades de conservação federais ao longo da BR-319.
             </Paragraph>
+
+            <Quote author="Trecho da ação do MPF">
+            Trata-se de ação civil pública (...) para
+            obrigar o ICMBio a implementar as 11 (onze) unidades de conservação federais
+            criadas ao longo do traçado da BR-319 (Manaus/AM – Porto Velho/RO), com a
+            finalidade de “blindar” as margens da estrada contra a ocupação desordenada e
+            o efeito “espinha de peixe”, causado pela abertura de ramais clandestinos ao
+            longo do eixo principal.
+            </Quote>
+
            <Paragraph>
             Mais à frente, já a pouco menos de 300 km de Manaus, chegamos
             à Reserva de Desenvolvimento Sustentável
-            do Igapó Açu. A área homenageia o rio que, como diz o próprio nome,
-            é um grande alagado. A reserva estadual, com seus vastos 400 mil
+            do Igapó Açu. A área conserva o rio que, como diz o próprio nome,
+            alaga uma grande extensão com suas águas negras.
+            A reserva estadual, com seus vastos 400 mil
             hectares, é a única unidade de  conservação por onde passa a rodovia.
             </Paragraph>
             <Paragraph>
-            Já há anos, a reserva do Igapó-Açu tem um conselho gestor bastante
+            Já há cinco anos, a reserva do Igapó-Açu tem um conselho gestor bastante
             atuante. Seu plano de gestão, aprovado e publicado, desde 2014. Por
             ali, estivemos com Jorge Nildo, membro do conselho gestor e um guia
             para pesca e turismo na região. Dormimos em sua casa e na manhã de
@@ -438,7 +459,8 @@ export default () => (
               }}
               >
               Ali, ele nos contou sobre os benefícios que a criação da área
-              protegida. A caça e a pesca melhoraram. Além disso, existe um
+              protegida. A caça e a pesca melhoraram, por exemplo.
+              Mas acima de tudo, ele acredita que existe um
               grande potencial para o turismo
               </StoryMedia>.
             </Paragraph>
@@ -456,27 +478,27 @@ export default () => (
             </Paragraph>
             <Paragraph>
               Com o tráfego de veículos interrompido, a rodovia deixou de ser
-              foco de atenção dos governo federal. Isso durou até o início dos
-              anos 2000, quando Lula, então recém-eleito, indicou como ministro
-              dos Transportes o político amazonense Alfredo Nascimento. A BR-319
-              entrou como prioridade das obras de infraestrutura do novo
-              governo. Passou a fazer parte do PAC, o programa de aceleração de
-              crescimento, plano de governo que alçou a então ministra da Casa
-              Civil Dilma Rousseff à Presidência.
+              foco de atenção dos governo federal. Isso durou até os governos
+              de Fernando Henrique Cardoso e Lula. Ambos criaram planos de
+              investimento em infraestrutura em que a recuperação da BR-319 era
+              citada como prioridade.
             </Paragraph>
             <Paragraph>
-              Assim como o BR-163, outra rodovia cujo asfaltamento era cobrado
-              por ligar a região produtora de grãos do Mato Grosso ao porto
-              fluvial de Santarém, a BR-319 sempre foi temida por seu potencial
-              de vetor de desmatamento. Por esta razão, a estratégia adotada foi
+            Mas a ligação de Porto Velho a Manaus sempre foi temida por seu potencial
+          destrutivo. Por conta das dificuldades de acesso,
+          ela é uma das poucas, se não a única rodovia amazônica
+          onde o padrão espinha de peixe não está consolidado.
+          </Paragraph>
+          Por esta razão, a estratégia adotada foi
               a criação de áreas protegidas para evitar a grilagem de terras e
-              invasões no momento do anúncio das obras. Coordenou-se, portanto, o
+              invasões no momento do anúncio das obras.
+              Coordenou-se, portanto, o
               asfaltamento com a implementação de medidas de conservação.
             </Paragraph>
             <Paragraph>
               Em 2008 e 2009, o Ministério do Meio Ambiente, então sob o comando
               de Carlos Minc, e a Secretária Estadual de Meio Ambiente do
-              Amazonas, na gestão de Eduardo Braga (PMDB), anunciaram a criação
+              Amazonas, na gestão do governador Eduardo Braga (PMDB), anunciaram a criação
               de 8,4 milhões de hectares de unidades de conservação.{" "}
               <StoryMedia
                   icon="map"
@@ -495,7 +517,7 @@ export default () => (
                       sourceLayer: "Assentamentos_incra-2wyd2b",
                       layoutData: {"visibility":"visible"},
                       paintData: {"fill-color":"hsla(250, 47%, 33%, 0.27)"},
-                      zoomNumber: "6",
+                      zoomNumber: "5",
                     }
                   }}
                 >
@@ -509,12 +531,10 @@ export default () => (
                 Aos olhos da população local e dos empreendedores, a criação de
                 parques e reservas já teria sido suficiente para liberar as
                 obras.
-              </Paragraph>
-              <FeaturedText>
               Mas desde que a decisão da reabertura foi tomada durante
               o governo Lula, ficou acordado com organizações da sociedade
               civil que haveria o licenciamento ambiental da obra.
-              </FeaturedText>
+
               <Paragraph>
                 O Departamento Nacional de Infraestrutura de transportes, o
                 DNIT, autarquia do governo federal, é o empreendedor
@@ -527,6 +547,11 @@ export default () => (
                 reconstrução do pavimento da BR-319 entre trecho do km 250 ao km
                 655,7 no Amazonas tem previsão de ser entregue ao Ibama no
                 primeiro semestre de 2019.
+                <FeaturedText>
+                Para a conclusão e entrega
+                do Estudo de Impacto Ambiental faltam apenas consultas às
+                populações indígenas
+                </FeaturedText>
               </Paragraph>
               <Paragraph>
               	A diferença com os anos anteriores é que a manutenção da rodovia
@@ -541,21 +566,20 @@ export default () => (
                 pressão pela trafegabilidade na estrada parece maior.
               </Paragraph>
               <Paragraph>
-                Os serviços de manutenção estão respaldados pela Licença de
-                Instalação – LI nº 1.111/2016 (Renovada) emitida pelo IBAMA em
-                12/05/2017, com validade de 24 meses. Para a conclusão e entrega
-                do Estudo de Impacto Ambiental faltam apenas consultas às
-                populações indígenas.
-              </Paragraph>
-              <Paragraph>
-                “O asfaltamento da BR-319 são favas contadas”, é um comentário
-                comum por aqueles que vêm trabalhando na região.  Dioneia
-                Ferreira, nativa de Humaitá, a cidade polo no sul do Amazonas
-                no entroncamento da BR-319 com a Transamazônica, é uma das
-                ativistas mais vocais. “A verdade é que existe um dragão de boca
-                aberta subindo a BR e quem está lá na frente não vai ser
-                poupado”, ela alerta.
-              </Paragraph>
+                Dioneia Ferreira, ex-gestora
+                da reserva do Igapó Açu e fundadora de uma rede de organizações
+                trabalhando no territórios sobre influência da BR-319, não
+                demonstra otimismo. Nativa de Humaitá, ela relata ter visto
+                a súbida gradual do modelo destrutivo de Rondônia em direção ao
+                Sul da Amazonas.
+                </Paragraph>
+
+                <Quote author="Dioneia Ferreira, ambientalista">
+                A verdade é que existe um dragão de boca
+                aberta subindo a BR-319 e quem está lá na frente não vai ser
+                poupado.
+                </Quote>
+
 	            <RelatedNews
 	              sectionTitle={"Assista também: "}
 	              title={"Bem-vindo a Realidade"}
