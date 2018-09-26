@@ -118,7 +118,7 @@ export default () => (
                layerId: "",
                sourceOptionType: "vector",
                sourceOptionUrl: "",
-               coordinates: [-63.000,-7.036],
+               coordinates: [-60.546,-7.036],
                style: "mapbox://styles/infoamazonia/cjmgv2m1s2q942spqd4naf2ke",
                sourceId: "source1",
                layerType: "fill",
@@ -511,14 +511,14 @@ export default () => (
                       layerId: "Assentamentos_incra-2wyd2b2",
                       sourceOptionType: "vector",
                       sourceOptionUrl: "mapbox://infoamazonia.1kti1hxh",
-                      coordinates: [-62.688,-6.414],
+                      coordinates: [-60.546,-6.343],
                       style: "mapbox://styles/infoamazonia/cjmh38rfkgtzc2rp0tir972ag",
                       sourceId: "source3",
                       layerType: "fill",
                       sourceLayer: "Assentamentos_incra-2wyd2b",
                       layoutData: {"visibility":"visible"},
                       paintData: {"fill-color":"hsla(250, 47%, 33%, 0.27)"},
-                      zoomNumber: "5",
+                      zoomNumber: "7",
                     }
                   }}
                 >
@@ -531,10 +531,9 @@ export default () => (
               <Paragraph>
                 Aos olhos da população local e dos empreendedores, a criação de
                 parques e reservas já teria sido suficiente para liberar as
-                obras.
-              Mas desde que a decisão da reabertura foi tomada durante
-              o governo Lula, ficou acordado com organizações da sociedade
-              civil que haveria o licenciamento ambiental da obra.
+                obras. Mas desde que a decisão da reabertura foi tomada durante
+                o governo Lula, ficou acordado com organizações da sociedade
+                civil que haveria o licenciamento ambiental da obra.
               </Paragraph>
               <Paragraph>
                 O Departamento Nacional de Infraestrutura de transportes, o
@@ -548,11 +547,11 @@ export default () => (
                 reconstrução do pavimento da BR-319 entre trecho do km 250 ao km
                 655,7 no Amazonas tem previsão de ser entregue ao Ibama no
                 primeiro semestre de 2019.
-                <FeaturedText>
+              <FeaturedText>
                 Para a conclusão e entrega
                 do Estudo de Impacto Ambiental faltam apenas consultas às
-                populações indígenas
-                </FeaturedText>
+                populações indígenas.
+              </FeaturedText>
               </Paragraph>
               <Paragraph>
               	A diferença com os anos anteriores é que a manutenção da rodovia
@@ -566,18 +565,15 @@ export default () => (
                 ambiente, se opõe a mais de uma licença ao empreendimento. Mas a
                 pressão pela trafegabilidade na estrada parece maior.
               </Paragraph>
-              <Quote author="Dioneia Ferreira, ambientalista">
-              A verdade é que existe um dragão de boca
-              aberta subindo a BR-319 e quem está lá na frente não vai ser
-              poupado.
-              </Quote>
               <Paragraph>
                 Dioneia Ferreira, ex-gestora
                 da reserva do Igapó Açu e fundadora de uma rede de organizações
                 trabalhando no territórios sobre influência da BR-319, não
                 demonstra otimismo. Nativa de Humaitá, ela relata ter visto
                 a súbida gradual do modelo destrutivo de Rondônia em direção ao
-                Sul da Amazonas.
+                Sul da Amazonas. A verdade é que existe um dragão de boca
+                aberta subindo a BR-319 e quem está lá na frente não vai ser
+                poupado.
                 </Paragraph>
 
 	            <RelatedNews
