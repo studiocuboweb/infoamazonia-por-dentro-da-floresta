@@ -535,7 +535,7 @@ export default () => (
               Mas desde que a decisão da reabertura foi tomada durante
               o governo Lula, ficou acordado com organizações da sociedade
               civil que haveria o licenciamento ambiental da obra.
-
+              </Paragraph>
               <Paragraph>
                 O Departamento Nacional de Infraestrutura de transportes, o
                 DNIT, autarquia do governo federal, é o empreendedor
@@ -566,6 +566,11 @@ export default () => (
                 ambiente, se opõe a mais de uma licença ao empreendimento. Mas a
                 pressão pela trafegabilidade na estrada parece maior.
               </Paragraph>
+              <Quote author="Dioneia Ferreira, ambientalista">
+              A verdade é que existe um dragão de boca
+              aberta subindo a BR-319 e quem está lá na frente não vai ser
+              poupado.
+              </Quote>
               <Paragraph>
                 Dioneia Ferreira, ex-gestora
                 da reserva do Igapó Açu e fundadora de uma rede de organizações
@@ -574,12 +579,6 @@ export default () => (
                 a súbida gradual do modelo destrutivo de Rondônia em direção ao
                 Sul da Amazonas.
                 </Paragraph>
-
-                <Quote author="Dioneia Ferreira, ambientalista">
-                A verdade é que existe um dragão de boca
-                aberta subindo a BR-319 e quem está lá na frente não vai ser
-                poupado.
-                </Quote>
 
 	            <RelatedNews
 	              sectionTitle={"Assista também: "}
