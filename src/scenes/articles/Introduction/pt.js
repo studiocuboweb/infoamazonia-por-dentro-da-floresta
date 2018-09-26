@@ -118,7 +118,7 @@ export default () => (
                layerId: "",
                sourceOptionType: "vector",
                sourceOptionUrl: "",
-               coordinates: [-54.040,-5.767],
+               coordinates: [-52.040,-5.767],
                style: "mapbox://styles/infoamazonia/cjmgv2m1s2q942spqd4naf2ke",
                sourceId: "source1",
                layerType: "fill",
