@@ -489,6 +489,7 @@ export default () => (
           ela é uma das poucas, se não a única rodovia amazônica
           onde o padrão espinha de peixe não está consolidado.
           </Paragraph>
+          <Paragraph>
           Por esta razão, a estratégia adotada foi
               a criação de áreas protegidas para evitar a grilagem de terras e
               invasões no momento do anúncio das obras.
