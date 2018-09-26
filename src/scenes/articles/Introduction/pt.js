@@ -125,7 +125,7 @@ export default () => (
                sourceLayer: "",
                layoutData: {"visibility":""},
                paintData: {"fill-color":"#ea1f1f"},
-               zoomNumber: [5.11],
+               zoomNumber: "5",
              }
            }}
          >
@@ -552,7 +552,7 @@ export default () => (
                 Para a conclusão e entrega
                 do Estudo de Impacto Ambiental faltam apenas consultas às
                 populações indígenas.
-              </FeaturedText>  
+              </FeaturedText>
               <Paragraph>
               	A diferença com os anos anteriores é que a manutenção da rodovia
               	indica que a pavimentação é um caminho sem volta. Polêmicas
@@ -571,9 +571,9 @@ export default () => (
                 trabalhando no territórios sobre influência da BR-319, não
                 demonstra otimismo. Nativa de Humaitá, ela relata ter visto
                 a súbida gradual do modelo destrutivo de Rondônia em direção ao
-                Sul da Amazonas. A verdade é que existe um dragão de boca
+                Sul da Amazonas. "A verdade é que existe um dragão de boca
                 aberta subindo a BR-319 e quem está lá na frente não vai ser
-                poupado.
+                poupado."
                 </Paragraph>
 
 	            <RelatedNews
