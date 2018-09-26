@@ -67,7 +67,7 @@ export default () => (
         </Paragraph>
         <FeaturedText>
         Na margem direita da nova rodovia, se estabeleceu um assentamento
-        da reforma agrária chamado Realidade, com 42,0 mil hectares.
+        da reforma agrária chamado Realidade, com 42,9 mil hectares.
         </FeaturedText>
         <Paragraph>
           <StoryMedia
@@ -118,7 +118,7 @@ export default () => (
                layerId: "",
                sourceOptionType: "vector",
                sourceOptionUrl: "",
-               coordinates: [-60.546,-7.036],
+               coordinates: [-59.318,-6.343],
                style: "mapbox://styles/infoamazonia/cjmgv2m1s2q942spqd4naf2ke",
                sourceId: "source1",
                layerType: "fill",
@@ -511,7 +511,7 @@ export default () => (
                       layerId: "Assentamentos_incra-2wyd2b2",
                       sourceOptionType: "vector",
                       sourceOptionUrl: "mapbox://infoamazonia.1kti1hxh",
-                      coordinates: [-60.546,-6.343],
+                      coordinates: [-59.318,-6.343],
                       style: "mapbox://styles/infoamazonia/cjmh38rfkgtzc2rp0tir972ag",
                       sourceId: "source3",
                       layerType: "fill",
@@ -547,12 +547,12 @@ export default () => (
                 reconstrução do pavimento da BR-319 entre trecho do km 250 ao km
                 655,7 no Amazonas tem previsão de ser entregue ao Ibama no
                 primeiro semestre de 2019.
+              </Paragraph>
               <FeaturedText>
                 Para a conclusão e entrega
                 do Estudo de Impacto Ambiental faltam apenas consultas às
                 populações indígenas.
-              </FeaturedText>
-              </Paragraph>
+              </FeaturedText>  
               <Paragraph>
               	A diferença com os anos anteriores é que a manutenção da rodovia
               	indica que a pavimentação é um caminho sem volta. Polêmicas
