@@ -110,25 +110,15 @@ export default () => (
          </Paragraph>
          <Paragraph>
          <StoryMedia
-           icon="map"
-           media={{
-             id: "map-1",
-             type: "mapbox",
-             data: {
-               layerId: "",
-               sourceOptionType: "vector",
-               sourceOptionUrl: "",
-               coordinates: [-50.040,-5.767],
-               style: "mapbox://styles/infoamazonia/cjmgv2m1s2q942spqd4naf2ke",
-               sourceId: "source1",
-               layerType: "fill",
-               sourceLayer: "",
-               layoutData: {"visibility":""},
-               paintData: {"fill-color":"#ea1f1f"},
-               zoomNumber: "5",
-             }
-           }}
-         >
+            icon="map"
+            media={{
+              id: "map-1",
+              type: "embed",
+              data: {
+                src: "https://infoamazonia.org/pt/embed/?map_only=1&map_id=17467"
+              }
+            }}
+          >
 				 	Estradas que servem para puxar madeira de dentro da mata para pelo
 				 	menos quatro serrarias que funcionam na Vila
          </StoryMedia>.
@@ -501,24 +491,13 @@ export default () => (
               de Carlos Minc, e a Secretária Estadual de Meio Ambiente do
               Amazonas, na gestão do governador Eduardo Braga (PMDB), anunciaram a criação
               de 8,4 milhões de hectares de unidades de conservação.{" "}
-              <StoryMedia
+                <StoryMedia
                   icon="map"
                   media={{
-                    id: "map-3",
-                    type: "mapbox",
-
+                    id: "map-2",
+                    type: "embed",
                     data: {
-                      layerId: "Assentamentos_incra-2wyd2b2",
-                      sourceOptionType: "vector",
-                      sourceOptionUrl: "mapbox://infoamazonia.1kti1hxh",
-                      coordinates: [-59.318,-6.343],
-                      style: "mapbox://styles/infoamazonia/cjmh38rfkgtzc2rp0tir972ag",
-                      sourceId: "source3",
-                      layerType: "fill",
-                      sourceLayer: "Assentamentos_incra-2wyd2b",
-                      layoutData: {"visibility":"visible"},
-                      paintData: {"fill-color":"hsla(250, 47%, 33%, 0.27)"},
-                      zoomNumber: "7",
+                      src: "https://infoamazonia.org/pt/embed/?map_only=1&map_id=17467"
                     }
                   }}
                 >

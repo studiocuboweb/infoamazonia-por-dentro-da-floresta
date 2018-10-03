@@ -21,8 +21,7 @@ const Wrapper = styled.div`
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-
-
+  
   // @media(max-width: 800px) {
   //   width:100vw;
   //   height:100vh;
@@ -31,7 +30,17 @@ const Wrapper = styled.div`
   .media-embed {
     width: 100%;
     height: 100%;
+    pointer-events:auto;
   }
+
+  @media(max-width: 439px){
+    width:100vw !important;
+    height:100vh !important;
+    .media-embed {
+      pointer-events:none;
+    }
+  }
+  
   .placeholder-background {
     background-size: cover;
     background-position: center;
@@ -302,7 +311,7 @@ class Media extends Component {
                 <span className={`fa fa-${media.icon}`} />
               </Expand>
             ) : null}
-          </Wrapper>
+        </Wrapper>
         );
       }
       default: {
