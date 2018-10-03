@@ -139,7 +139,7 @@ const Expand = styled.div`
   width: 100%;
   top: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0);
   text-align: center;
   color: #fff;
   ${media.desktop`
@@ -308,7 +308,7 @@ class Media extends Component {
             />
             {!active ? (
               <Expand>
-                <span className={`fa fa-${media.icon}`} />
+                <span></span>
               </Expand>
             ) : null}
         </Wrapper>
