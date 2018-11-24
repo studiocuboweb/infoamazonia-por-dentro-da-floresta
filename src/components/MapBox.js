@@ -1,165 +1,59 @@
-import React, { Component } from 'react';
+/* global window */
+import React, {Component} from 'react';
+import ReactMapGL from 'react-map-gl';
+//import MAP_STYLE from './style.json';
+import MAP_STYLE from './map-style-basic-v8.json';
+import {fromJS} from 'immutable';
 import PropTypes from 'prop-types';
-import ReactMapboxGl, { Layer, Source } from "react-mapbox-gl";
+import Dimensions from 'react-dimensions';
+import ControlPanel from './ControlPanel';
 
-const Map = ReactMapboxGl({
-  accessToken: "pk.eyJ1IjoiaW5mb2FtYXpvbmlhIiwiYSI6InItajRmMGsifQ.JnRnLDiUXSEpgn7bPDzp7g",
-  // minZoom: 8,
-  // maxZoom: 10,
-  interactive: ((typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1)) ? false : true
-});
+//const defaultMapStyle = fromJS(MAP_STYLE);
+const MAPBOX_TOKEN = 'pk.eyJ1IjoiaW5mb2FtYXpvbmlhIiwiYSI6InItajRmMGsifQ.JnRnLDiUXSEpgn7bPDzp7g'; // Set your mapbox token here
 
 class MapBox extends Component {
+
   state = {
-    stateOldLayerId:null,
-    stateSourceOptionType:null,
-    stateSourceOptionUrl:null,
-    center: null,
-    stateZoomNumber: null,
-    stateStyle:null,
-    stateSourceId:null,
-    stateLayerType:null,
-    stateSourceLayer:null,
-    stateLayoutVisibility:null,
-    stateLayoutData:{},
-    statePaint:{},
-    updated:true
+    mapStyle: '',
+    viewport: {
+      width: this.props.containerWidth,
+      height: this.props.containerHeight,
+      latitude: 37.7577,
+      longitude: -122.4376,      
+      zoom: 8
+    }
+  };
+
+  _onViewportChange = viewport => this.setState({viewport});
+  _onStyleChange = mapStyle => this.setState({mapStyle});
+
+  static propTypes = {
+    width: PropTypes.number.isRequired,
+    height: PropTypes.number.isRequired
   }
-  
-  componentWillReceiveProps(nextProps) {
-    const { sourceOptionType,sourceOptionUrl,coordinates,style,sourceId,layerType,sourceLayer,layoutVisibility,layerId,layoutData,paintData,zoomNumber } = nextProps;
-    const { sourceOptionType:oldSourceOptionType,sourceOptionUrl:oldSourceOptionUrl,coordinates:oldCoordinates,style:oldStyle,sourceId:oldSourceId,layerType:oldLayerType,sourceLayer:oldSourceLayer,layoutVisibility:oldLayoutVisibility,layerId:oldLayerId,layoutData:oldlayoutData,paintData:oldPaintData,zoomNumber:oldZoom} = this.props
 
-    if (sourceOptionType !== oldSourceOptionType) {
-      this.setState({
-        stateSourceOptionType: sourceOptionType
-      })
-    }
-    
-    if (layerId !== oldLayerId) {
-      this.setState({
-        stateOldLayerId: layerId
-      })
-    }
-
-
-    if (sourceOptionUrl !== oldSourceOptionUrl) {
-      this.setState({
-        stateSourceOptionUrl: sourceOptionUrl
-      })
-    }
-
-    if (coordinates !== oldCoordinates) {
-      this.setState({
-        center: coordinates
-      })
-    }
-    if (style !== oldStyle) {
-      this.setState({
-        stateStyle: style
-      })
-    }
-    if (sourceId !== oldSourceId) {
-      this.setState({
-        stateSourceId: sourceId
-      })
-    }
-    if (layerType !== oldLayerType) {
-      this.setState({
-        stateLayerType: layerType
-      })
-    }
-    if (sourceLayer !== oldSourceLayer) {
-      this.setState({
-        stateSourceLayer: sourceLayer
-      })
-    }
-    if (layoutVisibility !== oldLayoutVisibility) {
-      this.setState({
-        stateLayoutVisibility: layoutVisibility
-      })
-    }
-    if (layoutData !== oldlayoutData) {
-      this.setState({
-        stateLayoutData: layoutData
-      })
-    }
-    if (paintData !== oldPaintData) {
-      this.setState({
-        statePaintData: paintData
-      })
-    }
-
-    if (zoomNumber !== oldZoom) {
-      this.setState({
-        stateZoomNumber: zoomNumber
-      })
-    }
-    this.setState({updated:false})
-    setTimeout(
-      function() {
-        this.setState({updated:true})
-      }
-      .bind(this),
-      100
-    );
-   
+  componentDidMount() {
+    console.log('componentDidMount')
+    // console.log(this.props.containerWidth)
+    // this.setState({viewport:{
+    //   width: this.props.containerWidth,
+    //   height: this.props.containerHeight,
+    // }});
   }
+
   render() {
-    const { sourceOptionType,sourceOptionUrl,coordinates,style,sourceId,layerType,sourceLayer,layoutVisibility,layerId,layoutData,paintData,zoomNumber} = this.props;
-    const { stateSourceOptionType,stateSourceOptionUrl,center,stateStyle,stateSourceId,stateLayerType,stateSourceLayer,stateLayoutVisibility,stateLayerId,updated,stateLayoutData,statePaintData,stateZoomNumber} = this.state 
+    const {viewport, mapStyle} = this.state;
     return (
-      <Map
-        center={center  || coordinates}
-        zoom={[zoomNumber]}
-        flyToOptions={{
-          center: center || coordinates,
-          speed: 0.9,
-          curve: 1,
-          easing(t) {
-            return t;
-          }
-        }}
-        style={style || stateStyle}
-        containerStyle={{
-          height: "100vh",
-          width: "100vw"
-        }}>
-        {/* {console.log(updated)}
-        {console.log("sourceOptionType")}
-        {console.log('LayerType')}
-        {console.log(layerType || stateLayerType)}
-        {console.log('sourceId')}
-        {console.log(sourceId || stateSourceId)}
-        {console.log('layerId')}
-        {console.log(layerId || stateLayerId)}
-        {console.log('sourceOptionType')}
-        {console.log(sourceOptionType || stateSourceOptionType)}
-        {console.log('sourceOptionUrl')}
-        {console.log(sourceOptionUrl || stateSourceOptionUrl)}
-        {console.log('sourceLayer')}
-        {console.log(sourceLayer || stateSourceLayer)}
-        {console.log(sourceLayer || stateSourceLayer)} */}
-        {
-          updated &&
-            <Source id={sourceId || stateSourceId} tileJsonSource={{"type": sourceOptionType || stateSourceOptionType,"url": sourceOptionUrl || stateSourceOptionUrl}} />
-        }
-        {
-          updated &&
-            <Layer
-              type={layerType || stateLayerType}
-              id={layerId || stateLayerId}
-              sourceId={sourceId || stateSourceId}
-              sourceLayer={sourceLayer || stateSourceLayer}
-              layout={layoutData || stateLayoutData}
-              paint={paintData || statePaintData}
-            ></Layer>
-        }
-      </Map>
-    )
+      <ReactMapGL
+        {...viewport}
+        mapStyle={mapStyle}
+        onViewportChange={(viewport) => this.setState({viewport})}
+        //mapStyle={defaultMapStyle}
+        mapboxApiAccessToken={MAPBOX_TOKEN} >
+        <ControlPanel containerComponent={this.props.containerComponent} onChange={this._onStyleChange} />
+      </ReactMapGL>
+    );
   }
 }
 
-
-export default MapBox
-
+export default Dimensions({elementResize: true})(MapBox)

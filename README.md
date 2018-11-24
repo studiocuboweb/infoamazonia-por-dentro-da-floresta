@@ -12,6 +12,12 @@ git clone https://github.com/studiocuboweb/infoamazonia-por-dentro-da-floresta.g
 
 - INSTALANDO O NPM E AS DEPENDENCIAS
 docker run -v "$PWD":/usr/src/app -w /usr/src/app node:8 yarn install
+docker run -v "$PWD":/usr/src/app -w /usr/src/app node:8 yarn upgrade
+docker run -v "$PWD":/usr/src/app -w /usr/src/app node:8 yarn global add webpack@3.6.0
+docker run -v "$PWD":/usr/src/app -w /usr/src/app node:8 yarn add -D webpack-cli@2.0.4
+
+docker run -v "$PWD":/usr/src/app -w /usr/src/app node:8 yarn remove webpack
+docker run -v "$PWD":/usr/src/app -w /usr/src/app node:8 yarn remove webpack-cli
 
 - FAZENDO O BUILD
 docker-comose build

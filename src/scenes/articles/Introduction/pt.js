@@ -491,16 +491,26 @@ export default () => (
               de Carlos Minc, e a Secretária Estadual de Meio Ambiente do
               Amazonas, na gestão do governador Eduardo Braga (PMDB), anunciaram a criação
               de 8,4 milhões de hectares de unidades de conservação.{" "}
-                <StoryMedia
-                  icon="map"
-                  media={{
-                    id: "map-2",
-                    type: "embed",
-                    data: {
-                      src: "https://infoamazonia.org/pt/embed/?map_only=1&map_id=18707"
-                    }
-                  }}
-                >
+            <StoryMedia
+            icon="map"
+            media={{
+              id: "map-1",
+              type: "mapbox",
+              data: {
+                layerId: "",
+                sourceOptionType: "vector",
+                sourceOptionUrl: "",
+                coordinates: [-50.040,-5.767],
+                style: "mapbox://styles/infoamazonia/cjmgv2m1s2q942spqd4naf2ke",
+                sourceId: "source1",
+                layerType: "fill",
+                sourceLayer: "",
+                layoutData: {"visibility":""},
+                paintData: {"fill-color":"#ea1f1f"},
+                zoomNumber: "5",
+              }
+            }}
+          >
                 	A área total equivale a três vezes e meia o território do
                 	estado de Alagoas
                 </StoryMedia>.

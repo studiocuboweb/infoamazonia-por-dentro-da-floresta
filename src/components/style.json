@@ -1,0 +1,840 @@
+{
+    "version": 8,
+    "name": "RAISG_geral_MineriaIlegal-copy",
+    "metadata": {
+        "mapbox:autocomposite": false,
+        "mapbox:type": "default",
+        "mapbox:sdk-support": {
+            "js": "0.49.0",
+            "android": "6.5.0",
+            "ios": "4.4.0"
+        },
+        "mapbox:groups": {
+            "dca83f9159fd0930318edff4164f6b51": {
+                "name": "BaseCartografia-RAISG e Mapbox",
+                "collapsed": true
+            },
+            "4894f61bf5e02f3ce9eec00c65bd7381": {
+                "name": "labels Mapbox",
+                "collapsed": true
+            },
+            "4bfd003f71e48770638ad03642605a13": {
+                "name": "mineria - teste cor",
+                "collapsed": true
+            }
+        }
+    },
+    "center": [-62.384710547041664, -7.268519069130065],
+    "zoom": 4.063365453420774,
+    "bearing": 0,
+    "pitch": 0,
+    "light": {
+        "anchor": "map",
+        "color": "hsl(0, 100%, 52%)",
+        "position": [1.15, 210, 1000000],
+        "intensity": 0.72
+    },
+    "sources": {
+        "mapbox://mapbox.satellite": {
+            "url": "mapbox://mapbox.satellite",
+            "type": "raster",
+            "tileSize": 256
+        },
+        "mapbox://infoamazonia.rivers": {
+            "url": "mapbox://infoamazonia.rivers",
+            "type": "raster",
+            "tileSize": 256
+        },
+        "mapbox://infoamazonia.osm-brasil-fires": {
+            "url": "mapbox://infoamazonia.osm-brasil-fires",
+            "type": "raster",
+            "tileSize": 256
+        },
+        "mapbox://infoamazonia.forest-amazonia": {
+            "url": "mapbox://infoamazonia.forest-amazonia",
+            "type": "raster",
+            "tileSize": 256
+        },
+        "composite": {
+            "url": "mapbox://infoamazonia.a163w3r6,infoamazonia.57fl1oq8,mapbox.mapbox-streets-v7,infoamazonia.5oqd2azo,infoamazonia.6d1wlvd9,infoamazonia.aeh15zm1,infoamazonia.6ny4aw4g,infoamazonia.1ifthw9d,infoamazonia.8bpbcmqq",
+            "type": "vector"
+        }
+    },
+    "sprite": "mapbox://sprites/infoamazonia/cjom7lmpd1lut2rmktspvs0jn",
+    "glyphs": "mapbox://fonts/infoamazonia/{fontstack}/{range}.pbf",
+    "layers": [
+        {
+            "id": "2-mineriailegal-pt-5owfra copy 1",
+            "type": "circle",
+            "metadata": {"mapbox:group": "4bfd003f71e48770638ad03642605a13"},
+            "source": "composite",
+            "source-layer": "MineriaIlegal_pt-5owfra",
+            "layout": {"visibility": "none"},
+            "paint": {
+                "circle-color": [
+                    "match",
+                    ["get", "leyendagar"],
+                    ["activo", "activo (local. aproximada)"],
+                    "#5E2EB8",
+                    ["inactivo", "inactivo (local. aproximada)"],
+                    "#39175e",
+                    ["s.i", "s.i (local. aproximada)"],
+                    "#9c85c1",
+                    "hsla(0, 0%, 0%, 0)"
+                ],
+                "circle-stroke-width": 0.5,
+                "circle-stroke-color": "#562375",
+                "circle-opacity": 0.89,
+                "circle-radius": 6
+            }
+        },
+        {
+            "id": "2.2-mineriailegal-pt-5owfra copy 2",
+            "type": "circle",
+            "metadata": {"mapbox:group": "4bfd003f71e48770638ad03642605a13"},
+            "source": "composite",
+            "source-layer": "MineriaIlegal_pt-5owfra",
+            "layout": {"visibility": "none"},
+            "paint": {
+                "circle-color": [
+                    "match",
+                    ["get", "leyendagar"],
+                    ["activo", "activo (local. aproximada)"],
+                    "#9c85c1",
+                    ["inactivo", "inactivo (local. aproximada)"],
+                    "#39175e",
+                    ["s.i", "s.i (local. aproximada)"],
+                    "#5e2eb8",
+                    "hsla(0, 0%, 0%, 0)"
+                ],
+                "circle-stroke-width": 0.5,
+                "circle-stroke-color": "hsl(277, 54%, 30%)",
+                "circle-opacity": 0.89,
+                "circle-radius": 6
+            }
+        },
+        {
+            "id": "mineriailegal-pt-5owfra",
+            "type": "circle",
+            "metadata": {"mapbox:group": "4bfd003f71e48770638ad03642605a13"},
+            "source": "composite",
+            "source-layer": "MineriaIlegal_pt-5owfra",
+            "layout": {"visibility": "none"},
+            "paint": {
+                "circle-color": [
+                    "match",
+                    ["get", "leyendagar"],
+                    ["activo", "activo (local. aproximada)"],
+                    "hsl(267, 42%, 43%)",
+                    ["inactivo", "inactivo (local. aproximada)"],
+                    "hsl(277, 56%, 21%)",
+                    ["s.i", "s.i (local. aproximada)"],
+                    "hsl(263, 21%, 58%)",
+                    "hsla(0, 0%, 0%, 0)"
+                ],
+                "circle-stroke-width": 0.5,
+                "circle-stroke-color": "hsl(277, 54%, 30%)",
+                "circle-opacity": 0.89,
+                "circle-radius": 6
+            }
+        },
+        {
+            "id": "3-mineriailegal-pt-5owfra copy 2",
+            "type": "circle",
+            "metadata": {"mapbox:group": "4bfd003f71e48770638ad03642605a13"},
+            "source": "composite",
+            "source-layer": "MineriaIlegal_pt-5owfra",
+            "layout": {"visibility": "none"},
+            "paint": {
+                "circle-color": [
+                    "match",
+                    ["get", "leyendagar"],
+                    ["activo", "activo (local. aproximada)"],
+                    "hsl(260, 100%, 73%)",
+                    ["inactivo", "inactivo (local. aproximada)"],
+                    "#492173",
+                    ["s.i", "s.i (local. aproximada)"],
+                    "#733dd1",
+                    "hsla(0, 0%, 0%, 0)"
+                ],
+                "circle-stroke-width": 0.5,
+                "circle-stroke-color": "#311344",
+                "circle-opacity": 1,
+                "circle-radius": 7
+            }
+        },
+        {
+            "id": "infoamazonia-forest-amazonia",
+            "type": "raster",
+            "source": "mapbox://infoamazonia.forest-amazonia",
+            "layout": {"visibility": "none"},
+            "paint": {}
+        },
+        {
+            "id": "state-label",
+            "type": "symbol",
+            "metadata": {"mapbox:group": "4894f61bf5e02f3ce9eec00c65bd7381"},
+            "source": "composite",
+            "source-layer": "state_label",
+            "minzoom": 5,
+            "filter": ["in", "$type", "LineString", "Point", "Polygon"],
+            "layout": {
+                "text-transform": "uppercase",
+                "text-font": ["Open Sans Italic", "Arial Unicode MS Regular"],
+                "text-size": [
+                    "interpolate",
+                    ["linear"],
+                    ["zoom"],
+                    0,
+                    0,
+                    6,
+                    12,
+                    7,
+                    15,
+                    8,
+                    17,
+                    11,
+                    19
+                ],
+                "text-letter-spacing": 1,
+                "text-field": ["to-string", ["get", "name"]],
+                "visibility": "none"
+            },
+            "paint": {
+                "text-color": "hsl(0, 0%, 100%)",
+                "text-halo-color": "hsla(0, 0%, 100%, 0.9)",
+                "text-halo-width": 1.5
+            }
+        },
+        {
+            "id": "place-label",
+            "type": "symbol",
+            "metadata": {"mapbox:group": "4894f61bf5e02f3ce9eec00c65bd7381"},
+            "source": "composite",
+            "source-layer": "place_label",
+            "minzoom": 5.9,
+            "layout": {
+                "text-field": ["to-string", ["get", "name"]],
+                "text-font": ["Open Sans Regular", "Arial Unicode MS Regular"],
+                "text-size": [
+                    "interpolate",
+                    ["linear"],
+                    ["zoom"],
+                    0,
+                    0,
+                    7,
+                    13,
+                    8,
+                    15,
+                    9,
+                    17,
+                    11,
+                    19
+                ],
+                "visibility": "none"
+            },
+            "paint": {
+                "text-color": "hsl(0, 0%, 100%)",
+                "text-halo-color": "#6f808d",
+                "text-translate": [0, 7]
+            }
+        },
+        {
+            "id": "place-label copy-symbol",
+            "type": "circle",
+            "metadata": {"mapbox:group": "4894f61bf5e02f3ce9eec00c65bd7381"},
+            "source": "composite",
+            "source-layer": "place_label",
+            "layout": {"visibility": "none"},
+            "paint": {
+                "circle-color": "hsl(0, 1%, 98%)",
+                "circle-radius": 3,
+                "circle-opacity": 0.9,
+                "circle-translate": [0, 0]
+            }
+        },
+        {
+            "id": "admin",
+            "type": "line",
+            "metadata": {"mapbox:group": "4894f61bf5e02f3ce9eec00c65bd7381"},
+            "source": "composite",
+            "source-layer": "admin",
+            "minzoom": 4,
+            "layout": {"visibility": "none"},
+            "paint": {
+                "line-color": [
+                    "interpolate",
+                    ["linear"],
+                    ["zoom"],
+                    0,
+                    "hsl(0, 3%, 100%)",
+                    4.69,
+                    "hsl(0, 3%, 100%)",
+                    22,
+                    "hsl(0, 3%, 100%)"
+                ],
+                "line-opacity": ["match", ["get", "admin_level"], [2], 1, 0]
+            }
+        },
+        {
+            "id": "satellite",
+            "type": "raster",
+            "source": "mapbox://mapbox.satellite",
+            "source-layer": "mapbox_satellite_full",
+            "layout": {},
+            "paint": {
+                "raster-opacity": 1,
+                "raster-saturation": 0,
+                "raster-hue-rotate": 5
+            }
+        },
+        {
+            "id": "infoamazonia-rivers",
+            "type": "raster",
+            "source": "mapbox://infoamazonia.rivers",
+            "layout": {},
+            "paint": {
+                "raster-contrast": 0,
+                "raster-opacity": 0.89,
+                "raster-saturation": 0.33,
+                "raster-brightness-min": 0
+            }
+        },
+        {
+            "id": "div-politica-pais",
+            "type": "line",
+            "metadata": {"mapbox:group": "dca83f9159fd0930318edff4164f6b51"},
+            "source": "composite",
+            "source-layer": "div_politica_pais",
+            "minzoom": 3,
+            "layout": {},
+            "paint": {
+                "line-color": [
+                    "step",
+                    ["zoom"],
+                    "hsla(0, 0%, 100%, 0)",
+                    3,
+                    "hsl(0, 0%, 100%)"
+                ],
+                "line-opacity": [
+                    "interpolate",
+                    ["linear"],
+                    ["zoom"],
+                    3.8,
+                    0,
+                    4,
+                    0.29,
+                    5,
+                    1
+                ],
+                "line-width": [
+                    "interpolate",
+                    ["linear"],
+                    ["zoom"],
+                    4,
+                    0.5,
+                    5,
+                    0.7,
+                    6,
+                    1
+                ]
+            }
+        },
+        {
+            "id": "BOLIVIA_div-politica-pais",
+            "type": "fill",
+            "metadata": {"mapbox:group": "dca83f9159fd0930318edff4164f6b51"},
+            "source": "composite",
+            "source-layer": "div_politica_pais",
+            "minzoom": 5.5,
+            "maxzoom": 6.4,
+            "layout": {},
+            "paint": {
+                "fill-color": [
+                    "match",
+                    ["get", "paisiso"],
+                    ["BOL"],
+                    "hsla(0, 0%, 0%, 0)",
+                    "hsla(0, 0%, 0%, 0.53)"
+                ],
+                "fill-opacity": ["match", ["get", "paisiso"], ["BOL"], 0, 1]
+            }
+        },
+        {
+            "id": "country-label",
+            "type": "symbol",
+            "metadata": {"mapbox:group": "dca83f9159fd0930318edff4164f6b51"},
+            "source": "composite",
+            "source-layer": "country_label",
+            "minzoom": 4,
+            "layout": {
+                "text-field": [
+                    "step",
+                    ["zoom"],
+                    ["to-string", ["get", "name"]],
+                    22,
+                    ["to-string", ["get", "name"]]
+                ],
+                "text-font": ["Open Sans Bold", "Arial Unicode MS Regular"],
+                "text-offset": [
+                    "match",
+                    ["get", "name"],
+                    ["Colombia"],
+                    ["literal", [0, 2.7]],
+                    ["Ecuador"],
+                    ["literal", [2.7, 0.7]],
+                    ["Venezuela"],
+                    ["literal", [0.9, 1]],
+                    ["literal", [0, 0]]
+                ],
+                "text-rotation-alignment": "map",
+                "text-size": [
+                    "interpolate",
+                    ["linear"],
+                    ["zoom"],
+                    4,
+                    15,
+                    5,
+                    17,
+                    5.52,
+                    20,
+                    6.49,
+                    22
+                ],
+                "text-padding": 2,
+                "text-allow-overlap": true
+            },
+            "paint": {
+                "text-color": "hsl(0, 0%, 100%)",
+                "text-translate": [0, 0],
+                "text-opacity": [
+                    "match",
+                    ["get", "name"],
+                    [
+                        "Guyana",
+                        "Guyane",
+                        "Venezuela",
+                        "Ecuador",
+                        "Suriname",
+                        "Perú",
+                        "Brasil",
+                        "Bolivia",
+                        "Colombia"
+                    ],
+                    1,
+                    0
+                ]
+            }
+        },
+        {
+            "id": "div-politica-departamental",
+            "type": "line",
+            "metadata": {"mapbox:group": "dca83f9159fd0930318edff4164f6b51"},
+            "source": "composite",
+            "source-layer": "div_politica_departamental",
+            "minzoom": 4,
+            "layout": {},
+            "paint": {
+                "line-color": [
+                    "step",
+                    ["zoom"],
+                    "hsla(0, 5%, 100%, 0)",
+                    5,
+                    "hsl(0, 0%, 100%)"
+                ],
+                "line-opacity": [
+                    "interpolate",
+                    ["linear"],
+                    ["zoom"],
+                    5,
+                    0.13,
+                    5.5,
+                    0.17,
+                    6.5,
+                    0.33,
+                    7,
+                    0.51
+                ]
+            }
+        },
+        {
+            "id": "MDD -div-politica-departamental",
+            "type": "fill",
+            "metadata": {"mapbox:group": "dca83f9159fd0930318edff4164f6b51"},
+            "source": "composite",
+            "source-layer": "div_politica_departamental",
+            "minzoom": 6.3,
+            "maxzoom": 7.3,
+            "layout": {},
+            "paint": {
+                "fill-color": "hsla(0, 0%, 0%, 0.46)",
+                "fill-opacity": [
+                    "match",
+                    ["get", "nomedep"],
+                    ["Madre De Dios"],
+                    0,
+                    0.7
+                ],
+                "fill-outline-color": "hsla(0, 0%, 100%, 0)"
+            }
+        },
+        {
+            "id": "Para-div-politica-departamental",
+            "type": "fill",
+            "metadata": {"mapbox:group": "dca83f9159fd0930318edff4164f6b51"},
+            "source": "composite",
+            "source-layer": "div_politica_departamental",
+            "minzoom": 6.48,
+            "maxzoom": 8,
+            "layout": {},
+            "paint": {
+                "fill-color": "hsla(0, 0%, 0%, 0.46)",
+                "fill-opacity": [
+                    "interpolate",
+                    ["linear"],
+                    ["zoom"],
+                    6.49,
+                    [
+                        "match",
+                        ["get", "nomedep"],
+                        ["Pará", "Amazonas"],
+                        0,
+                        0.93
+                    ],
+                    8,
+                    ["match", ["get", "nomedep"], ["Pará"], 0, 0]
+                ],
+                "fill-outline-color": "hsla(0, 0%, 100%, 0)"
+            }
+        },
+        {
+            "id": "div-politica-departamental copy",
+            "type": "symbol",
+            "metadata": {"mapbox:group": "dca83f9159fd0930318edff4164f6b51"},
+            "source": "composite",
+            "source-layer": "div_politica_departamental",
+            "minzoom": 5,
+            "layout": {
+                "text-line-height": 1.2,
+                "text-size": [
+                    "interpolate",
+                    ["linear"],
+                    ["zoom"],
+                    5,
+                    11,
+                    6,
+                    12,
+                    6.5,
+                    15
+                ],
+                "text-transform": "uppercase",
+                "text-font": ["Open Sans Italic", "Arial Unicode MS Regular"],
+                "text-padding": [
+                    "interpolate",
+                    ["linear"],
+                    ["zoom"],
+                    0,
+                    0,
+                    5,
+                    10,
+                    6,
+                    20,
+                    7,
+                    50
+                ],
+                "text-offset": [
+                    "match",
+                    ["get", "nomedep"],
+                    ["Pará"],
+                    ["literal", [15, 0]],
+                    ["literal", [0, 0]]
+                ],
+                "text-rotation-alignment": "map",
+                "text-pitch-alignment": "map",
+                "text-field": ["to-string", ["get", "nomedep"]],
+                "text-letter-spacing": 0.3
+            },
+            "paint": {
+                "text-color": "hsl(0, 0%, 100%)",
+                "text-halo-color": "hsl(206, 12%, 49%)",
+                "text-halo-width": 0.3,
+                "text-translate": [0, 30],
+                "text-opacity": [
+                    "interpolate",
+                    ["linear"],
+                    ["zoom"],
+                    5,
+                    0.7,
+                    22,
+                    1
+                ]
+            }
+        },
+        {
+            "id": "cidades-principais-6gbant",
+            "type": "symbol",
+            "metadata": {"mapbox:group": "dca83f9159fd0930318edff4164f6b51"},
+            "source": "composite",
+            "source-layer": "cidades_principais-6gbant",
+            "layout": {
+                "text-field": ["to-string", ["get", "nomemun"]],
+                "text-font": ["Open Sans Regular", "Arial Unicode MS Regular"],
+                "text-size": [
+                    "interpolate",
+                    ["linear"],
+                    ["zoom"],
+                    7,
+                    12,
+                    8,
+                    13,
+                    9,
+                    17,
+                    11,
+                    19
+                ],
+                "text-padding": 2,
+                "text-justify": "left",
+                "text-anchor": "left"
+            },
+            "paint": {
+                "text-color": "hsl(0, 0%, 100%)",
+                "text-opacity": ["step", ["zoom"], 0, 6.4, 0.65, 7, 1],
+                "text-halo-color": "#6f808d",
+                "text-halo-width": 0.3,
+                "text-translate": [5, 0]
+            }
+        },
+        {
+            "id": "cidades-principais-6gbant copy",
+            "type": "circle",
+            "metadata": {"mapbox:group": "dca83f9159fd0930318edff4164f6b51"},
+            "source": "composite",
+            "source-layer": "cidades_principais-6gbant",
+            "minzoom": 5,
+            "layout": {},
+            "paint": {
+                "circle-color": [
+                    "step",
+                    ["zoom"],
+                    "hsla(0, 0%, 100%, 0)",
+                    6.4,
+                    "hsla(0, 0%, 100%, 0.65)",
+                    7,
+                    "hsl(0, 0%, 100%)"
+                ],
+                "circle-radius": 3,
+                "circle-opacity": [
+                    "interpolate",
+                    ["linear"],
+                    ["zoom"],
+                    6.4,
+                    0.68,
+                    7,
+                    0.78
+                ]
+            }
+        },
+        {
+            "id": "infoamazonia-osm-brasil-fires",
+            "type": "raster",
+            "metadata": {},
+            "source": "mapbox://infoamazonia.osm-brasil-fires",
+            "layout": {"visibility": "none"},
+            "paint": {}
+        },
+        {
+            "id": "lim-amazonia-inverted-c3k18x",
+            "type": "fill",
+            "metadata": {},
+            "source": "composite",
+            "source-layer": "lim_amazonia_inverted-c3k18x",
+            "layout": {},
+            "paint": {"fill-opacity": 0.63}
+        },
+        {
+            "id": "mineria-pl-1y529d",
+            "type": "fill",
+            "source": "composite",
+            "source-layer": "mineria_pl-1y529d",
+            "layout": {"visibility": "none"},
+            "paint": {
+                "fill-color": [
+                    "case",
+                    [
+                        "match",
+                        ["get", "leyenda"],
+                        ["en explotación"],
+                        true,
+                        false
+                    ],
+                    "hsla(172, 96%, 50%, 0.7)",
+                    [
+                        "match",
+                        ["get", "leyenda"],
+                        ["en exploración/en explotación"],
+                        true,
+                        false
+                    ],
+                    "hsla(172, 71%, 51%, 0.7)",
+                    [
+                        "match",
+                        ["get", "leyenda"],
+                        ["en exploración"],
+                        true,
+                        false
+                    ],
+                    "hsla(172, 72%, 42%, 0.7)",
+                    ["match", ["get", "leyenda"], ["solicitud"], true, false],
+                    "hsla(188, 96%, 27%, 0.77)",
+                    [
+                        "match",
+                        ["get", "leyenda"],
+                        ["", "potencial"],
+                        true,
+                        false
+                    ],
+                    "hsla(189, 96%, 11%, 0.77)",
+                    [
+                        "match",
+                        ["get", "leyenda"],
+                        ["", "sin información"],
+                        true,
+                        false
+                    ],
+                    "hsla(0, 0%, 0%, 0.4)",
+                    "hsl(211, 93%, 53%)"
+                ],
+                "fill-outline-color": [
+                    "match",
+                    ["get", "leyenda"],
+                    [
+                        "en explotación",
+                        "en exploración/en explotación",
+                        "en exploración"
+                    ],
+                    "hsla(172, 96%, 50%, 0.7)",
+                    ["solicitud"],
+                    "hsla(188, 96%, 27%, 0.77)",
+                    ["potencial"],
+                    "hsla(189, 96%, 11%, 0.77)",
+                    ["sin información"],
+                    "hsla(0, 0%, 0%, 0.47)",
+                    "#000000"
+                ],
+                "fill-opacity": 0.71
+            }
+        },
+        {
+            "id": "mineriailegal-pl-6rfpha",
+            "type": "fill",
+            "source": "composite",
+            "source-layer": "MineriaIlegal_pl-6rfpha",
+            "layout": {},
+            "paint": {
+                "fill-color": [
+                    "case",
+                    [
+                        "match",
+                        ["get", "leyendagar"],
+                        ["", "activo"],
+                        true,
+                        false
+                    ],
+                    "#a375ff",
+                    ["match", ["get", "leyendagar"], ["inactivo"], true, false],
+                    "#492173",
+                    ["match", ["get", "leyendagar"], ["", "s.i."], true, false],
+                    "#733dd1",
+                    "hsl(0, 100%, 52%)"
+                ],
+                "fill-outline-color": "#311344"
+            }
+        },
+        {
+            "id": "mineriailegal-pt-5owfra copy",
+            "type": "symbol",
+            "source": "composite",
+            "source-layer": "MineriaIlegal_pt-5owfra",
+            "layout": {
+                "icon-size": 1,
+                "icon-image": [
+                    "case",
+                    [
+                        "match",
+                        ["get", "leyendagar"],
+                        ["", "activo"],
+                        true,
+                        false
+                    ],
+                    "circle-11_active2",
+                    [
+                        "match",
+                        ["get", "leyendagar"],
+                        ["", "inactivo"],
+                        true,
+                        false
+                    ],
+                    "circle-11_inactive2",
+                    ["match", ["get", "leyendagar"], ["", "s.i"], true, false],
+                    "circle-11_noinfo2",
+                    [
+                        "match",
+                        ["get", "leyendagar"],
+                        ["activo (local. aproximada)"],
+                        true,
+                        false
+                    ],
+                    "circle-stroked-11_active2",
+                    [
+                        "match",
+                        ["get", "leyendagar"],
+                        ["inactivo (local. aproximada)"],
+                        true,
+                        false
+                    ],
+                    "circle-stroked-11_inactive2",
+                    [
+                        "match",
+                        ["get", "leyendagar"],
+                        ["s.i (local. aproximada)"],
+                        true,
+                        false
+                    ],
+                    "circle-stroked-11_noinfo2",
+                    "airfield-11"
+                ],
+                "icon-padding": 1,
+                "icon-ignore-placement": true
+            },
+            "paint": {"icon-opacity": 0.91}
+        },
+        {
+            "id": "mineriailegal-ln-67gxaf",
+            "type": "line",
+            "metadata": {},
+            "source": "composite",
+            "source-layer": "MineriaIlegal_ln-67gxaf",
+            "filter": ["in", "$type", "LineString", "Point", "Polygon"],
+            "layout": {"line-miter-limit": 2},
+            "paint": {
+                "line-color": "hsl(277, 85%, 63%)",
+                "line-width": 1.5,
+                "line-opacity": 0.9
+            }
+        },
+        {
+            "id": "water-label",
+            "type": "symbol",
+            "source": "composite",
+            "source-layer": "water_label",
+            "layout": {"text-field": ["to-string", ["get", "name"]]},
+            "paint": {"text-color": "hsl(0, 0%, 100%)"}
+        }
+    ],
+    "created": "2018-11-18T01:35:16.634Z",
+    "id": "cjom7lmpd1lut2rmktspvs0jn",
+    "modified": "2018-11-18T01:35:16.634Z",
+    "owner": "infoamazonia",
+    "visibility": "private",
+    "draft": false
+}

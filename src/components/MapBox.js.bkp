@@ -1,0 +1,164 @@
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import ReactMapGL from 'react-map-gl';
+import Dimensions from 'react-dimensions';
+import Immutable from 'immutable'
+import MAP_STYLE from './example.json';
+
+const MAPBOX_TOKEN = 'pk.eyJ1IjoiaW5mb2FtYXpvbmlhIiwiYSI6InItajRmMGsifQ.JnRnLDiUXSEpgn7bPDzp7g';
+// const Map = ReactMapboxGl({
+//   accessToken: "pk.eyJ1IjoiaW5mb2FtYXpvbmlhIiwiYSI6InItajRmMGsifQ.JnRnLDiUXSEpgn7bPDzp7g",
+//   // minZoom: 8,
+//   // maxZoom: 10,
+//   interactive: ((typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1)) ? false : true
+// });
+
+class MapBox extends Component {
+  state = {
+    stateOldLayerId:null,
+    stateSourceOptionType:null,
+    stateSourceOptionUrl:null,
+    center: null,
+    stateZoomNumber: null,
+    stateStyle:null,
+    stateSourceId:null,
+    stateLayerType:null,
+    stateSourceLayer:null,
+    stateLayoutVisibility:null,
+    stateLayoutData:{},
+    statePaint:{},
+    stateViewport: {
+      width:0,
+      height:0,
+      latitude:0,
+      longitude:0,
+      zoom: 8
+    },
+    updated:true
+  }
+
+  static propTypes = {
+    containerWidth: PropTypes.number.isRequired,
+    containerHeight: PropTypes.number.isRequired
+  }
+  componentDidMount() {
+    this.setState({stateViewport:{
+      width: this.props.containerWidth,
+      height: this.props.containerHeight,
+      latitude: this.props.coordinates[1],
+      longitude: this.props.coordinates[0],
+      zoom: 7
+    }});
+  }
+  componentWillReceiveProps(nextProps) {
+    const { sourceOptionType,sourceOptionUrl,coordinates,style,sourceId,layerType,sourceLayer,layoutVisibility,layerId,layoutData,paintData,zoomNumber } = nextProps;
+    const { sourceOptionType:oldSourceOptionType,sourceOptionUrl:oldSourceOptionUrl,coordinates:oldCoordinates,style:oldStyle,sourceId:oldSourceId,layerType:oldLayerType,sourceLayer:oldSourceLayer,layoutVisibility:oldLayoutVisibility,layerId:oldLayerId,layoutData:oldlayoutData,paintData:oldPaintData,zoomNumber:oldZoom} = this.props
+
+    if (sourceOptionType !== oldSourceOptionType) {
+      this.setState({
+        stateSourceOptionType: sourceOptionType
+      })
+    }
+    
+    if (layerId !== oldLayerId) {
+      this.setState({
+        stateOldLayerId: layerId
+      })
+    }
+
+
+    if (sourceOptionUrl !== oldSourceOptionUrl) {
+      this.setState({
+        stateSourceOptionUrl: sourceOptionUrl
+      })
+    }
+
+    if (coordinates !== oldCoordinates) {
+      this.setState({
+        center: coordinates
+      })
+    }
+    if (style !== oldStyle) {
+      this.setState({
+        stateStyle: style
+      })
+    }
+    if (sourceId !== oldSourceId) {
+      this.setState({
+        stateSourceId: sourceId
+      })
+    }
+    if (layerType !== oldLayerType) {
+      this.setState({
+        stateLayerType: layerType
+      })
+    }
+    if (sourceLayer !== oldSourceLayer) {
+      this.setState({
+        stateSourceLayer: sourceLayer
+      })
+    }
+    if (layoutVisibility !== oldLayoutVisibility) {
+      this.setState({
+        stateLayoutVisibility: layoutVisibility
+      })
+    }
+    if (layoutData !== oldlayoutData) {
+      this.setState({
+        stateLayoutData: layoutData
+      })
+    }
+    if (paintData !== oldPaintData) {
+      this.setState({
+        statePaintData: paintData
+      })
+    }
+
+    if (zoomNumber !== oldZoom) {
+      this.setState({
+        stateZoomNumber: zoomNumber
+      })
+    }
+    this.setState({updated:false})
+    setTimeout(
+      function() {
+        this.setState({updated:true})
+      }
+      .bind(this),
+      100
+    )
+
+    this.setState({stateViewport:{
+      width: this.props.containerWidth,
+      height: this.props.containerHeight,
+      latitude: this.props.coordinates[1],
+      longitude: this.props.coordinates[0],
+      zoom: 8
+    }})
+  }
+  viewportChange() {
+    // console.log('viewportChange');
+    // this.setState({stateViewport:{
+    //   width: this.props.containerWidth,
+    //   height: this.props.containerHeight,  
+    //   latitude: 37.7577,
+    //   longitude: 122.4376,
+    //   zoom: 8
+    // }})
+  }
+  render() {
+    const { sourceOptionType,sourceOptionUrl,coordinates,style,sourceId,layerType,sourceLayer,layoutVisibility,layerId,layoutData,paintData,zoomNumber} = this.props;
+    const { stateSourceOptionType,stateSourceOptionUrl,center,stateStyle,stateSourceId,stateLayerType,stateSourceLayer,stateLayoutVisibility,stateLayerId,updated,stateLayoutData,statePaintData,stateZoomNumber} = this.state;
+    const mapStyle = Immutable.fromJS(MAP_STYLE);
+    return (
+      <ReactMapGL
+        {...this.state.stateViewport}
+        //mapStyle='mapbox://styles/infoamazonia/cjmh38rfkgtzc2rp0tir972ag'
+        mapStyle={mapStyle}
+        mapboxApiAccessToken={MAPBOX_TOKEN}
+        onViewportChange={this.viewportChange()}
+      ></ReactMapGL>
+    )
+  }
+}
+export default Dimensions({elementResize: true})(MapBox)

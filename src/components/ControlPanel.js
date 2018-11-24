@@ -2,8 +2,8 @@ import React, {PureComponent} from 'react';
 import {fromJS} from 'immutable';
 import MAP_STYLE from './style';
 import "styles/mapbox.css";
+import LegendCollapse from './LegendCollapse';
 import {Collapse} from 'react-collapse';
-import PropTypes from 'prop-types';
 
 const defaultMapStyle = fromJS(MAP_STYLE);
 
@@ -56,21 +56,14 @@ const defaultContainer = ({children}) => <div className="control-panel">{childre
 
 export default class StyleControls extends PureComponent {
 
-  static propTypes = {
-    isOpened: PropTypes.bool
-  };
-
-  static defaultProps = {
-    isOpened: false
-  };
-
   constructor(props) {
     super(props);
 
     this._defaultLayers = defaultMapStyle.get('layers');
     
     this.state = {
-      isOpened:this.props.isOpened,
+      displayLegendBG: {'background-color':'none'}, 
+      displayLegend: {'display':'none'},
       visibility: {
         // water: true,
         // parks: true,
@@ -90,7 +83,6 @@ export default class StyleControls extends PureComponent {
         // background: '#EBF0F0'
       }
     };
-
   }
 
   componentDidMount() {
@@ -103,10 +95,10 @@ export default class StyleControls extends PureComponent {
     this._updateMapStyle({...this.state, color});
   }
 
-  _onVisibilityChange(name, event) {
-    const visibility = {...this.state.visibility, [name]: event.target.checked};
-    this.setState({visibility});
-    this._updateMapStyle({...this.state, visibility});
+  _onVisibilityChange(name,target,parent_scope) {
+    const visibility = {...parent_scope.state.visibility, [name]: target};
+    parent_scope.setState({visibility});
+    parent_scope._updateMapStyle({...parent_scope.state, visibility});
   }
 
   _updateMapStyle({visibility, color}) {
@@ -129,42 +121,47 @@ export default class StyleControls extends PureComponent {
     this.props.onChange(defaultMapStyle.set('layers', layers));
   }
 
-
   _renderLayerControl(name,render_obj) {
     const {visibility, color, isOpened} = this.state;
     return (
-      <div key={name} className="input">
-        <label style={{pointerEvents:'auto',cursor:'pointer',zIndex:'-100'}} onClick={render_obj._toggleCollapse.bind(this,isOpened,render_obj)}>{layerLabels[name]}</label> 
-        <input type="checkbox" checked={visibility[name]} onChange={this._onVisibilityChange.bind(this, name)} />
-        <Collapse isOpened={isOpened}>
-          { Object.keys(subCategories[name]).map(function (key) {
-              return <div className='mapbox_control-panel_subtitle'><span style={{'backgroundColor':subCategories[name][key]}}></span>{key}</div>
-          })}
-        </Collapse>
-      </div>
+        <div>
+        <LegendCollapse 
+          name={name} 
+          label={layerLabels[name]} 
+          visibility={visibility[name]}
+          subCategories={{subCategories}}
+          onVisibilityChange={this._onVisibilityChange}
+          parentScope={this}
+        />
+        </div>
     );
   }
-  _toggleCollapse(isOpened,render_obj) {
-    if (!isOpened) {
-      this.setState({isOpened:true})
+  _toggleLegend() {
+    if (this.state.displayLegend['display'] == 'none') {
+      this.setState({displayLegend: {'display':'block'}})
+      this.setState({displayLegendBG: {'background-color':'#fff'}})
     } else {
-      this.setState({isOpened:false})
+      this.setState({displayLegend: {'display':'none'}})
+      this.setState({displayLegendBG: {'background-color':'transparent'}})
     }
-    return false;
   }
   render() {
     const Container = this.props.containerComponent || defaultContainer;
     return (
       <Container>
-        <div className='fa fa-map mapbox_legend-block'></div>
-        <div className='mapbox_legend-align-center'>
-          <h5>Legend</h5>
-          <a href='#' className='fa fa-window-close mapbox_legend-btn-close'></a>
+        <div style={this.state.displayLegendBG} className='control-panel-padding'>
+          <button className='fa fa-map mapbox_legend-ico mapbox_legend-block mapbox_legend-button' style={{'cursor':'pointer'}} onClick={this._toggleLegend.bind(this)}></button>
+          <div style={this.state.displayLegend}>
+            <div className='mapbox_legend-align-center'>
+              <h5>Legend</h5>
+              <a href='#' className='fa fa-window-close mapbox_legend-btn-close' onClick={this._toggleLegend.bind(this)}></a>
+            </div>
+            <hr />
+            { //Object.keys(layerLabels).map((name,key,label) => this._renderLayerControl(layerLabels[key],name,label)) 
+              categories.map((name) => this._renderLayerControl(name,this)) 
+            }
+          </div>
         </div>
-        <hr />
-        { //Object.keys(layerLabels).map((name,key,label) => this._renderLayerControl(layerLabels[key],name,label)) 
-          categories.map((name) => this._renderLayerControl(name,this)) 
-        }
       </Container>
     );
   }
