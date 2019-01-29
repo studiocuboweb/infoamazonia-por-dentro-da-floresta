@@ -78,7 +78,7 @@ const About = ({ intl, lastPath }) => {
           <Paragraph big>
             <FormattedMessage
               id="about.intro"
-              defaultMessage="Esta reportagem foi produzida pela {amazoniareal} com apoio da {clua} e faz parte do especial “{olhandopordentrodafloresta}”."
+              defaultMessage="Esta reportagem foi produzida pela {amazoniareal} e faz parte do especial “{olhandopordentrodafloresta}”."
               values={{
                 infoamazonia: (
                   <strong>
