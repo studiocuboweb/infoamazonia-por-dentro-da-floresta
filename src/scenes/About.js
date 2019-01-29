@@ -75,7 +75,7 @@ const About = ({ intl, lastPath }) => {
           <Paragraph big>
             <FormattedMessage
               id="about.intro"
-              defaultMessage="Esta reportagem foi produzida pela {amazoniareal} com apoio da {clua} e faz parte do especial “{olhandopordentrodafloresta}”."
+              defaultMessage="Esta reportagem foi produzida pela {amazoniareal} e faz parte do especial “{olhandopordentrodafloresta}”."
               values={{
                 infoamazonia: (
                   <strong>
@@ -194,19 +194,6 @@ const About = ({ intl, lastPath }) => {
             <img
               src={require("images/partners/infoamazonia.png")}
               alt="InfoAmazonia"
-            />
-          </Paragraph>
-          <Paragraph>
-            <strong>
-              <FormattedMessage
-                id="about.supporter"
-                defaultMessage="Apoio"
-              />
-            </strong>
-            <br />
-            <img
-              src={require("images/partners/clua.png")}
-              alt="Climate And Land Use Alliance"
             />
           </Paragraph>
           <Button>
