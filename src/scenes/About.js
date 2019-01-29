@@ -189,19 +189,6 @@ const About = ({ intl, lastPath }) => {
               alt="InfoAmazonia"
             />
           </Paragraph>
-          <Paragraph>
-            <strong>
-              <FormattedMessage
-                id="about.supporter"
-                defaultMessage="Apoio"
-              />
-            </strong>
-            <br />
-            <img
-              src={require("images/partners/clua.png")}
-              alt="Climate And Land Use Alliance"
-            />
-          </Paragraph>
           <Button>
             <div>
               {
