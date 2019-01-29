@@ -32,7 +32,8 @@ let config = {
         DEFAULT_CREDITS: JSON.stringify(process.env.DEFAULT_CREDITS || ""),
         GOOGLE_ANALYTICS: JSON.stringify(process.env.GOOGLE_ANALYTICS || ""),
         LAUNCH_DATE: JSON.stringify(process.env.LAUNCH_DATE || "")
-      }
+      },
+      __REACT_DEVTOOLS_GLOBAL_HOOK__: ({ isDisabled: true })
     })
   ],
   module: {
