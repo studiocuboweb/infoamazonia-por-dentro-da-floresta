@@ -57,6 +57,7 @@ const Title = styled.h1`
       letter-spacing: -.03em;
       font-size: 1.6em;
       font-weight: 700;
+      margin-top:55px;
       padding: 0;
       ${media.phone`
         font-size: 1em;
