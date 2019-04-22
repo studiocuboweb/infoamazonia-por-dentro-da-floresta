@@ -97,9 +97,6 @@ class Header extends Component {
       <Top>
       <div className="partners">
         <div className="partners-logo">
-          <a href="//amazoniareal.com.br/" target="_blank">
-            <img src={require("images/partners/amazonia-real.png")} />
-          </a>
           <a href="//infoamazonia.org/" target="_blank">
             <img src={require("images/partners/infoamazonia.png")} />
           </a>
