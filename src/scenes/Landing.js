@@ -299,20 +299,20 @@ class Scene extends Component {
       <Wrapper className="scene landing">
         <Top>
           <div className="partners">
-            <img src={require("images/partners/amazonia-real.png")} />
+            <img src={require("images/partners/resistentes.png")} />
             <img src={require("images/partners/infoamazonia.png")} />
           </div>
           <SiteTitle />
           <h2>
             <FormattedMessage
               id="general.author"
-              defaultMessage="Reportagem e roteiro: Gustavo Faleiros / Fotografia e montagem: Márcio Isensee e Sá"
+              defaultMessage="por Fábio Nascimento e Gustavo Faleiros"
             />
           </h2>
           <h3>
             <FormattedMessage
               id="general.publishDate"
-              defaultMessage="5 de setembro de 2018"
+              defaultMessage="23 de abril de 2019"
             />
           </h3>
         </Top>
@@ -321,7 +321,7 @@ class Scene extends Component {
           <p className="description">
             <FormattedMessage
               id="general.tagline"
-              defaultMessage="Uma vila localizada na estrada mais erma do Brasil se torna a nova fronteira para madeireiros de Rondônia. A cada dia, novos moradores chegam abrindo negócios, em busca de oportunidades na Amazônia"
+              defaultMessage="Indígenas Uru-Eu-Wau-Wau sofrem ataques constantes de invasores. Com a chegada do governo Bolsonaro, os interesses para a redução do território estão evidentes"
             />
           </p>
             <div>

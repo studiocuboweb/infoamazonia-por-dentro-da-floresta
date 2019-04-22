@@ -20,7 +20,7 @@ const messages = defineMessages({
   },
   siteTitle: {
     id: "head.title",
-    defaultMessage: "BR 319: Bem-Vindo à Realidade"
+    defaultMessage: "Uru-Eu-Wau-Wau: Terra em Disputa"
   }
 });
 
@@ -75,34 +75,14 @@ const About = ({ intl, lastPath }) => {
           <Paragraph big>
             <FormattedMessage
               id="about.intro"
-              defaultMessage="Esta reportagem foi produzida por {amazoniareal} e {infoamazonia} e faz parte do especial “{olhandopordentrodafloresta}”."
+              defaultMessage="Esta reportagem foi produzida por {infoamazonia} e faz parte do especial “{tierraderesisntente}”."
               values={{
                 infoamazonia: (
                   <strong>
                     <a href="http://infoamazonia.org/">InfoAmazonia</a>
                   </strong>
                 ),
-                amazoniareal: (
-                  <strong>
-                    <a href="http://amazoniareal.com.br/">
-                      Amazônia Real
-                    </a>
-                  </strong>
-                ),
-                clua: (
-                  <strong>
-                    <a href="http://www.climateandlandusealliance.org/">
-                      Aliança pelo Clima e Uso da Terra (CLUA)
-                    </a>
-                  </strong>
-                ),
-                olhandopordentrodafloresta: (
-                  <strong>
-                    <a href="http://amazoniareal.com.br/espera-da-terra-firme/">
-                      Olhando por Dentro da Floresta Amazônica
-                    </a>
-                  </strong>
-                )
+                
               }}
             />
           </Paragraph>
@@ -121,17 +101,7 @@ const About = ({ intl, lastPath }) => {
               />
             </strong>
             <br />
-            Márcio Isensee e Sá
-          </Paragraph>
-          <Paragraph>
-            <strong>
-              <FormattedMessage
-                id="about.logistics"
-                defaultMessage="Logística"
-              />
-            </strong>
-            <br />
-            Áureo César de Oliveira
+            Fábio Nascimento
           </Paragraph>
           <Paragraph>
             <strong>
@@ -159,13 +129,13 @@ const About = ({ intl, lastPath }) => {
             </strong>
             <br />
             <img
-              src={require("images/partners/amazonia-real-p.png")}
+              src={require("images/partners/infoamazonia.png")}
               alt="Amazônia Real"
             />
             <br />
             <img
-              src={require("images/partners/infoamazonia.png")}
-              alt="InfoAmazonia"
+              src={require("images/partners/resistentes.png")}
+              alt="Tierra de Resistentes"
             />
           </Paragraph>
           <Button>
@@ -186,7 +156,7 @@ const About = ({ intl, lastPath }) => {
           <Paragraph small>
             <FormattedMessage
               id="about.license"
-              defaultMessage="Todo o conteúdo publicado neste site está licenciado usando a licença Creative Commons – Atribuição 4.0 Internacional. Para qualquer outro uso, escreva-nos em redacao@amazoniareal.com.br"
+              defaultMessage="Todo o conteúdo publicado neste site está licenciado usando a licença Creative Commons – Atribuição 4.0 Internacional. Para qualquer outro uso, escreva-nos em contact@infoamazonia.or"
             />
           </Paragraph>
         </Container>

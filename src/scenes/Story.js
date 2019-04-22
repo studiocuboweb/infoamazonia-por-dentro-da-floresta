@@ -247,16 +247,20 @@ const videoChapters = [
     name: "Início",
   },
   {
-    seek: 32,
-    name: "Os empresários",
+    seek: 154,
+    name: "Encontro com invasores",
   },
   {
-    seek: 129,
-    name: "Os pioneiros",
+    seek: 554,
+    name: "Dados e mapas",
   },
   {
-    seek: 266,
-    name: "Desmatamento",
+    seek: 700,
+    name: "Preso por invadir",
+  },
+  {
+    seek: 1030,
+    name: "Quadrilhas",
   }
 ]
 
@@ -408,7 +412,7 @@ class Scene extends Component {
                     { ...this.state.playing }
                     chapter={chapter}
                     autoplay={!elapsedTime ? true : false}
-                    data={{ id: "DLALJUekbW8" }}
+                    data={{ id: "PIFcHf99cb8" }}
                     displayVideoEnd={ this._setVideoEnd }
                     preview={false}
                     playing={playing}

@@ -24,7 +24,7 @@ const messages = defineMessages({
   },
   siteTitle: {
     id: "head.title",
-    defaultMessage: "Documentário “BR 319: Bem-Vindo à Realidade”"
+    defaultMessage: "Documentário “Uru-Eu-Wau-Wau. Terra em Disputa”"
   }
 });
 
@@ -75,7 +75,7 @@ const Buttons = styled.div`
 const Share = ({ intl, lastPath }) => {
   const title = intl.formatMessage(messages.title);
   const siteTitle = intl.formatMessage(messages.siteTitle);
-  const url = process.env.SITE_URL || "http://realidade.amazoniareal.com.br";
+  const url = process.env.SITE_URL || "http://urueu.infoamazonia.org";
   const {
     FacebookShareButton,
     GooglePlusShareButton,
@@ -110,12 +110,9 @@ const Share = ({ intl, lastPath }) => {
             <FacebookShareButton url={url} quote={siteTitle}>
               <span className="fa fa-facebook" />
             </FacebookShareButton>
-            <TwitterShareButton url={url} title={siteTitle} via="amazonia_real">
+            <TwitterShareButton url={url} title={siteTitle} via="InfoAmazonia">
               <span className="fa fa-twitter" />
             </TwitterShareButton>
-            <TelegramShareButton url={url} title={siteTitle}>
-              <span className="fa fa-telegram" />
-            </TelegramShareButton>
             <WhatsappShareButton url={url} title={siteTitle}>
               <span className="fa fa-whatsapp" />
             </WhatsappShareButton>

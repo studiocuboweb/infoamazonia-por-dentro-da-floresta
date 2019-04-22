@@ -7,7 +7,7 @@ import mediaLibrary from './mediaLibrary';
 import { routerReducer } from 'react-router-redux';
 
 const storage = localForage.createInstance({
-  name: 'BR 319: Bem-Vindo à Realidade',
+  name: 'Uru-Eu-Wau-Wau: Terra em Disputa',
   description: 'Persistant application state'
 });
 
