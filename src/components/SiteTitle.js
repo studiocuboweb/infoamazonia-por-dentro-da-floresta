@@ -61,9 +61,19 @@ const Title = styled.h1`
       padding: 0;
       ${media.phone`
         font-size: 1em;
+        margin-top:5px;
+        white-space: normal;
+        text-align:center;
+        padding:0 16px;
+        line-height: 1.4;
       `}
       ${media.phablet`
         font-size: 1.4em;
+        margin-top:45px;
+        white-space: normal;
+        text-align:center;
+        padding:0 16px;
+        line-height: 1.4;
       `}
     }
   }
