@@ -44,10 +44,10 @@ const VideoContentEnd = ({ data }) => (
       <span>{data}</span>
       <RelatedNews className='related-alternative'
           sectionTitle={"Confira também: "}
-          title={"A luta dos herdeiros de Mata Cavalo pelo título do quilombo"}
-          subtitle={"O território foi formado no século 19, quando negros africanos compraram ou ganharam as terras após o fim da escravidão no Brasil. Agora enfrentam dificuldades para aderir o Cadastro Ambiental Rural (CAR)" }
-          imageUrl={require("images/matacavalo_related.jpg")}
-          href={"//matacavalo.amazoniareal.com.br/"}
+          title={"BR319: Bem Vindo a Realidade"}
+          subtitle={"Uma vila localizada na estrada mais erma do Brasil - a rodovia que liga Porto Velho a Manaus - se torna a nova fronteira para madeireiros de Rondônia. A cada dia novos moradores chegam à Realidade, abrindo novos negócios, em busca de oportunidades na Amazônia." }
+          imageUrl={require("images/related.jpg")}
+          href={"//realidade.amazoniareal.com.br/"}
         />
         <div className="link-back">
           <Link to="/">
