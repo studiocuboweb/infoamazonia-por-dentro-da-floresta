@@ -33,10 +33,11 @@ const Wrapper = styled.section`
     left: 0;
     bottom: 0;
     right: 0;
-    background-image: url(${require("images/bg-1.jpg")});
+    background-image: url(${require("images/bg.jpg")});
     background-size: cover;
     background-position: center;
     z-index: -1;
+    opacity:0.7;
   }
   &.route-transition-enter {
     opacity: 1;
