@@ -247,19 +247,23 @@ const videoChapters = [
     name: "Início",
   },
   {
-    seek: 154,
+    // seek: 154,
+    seek: 114,
     name: "Encontro com invasores",
   },
   {
-    seek: 554,
+    //seek: 554,
+    seek: 314,
     name: "Dados e mapas",
   },
   {
-    seek: 700,
+    //seek: 700,
+    seek: 420,
     name: "Preso por invadir",
   },
   {
-    seek: 1030,
+    // seek: 1030,
+    seek: 630,
     name: "Quadrilhas",
   }
 ]
@@ -417,6 +421,7 @@ class Scene extends Component {
                     preview={false}
                     playing={playing}
                     startTime={0}
+                    showCaptions={true}
                   />
               }
             </div>
