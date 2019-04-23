@@ -89,10 +89,10 @@ const favicons = new FaviconsWebpackPlugin({
 });
 
 const pwa = new WebpackPwaManifest({
-  name: "A Veneza de Belo Monte",
-  short_name: "A Veneza de Belo Monte",
+  name: "Uru-Eu-Wau-Wau: Terra em Disputa",
+  short_name: "Uru-Eu-Wau-Wau: Terra em Disputa",
   description:
-    "Lorem",
+    "A terra indígena vive constante ataque de invasores. Com a chegada do governo Bolsonaro, os interesses para a redução do território ficaram evidentes.",
   background_color: "#fff",
   orientation: "portrait",
   start_url: "/?launcher=true",
