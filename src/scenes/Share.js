@@ -75,7 +75,7 @@ const Buttons = styled.div`
 const Share = ({ intl, lastPath }) => {
   const title = intl.formatMessage(messages.title);
   const siteTitle = intl.formatMessage(messages.siteTitle);
-  const url = process.env.SITE_URL || "http://urueu.infoamazonia.org";
+  const url = process.env.SITE_URL || "http://terraemdisputa.infoamazonia.org";
   const {
     FacebookShareButton,
     GooglePlusShareButton,
